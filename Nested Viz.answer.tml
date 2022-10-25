@@ -1,0 +1,51 @@
+guid: d0e16150-6a70-4c6c-8b4b-0afc4915d753
+answer:
+  name: Nested Viz
+  description: Nested Viz Tables and Chart
+  tables:
+  - id: LINEORDER
+    name: LINEORDER
+  - id: PART
+    name: PART
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1]"
+  answer_columns:
+  - name: Brand1
+  - name: Total Revenue
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Brand1
+    - Total Revenue
+    client_state: "{\"wrapTableHeader\":true}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Brand1
+      "y":
+      - Total Revenue
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"24a9bd3a-4804-447c-a406-266fe25a7c56\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"00afc07a-7c7a-4b6f-b1f0-9b021fe90930\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#8C62F5\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Total Revenue\":{}}}"
+  display_mode: CHART_MODE
+  client_state: "{\"answerMode\":\"advanced\"}"
