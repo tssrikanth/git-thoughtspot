@@ -1,0 +1,65 @@
+guid: 99dd0969-6445-4931-a5a8-35622cf45844
+answer:
+  name: Heatmap
+  tables:
+  - id: CUSTOMER
+    name: CUSTOMER
+  - id: LINEORDER
+    name: LINEORDER
+  joins:
+  - id: Lineorder CustKey - Customer CustKey
+    name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  search_query: "[LINEORDER_1::Quantity] [LINEORDER_1::Tax] [LINEORDER_1::Discount] [CUSTOMER_1::Market Segment] [CUSTOMER_1::Customer Region] [CUSTOMER_1::Market Segment] = [CUSTOMER_1::Market Segment].building [CUSTOMER_1::Market Segment].furniture [CUSTOMER_1::Market Segment].automobile"
+  answer_columns:
+  - name: Customer Region
+  - name: Total Quantity
+  - name: Market Segment
+  - name: Total Tax
+  - name: Total Discount
+  table:
+    table_columns:
+    - column_id: Market Segment
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Customer Region
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Quantity
+      headline_aggregation: SUM
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Market Segment
+    - Customer Region
+    - Total Quantity
+    - Total Tax
+    - Total Discount
+    client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+  chart:
+    type: HEATMAP
+    chart_columns:
+    - column_id: Market Segment
+    - column_id: Customer Region
+    - column_id: Total Quantity
+    - column_id: Total Tax
+    - column_id: Total Discount
+    axis_configs:
+    - x:
+      - Market Segment
+      "y":
+      - Customer Region
+      size: Total Quantity
+    client_state: "{\"seriesColors\":{\"total tax\":\"#940713\"},\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"290bef81-9c58-47c4-a6bf-e57e97860681\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d3773efd-8fa4-4540-8f99-9237149961d7\":{\"linkedColumns\":[\"Market Segment\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"automobile\":\"#4074b3\",\"building\":\"#f5cb4e\",\"furniture\":\"#68b8e3\",\"total tax\":\"#940713\",\"Total Quantity\":\"#4074b3\",\"Total Tax\":\"#68b8e3\",\"Total Discount\":\"#f5cb4e\",\"Customer Region\":\"#e3394a\"},\"yAxisShared\":false,\"gridLineConfig\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Customer Region\":{},\"Total Quantity\":{},\"Total Tax\":{},\"Total Discount\":{}}}"
+  display_mode: CHART_MODE
