@@ -1,0 +1,17 @@
+guid: 6d2c1c9b-a407-409c-8c0c-819aeb51350f
+table:
+  name: TESTINT
+  db: SUPPLYCHAIN_MAIN
+  schema: PUBLIC
+  db_table: TESTINT
+  connection:
+    name: SnowflakeConnection
+  columns:
+  - name: C1
+    db_column_name: C1
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
