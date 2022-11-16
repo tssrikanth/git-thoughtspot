@@ -12,6 +12,7 @@ table:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      is_hidden: true
     db_column_properties:
       data_type: VARCHAR
   - name: COMPANY_NAME
@@ -19,6 +20,7 @@ table:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      is_hidden: true
     db_column_properties:
       data_type: VARCHAR
   - name: COUNTRY_NAME
