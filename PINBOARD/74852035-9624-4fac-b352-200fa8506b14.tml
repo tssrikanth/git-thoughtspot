@@ -1,0 +1,400 @@
+guid: 74852035-9624-4fac-b352-200fa8506b14
+liveboard:
+  name: Object Usage
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: User Worksheet -> Table -> Column Usage
+      description: "count of events by user by worksheets, tables and columns"
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "count [Incident id] [Worksheet name] [Table Column name] sort by count [Incident id] descending [Table name] [User name]"
+      answer_columns:
+      - name: Table name
+      - name: Table Column name
+      - name: Number of Incident id
+      - name: Worksheet name
+      - name: User name
+      table:
+        table_columns:
+        - column_id: Worksheet name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Table Column name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Worksheet name
+        - Table Column name
+        - Table name
+        - User name
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Worksheet name
+        - column_id: Table Column name
+        - column_id: Table name
+        - column_id: User name
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Worksheet name
+          - Table name
+          - Table Column name
+          "y":
+          - Number of Incident id
+          color:
+          - User name
+        - "y":
+          - Number of Incident id
+        - x:
+          - Worksheet name
+          "y":
+          - Number of Incident id
+        - "y":
+          - Number of Incident id
+          color:
+          - User name
+        - x:
+          - Worksheet name
+          "y":
+          - Number of Incident id
+          color:
+          - User name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": true}},\"columnProperties\": [{\"columnId\": \"Worksheet name\",\"columnProperty\": {}},{\"columnId\": \"Table Column name\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"893fb67b-9ae6-4cfb-87ef-a0910815f67c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident id\"],\"isOpposite\": false}},{\"id\": \"348506c3-1be1-49e9-adc0-8634c35d2674\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Worksheet name\",\"Table name\",\"Table Column name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#A2ACBA\"},{\"serieName\": \"credit usage worksheet\",\"color\": \"#47515F\"},{\"serieName\": \"credits purchased\",\"color\": \"#BEC6D0\"},{\"serieName\": \"discover monitoring data\",\"color\": \"#747E8C\"},{\"serieName\": \"falcon_monitor_data_load_360\",\"color\": \"#FFA97E\"},{\"serieName\": \"falcon_monitor_query_360\",\"color\": \"#C26232\"},{\"serieName\": \"falcon_monitor_system_stats_360\",\"color\": \"#FFCCB3\"},{\"serieName\": \"falcon_monitor_varz_360\",\"color\": \"#FF8142\"},{\"serieName\": \"load aggregated view\",\"color\": \"#B094F8\"},{\"serieName\": \"product usage\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sample retail - apparel\",\"color\": \"#D1C0FB\"},{\"serieName\": \"ts: bi server\",\"color\": \"#8C62F5\"},{\"serieName\": \"ts: daily row count external table [deprecated]\",\"color\": \"#025B3C\"},{\"serieName\": \"ts: database\",\"color\": \"#56D3A8\"},{\"serieName\": \"ts: embrace historical row fact\",\"color\": \"#049160\"},{\"serieName\": \"ts: embrace stats worksheet\",\"color\": \"#9BE5CB\"},{\"serieName\": \"ts: embrace table dimension\",\"color\": \"#06BF7F\"},{\"serieName\": \"ts: external table current row count [deprecated]\",\"color\": \"#785F1A\"},{\"serieName\": \"ts: external table info [deprecated]\",\"color\": \"#FCD977\"},{\"serieName\": \"ts: external table stats ws [deprecated]\",\"color\": \"#BF982A\"},{\"serieName\": \"ts: internal capacity ws\",\"color\": \"#FDE9AF\"},{\"serieName\": \"ts: internal table wise capacity ws\",\"color\": \"#FCC838\"},{\"serieName\": \"ts: metrics\",\"color\": \"#22636B\"},{\"serieName\": \"ts: rows of un-cached tables by connection [deprecated]\",\"color\": \"#82DFE9\"},{\"serieName\": \"ts: search\",\"color\": \"#369FAA\"},{\"serieName\": \"ts: service resources\",\"color\": \"#B5ECF2\"},{\"serieName\": \"ts: table info\",\"color\": \"#48D1E0\"},{\"serieName\": \"ts: table row counts\",\"color\": \"#163772\"},{\"serieName\": \"ts: table row counts and shards\",\"color\": \"#71A1F4\"},{\"serieName\": \"ts: table row size\",\"color\": \"#2359B6\"},{\"serieName\": \"ts: table shards\",\"color\": \"#ABC7F9\"},{\"serieName\": \"worksheet report view\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d56d411e-1a66-4aa2-8931-a04d2e5b631a
+  - id: Viz_2
+    answer:
+      name: Pinboards
+      description: unique names
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Pinboard name]"
+      answer_columns:
+      - name: Unique Number of Pinboard name
+      table:
+        table_columns:
+        - column_id: Unique Number of Pinboard name
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Unique Number of Pinboard name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Pinboard name
+        axis_configs:
+        - "y":
+          - Unique Number of Pinboard name
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of Pinboard name
+    viz_guid: 12e3720a-1d86-4cbe-9497-b089317b607f
+  - id: Viz_3
+    answer:
+      name: Answers
+      description: unique names
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Answer name]"
+      answer_columns:
+      - name: Unique Number of Answer name
+      table:
+        table_columns:
+        - column_id: Unique Number of Answer name
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Unique Number of Answer name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Answer name
+        axis_configs:
+        - "y":
+          - Unique Number of Answer name
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of Answer name
+    viz_guid: 793fa146-3301-4bcf-bf7b-303e0df6fb6d
+  - id: Viz_4
+    answer:
+      name: Worksheets
+      description: unique names
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Worksheet name]"
+      answer_columns:
+      - name: Unique Number of Worksheet name
+      table:
+        table_columns:
+        - column_id: Unique Number of Worksheet name
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Unique Number of Worksheet name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Worksheet name
+        axis_configs:
+        - "y":
+          - Unique Number of Worksheet name
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of Worksheet name
+    viz_guid: e715a758-09de-4e3d-bdef-6a96521b793d
+  - id: Viz_5
+    answer:
+      name: Tables
+      description: unique names
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Table name]"
+      answer_columns:
+      - name: Unique Number of Table name
+      table:
+        table_columns:
+        - column_id: Unique Number of Table name
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Unique Number of Table name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Table name
+        axis_configs:
+        - "y":
+          - Unique Number of Table name
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of Table name
+    viz_guid: 8f5fcd02-02c8-414a-8e9f-a9d974a4197d
+  - id: Viz_6
+    answer:
+      name: Monthly Table Volume
+      description: count of events for each table
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Timestamp].monthly count [Incident id] [Table Sub type] = 'one_to_one_logical'"
+      answer_columns:
+      - name: Month(Timestamp)
+      - name: Table name
+      - name: Number of Incident id
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Month(Timestamp)
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Month(Timestamp)
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          "y":
+          - Number of Incident id
+          color:
+          - Table name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Table name\",\"columnProperty\": {}},{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"16cc92ff-d560-4038-9395-4b95a3e7a88f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident id\"],\"isOpposite\": false}},{\"id\": \"f7643816-6004-4f17-b0a9-de104615991d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Timestamp)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"dim_retapp_products\",\"color\": \"#2E75F0\"},{\"serieName\": \"dim_retapp_stores\",\"color\": \"#48D1E0\"},{\"serieName\": \"external_table_stats\",\"color\": \"#FCC838\"},{\"serieName\": \"fact_retapp_sales\",\"color\": \"#06BF7F\"},{\"serieName\": \"falcon_monitor_dataload_global_stats\",\"color\": \"#8C62F5\"},{\"serieName\": \"metricsmonitoring\",\"color\": \"#FF8142\"},{\"serieName\": \"ts: bi server\",\"color\": \"#ABC7F9\"},{\"serieName\": \"ts: embrace query fact\",\"color\": \"#B5ECF2\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 929b83ef-9cda-40a2-98a4-a0ceb3b87d88
+  - id: Viz_7
+    answer:
+      name: Monthly Worksheet Volume
+      description: count of events for each table
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Timestamp].monthly count [Incident id] [Table Sub type] = 'worksheet'"
+      answer_columns:
+      - name: Month(Timestamp)
+      - name: Table name
+      - name: Number of Incident id
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Month(Timestamp)
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Month(Timestamp)
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          "y":
+          - Number of Incident id
+          color:
+          - Table name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Table name\",\"columnProperty\": {}},{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"16cc92ff-d560-4038-9395-4b95a3e7a88f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident id\"],\"isOpposite\": false}},{\"id\": \"f7643816-6004-4f17-b0a9-de104615991d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Timestamp)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"discover monitoring data\",\"color\": \"#2E75F0\"},{\"serieName\": \"falcon_monitor_data_load_360\",\"color\": \"#48D1E0\"},{\"serieName\": \"sample retail - apparel\",\"color\": \"#FCC838\"},{\"serieName\": \"ts: bi server\",\"color\": \"#06BF7F\"},{\"serieName\": \"ts: embrace stats worksheet\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f10f79d5-97e1-43ba-9dea-46a8cd2571b7
+  - id: Viz_8
+    answer:
+      name: Monthly View Volume
+      description: count of events for each table
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Timestamp].monthly count [Incident id] [Table Sub type] = 'aggr_worksheet'"
+      answer_columns:
+      - name: Month(Timestamp)
+      - name: Number of Incident id
+      - name: Table name
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Month(Timestamp)
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Month(Timestamp)
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          "y":
+          - Number of Incident id
+          color:
+          - Table name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Table name\",\"columnProperty\": {}},{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"16cc92ff-d560-4038-9395-4b95a3e7a88f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident id\"],\"isOpposite\": false}},{\"id\": \"f7643816-6004-4f17-b0a9-de104615991d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Timestamp)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"ts: embrace historical row fact\",\"color\": \"#2E75F0\"},{\"serieName\": \"ts: embrace table dimension\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e78aa7ae-4d03-481f-bbd7-52a1a9c47c7c
+  - id: Viz_9
+    answer:
+      name: Table Column Usage
+      description: "count of events by user by worksheets, tables and columns"
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Table Sub type] [Table Column name] count [Incident id]"
+      answer_columns:
+      - name: Table name
+      - name: Table Sub type
+      - name: Number of Incident id
+      - name: Table Column name
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Table Sub type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Table Column name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Table Sub type
+        - Table Column name
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Table Sub type
+        - column_id: Table Column name
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Table Column name
+          "y":
+          - Number of Incident id
+          color:
+          - Table Sub type
+          - Table name
+        - "y":
+          - Number of Incident id
+        - x:
+          - Table Column name
+          "y":
+          - Number of Incident id
+        - "y":
+          - Number of Incident id
+          color:
+          - Table Sub type
+        - x:
+          - Table Column name
+          "y":
+          - Number of Incident id
+          color:
+          - Table Sub type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": true}},\"columnProperties\": [{\"columnId\": \"Table name\",\"columnProperty\": {}},{\"columnId\": \"Table Sub type\",\"columnProperty\": {}},{\"columnId\": \"Table Column name\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"66634e56-4b1d-451f-b18c-b2957b79a153\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident id\"],\"isOpposite\": false}},{\"id\": \"231bb35e-06f2-4497-a431-47d78c7aed0d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Table Column name\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 17708b3b-bab3-474d-9454-d1218fb3247b
+  filters:
+  - column:
+    - User name
+    is_mandatory: false
+  layout:
+    tiles:
+    - visualization_id: Viz_2
+      size: EXTRA_SMALL
+    - visualization_id: Viz_3
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: EXTRA_SMALL
+    - visualization_id: Viz_5
+      size: EXTRA_SMALL
+    - visualization_id: Viz_9
+      size: LARGE
+    - visualization_id: Viz_1
+      size: LARGE
+    - visualization_id: Viz_7
+      size: LARGE_SMALL
+    - visualization_id: Viz_6
+      size: LARGE_SMALL
+    - visualization_id: Viz_8
+      size: LARGE_SMALL
