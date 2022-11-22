@@ -12,8 +12,8 @@ liveboard:
       search_query: "count [Incident Number] [Incident Category] [Incident Category] != '{null}' [Incident Closed At] [Incident Closed At] [Incident Closed At].monthly [Incident Closed At] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
       - name: Month(Incident Closed At)
-      - name: Incident Category
       - name: Number of Incident Number
+      - name: Incident Category
       table:
         table_columns:
         - column_id: Incident Category
@@ -54,9 +54,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident State] [Incident Active] = 'true' [Incident Status] [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
       answer_columns:
+      - name: Incident Status
       - name: Incident State
       - name: Number of Incident Number
-      - name: Incident Status
       table:
         table_columns:
         - column_id: Incident State
@@ -96,8 +96,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Close Code] [Incident Active] = 'false' [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
-      - name: Number of Incident Number
       - name: Incident Close Code
+      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Incident Close Code
@@ -132,9 +132,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Category] [Incident Category] != '{null}' [Incident Closed At] [Incident Closed At] [Incident Closed At].monthly [Incident Closed At] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
-      - name: Month(Incident Closed At)
-      - name: Incident Category
       - name: Number of Incident Number
+      - name: Incident Category
+      - name: Month(Incident Closed At)
       table:
         table_columns:
         - column_id: Incident Category
@@ -172,8 +172,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "[Incident Number] [Incident Reassignment Count] [Incident Reassignment Count] = '0'"
       answer_columns:
-      - name: Incident Reassignment Count
       - name: Incident Number
+      - name: Incident Reassignment Count
       table:
         table_columns:
         - column_id: Incident Number
@@ -244,8 +244,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "[Incident Number] [SLA Has Breached] [SLA Has Breached] = 'true' [Incident Active] = 'true'"
       answer_columns:
-      - name: Incident Number
       - name: SLA Has Breached
+      - name: Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -280,8 +280,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "[Incident Number] [SLA Has Breached] [SLA Has Breached] = 'false'"
       answer_columns:
-      - name: SLA Has Breached
       - name: Incident Number
+      - name: SLA Has Breached
       table:
         table_columns:
         - column_id: Incident Number
@@ -317,9 +317,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Priority] [Incident Closed At] [Incident Closed At].monthly [Incident Priority] != '{null}' [Incident Closed At] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
-      - name: Month(Incident Closed At)
-      - name: Number of Incident Number
       - name: Incident Priority
+      - name: Number of Incident Number
+      - name: Month(Incident Closed At)
       table:
         table_columns:
         - column_id: Incident Priority
@@ -359,9 +359,9 @@ liveboard:
       search_query: "count [Incident Number] [Incident Escalation] [Incident Escalation Status] [Incident Sys Created On].monthly [Incident Sys Created On].'last 12 months' [Incident Sys Created On].'this month'"
       answer_columns:
       - name: Incident Escalation
-      - name: Month(Incident Sys Created On)
-      - name: Number of Incident Number
       - name: Incident Escalation Status
+      - name: Number of Incident Number
+      - name: Month(Incident Sys Created On)
       table:
         table_columns:
         - column_id: Incident Escalation
@@ -406,8 +406,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Category] [Incident Active] = 'true' [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
       answer_columns:
-      - name: Incident Category
       - name: Number of Incident Number
+      - name: Incident Category
       table:
         table_columns:
         - column_id: Incident Category
@@ -562,9 +562,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [SLA End Time] [SLA End Time].monthly [SLA Has Breached] = 'true' [SLA Sys Created On] [SLA Sys Created On].daily [SLA Sys Created On].'last 12 months' [SLA Sys Created On].'this month'"
       answer_columns:
-      - name: Month(SLA End Time)
-      - name: Day(SLA Sys Created On)
       - name: Number of Incident Number
+      - name: Day(SLA Sys Created On)
+      - name: Month(SLA End Time)
       table:
         table_columns:
         - column_id: Month(SLA End Time)
@@ -602,8 +602,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "[Incident Number] [Major Incident State] [Major Incident State].accepted"
       answer_columns:
-      - name: Incident Number
       - name: Major Incident State
+      - name: Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -639,8 +639,8 @@ liveboard:
       search_query: "[Incident Number] [Incident Assigned To] [Incident Assigned To] = '{null}' [Unassigned Count with Priority High]"
       answer_columns:
       - name: Unassigned Count with Priority High
-      - name: Incident Number
       - name: Incident Assigned To
+      - name: Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -681,9 +681,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "[Incident Number] [Incident Sys Updated On] [Incident Sys Updated On].daily [Incident Sys Updated By] [Incident Sys Updated By] != 'system' [Incident Active] = 'true' [Incident Not Updated for 7 days]"
       answer_columns:
-      - name: Total Incident Not Updated for 7 days
       - name: Incident Sys Updated By
       - name: Incident Number
+      - name: Total Incident Not Updated for 7 days
       - name: Day(Incident Sys Updated On)
       table:
         table_columns:
@@ -730,11 +730,11 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "[Incident Number] [Incident Active] = 'true' [Incident Opened At] [Incident Opened At].daily [Incident Closed At] [Incident Closed At].detailed [Incident Aging] count [Incident Sys Id] [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
       answer_columns:
-      - name: Incident Number
       - name: Incident Closed At
-      - name: Day(Incident Opened At)
       - name: Incident Aging
       - name: Number of Incident Sys Id
+      - name: Incident Number
+      - name: Day(Incident Opened At)
       table:
         table_columns:
         - column_id: Incident Number
@@ -782,9 +782,9 @@ liveboard:
       search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [SLA Has Breached] = 'true' [Incident Priority] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
       - name: Incident Number
+      - name: Incident Priority
       - name: Number of Incident Number
       - name: SLA Type
-      - name: Incident Priority
       table:
         table_columns:
         - column_id: Incident Number
@@ -827,10 +827,10 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [CMN Country] [SLA Has Breached] = 'true' [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
-      - name: Number of Incident Number
-      - name: CMN Country
-      - name: Incident Number
       - name: SLA Type
+      - name: Incident Number
+      - name: CMN Country
+      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -873,10 +873,10 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [SLA Has Breached] = 'true' [Incident Category] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
+      - name: Number of Incident Number
+      - name: Incident Category
       - name: Incident Number
       - name: SLA Type
-      - name: Incident Category
-      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -919,9 +919,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [SLA Stage].achieved [SLA Stage].breached [SLA Stage] [SLA Target] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
       answer_columns:
+      - name: SLA Stage
       - name: SLA Target
       - name: Incident Number
-      - name: SLA Stage
       - name: Number of Incident Number
       table:
         table_columns:
@@ -968,9 +968,9 @@ liveboard:
       search_query: "count [Incident Number] [SLA End Time] [SLA End Time].monthly [SLA Has Breached] = 'true' [SLA Sys Created On] [SLA Sys Created On].daily [SLA End Time] [User Assigned Name] [Incident Closed At].'last 12 months' [Incident Closed At].'this month' sort by count [Incident Number] descending"
       answer_columns:
       - name: User Assigned Name
+      - name: Number of Incident Number
       - name: Day(SLA Sys Created On)
       - name: Month(SLA End Time)
-      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Month(SLA End Time)
@@ -1013,10 +1013,10 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [User Assigned Name] sort by count [Incident Number] descending [Incident Status] [Incident Status] != [Incident Status].closed [Incident Status].resolved [Incident Status].{null} [Incident Opened At] = [Incident Opened At].'last 12 months' [Incident Opened At].'this month' [Incident Active] = 'true'"
       answer_columns:
-      - name: Incident Status
-      - name: Incident Number
       - name: Number of Incident Number
       - name: User Assigned Name
+      - name: Incident Status
+      - name: Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -1059,10 +1059,10 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [User Assigned Name] sort by count [Incident Number] descending [Incident Status] [Incident Status] = [Incident Status].closed [Incident Status].resolved [Incident Closed At].'last 12 months' [Incident Closed At].'this month' [Incident Active] = 'false'"
       answer_columns:
-      - name: Number of Incident Number
+      - name: Incident Number
       - name: Incident Status
       - name: User Assigned Name
-      - name: Incident Number
+      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -1105,10 +1105,10 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [Incident Priority] [Incident Opened At].monthly [Incident Opened At].'last 12 months' [Incident Opened At].'this month' [Incident Active] = 'true'"
       answer_columns:
-      - name: Number of Incident Number
-      - name: Month(Incident Opened At)
       - name: Incident Priority
+      - name: Month(Incident Opened At)
       - name: Incident Number
+      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Incident Number
@@ -1153,11 +1153,11 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [Incident Escalation] [Incident Escalation Status] [Incident Sys Created On] [Incident Sys Created On].daily [Incident Sys Created On].'last 12 months' [Incident Sys Created On].'this month'"
       answer_columns:
+      - name: Incident Escalation Status
       - name: Number of Incident Number
       - name: Day(Incident Sys Created On)
       - name: Incident Number
       - name: Incident Escalation
-      - name: Incident Escalation Status
       table:
         table_columns:
         - column_id: Incident Number
@@ -1204,8 +1204,6 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [SLA Stage] [SLA Stage] != 'cancelled' sort by count [Incident Number] descending [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
       answer_columns:
-      - name: SLA Type
-      - name: SLA Stage
       - name: Number of Incident Number
         format:
           category: NUMBER
@@ -1216,6 +1214,8 @@ liveboard:
             toSeparateThousands: true
           isCategoryEditable: true
       - name: Incident Number
+      - name: SLA Stage
+      - name: SLA Type
       table:
         table_columns:
         - column_id: Incident Number
@@ -1258,9 +1258,9 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Incident Number] [User Group Name] [Incident Closed At].'last 12 months' [Incident Closed At].'this month' sort by count [Incident Number] descending"
       answer_columns:
+      - name: User Group Name
       - name: Incident Number
       - name: Number of Incident Number
-      - name: User Group Name
       table:
         table_columns:
         - column_id: Incident Number
@@ -1298,8 +1298,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Business Service Name] [Business Service Name] != '{null}' sort by count [Incident Number] top 10"
       answer_columns:
-      - name: Number of Incident Number
       - name: Business Service Name
+      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Business Service Name
@@ -1333,8 +1333,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Config Item Name] [Config Item Name] != [Config Item Name].{null} [Config Item Name].{empty} top 10"
       answer_columns:
-      - name: Config Item Name
       - name: Number of Incident Number
+      - name: Config Item Name
       table:
         table_columns:
         - column_id: Config Item Name
@@ -1368,8 +1368,8 @@ liveboard:
         name: ServiceNow Incident Management
       search_query: "count [Incident Number] [Service Offering] [Service Offering] != '{null}' top 10"
       answer_columns:
-      - name: Number of Incident Number
       - name: Service Offering
+      - name: Number of Incident Number
       table:
         table_columns:
         - column_id: Service Offering
