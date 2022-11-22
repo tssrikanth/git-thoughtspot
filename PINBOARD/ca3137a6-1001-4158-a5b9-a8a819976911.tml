@@ -1,0 +1,1475 @@
+guid: ca3137a6-1001-4158-a5b9-a8a819976911
+liveboard:
+  name: ServiceNow Incident Management
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Incidents Closed by Category Monthly
+      description: Incidents Closed by Category Monthly for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Category] [Incident Category] != '{null}' [Incident Closed At] [Incident Closed At] [Incident Closed At].monthly [Incident Closed At] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Month(Incident Closed At)
+      - name: Incident Category
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Closed At)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Month(Incident Closed At)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Month(Incident Closed At)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Month(Incident Closed At)
+          "y":
+          - Number of Incident Number
+          color:
+          - Incident Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Incident Category\",\"columnProperty\": {}},{\"columnId\": \"Month(Incident Closed At)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ed775d77-45d0-402a-8210-00abb3204725\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"b76f507b-89fa-47b6-ab6e-76218c4874e3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Incident Closed At)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"},{\"serieName\": \"database\",\"color\": \"#2E75F0\"},{\"serieName\": \"hardware\",\"color\": \"#48D1E0\"},{\"serieName\": \"inquiry\",\"color\": \"#FCC838\"},{\"serieName\": \"network\",\"color\": \"#06BF7F\"},{\"serieName\": \"software\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5d3a6e47-272a-4a43-8c28-8008988f72ac
+  - id: Viz_2
+    answer:
+      name: Count of Open Incidents by Incident State
+      description: Number of Open Incidents by Incident State for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident State] [Incident Active] = 'true' [Incident Status] [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
+      answer_columns:
+      - name: Incident State
+      - name: Number of Incident Number
+      - name: Incident Status
+      table:
+        table_columns:
+        - column_id: Incident State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident State
+        - Incident Status
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Incident State\",\"width\": 142.0638885498047},{\"columnId\": \"Incident Active\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident State
+        - column_id: Incident Status
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Status
+          - Incident State
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"f9d75790-78ea-417f-b8d4-9087910a303c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"09f6c0b6-35f2-4c8f-b8c7-71a512cd9993\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Status\",\"Incident State\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#747E8C\"},{\"serieName\": \"1\",\"color\": \"#FCC838\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#2E75F0\"},{\"serieName\": \"in-progress, 2\",\"color\": \"#FCC838\"},{\"serieName\": \"new, 1\",\"color\": \"#48D1E0\"},{\"serieName\": \"on hold, 3\",\"color\": \"#2E75F0\"},{\"serieName\": \"resolved, 6\",\"color\": \"#06BF7F\"},{\"serieName\": \"in-progress, in-progress, 2\",\"color\": \"#06BF7F\"},{\"serieName\": \"new, new, 1\",\"color\": \"#FCC838\"},{\"serieName\": \"on hold, on hold, 3\",\"color\": \"#48D1E0\"},{\"serieName\": \"resolved, resolved, 6\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d8a56ce9-eda6-4c61-8689-aaa9559b2696
+  - id: Viz_3
+    answer:
+      name: Count of Close Incidents by Close Code
+      description: Incident Count by Close Code for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Close Code] [Incident Active] = 'false' [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Incident Close Code
+      table:
+        table_columns:
+        - column_id: Incident Close Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Close Code
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Close Code
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Close Code
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"2afc6901-f024-47e0-8616-fe9e283a584d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"47badffa-b1aa-4c4c-b245-f28ad4a6cd9b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Close Code\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"closed/resolved by caller\",\"color\": \"#06BF7F\"},{\"serieName\": \"solved (permanently)\",\"color\": \"#FCC838\"},{\"serieName\": \"solved (work around)\",\"color\": \"#48D1E0\"},{\"serieName\": \"solved remotely (permanently)\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 82e430c6-680b-45af-a8af-33dc2c10b211
+  - id: Viz_4
+    answer:
+      name: Incidents Closed Monthly
+      description: Incidents Closed Monthly for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Category] [Incident Category] != '{null}' [Incident Closed At] [Incident Closed At] [Incident Closed At].monthly [Incident Closed At] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Month(Incident Closed At)
+      - name: Incident Category
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Closed At)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Month(Incident Closed At)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Month(Incident Closed At)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Month(Incident Closed At)
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"ed775d77-45d0-402a-8210-00abb3204725\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"b76f507b-89fa-47b6-ab6e-76218c4874e3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Incident Closed At)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"},{\"serieName\": \"database\",\"color\": \"#2E75F0\"},{\"serieName\": \"hardware\",\"color\": \"#48D1E0\"},{\"serieName\": \"inquiry\",\"color\": \"#FCC838\"},{\"serieName\": \"network\",\"color\": \"#06BF7F\"},{\"serieName\": \"software\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9f89bb25-e76b-4079-bee3-7aaee69957cb
+  - id: Viz_5
+    answer:
+      name: Count of Incidents at First Call Resolution
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [Incident Reassignment Count] [Incident Reassignment Count] = '0'"
+      answer_columns:
+      - name: Incident Reassignment Count
+      - name: Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Reassignment Count
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Incident Number
+        - Incident Reassignment Count
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Incident Number\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Incident Reassignment Count
+        axis_configs:
+        - x:
+          - Incident Reassignment Count
+          "y":
+          - Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"e94f39c3-d69c-4bb9-8379-f85af5add40a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Incident Number\"],\"isOpposite\": false}},{\"id\": \"36bee481-c909-4009-9bda-4652504f9be2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Reassignment Count\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Incident Number
+    viz_guid: 9d06796c-5148-4706-8583-745ac3974f38
+  - id: Viz_6
+    answer:
+      name: Count of Reopened Incidents
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [Incident Reopen Count] [Incident Reopen Count] > '0'"
+      answer_columns:
+      - name: Incident Number
+      - name: Incident Reopen Count
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Reopen Count
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Incident Number
+        - Incident Reopen Count
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Incident Number\",\"width\": 142.0638885498047},{\"columnId\": \"Incident Reopen Count\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Incident Reopen Count
+        axis_configs:
+        - x:
+          - Incident Reopen Count
+          "y":
+          - Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"dad323de-2d48-4785-99da-521b1d2ca3c3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Incident Number\"],\"isOpposite\": false}},{\"id\": \"fbdf9139-9c98-4003-9c08-c9e6e4fc84ee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Reopen Count\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Incident Number
+    viz_guid: 490164e8-68f5-4fab-83e5-13913a8640fb
+  - id: Viz_7
+    answer:
+      name: Count of Incidents Breached SLA
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [SLA Has Breached] [SLA Has Breached] = 'true' [Incident Active] = 'true'"
+      answer_columns:
+      - name: Incident Number
+      - name: SLA Has Breached
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Has Breached
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Incident Number
+        - SLA Has Breached
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Incident Number\",\"columnProperty\": {}},{\"columnId\": \"SLA Has Breached\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Has Breached
+        axis_configs:
+        - x:
+          - SLA Has Breached
+          "y":
+          - Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"77e76f74-4f45-4a2b-86bf-fb754a6ddae6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Incident Number\"],\"isOpposite\": false}},{\"id\": \"1ba87aa5-4bf6-4d6d-a4fe-369331e46944\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SLA Has Breached\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Incident Number
+    viz_guid: 597dd3ea-6bcf-485a-865c-dd998240fb09
+  - id: Viz_8
+    answer:
+      name: Count of Incidents that Met SLA
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [SLA Has Breached] [SLA Has Breached] = 'false'"
+      answer_columns:
+      - name: SLA Has Breached
+      - name: Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Has Breached
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Incident Number
+        - SLA Has Breached
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Incident Number\",\"columnProperty\": {}},{\"columnId\": \"SLA Has Breached\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Has Breached
+        axis_configs:
+        - x:
+          - SLA Has Breached
+          "y":
+          - Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"1a544a9d-1296-4ffc-8830-5c764e3596e3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Incident Number\"],\"isOpposite\": false}},{\"id\": \"55cd0ba8-97dc-4329-846d-877dc3c5fa30\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SLA Has Breached\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Incident Number
+    viz_guid: 6a4667f0-9752-4e9d-a07a-ad880d297bb7
+  - id: Viz_9
+    answer:
+      name: Count of All Incidents By Priority
+      description: Incident By Priority for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Priority] [Incident Closed At] [Incident Closed At].monthly [Incident Priority] != '{null}' [Incident Closed At] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Month(Incident Closed At)
+      - name: Number of Incident Number
+      - name: Incident Priority
+      table:
+        table_columns:
+        - column_id: Incident Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Closed At)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Priority
+        - Month(Incident Closed At)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Priority
+        - column_id: Month(Incident Closed At)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Priority
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1f6c215b-b8d3-48d3-af1e-7fa748d11b34\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"63f1905f-51e9-4f31-96da-e96b17f0358b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCC838\"},{\"serieName\": \"3\",\"color\": \"#48D1E0\"},{\"serieName\": \"4\",\"color\": \"#71A1F4\"},{\"serieName\": \"5\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c077bead-abef-49ca-93c7-c3f39638dbc3
+  - id: Viz_10
+    answer:
+      name: Incidents by Escalation Status Monthly
+      description: Incident by Escalation Status for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Escalation] [Incident Escalation Status] [Incident Sys Created On].monthly [Incident Sys Created On].'last 12 months' [Incident Sys Created On].'this month'"
+      answer_columns:
+      - name: Incident Escalation
+      - name: Month(Incident Sys Created On)
+      - name: Number of Incident Number
+      - name: Incident Escalation Status
+      table:
+        table_columns:
+        - column_id: Incident Escalation
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Escalation Status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Sys Created On)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Escalation
+        - Incident Escalation Status
+        - Month(Incident Sys Created On)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Incident Escalation
+        - column_id: Incident Escalation Status
+        - column_id: Month(Incident Sys Created On)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Month(Incident Sys Created On)
+          "y":
+          - Number of Incident Number
+          color:
+          - Incident Escalation Status
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Month(Incident Sys Created On)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}},{\"columnId\": \"Incident Escalation Status\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4934ed12-33c3-40b3-b9e1-102d80304c43\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"9f5d9587-ed41-47ad-b98d-f51865997c73\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Incident Sys Created On)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"0\",\"color\": \"#06BF7F\"},{\"serieName\": \"1\",\"color\": \"#FCC838\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#2E75F0\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"},{\"serieName\": \"0-normal\",\"color\": \"#06BF7F\"},{\"serieName\": \"1-moderate\",\"color\": \"#FCC838\"},{\"serieName\": \"2-high\",\"color\": \"#48D1E0\"},{\"serieName\": \"3-overdue\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2850f6ce-f68f-410f-8aa4-98109482314d
+  - id: Viz_11
+    answer:
+      name: Count of Active Incidents by Category
+      description: Incident Count by Category for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Category] [Incident Active] = 'true' [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
+      answer_columns:
+      - name: Incident Category
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Category
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"fce16cd5-fd00-463c-b209-65febd484654\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"ef84b4c3-a7f4-49e3-88e3-f768896a091d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#FCC838\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"database\",\"color\": \"#FCC838\"},{\"serieName\": \"hardware\",\"color\": \"#82DFE9\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"network\",\"color\": \"#71A1F4\"},{\"serieName\": \"software\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 69a159b5-1a7f-4b9e-acd9-c76dfaf8210c
+  - id: Viz_12
+    answer:
+      name: Count of Overdue Incidents
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [Incident Escalation] = '3'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Incident Number\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Number
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}},{\"columnId\": \"Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e808915c-38c6-48f1-82f2-20e46bcc566c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"fde54446-f27f-4a6c-a5dc-007ca7420d03\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Number\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Incident Number
+    viz_guid: a966d568-6453-40df-aef3-45a5db5c815b
+  - id: Viz_13
+    answer:
+      name: Incidents Opened Monthly
+      description: Incidents Opened Monthly for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Category] [Incident Category] != '{null}' [Incident Opened At] [Incident Opened At] [Incident Opened At].monthly [Incident Opened At] [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
+      answer_columns:
+      - name: Incident Category
+      - name: Number of Incident Number
+      - name: Month(Incident Opened At)
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Opened At)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Month(Incident Opened At)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Month(Incident Opened At)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Month(Incident Opened At)
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Month(Incident Opened At)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2c111fe1-f858-4ade-a34c-1ebc17046a58\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"c807f759-f872-411e-8ce7-67719001d998\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Incident Opened At)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"},{\"serieName\": \"database\",\"color\": \"#2E75F0\"},{\"serieName\": \"hardware\",\"color\": \"#48D1E0\"},{\"serieName\": \"inquiry\",\"color\": \"#FCC838\"},{\"serieName\": \"network\",\"color\": \"#06BF7F\"},{\"serieName\": \"software\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7c8d5e98-7be2-4b44-aecb-12adeb7f3381
+  - id: Viz_14
+    answer:
+      name: Incidents Opened by Category Monthly
+      description: Incidents Opened by Category Monthly for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Category] [Incident Category] != '{null}' [Incident Opened At] [Incident Opened At] [Incident Opened At].monthly [Incident Opened At] [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Month(Incident Opened At)
+      - name: Incident Category
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Opened At)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Month(Incident Opened At)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Month(Incident Opened At)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Month(Incident Opened At)
+          "y":
+          - Number of Incident Number
+          color:
+          - Incident Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Month(Incident Opened At)\",\"columnProperty\": {}},{\"columnId\": \"Incident Category\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e7aaea09-e44a-4657-b2a5-ce5cb9580e7a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"caf6018a-fdae-4789-9fef-c19b1a3a293b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Incident Opened At)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"},{\"serieName\": \"database\",\"color\": \"#2E75F0\"},{\"serieName\": \"hardware\",\"color\": \"#48D1E0\"},{\"serieName\": \"inquiry\",\"color\": \"#FCC838\"},{\"serieName\": \"network\",\"color\": \"#06BF7F\"},{\"serieName\": \"software\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5c3ca595-781a-4d2b-a96d-63abc05f85e0
+  - id: Viz_15
+    answer:
+      name: Count of SLA Breached Monthly
+      description: SLA Breached Monthly for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [SLA End Time] [SLA End Time].monthly [SLA Has Breached] = 'true' [SLA Sys Created On] [SLA Sys Created On].daily [SLA Sys Created On].'last 12 months' [SLA Sys Created On].'this month'"
+      answer_columns:
+      - name: Month(SLA End Time)
+      - name: Day(SLA Sys Created On)
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Month(SLA End Time)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(SLA Sys Created On)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Month(SLA End Time)
+        - Day(SLA Sys Created On)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"SLA Has Breached\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(SLA End Time)
+        - column_id: Day(SLA Sys Created On)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Day(SLA Sys Created On)
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Day(SLA Sys Created On)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f8a66146-5b1c-4090-9b07-e48396d59f43\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"2fca0a77-3edb-43bf-a385-9ea42660cca3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(SLA Sys Created On)\"]}}],\"seriesColors\": [{\"serieName\": \"inc0000060\",\"color\": \"#06BF7F\"},{\"serieName\": \"false\",\"color\": \"#48D1E0\"},{\"serieName\": \"{null}, false\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}, true\",\"color\": \"#48D1E0\"},{\"serieName\": \"12/12/2016 05 pm, false\",\"color\": \"#FCC838\"},{\"serieName\": \"13/12/2016 12 am, true\",\"color\": \"#06BF7F\"},{\"serieName\": \"14/12/2016 02 am, false\",\"color\": \"#8C62F5\"},{\"serieName\": \"14/12/2016 02 am, true\",\"color\": \"#FF8142\"},{\"serieName\": \"{null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"12/12/2016 05 pm\",\"color\": \"#48D1E0\"},{\"serieName\": \"13/12/2016 12 am\",\"color\": \"#FCC838\"},{\"serieName\": \"14/12/2016 02 am\",\"color\": \"#06BF7F\"},{\"serieName\": \"false, {null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"false, 12/12/2016 05 pm\",\"color\": \"#48D1E0\"},{\"serieName\": \"false, 14/12/2016 02 am\",\"color\": \"#FCC838\"},{\"serieName\": \"true, {null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"true, 13/12/2016 12 am\",\"color\": \"#8C62F5\"},{\"serieName\": \"true, 14/12/2016 02 am\",\"color\": \"#FF8142\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"dec 2016\",\"color\": \"#FCC838\"},{\"serieName\": \"{null}, 04/01/2022\",\"color\": \"#2E75F0\"},{\"serieName\": \"dec 2016, 07/04/2017\",\"color\": \"#48D1E0\"},{\"serieName\": \"07/04/2017\",\"color\": \"#2E75F0\"},{\"serieName\": \"04/01/2022\",\"color\": \"#48D1E0\"},{\"serieName\": \"07/04/2017, false\",\"color\": \"#2E75F0\"},{\"serieName\": \"07/04/2017, true\",\"color\": \"#48D1E0\"},{\"serieName\": \"04/01/2022, false\",\"color\": \"#FCC838\"},{\"serieName\": \"04/01/2022, true\",\"color\": \"#06BF7F\"},{\"serieName\": \"true\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ef030773-0875-4c96-b954-6bbb4bfd1c77
+  - id: Viz_16
+    answer:
+      name: Count of Major Incidents
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [Major Incident State] [Major Incident State].accepted"
+      answer_columns:
+      - name: Incident Number
+      - name: Major Incident State
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Major Incident State
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Incident Number
+        - Major Incident State
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Major Incident State
+        axis_configs:
+        - x:
+          - Major Incident State
+          "y":
+          - Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"fbe86001-f8e4-4105-a670-2a11ff3b82b4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Incident Number\"],\"isOpposite\": false}},{\"id\": \"042b1bc1-14f4-4c7b-972d-5558d5b5a802\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Major Incident State\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Incident Number
+    viz_guid: c45c65f4-ba06-4ee0-ac07-d1ef022518a4
+  - id: Viz_17
+    answer:
+      name: Count of Unassigned Incidents with Priority High
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [Incident Assigned To] [Incident Assigned To] = '{null}' [Unassigned Count with Priority High]"
+      answer_columns:
+      - name: Unassigned Count with Priority High
+      - name: Incident Number
+      - name: Incident Assigned To
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Assigned To
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unassigned Count with Priority High
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Incident Number
+        - Incident Assigned To
+        - Unassigned Count with Priority High
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"2e423e8f-1488-4bd4-b60f-0a5086d0ad51\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Incident Assigned To
+        - column_id: Unassigned Count with Priority High
+        axis_configs:
+        - x:
+          - Incident Number
+          "y":
+          - Unassigned Count with Priority High
+          color:
+          - Incident Assigned To
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"8f7ce299-fa73-4386-8208-183c803f9967\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unassigned Count with Priority High\"],\"isOpposite\": false}},{\"id\": \"37959b4c-e326-4bd4-a320-f5e735d38ca8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Number\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Unassigned Count with Priority High
+    viz_guid: 0fc7360f-860e-4fc7-9156-6d8ffb57dd36
+  - id: Viz_18
+    answer:
+      name: Count of Incidents Not Updated for 7 Days
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [Incident Sys Updated On] [Incident Sys Updated On].daily [Incident Sys Updated By] [Incident Sys Updated By] != 'system' [Incident Active] = 'true' [Incident Not Updated for 7 days]"
+      answer_columns:
+      - name: Total Incident Not Updated for 7 days
+      - name: Incident Sys Updated By
+      - name: Incident Number
+      - name: Day(Incident Sys Updated On)
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(Incident Sys Updated On)
+          headline_aggregation: MIN-MAX
+        - column_id: Incident Sys Updated By
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Incident Not Updated for 7 days
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Incident Number
+        - Day(Incident Sys Updated On)
+        - Incident Sys Updated By
+        - Total Incident Not Updated for 7 days
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Day(Incident Sys Updated On)
+        - column_id: Incident Sys Updated By
+        - column_id: Total Incident Not Updated for 7 days
+        axis_configs:
+        - x:
+          - Day(Incident Sys Updated On)
+          "y":
+          - Total Incident Not Updated for 7 days
+          color:
+          - Incident Sys Updated By
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"3531140a-1eab-4cac-a21b-61f7639d9d45\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Incident Not Updated for 7 days\"],\"isOpposite\": false}},{\"id\": \"cb64c0f3-7c6d-4a44-b75f-63c31c6e46c0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Incident Sys Updated On)\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Total Incident Not Updated for 7 days
+    viz_guid: d65d6da5-75c6-4891-9263-2378d34b5b26
+  - id: Viz_19
+    answer:
+      name: Count of Incidents by Age
+      description: Incident Aging for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "[Incident Number] [Incident Active] = 'true' [Incident Opened At] [Incident Opened At].daily [Incident Closed At] [Incident Closed At].detailed [Incident Aging] count [Incident Sys Id] [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
+      answer_columns:
+      - name: Incident Number
+      - name: Incident Closed At
+      - name: Day(Incident Opened At)
+      - name: Incident Aging
+      - name: Number of Incident Sys Id
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(Incident Opened At)
+          headline_aggregation: MIN-MAX
+        - column_id: Incident Closed At
+          headline_aggregation: MIN-MAX
+        - column_id: Incident Aging
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Sys Id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - Day(Incident Opened At)
+        - Incident Closed At
+        - Incident Aging
+        - Number of Incident Sys Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Day(Incident Opened At)
+        - column_id: Incident Closed At
+        - column_id: Incident Aging
+        - column_id: Number of Incident Sys Id
+        axis_configs:
+        - x:
+          - Incident Aging
+          "y":
+          - Number of Incident Sys Id
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"6f93ed9f-6868-4a39-9341-a30ebd87a7c0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Sys Id\"],\"isOpposite\": false}},{\"id\": \"72db6972-1fa2-4e21-8770-c7fd302e36c1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Aging\"]}}],\"systemSeriesColors\": [{\"serieName\": \"inc0000002\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000003\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000005\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000007\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000014\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000017\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000020\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000029\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000039\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000040\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000041\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000044\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000046\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000047\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000048\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000049\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000050\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000051\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000052\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000053\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000054\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000055\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000057\",\"color\": \"#049160\"},{\"serieName\": \"inc0000058\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000059\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0000501\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0000502\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0000503\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0000504\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0000505\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0000506\",\"color\": \"#22636B\"},{\"serieName\": \"inc0000507\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0000511\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0000530\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0000930\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0001990\",\"color\": \"#163772\"},{\"serieName\": \"inc0007001\",\"color\": \"#71A1F4\"},{\"serieName\": \"inc0007002\",\"color\": \"#2359B6\"},{\"serieName\": \"inc0008001\",\"color\": \"#ABC7F9\"},{\"serieName\": \"inc0008111\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0008112\",\"color\": \"#721F27\"},{\"serieName\": \"inc0009001\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0009005\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0009009\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000015\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000016\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000018\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000019\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000025\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000027\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000031\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000037\",\"color\": \"#422E75\"},{\"serieName\": \"incident opened more than 30 days, inc0000046\",\"color\": \"#721F27\"},{\"serieName\": \"incident opened more than 30 days, inc0000047\",\"color\": \"#F47E89\"},{\"serieName\": \"incident opened more than 30 days, inc0000048\",\"color\": \"#B6313E\"},{\"serieName\": \"incident opened more than 30 days, inc0000049\",\"color\": \"#F9B3B9\"},{\"serieName\": \"incident opened more than 30 days, inc0000050\",\"color\": \"#F04152\"},{\"serieName\": \"incident opened more than 30 days, inc0000051\",\"color\": \"#2F3947\"},{\"serieName\": \"incident opened more than 30 days, inc0000052\",\"color\": \"#A2ACBA\"},{\"serieName\": \"incident opened more than 30 days, inc0000053\",\"color\": \"#47515F\"},{\"serieName\": \"incident opened more than 30 days, inc0000054\",\"color\": \"#BEC6D0\"},{\"serieName\": \"incident opened more than 30 days, inc0000055\",\"color\": \"#747E8C\"},{\"serieName\": \"incident opened more than 60 days, inc0000002\",\"color\": \"#7A3D1F\"},{\"serieName\": \"incident opened more than 60 days, inc0000003\",\"color\": \"#FFA97E\"},{\"serieName\": \"incident opened more than 60 days, inc0000005\",\"color\": \"#C26232\"},{\"serieName\": \"incident opened more than 60 days, inc0000007\",\"color\": \"#FFCCB3\"},{\"serieName\": \"incident opened more than 60 days, inc0000014\",\"color\": \"#FF8142\"},{\"serieName\": \"incident opened more than 60 days, inc0000015\",\"color\": \"#422E75\"},{\"serieName\": \"incident opened more than 60 days, inc0000016\",\"color\": \"#B094F8\"},{\"serieName\": \"incident opened more than 60 days, inc0000017\",\"color\": \"#6A4ABA\"},{\"serieName\": \"incident opened more than 60 days, inc0000018\",\"color\": \"#D1C0FB\"},{\"serieName\": \"incident opened more than 60 days, inc0000019\",\"color\": \"#8C62F5\"},{\"serieName\": \"incident opened more than 60 days, inc0000020\",\"color\": \"#025B3C\"},{\"serieName\": \"incident opened more than 60 days, inc0000025\",\"color\": \"#56D3A8\"},{\"serieName\": \"incident opened more than 60 days, inc0000027\",\"color\": \"#049160\"},{\"serieName\": \"incident opened more than 60 days, inc0000029\",\"color\": \"#9BE5CB\"},{\"serieName\": \"incident opened more than 60 days, inc0000031\",\"color\": \"#06BF7F\"},{\"serieName\": \"incident opened more than 60 days, inc0000037\",\"color\": \"#785F1A\"},{\"serieName\": \"incident opened more than 60 days, inc0000039\",\"color\": \"#FCD977\"},{\"serieName\": \"incident opened more than 60 days, inc0000040\",\"color\": \"#BF982A\"},{\"serieName\": \"incident opened more than 60 days, inc0000041\",\"color\": \"#FDE9AF\"},{\"serieName\": \"incident opened more than 60 days, inc0000044\",\"color\": \"#FCC838\"},{\"serieName\": \"incident opened more than 60 days, inc0000057\",\"color\": \"#22636B\"},{\"serieName\": \"incident opened more than 60 days, inc0000058\",\"color\": \"#82DFE9\"},{\"serieName\": \"incident opened more than 60 days, inc0000059\",\"color\": \"#369FAA\"},{\"serieName\": \"incident opened more than 60 days, inc0000501\",\"color\": \"#B5ECF2\"},{\"serieName\": \"incident opened more than 60 days, inc0000502\",\"color\": \"#48D1E0\"},{\"serieName\": \"incident opened more than 60 days, inc0000503\",\"color\": \"#163772\"},{\"serieName\": \"incident opened more than 60 days, inc0000504\",\"color\": \"#71A1F4\"},{\"serieName\": \"incident opened more than 60 days, inc0000505\",\"color\": \"#2359B6\"},{\"serieName\": \"incident opened more than 60 days, inc0000506\",\"color\": \"#ABC7F9\"},{\"serieName\": \"incident opened more than 60 days, inc0000507\",\"color\": \"#2E75F0\"},{\"serieName\": \"incident opened more than 60 days, inc0000511\",\"color\": \"#721F27\"},{\"serieName\": \"incident opened more than 60 days, inc0000530\",\"color\": \"#F47E89\"},{\"serieName\": \"incident opened more than 60 days, inc0000930\",\"color\": \"#B6313E\"},{\"serieName\": \"incident opened more than 60 days, inc0001990\",\"color\": \"#F9B3B9\"},{\"serieName\": \"incident opened more than 60 days, inc0007001\",\"color\": \"#F04152\"},{\"serieName\": \"incident opened more than 60 days, inc0007002\",\"color\": \"#2F3947\"},{\"serieName\": \"incident opened more than 60 days, inc0008001\",\"color\": \"#A2ACBA\"},{\"serieName\": \"incident opened more than 60 days, inc0008111\",\"color\": \"#47515F\"},{\"serieName\": \"incident opened more than 60 days, inc0008112\",\"color\": \"#BEC6D0\"},{\"serieName\": \"incident opened more than 60 days, inc0009001\",\"color\": \"#747E8C\"},{\"serieName\": \"incident opened more than 60 days, inc0009005\",\"color\": \"#7A3D1F\"},{\"serieName\": \"incident opened more than 60 days, inc0009009\",\"color\": \"#FFA97E\"},{\"serieName\": \"incident opened more than 30 days\",\"color\": \"#48D1E0\"},{\"serieName\": \"incident opened more than 60 days\",\"color\": \"#2E75F0\"},{\"serieName\": \"Number of Incident Sys Id\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 24b453be-02e8-46b9-a480-666d21ec9d7f
+  - id: Viz_20
+    answer:
+      name: Count of SLA Breached by Incident Priority
+      description: SLA Breached by Incident Priority for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [SLA Has Breached] = 'true' [Incident Priority] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Incident Number
+      - name: Number of Incident Number
+      - name: SLA Type
+      - name: Incident Priority
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - SLA Type
+        - Incident Priority
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Type
+        - column_id: Incident Priority
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Priority
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"12d692d1-0ae6-4d9e-9db3-31399fc1e455\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"372b84f3-0276-49ba-983b-df154d0bfb04\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"sla\",\"color\": \"#FF8142\"},{\"serieName\": \"sla, 1\",\"color\": \"#06BF7F\"},{\"serieName\": \"sla, 2\",\"color\": \"#FCC838\"},{\"serieName\": \"sla, 3\",\"color\": \"#48D1E0\"},{\"serieName\": \"sla, 4\",\"color\": \"#2E75F0\"},{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCC838\"},{\"serieName\": \"3\",\"color\": \"#48D1E0\"},{\"serieName\": \"4\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 882325cc-d873-4507-b77d-d7a466bc3c2b
+  - id: Viz_21
+    answer:
+      name: Count of SLA Breached by Incident Country
+      description: SLA Breached by Incident Country for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [CMN Country] [SLA Has Breached] = 'true' [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: CMN Country
+      - name: Incident Number
+      - name: SLA Type
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: CMN Country
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - SLA Type
+        - CMN Country
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Type
+        - column_id: CMN Country
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - CMN Country
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1d49667c-75be-4fa9-b2dc-a433225cdc8b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"051c81c7-9c81-42d1-a143-049f94e2696e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"CMN Country\"]}}],\"systemSeriesColors\": [{\"serieName\": \"sla\",\"color\": \"#48D1E0\"},{\"serieName\": \"sla, {null}\",\"color\": \"#FCC838\"},{\"serieName\": \"sla, germany\",\"color\": \"#48D1E0\"},{\"serieName\": \"sla, usa\",\"color\": \"#2E75F0\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#8C62F5\"},{\"serieName\": \"{null}, sla\",\"color\": \"#FCC838\"},{\"serieName\": \"germany, sla\",\"color\": \"#48D1E0\"},{\"serieName\": \"usa, sla\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}\",\"color\": \"#FCC838\"},{\"serieName\": \"germany\",\"color\": \"#48D1E0\"},{\"serieName\": \"usa\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d06eab03-a6c9-42f6-8588-46cf007e15a9
+  - id: Viz_22
+    answer:
+      name: Count of SLA Breached by Incident Category
+      description: SLA Breached by Incident Category for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [SLA Has Breached] = 'true' [Incident Category] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: Incident Number
+      - name: SLA Type
+      - name: Incident Category
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - SLA Type
+        - Incident Category
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Type
+        - column_id: Incident Category
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Category
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"680893f0-b611-46dc-85af-815cc3be3f40\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"04679010-95ea-4a9c-95ac-be2b018622f0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"ola\",\"color\": \"#FCC838\"},{\"serieName\": \"sla\",\"color\": \"#48D1E0\"},{\"serieName\": \"underpinning contract\",\"color\": \"#2E75F0\"},{\"serieName\": \"sla, {null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"sla, hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"sla, inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"sla, software\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"software\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 22d29f64-cc02-409f-b7ea-44e39f9c6740
+  - id: Viz_23
+    answer:
+      name: SLA Breached vs Achieved
+      description: SLA Breached vs Achieved for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [SLA Stage].achieved [SLA Stage].breached [SLA Stage] [SLA Target] [Incident Closed At].'last 12 months' [Incident Closed At].'this month'"
+      answer_columns:
+      - name: SLA Target
+      - name: Incident Number
+      - name: SLA Stage
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Stage
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Target
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - SLA Stage
+        - SLA Target
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Stage
+        - column_id: SLA Target
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - SLA Stage
+          "y":
+          - Number of Incident Number
+          color:
+          - SLA Target
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"SLA Target\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}},{\"columnId\": \"SLA Stage\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5cb4b24d-5805-42b9-aa83-5248df8605a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"00b3741e-c6f7-4164-8548-3e070656e740\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SLA Stage\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"achieved\",\"color\": \"#48D1E0\"},{\"serieName\": \"breached\",\"color\": \"#2E75F0\"},{\"serieName\": \"resolution, achieved\",\"color\": \"#48D1E0\"},{\"serieName\": \"resolution, breached\",\"color\": \"#2E75F0\"},{\"serieName\": \"resolution, inc0000060\",\"color\": \"#747E8C\"},{\"serieName\": \"resolution\",\"color\": \"#163772\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"achieved\",\"color\": \"#48D1E0\"},{\"serieName\": \"breached\",\"color\": \"#2E75F0\"},{\"serieName\": \"resolution, achieved\",\"color\": \"#48D1E0\"},{\"serieName\": \"resolution, breached\",\"color\": \"#2E75F0\"},{\"serieName\": \"resolution\",\"color\": \"#2E75F0\"},{\"serieName\": \"resolution, inc0000060\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 73137acf-b8cb-4287-ae88-580e9ffef982
+  - id: Viz_24
+    answer:
+      name: Count of SLA Breached by Agent
+      description: SLA Breached by Agent for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [SLA End Time] [SLA End Time].monthly [SLA Has Breached] = 'true' [SLA Sys Created On] [SLA Sys Created On].daily [SLA End Time] [User Assigned Name] [Incident Closed At].'last 12 months' [Incident Closed At].'this month' sort by count [Incident Number] descending"
+      answer_columns:
+      - name: User Assigned Name
+      - name: Day(SLA Sys Created On)
+      - name: Month(SLA End Time)
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Month(SLA End Time)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(SLA Sys Created On)
+          headline_aggregation: MIN-MAX
+        - column_id: User Assigned Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Month(SLA End Time)
+        - Day(SLA Sys Created On)
+        - User Assigned Name
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"SLA Has Breached\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Month(SLA End Time)
+        - column_id: Day(SLA Sys Created On)
+        - column_id: User Assigned Name
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - User Assigned Name
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}},{\"columnId\": \"User Assigned Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a3895427-5921-4174-9700-efd3908a103d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"69b525eb-1009-4985-99a5-5f7c8000313f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User Assigned Name\"]}}],\"seriesColors\": [{\"serieName\": \"inc0000060\",\"color\": \"#06BF7F\"},{\"serieName\": \"false\",\"color\": \"#48D1E0\"},{\"serieName\": \"{null}, false\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}, true\",\"color\": \"#48D1E0\"},{\"serieName\": \"12/12/2016 05 pm, false\",\"color\": \"#FCC838\"},{\"serieName\": \"13/12/2016 12 am, true\",\"color\": \"#06BF7F\"},{\"serieName\": \"14/12/2016 02 am, false\",\"color\": \"#8C62F5\"},{\"serieName\": \"14/12/2016 02 am, true\",\"color\": \"#FF8142\"},{\"serieName\": \"{null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"12/12/2016 05 pm\",\"color\": \"#48D1E0\"},{\"serieName\": \"13/12/2016 12 am\",\"color\": \"#FCC838\"},{\"serieName\": \"14/12/2016 02 am\",\"color\": \"#06BF7F\"},{\"serieName\": \"false, {null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"false, 12/12/2016 05 pm\",\"color\": \"#48D1E0\"},{\"serieName\": \"false, 14/12/2016 02 am\",\"color\": \"#FCC838\"},{\"serieName\": \"true, {null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"true, 13/12/2016 12 am\",\"color\": \"#8C62F5\"},{\"serieName\": \"true, 14/12/2016 02 am\",\"color\": \"#FF8142\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"dec 2016\",\"color\": \"#FCC838\"},{\"serieName\": \"{null}, 04/01/2022\",\"color\": \"#2E75F0\"},{\"serieName\": \"dec 2016, 07/04/2017\",\"color\": \"#48D1E0\"},{\"serieName\": \"07/04/2017\",\"color\": \"#2E75F0\"},{\"serieName\": \"04/01/2022\",\"color\": \"#48D1E0\"},{\"serieName\": \"07/04/2017, false\",\"color\": \"#2E75F0\"},{\"serieName\": \"07/04/2017, true\",\"color\": \"#48D1E0\"},{\"serieName\": \"04/01/2022, false\",\"color\": \"#FCC838\"},{\"serieName\": \"04/01/2022, true\",\"color\": \"#06BF7F\"},{\"serieName\": \"true\",\"color\": \"#06BF7F\"}],\"systemSeriesColors\": [{\"serieName\": \"inc0000060\",\"color\": \"#06BF7F\"},{\"serieName\": \"false\",\"color\": \"#48D1E0\"},{\"serieName\": \"{null}, false\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}, true\",\"color\": \"#48D1E0\"},{\"serieName\": \"12/12/2016 05 pm, false\",\"color\": \"#FCC838\"},{\"serieName\": \"13/12/2016 12 am, true\",\"color\": \"#06BF7F\"},{\"serieName\": \"14/12/2016 02 am, false\",\"color\": \"#8C62F5\"},{\"serieName\": \"14/12/2016 02 am, true\",\"color\": \"#FF8142\"},{\"serieName\": \"{null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"12/12/2016 05 pm\",\"color\": \"#48D1E0\"},{\"serieName\": \"13/12/2016 12 am\",\"color\": \"#FCC838\"},{\"serieName\": \"14/12/2016 02 am\",\"color\": \"#06BF7F\"},{\"serieName\": \"false, {null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"false, 12/12/2016 05 pm\",\"color\": \"#48D1E0\"},{\"serieName\": \"false, 14/12/2016 02 am\",\"color\": \"#FCC838\"},{\"serieName\": \"true, {null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"true, 13/12/2016 12 am\",\"color\": \"#8C62F5\"},{\"serieName\": \"true, 14/12/2016 02 am\",\"color\": \"#FF8142\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"dec 2016\",\"color\": \"#FCC838\"},{\"serieName\": \"{null}, 04/01/2022\",\"color\": \"#2E75F0\"},{\"serieName\": \"dec 2016, 07/04/2017\",\"color\": \"#48D1E0\"},{\"serieName\": \"07/04/2017\",\"color\": \"#2E75F0\"},{\"serieName\": \"04/01/2022\",\"color\": \"#48D1E0\"},{\"serieName\": \"07/04/2017, false\",\"color\": \"#2E75F0\"},{\"serieName\": \"07/04/2017, true\",\"color\": \"#48D1E0\"},{\"serieName\": \"04/01/2022, false\",\"color\": \"#FCC838\"},{\"serieName\": \"04/01/2022, true\",\"color\": \"#06BF7F\"},{\"serieName\": \"true\",\"color\": \"#06BF7F\"},{\"serieName\": \"bud richman\",\"color\": \"#06BF7F\"},{\"serieName\": \"david loo\",\"color\": \"#FCC838\"},{\"serieName\": \"howard johnson\",\"color\": \"#48D1E0\"},{\"serieName\": \"itil user\",\"color\": \"#2E75F0\"},{\"serieName\": \"01/04/2022\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 521da998-cc83-4363-8e3a-0e244b57e7f2
+  - id: Viz_25
+    answer:
+      name: Count of Opened Incidents by User Assigned Name
+      description: Number of Opened Incidents by User Assigned Name for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [User Assigned Name] sort by count [Incident Number] descending [Incident Status] [Incident Status] != [Incident Status].closed [Incident Status].resolved [Incident Status].{null} [Incident Opened At] = [Incident Opened At].'last 12 months' [Incident Opened At].'this month' [Incident Active] = 'true'"
+      answer_columns:
+      - name: Incident Status
+      - name: Incident Number
+      - name: Number of Incident Number
+      - name: User Assigned Name
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User Assigned Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - User Assigned Name
+        - Incident Status
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Incident Number\",\"width\": 142.0638885498047},{\"columnId\": \"Incident Status\",\"width\": 142.0638885498047},{\"columnId\": \"User Assigned Name\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: User Assigned Name
+        - column_id: Incident Status
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - User Assigned Name
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"User Assigned Name\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6ac5de36-b9e5-450d-8d38-e858c074331b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"6dc5d85d-2bf3-4516-8542-5fa2fc4e2d33\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User Assigned Name\"]}}],\"seriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#B094F8\"},{\"serieName\": \"39e9ebb33b08030050bec9bb34efc43c\",\"color\": \"#8C62F5\"},{\"serieName\": \"46b87022a9fe198101a78787e40d7547\",\"color\": \"#56D3A8\"},{\"serieName\": \"46c6f9efa9fe198101ddf5eed9adf6e7\",\"color\": \"#06BF7F\"},{\"serieName\": \"46ca0887a9fe19810191e08e51927ebf\",\"color\": \"#FCD977\"},{\"serieName\": \"46d44a23a9fe19810012d100cca80666\",\"color\": \"#FCC838\"},{\"serieName\": \"46d96f57a9fe198101947a9620895886\",\"color\": \"#369FAA\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2005\",\"color\": \"#82DFE9\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2007\",\"color\": \"#48D1E0\"},{\"serieName\": \"681b365ec0a80164000fb0b05854a0cd\",\"color\": \"#2359B6\"},{\"serieName\": \"97b1b43a73033300c5e4660c4cf6a75e\",\"color\": \"#71A1F4\"},{\"serieName\": \"9ee1b13dc6112271007f9d0efdb69cd0\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000001\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000002\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000003\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000004\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000005\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000006\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000007\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000008\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000009\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000010\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000011\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000012\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000013\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000014\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000015\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000016\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000017\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000018\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000019\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000020\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000021\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000024\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000025\",\"color\": \"#049160\"},{\"serieName\": \"inc0000026\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000027\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0000028\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0000029\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0000030\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0000031\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0000032\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0000033\",\"color\": \"#22636B\"},{\"serieName\": \"inc0000034\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0000035\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0000036\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0000037\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0000038\",\"color\": \"#163772\"},{\"serieName\": \"inc0000039\",\"color\": \"#71A1F4\"},{\"serieName\": \"inc0000040\",\"color\": \"#2359B6\"},{\"serieName\": \"inc0000041\",\"color\": \"#ABC7F9\"},{\"serieName\": \"inc0000044\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000046\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000047\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000048\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000049\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000050\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000051\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000052\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000053\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000054\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000055\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000057\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000058\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000059\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000060\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000501\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000502\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000503\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000504\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000505\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000506\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000507\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000511\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000530\",\"color\": \"#049160\"},{\"serieName\": \"inc0000601\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000930\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0001990\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0007001\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0007002\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0008001\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0008111\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0008112\",\"color\": \"#22636B\"},{\"serieName\": \"inc0009001\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0009002\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0009003\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0009004\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0009005\",\"color\": \"#163772\"},{\"serieName\": \"inc0009009\",\"color\": \"#71A1F4\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#369FAA\"}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#B094F8\"},{\"serieName\": \"39e9ebb33b08030050bec9bb34efc43c\",\"color\": \"#8C62F5\"},{\"serieName\": \"46b87022a9fe198101a78787e40d7547\",\"color\": \"#56D3A8\"},{\"serieName\": \"46c6f9efa9fe198101ddf5eed9adf6e7\",\"color\": \"#06BF7F\"},{\"serieName\": \"46ca0887a9fe19810191e08e51927ebf\",\"color\": \"#FCD977\"},{\"serieName\": \"46d44a23a9fe19810012d100cca80666\",\"color\": \"#FCC838\"},{\"serieName\": \"46d96f57a9fe198101947a9620895886\",\"color\": \"#369FAA\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2005\",\"color\": \"#82DFE9\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2007\",\"color\": \"#48D1E0\"},{\"serieName\": \"681b365ec0a80164000fb0b05854a0cd\",\"color\": \"#2359B6\"},{\"serieName\": \"97b1b43a73033300c5e4660c4cf6a75e\",\"color\": \"#71A1F4\"},{\"serieName\": \"9ee1b13dc6112271007f9d0efdb69cd0\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000001\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000002\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000003\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000004\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000005\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000006\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000007\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000008\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000009\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000010\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000011\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000012\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000013\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000014\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000015\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000016\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000017\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000018\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000019\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000020\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000021\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000024\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000025\",\"color\": \"#049160\"},{\"serieName\": \"inc0000026\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000027\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0000028\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0000029\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0000030\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0000031\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0000032\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0000033\",\"color\": \"#22636B\"},{\"serieName\": \"inc0000034\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0000035\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0000036\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0000037\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0000038\",\"color\": \"#163772\"},{\"serieName\": \"inc0000039\",\"color\": \"#71A1F4\"},{\"serieName\": \"inc0000040\",\"color\": \"#2359B6\"},{\"serieName\": \"inc0000041\",\"color\": \"#ABC7F9\"},{\"serieName\": \"inc0000044\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000046\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000047\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000048\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000049\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000050\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000051\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000052\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000053\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000054\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000055\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000057\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000058\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000059\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000060\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000501\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000502\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000503\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000504\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000505\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000506\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000507\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000511\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000530\",\"color\": \"#049160\"},{\"serieName\": \"inc0000601\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000930\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0001990\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0007001\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0007002\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0008001\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0008111\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0008112\",\"color\": \"#22636B\"},{\"serieName\": \"inc0009001\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0009002\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0009003\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0009004\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0009005\",\"color\": \"#163772\"},{\"serieName\": \"inc0009009\",\"color\": \"#71A1F4\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: de423990-d559-4633-9af4-b467e9b6a366
+  - id: Viz_26
+    answer:
+      name: Count of Closed Incidents by User Assigned Name
+      description: Number of Closed Incidents by User Assigned Name for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [User Assigned Name] sort by count [Incident Number] descending [Incident Status] [Incident Status] = [Incident Status].closed [Incident Status].resolved [Incident Closed At].'last 12 months' [Incident Closed At].'this month' [Incident Active] = 'false'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Incident Status
+      - name: User Assigned Name
+      - name: Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User Assigned Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - User Assigned Name
+        - Incident Status
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Incident Number\",\"width\": 142.0638885498047},{\"columnId\": \"Incident Status\",\"width\": 142.0638885498047},{\"columnId\": \"User Assigned Name\",\"width\": 142.0638885498047}],\"wrapTableHeader\": true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: User Assigned Name
+        - column_id: Incident Status
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - User Assigned Name
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}},{\"columnId\": \"User Assigned Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6ac5de36-b9e5-450d-8d38-e858c074331b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"6dc5d85d-2bf3-4516-8542-5fa2fc4e2d33\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User Assigned Name\"]}}],\"seriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#B094F8\"},{\"serieName\": \"39e9ebb33b08030050bec9bb34efc43c\",\"color\": \"#8C62F5\"},{\"serieName\": \"46b87022a9fe198101a78787e40d7547\",\"color\": \"#56D3A8\"},{\"serieName\": \"46c6f9efa9fe198101ddf5eed9adf6e7\",\"color\": \"#06BF7F\"},{\"serieName\": \"46ca0887a9fe19810191e08e51927ebf\",\"color\": \"#FCD977\"},{\"serieName\": \"46d44a23a9fe19810012d100cca80666\",\"color\": \"#FCC838\"},{\"serieName\": \"46d96f57a9fe198101947a9620895886\",\"color\": \"#369FAA\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2005\",\"color\": \"#82DFE9\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2007\",\"color\": \"#48D1E0\"},{\"serieName\": \"681b365ec0a80164000fb0b05854a0cd\",\"color\": \"#2359B6\"},{\"serieName\": \"97b1b43a73033300c5e4660c4cf6a75e\",\"color\": \"#71A1F4\"},{\"serieName\": \"9ee1b13dc6112271007f9d0efdb69cd0\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000001\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000002\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000003\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000004\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000005\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000006\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000007\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000008\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000009\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000010\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000011\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000012\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000013\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000014\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000015\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000016\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000017\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000018\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000019\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000020\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000021\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000024\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000025\",\"color\": \"#049160\"},{\"serieName\": \"inc0000026\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000027\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0000028\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0000029\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0000030\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0000031\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0000032\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0000033\",\"color\": \"#22636B\"},{\"serieName\": \"inc0000034\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0000035\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0000036\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0000037\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0000038\",\"color\": \"#163772\"},{\"serieName\": \"inc0000039\",\"color\": \"#71A1F4\"},{\"serieName\": \"inc0000040\",\"color\": \"#2359B6\"},{\"serieName\": \"inc0000041\",\"color\": \"#ABC7F9\"},{\"serieName\": \"inc0000044\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000046\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000047\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000048\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000049\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000050\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000051\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000052\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000053\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000054\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000055\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000057\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000058\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000059\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000060\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000501\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000502\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000503\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000504\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000505\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000506\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000507\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000511\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000530\",\"color\": \"#049160\"},{\"serieName\": \"inc0000601\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000930\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0001990\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0007001\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0007002\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0008001\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0008111\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0008112\",\"color\": \"#22636B\"},{\"serieName\": \"inc0009001\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0009002\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0009003\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0009004\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0009005\",\"color\": \"#163772\"},{\"serieName\": \"inc0009009\",\"color\": \"#71A1F4\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#369FAA\"}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#B094F8\"},{\"serieName\": \"39e9ebb33b08030050bec9bb34efc43c\",\"color\": \"#8C62F5\"},{\"serieName\": \"46b87022a9fe198101a78787e40d7547\",\"color\": \"#56D3A8\"},{\"serieName\": \"46c6f9efa9fe198101ddf5eed9adf6e7\",\"color\": \"#06BF7F\"},{\"serieName\": \"46ca0887a9fe19810191e08e51927ebf\",\"color\": \"#FCD977\"},{\"serieName\": \"46d44a23a9fe19810012d100cca80666\",\"color\": \"#FCC838\"},{\"serieName\": \"46d96f57a9fe198101947a9620895886\",\"color\": \"#369FAA\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2005\",\"color\": \"#82DFE9\"},{\"serieName\": \"5137153cc611227c000bbd1bd8cd2007\",\"color\": \"#48D1E0\"},{\"serieName\": \"681b365ec0a80164000fb0b05854a0cd\",\"color\": \"#2359B6\"},{\"serieName\": \"97b1b43a73033300c5e4660c4cf6a75e\",\"color\": \"#71A1F4\"},{\"serieName\": \"9ee1b13dc6112271007f9d0efdb69cd0\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000001\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000002\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000003\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000004\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000005\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000006\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000007\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000008\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000009\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000010\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000011\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000012\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000013\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000014\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000015\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000016\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000017\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000018\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000019\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000020\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000021\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000024\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000025\",\"color\": \"#049160\"},{\"serieName\": \"inc0000026\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000027\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0000028\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0000029\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0000030\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0000031\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0000032\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0000033\",\"color\": \"#22636B\"},{\"serieName\": \"inc0000034\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0000035\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0000036\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0000037\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0000038\",\"color\": \"#163772\"},{\"serieName\": \"inc0000039\",\"color\": \"#71A1F4\"},{\"serieName\": \"inc0000040\",\"color\": \"#2359B6\"},{\"serieName\": \"inc0000041\",\"color\": \"#ABC7F9\"},{\"serieName\": \"inc0000044\",\"color\": \"#2E75F0\"},{\"serieName\": \"inc0000046\",\"color\": \"#721F27\"},{\"serieName\": \"inc0000047\",\"color\": \"#F47E89\"},{\"serieName\": \"inc0000048\",\"color\": \"#B6313E\"},{\"serieName\": \"inc0000049\",\"color\": \"#F9B3B9\"},{\"serieName\": \"inc0000050\",\"color\": \"#F04152\"},{\"serieName\": \"inc0000051\",\"color\": \"#2F3947\"},{\"serieName\": \"inc0000052\",\"color\": \"#A2ACBA\"},{\"serieName\": \"inc0000053\",\"color\": \"#47515F\"},{\"serieName\": \"inc0000054\",\"color\": \"#BEC6D0\"},{\"serieName\": \"inc0000055\",\"color\": \"#747E8C\"},{\"serieName\": \"inc0000057\",\"color\": \"#7A3D1F\"},{\"serieName\": \"inc0000058\",\"color\": \"#FFA97E\"},{\"serieName\": \"inc0000059\",\"color\": \"#C26232\"},{\"serieName\": \"inc0000060\",\"color\": \"#FFCCB3\"},{\"serieName\": \"inc0000501\",\"color\": \"#FF8142\"},{\"serieName\": \"inc0000502\",\"color\": \"#422E75\"},{\"serieName\": \"inc0000503\",\"color\": \"#B094F8\"},{\"serieName\": \"inc0000504\",\"color\": \"#6A4ABA\"},{\"serieName\": \"inc0000505\",\"color\": \"#D1C0FB\"},{\"serieName\": \"inc0000506\",\"color\": \"#8C62F5\"},{\"serieName\": \"inc0000507\",\"color\": \"#025B3C\"},{\"serieName\": \"inc0000511\",\"color\": \"#56D3A8\"},{\"serieName\": \"inc0000530\",\"color\": \"#049160\"},{\"serieName\": \"inc0000601\",\"color\": \"#9BE5CB\"},{\"serieName\": \"inc0000930\",\"color\": \"#06BF7F\"},{\"serieName\": \"inc0001990\",\"color\": \"#785F1A\"},{\"serieName\": \"inc0007001\",\"color\": \"#FCD977\"},{\"serieName\": \"inc0007002\",\"color\": \"#BF982A\"},{\"serieName\": \"inc0008001\",\"color\": \"#FDE9AF\"},{\"serieName\": \"inc0008111\",\"color\": \"#FCC838\"},{\"serieName\": \"inc0008112\",\"color\": \"#22636B\"},{\"serieName\": \"inc0009001\",\"color\": \"#82DFE9\"},{\"serieName\": \"inc0009002\",\"color\": \"#369FAA\"},{\"serieName\": \"inc0009003\",\"color\": \"#B5ECF2\"},{\"serieName\": \"inc0009004\",\"color\": \"#48D1E0\"},{\"serieName\": \"inc0009005\",\"color\": \"#163772\"},{\"serieName\": \"inc0009009\",\"color\": \"#71A1F4\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: bc11d922-f26f-455c-adc7-a93f8effba0f
+  - id: Viz_27
+    answer:
+      name: Open Incidents by Priority Monthly
+      description: Number of Incidents by Priority for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [Incident Priority] [Incident Opened At].monthly [Incident Opened At].'last 12 months' [Incident Opened At].'this month' [Incident Active] = 'true'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Month(Incident Opened At)
+      - name: Incident Priority
+      - name: Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Incident Opened At)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - Incident Priority
+        - Month(Incident Opened At)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Incident Priority
+        - column_id: Month(Incident Opened At)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Month(Incident Opened At)
+          "y":
+          - Number of Incident Number
+          color:
+          - Incident Priority
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Incident Priority\",\"columnProperty\": {}},{\"columnId\": \"Month(Incident Opened At)\",\"columnProperty\": {}},{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"40aa8f4a-eb18-4955-b4a2-eb3d16aa9988\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"efc21769-fe6e-46b0-b82b-e213bd9c655f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Incident Opened At)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#2E75F0\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#06BF7F\"},{\"serieName\": \"5\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d6df3e13-a5d8-4d1c-bbec-3281961a8356
+  - id: Viz_28
+    answer:
+      name: Count of All Incidents by Escalation Status
+      description: Incident by Escalation Status for Last 12 months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [Incident Escalation] [Incident Escalation Status] [Incident Sys Created On] [Incident Sys Created On].daily [Incident Sys Created On].'last 12 months' [Incident Sys Created On].'this month'"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Day(Incident Sys Created On)
+      - name: Incident Number
+      - name: Incident Escalation
+      - name: Incident Escalation Status
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Escalation
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Escalation Status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(Incident Sys Created On)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - Incident Escalation
+        - Incident Escalation Status
+        - Day(Incident Sys Created On)
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: Incident Escalation
+        - column_id: Incident Escalation Status
+        - column_id: Day(Incident Sys Created On)
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Incident Escalation Status
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"b029dacb-1897-4b7b-9015-208c748bedee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"b19dc403-cc1d-471f-bf38-6822ac6748a7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Escalation Status\"]}}],\"systemSeriesColors\": [{\"serieName\": \"0, 0-normal\",\"color\": \"#06BF7F\"},{\"serieName\": \"1, 1-moderate\",\"color\": \"#FCC838\"},{\"serieName\": \"2, 2-high\",\"color\": \"#48D1E0\"},{\"serieName\": \"3, 3-overdue\",\"color\": \"#2E75F0\"},{\"serieName\": \"0\",\"color\": \"#06BF7F\"},{\"serieName\": \"1\",\"color\": \"#FCC838\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#2E75F0\"},{\"serieName\": \"0-normal, 0\",\"color\": \"#06BF7F\"},{\"serieName\": \"1-moderate, 1\",\"color\": \"#FCC838\"},{\"serieName\": \"2-high, 2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3-overdue, 3\",\"color\": \"#2E75F0\"},{\"serieName\": \"0-normal\",\"color\": \"#06BF7F\"},{\"serieName\": \"1-moderate\",\"color\": \"#FCC838\"},{\"serieName\": \"2-high\",\"color\": \"#48D1E0\"},{\"serieName\": \"3-overdue\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2f589ef0-460c-4768-88cf-c8bcc2e774b9
+  - id: Viz_29
+    answer:
+      name: Count of Incident SLA by Stage
+      description: Incident SLA by Stage for Last 12 Months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [SLA Type] [SLA Type] = 'sla' [SLA Stage] [SLA Stage] != 'cancelled' sort by count [Incident Number] descending [Incident Opened At].'last 12 months' [Incident Opened At].'this month'"
+      answer_columns:
+      - name: SLA Type
+      - name: SLA Stage
+      - name: Number of Incident Number
+        format:
+          category: NUMBER
+          numberFormatConfig:
+            unit: AUTO
+            decimals: 0.0
+            negativeValueFormat: PREFIX_DASH
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Incident Number
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: SLA Stage
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - SLA Type
+        - SLA Stage
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: SLA Type
+        - column_id: SLA Stage
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - SLA Stage
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Incident Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"43d5ae1a-1f97-4445-b6e8-adee93694db7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"d4115482-4b99-4b45-a9fa-6fb9dee0a38c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SLA Stage\"]}}],\"systemSeriesColors\": [{\"serieName\": \"sla, in_progress\",\"color\": \"#48D1E0\"},{\"serieName\": \"sla, paused\",\"color\": \"#2E75F0\"},{\"serieName\": \"sla\",\"color\": \"#48D1E0\"},{\"serieName\": \"Number of Incident Number\",\"color\": \"#747E8C\"},{\"serieName\": \"in_progress\",\"color\": \"#48D1E0\"},{\"serieName\": \"paused\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2c3712f2-b260-4abb-a9b5-805db142153f
+  - id: Viz_30
+    answer:
+      name: Count of Incidents by User Group Name
+      description: Incident Number by User Group Name for Last 12 months
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Incident Number] [User Group Name] [Incident Closed At].'last 12 months' [Incident Closed At].'this month' sort by count [Incident Number] descending"
+      answer_columns:
+      - name: Incident Number
+      - name: Number of Incident Number
+      - name: User Group Name
+      table:
+        table_columns:
+        - column_id: Incident Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User Group Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Number
+        - User Group Name
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Incident Number
+        - column_id: User Group Name
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - User Group Name
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"db19151e-5ea1-4844-9579-adc1569fd476\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"27765e54-35a4-4df9-9b85-e81161148c66\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User Group Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 66a27592-5abc-41d5-b38b-98759dc4abc9
+  - id: Viz_31
+    answer:
+      name: Top 10 Incidents by Business Service
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Business Service Name] [Business Service Name] != '{null}' sort by count [Incident Number] top 10"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Business Service Name
+      table:
+        table_columns:
+        - column_id: Business Service Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Business Service Name
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Business Service Name
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Business Service Name
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"b8fcf21b-263f-4223-b321-a04201c54187\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"90fa27a0-e105-4ad0-b3d8-9a7e5c99beab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Business Service Name\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#6A4ABA\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 26782c3b-f397-4843-a54c-919a8d2e842f
+  - id: Viz_32
+    answer:
+      name: Top 10 Incidents by Config Item Name
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Config Item Name] [Config Item Name] != [Config Item Name].{null} [Config Item Name].{empty} top 10"
+      answer_columns:
+      - name: Config Item Name
+      - name: Number of Incident Number
+      table:
+        table_columns:
+        - column_id: Config Item Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Config Item Name
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Config Item Name
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Config Item Name
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"0feb43cc-d3c8-47a0-879b-1f9c46388014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"6d13674c-dd0e-4bb6-bd35-6b505b07c177\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Config Item Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Incident Number\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: dd03aff6-5779-4931-bdf3-5cdb0e0136d6
+  - id: Viz_33
+    answer:
+      name: Count of Incidents by Service Offering
+      tables:
+      - id: ServiceNow Incident Management
+        name: ServiceNow Incident Management
+      search_query: "count [Incident Number] [Service Offering] [Service Offering] != '{null}' top 10"
+      answer_columns:
+      - name: Number of Incident Number
+      - name: Service Offering
+      table:
+        table_columns:
+        - column_id: Service Offering
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Service Offering
+        - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Service Offering
+        - column_id: Number of Incident Number
+        axis_configs:
+        - x:
+          - Service Offering
+          "y":
+          - Number of Incident Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"0878f701-9f9a-4f7e-bc98-472a4334bfe4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Incident Number\"],\"isOpposite\": false}},{\"id\": \"21a62bd0-caab-4261-83d3-6d6c88120c90\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Service Offering\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 60eec677-6989-4af3-b258-359a32b13961
+  filters:
+  - column:
+    - Incident Category
+    is_mandatory: false
+  - column:
+    - CMN Country
+    is_mandatory: false
+  - column:
+    - User Group Name
+    is_mandatory: false
+  layout:
+    tiles:
+    - visualization_id: Viz_8
+      size: EXTRA_SMALL
+    - visualization_id: Viz_12
+      size: EXTRA_SMALL
+    - visualization_id: Viz_5
+      size: EXTRA_SMALL
+    - visualization_id: Viz_6
+      size: EXTRA_SMALL
+    - visualization_id: Viz_7
+      size: EXTRA_SMALL
+    - visualization_id: Viz_17
+      size: EXTRA_SMALL
+    - visualization_id: Viz_18
+      size: EXTRA_SMALL
+    - visualization_id: Viz_16
+      size: EXTRA_SMALL
+    - visualization_id: Viz_13
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_4
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_14
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_1
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_2
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_3
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_11
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_19
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_9
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_27
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_28
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_10
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_15
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_23
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_20
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_22
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_29
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_24
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_21
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_30
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_25
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_26
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_31
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_32
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_33
+      size: MEDIUM_SMALL
