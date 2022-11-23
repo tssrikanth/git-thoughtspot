@@ -1,0 +1,226 @@
+guid: e36ee65e-64be-436b-a29a-22d8998c4fae
+liveboard:
+  name: Genericjoin Pinboard 1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric-2
+        name: Generic-NonGeneric-2
+      search_query: "[Category] [Customer Region] [genericjoinformula1] = true [Industry] [Tax]"
+      answer_columns:
+      - name: Category
+      - name: Industry
+      - name: Total Tax
+      - name: Customer Region
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Industry
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Customer Region
+        - Industry
+        - Total Tax
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Customer Region
+        - column_id: Industry
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Customer Region
+          "y":
+          - Total Tax
+          color:
+          - Industry
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"cc10fa3b-31a8-4fa7-a34d-8e0230e7ff75\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":false},\"b58d7967-303e-4b12-8ffd-1e3ae723c5c0\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Category\":{},\"Customer Region\":{},\"Industry\":{},\"Total Tax\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 0659dc4e-7dbb-4c1c-ab77-b2a34c6b60e4
+  - id: Viz_2
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric-2
+        name: Generic-NonGeneric-2
+      search_query: "[Category] [Customer Region] [genericjoinformula1] = true [genericjoinformula] = true"
+      answer_columns:
+      - name: Category
+      - name: Customer Region
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Category
+        - Customer Region
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Category
+        - column_id: Customer Region
+        axis_configs:
+        - x:
+          - Customer Region
+          "y":
+          - Category
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: cded2f2f-faf9-4ecd-9e29-c872ad6d8665
+  - id: Viz_3
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric-2
+        name: Generic-NonGeneric-2
+      search_query: "[Revenue] [genericjoinformula1] = true"
+      answer_columns:
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Revenue
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Revenue
+        axis_configs:
+        - "y":
+          - Total Revenue
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 57bf4410-80ed-426d-a6ad-4ebd7867d45f
+  - id: Viz_4
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric-2
+        name: Generic-NonGeneric-2
+      search_query: "[Revenue] [Industry]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Industry
+      table:
+        table_columns:
+        - column_id: Industry
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Industry
+        - Total Revenue
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Industry
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Industry
+          "y":
+          - Total Revenue
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"c64429e4-d14e-417e-9481-492e6e516f42\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"1efd69e2-b644-4c4f-9fc8-716906720fb7\":{\"linkedColumns\":[\"Industry\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Industry\":{},\"Total Revenue\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: f628ab2d-e8be-46dc-ba34-7ed833dfd250
+  - id: Viz_5
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric-2
+        name: Generic-NonGeneric-2
+      formulas:
+      - id: formulainanswer
+        name: formulainanswer
+        expr: "[Industry] = 'automobile'"
+        was_auto_generated: false
+      search_query: "[Discount] [Market Segment] [formulainanswer] = true"
+      answer_columns:
+      - name: Total Discount
+      - name: Market Segment
+      table:
+        table_columns:
+        - column_id: Market Segment
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Market Segment
+        - Total Discount
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Market Segment
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Market Segment
+          "y":
+          - Total Discount
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"667a5a85-5740-4fa0-b1db-f8e730514911\":{\"linkedColumns\":[\"Total Discount\"],\"axisType\":\"Y\",\"isOpposite\":false},\"cd15f106-d2e9-40a6-a695-8a84e85bf29b\":{\"linkedColumns\":[\"Market Segment\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Total Discount\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 09e0e13e-ed66-4e2e-9431-4244ff91c9db
+  - id: Viz_6
+    answer:
+      name: Chart 1
+      tables:
+      - id: Generic-NonGeneric-2
+        name: Generic-NonGeneric-2
+      search_query: "[Tax] [genericjoinformula1] = true [Market Segment]"
+      answer_columns:
+      - name: Market Segment
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Market Segment
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Market Segment
+        - Total Tax
+        client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Market Segment
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Market Segment
+          "y":
+          - Total Tax
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"20c48336-fbb2-43c8-9d1e-1b785c2465e5\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":false},\"3d45023c-b703-4bab-8d6a-d6e2a71a9a50\":{\"linkedColumns\":[\"Market Segment\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Total Tax\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 85a00ef4-e904-49ef-b7ad-44579673b67a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
+    - visualization_id: Viz_2
+      size: LARGE
+    - visualization_id: Viz_3
+      size: LARGE
+    - visualization_id: Viz_4
+      size: LARGE
+    - visualization_id: Viz_5
+      size: LARGE
+    - visualization_id: Viz_6
+      size: MEDIUM
