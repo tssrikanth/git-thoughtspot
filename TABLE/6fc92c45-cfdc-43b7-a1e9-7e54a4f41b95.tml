@@ -1,0 +1,26 @@
+guid: 6fc92c45-cfdc-43b7-a1e9-7e54a4f41b95
+table:
+  name: rls_sales_detail_general
+  db: rls_test
+  schema: falcon_default_schema
+  db_table: rls_sales_detail_general
+  columns:
+  - name: SALE_DETAIL_ID
+    db_column_name: SALE_DETAIL_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: SALE_DETAIL_DESCRIPTION
+    db_column_name: SALE_DETAIL_DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: SALE_DETAIL_ID - SALE_DETAIL_ID
+    destination:
+      name: rls_sales_detail_mapping
+    "on": "[rls_sales_detail_general::SALE_DETAIL_ID] = [rls_sales_detail_mapping::SALE_DETAIL_ID]"
+    type: INNER
