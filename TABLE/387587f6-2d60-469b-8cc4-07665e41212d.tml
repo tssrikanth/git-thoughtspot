@@ -1,0 +1,40 @@
+guid: 387587f6-2d60-469b-8cc4-07665e41212d
+table:
+  name: contract_sla
+  db: SPOTAPPS_DB
+  schema: SERVICENOW
+  db_table: contract_sla
+  connection:
+    name: conn_snow_nov11_tst
+  columns:
+  - name: TYPE
+    db_column_name: TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DURATION
+    db_column_name: DURATION
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: SYS_ID
+    db_column_name: SYS_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SYS_NAME
+    db_column_name: SYS_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TARGET
+    db_column_name: TARGET
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
