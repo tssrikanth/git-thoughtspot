@@ -82,10 +82,10 @@ liveboard:
         was_auto_generated: false
       search_query: "[Timestamp] [Timestamp].weekly count [Incident Id] [Timestamp].weekly unique count [User] average [latency in seconds] [Timestamp].'last 60 days' [Timestamp].today [URL] = [URL].data/reportbook [URL].tspublic/v1/pinboarddata [URL].data/answerbook/export [URL].answer"
       answer_columns:
-      - name: Average latency in seconds
-      - name: Unique Number of User
-      - name: Week(Timestamp)
       - name: Number of Incident Id
+      - name: Average latency in seconds
+      - name: Week(Timestamp)
+      - name: Unique Number of User
       table:
         table_columns:
         - column_id: Week(Timestamp)
@@ -131,9 +131,9 @@ liveboard:
       search_query: "[table_guid] [table_name] count [cycle_id] [load_start].'last 7 days' [load_start].today [load_start] [load_start].daily"
       answer_columns:
       - name: Number of cycle_id
-      - name: Day(load_start)
-      - name: table_name
       - name: table_guid
+      - name: table_name
+      - name: Day(load_start)
       table:
         table_columns:
         - column_id: table_guid
@@ -210,13 +210,13 @@ liveboard:
         was_auto_generated: false
       search_query: "[Request Percentage] by [Latency Bucket (seconds)] [Is Data Query] = true [Timestamp].'last 7 days'"
       answer_columns:
+      - name: Latency Bucket (seconds)
       - name: Total Request Percentage
         format:
           category: PERCENTAGE
           percentageFormatConfig:
             decimals: 2.0
           isCategoryEditable: true
-      - name: Latency Bucket (seconds)
       table:
         table_columns:
         - column_id: Latency Bucket (seconds)
@@ -283,13 +283,13 @@ liveboard:
         was_auto_generated: false
       search_query: "[Request Percentage] by [Latency Bucket (seconds)] [Is Data Query] = true [Timestamp].'last 30 days'"
       answer_columns:
-      - name: Latency Bucket (seconds)
       - name: Total Request Percentage
         format:
           category: PERCENTAGE
           percentageFormatConfig:
             decimals: 2.0
           isCategoryEditable: true
+      - name: Latency Bucket (seconds)
       table:
         table_columns:
         - column_id: Latency Bucket (seconds)
@@ -423,8 +423,8 @@ liveboard:
         was_auto_generated: false
       search_query: "[Is Data Query] = true [Timestamp].'last 30 days' count [Incident Id] [Timestamp].hourly"
       answer_columns:
-      - name: Number of Incident Id
       - name: Hour(Timestamp)
+      - name: Number of Incident Id
       table:
         table_columns:
         - column_id: Hour(Timestamp)
@@ -556,8 +556,8 @@ liveboard:
         was_auto_generated: false
       search_query: "[Timestamp].'last 90 days' average [Latency (Seconds)] [User] [Is Data Query] = true sort by average [Latency (Seconds)] descending"
       answer_columns:
-      - name: User
       - name: Average Latency (Seconds)
+      - name: User
       table:
         table_columns:
         - column_id: User
@@ -637,11 +637,11 @@ liveboard:
         was_auto_generated: false
       search_query: "[Timestamp] [Timestamp].detailed [Incident Id] [URL] = 'data/reportbook' [User] [Answer Book Name] average [Latency (Seconds)] sort by average [Latency (Seconds)] descending [Timestamp].'last 7 days' [User] != '{null}'"
       answer_columns:
-      - name: Incident Id
       - name: User
-      - name: Timestamp
       - name: Answer Book Name
+      - name: Incident Id
       - name: Average Latency (Seconds)
+      - name: Timestamp
       table:
         table_columns:
         - column_id: Timestamp
@@ -716,13 +716,13 @@ liveboard:
         was_auto_generated: false
       search_query: "[Timestamp] [Timestamp].detailed [Incident Id] [User] [Answer Book Name] average [Latency (Seconds)] sort by average [Latency (Seconds)] descending [Timestamp].'last 7 days' [User] != '{null}' [Query Text] [Query Text] != '{null}' [URL]"
       answer_columns:
-      - name: Incident Id
-      - name: Answer Book Name
       - name: URL
-      - name: Query Text
-      - name: Timestamp
-      - name: User
       - name: Average Latency (Seconds)
+      - name: Timestamp
+      - name: Answer Book Name
+      - name: Incident Id
+      - name: Query Text
+      - name: User
       table:
         table_columns:
         - column_id: Timestamp
