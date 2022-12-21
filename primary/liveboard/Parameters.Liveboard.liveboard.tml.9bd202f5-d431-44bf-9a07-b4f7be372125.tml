@@ -36,7 +36,7 @@ liveboard:
         - "y":
           - Total Partial Revenue
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f20d703e-b57a-4030-b02d-04e2f09fb393\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Revenue\"],\"isOpposite\": false}},{\"id\": \"f803da65-fc2a-49bb-8150-607a29de2a7b\",\"properties\": {\"axisType\": \"X\"}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c77b507b-4034-4990-803c-6f4fe27a8a9e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Revenue\"],\"isOpposite\": false}},{\"id\": \"2802c9a0-5874-419d-9dce-43df5fdb6c10\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: db0badd5-47c6-400a-842d-133a7b44d435
   - id: Viz_2
@@ -77,7 +77,7 @@ liveboard:
         - "y":
           - Total Partial Quantity
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f73443af-974f-4d01-b03b-13ae01efb7e0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Quantity\"],\"isOpposite\": false}},{\"id\": \"dfb9323b-92b2-4d9c-81a0-eb2d7b4ab0d9\",\"properties\": {\"axisType\": \"X\"}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"25b69fec-0614-4af9-a026-32a962767db6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Quantity\"],\"isOpposite\": false}},{\"id\": \"b1d9fcb0-009c-4a0f-a1db-eacf2d15c0d7\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 43c9f421-410f-4564-b624-2b3acc4ea8cd
   - id: Viz_3
