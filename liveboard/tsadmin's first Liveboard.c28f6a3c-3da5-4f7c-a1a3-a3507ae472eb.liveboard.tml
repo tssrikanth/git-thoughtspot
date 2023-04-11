@@ -1,0 +1,45 @@
+guid: c28f6a3c-3da5-4f7c-a1a3-a3507ae472eb
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total BYTES by Monthly CREATED
+      tables:
+      - id: TABLES
+        name: TABLES
+        fqn: cef63e19-7251-43b3-8e1a-3ebe93091585
+      search_query: "[BYTES] [CREATED] [CREATED].monthly [AUTO_CLUSTERING_ON]"
+      answer_columns:
+      - name: Total BYTES
+      - name: Month(CREATED)
+      - name: AUTO_CLUSTERING_ON
+      table:
+        table_columns:
+        - column_id: Month(CREATED)
+          headline_aggregation: MIN-MAX
+        - column_id: AUTO_CLUSTERING_ON
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total BYTES
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(CREATED)
+        - AUTO_CLUSTERING_ON
+        - Total BYTES
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(CREATED)
+        - column_id: AUTO_CLUSTERING_ON
+        - column_id: Total BYTES
+        axis_configs:
+        - x:
+          - Month(CREATED)
+          "y":
+          - Total BYTES
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"49e9820e-c83a-46d5-94ee-9823ab5364b5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total BYTES\"],\"isOpposite\": false}},{\"id\": \"87bb26e1-d599-430d-b8fc-c4ec8b96c690\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(CREATED)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total BYTES\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ba8c41c1-0b06-4b40-8ac7-125deb6e9662
