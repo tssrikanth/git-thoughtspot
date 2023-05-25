@@ -1,0 +1,79 @@
+guid: 112f0974-6905-44cb-adbd-814f0ed4967b
+table:
+  name: BILLING
+  db: SPOTAPPS_DB
+  schema: DATABRICKS
+  db_table: BILLING
+  connection:
+    name: sqefwet_test
+    fqn: cac0fea5-9ed6-4ef4-984b-741016989e8c
+  columns:
+  - name: workspaceId
+    db_column_name: workspaceId
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: timestamp
+    db_column_name: timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: clusterId
+    db_column_name: clusterId
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: clusterName
+    db_column_name: clusterName
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: clusterNodeType
+    db_column_name: clusterNodeType
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: clusterOwnerUserId
+    db_column_name: clusterOwnerUserId
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: clusterCustomTags
+    db_column_name: clusterCustomTags
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: sku
+    db_column_name: sku
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: dbus
+    db_column_name: dbus
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: machineHours
+    db_column_name: machineHours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
