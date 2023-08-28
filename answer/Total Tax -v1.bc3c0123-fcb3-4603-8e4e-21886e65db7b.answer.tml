@@ -1,0 +1,42 @@
+guid: bc3c0123-fcb3-4603-8e4e-21886e65db7b
+answer:
+  name: Total Tax -v1
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Tax] [Commit Date].'hour of day' [Commit Date].'day of week'"
+  answer_columns:
+  - name: Total Tax
+  - name: HOUR_OF_DAY(Commit Date)
+  - name: Day of Week(Commit Date)
+  table:
+    table_columns:
+    - column_id: HOUR_OF_DAY(Commit Date)
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Day of Week(Commit Date)
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - HOUR_OF_DAY(Commit Date)
+    - Day of Week(Commit Date)
+    - Total Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: HOUR_OF_DAY(Commit Date)
+    - column_id: Day of Week(Commit Date)
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Day of Week(Commit Date)
+      "y":
+      - Total Tax
+      color:
+      - HOUR_OF_DAY(Commit Date)
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"HOUR_OF_DAY(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Commit Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3a656717-1c87-42fb-a244-dc18e5480763\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"bb4a7fb6-40de-4443-8994-e0926c0581e4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Commit Date)\"]}}]}"
+  display_mode: TABLE_MODE
