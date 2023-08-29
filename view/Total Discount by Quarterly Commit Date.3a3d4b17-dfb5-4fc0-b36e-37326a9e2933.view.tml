@@ -1,0 +1,24 @@
+guid: 3a3d4b17-dfb5-4fc0-b36e-37326a9e2933
+view:
+  name: Total Discount by Quarterly Commit Date
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Commit Date] [Commit Date].monthly [Discount] [Category]"
+  view_columns:
+  - name: Month(Commit Date)
+    search_output_column: Month(Commit Date)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MMM yyyy
+  - name: Category
+    search_output_column: Category
+    properties:
+      column_type: ATTRIBUTE
+  - name: Total Discount
+    search_output_column: Total Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
