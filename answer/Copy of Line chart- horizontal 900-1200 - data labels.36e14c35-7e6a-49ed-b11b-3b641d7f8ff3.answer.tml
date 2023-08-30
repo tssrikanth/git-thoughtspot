@@ -1,0 +1,70 @@
+guid: 36e14c35-7e6a-49ed-b11b-3b641d7f8ff3
+answer:
+  name: Copy of Line chart- horizontal 900-1200 - data labels
+  tables:
+  - id: CUSTOMER
+    name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  joins:
+  - id: Lineorder CustKey - Customer CustKey
+    name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  search_query: "[LINEORDER_1::Quantity] [LINEORDER_1::Tax] [LINEORDER_1::Discount] [CUSTOMER_1::Market Segment] [CUSTOMER_1::Customer Region]"
+  answer_columns:
+  - name: Total Quantity
+  - name: Total Tax
+  - name: Total Discount
+  - name: Market Segment
+  - name: Customer Region
+  table:
+    table_columns:
+    - column_id: Market Segment
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Customer Region
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Quantity
+      headline_aggregation: SUM
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Market Segment
+    - Customer Region
+    - Total Quantity
+    - Total Tax
+    - Total Discount
+    client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Market Segment
+    - column_id: Customer Region
+    - column_id: Total Quantity
+    - column_id: Total Tax
+    - column_id: Total Discount
+    axis_configs:
+    - x:
+      - Customer Region
+      "y":
+      - Total Discount
+      color:
+      - Market Segment
+    client_state: "{\"dataLabels\":true,\"seriesColors\":{\"total tax\":\"#940713\"},\"yAxisRange\":{\"min\":900.0,\"max\":1200.0},\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"afa10688-7c9c-45d0-84a4-ddfcf55d1f1f\":{\"linkedColumns\":[\"Total Discount\"],\"axisType\":\"Y\",\"yAxisRange\":{\"min\":900.0,\"max\":1200.0},\"isOpposite\":false},\"7d846613-cadc-4f09-978c-b5896159ba37\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Quantity\":\"#e3394a\",\"Total Tax\":\"#68b8e3\",\"Total Discount\":\"#f5cb4e\",\"automobile\":\"#e3394a\",\"building\":\"#68b8e3\",\"furniture\":\"#f5cb4e\",\"household\":\"#4074b3\",\"machinery\":\"#35b06e\"},\"yAxisShared\":true,\"gridLineConfig\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{\"dataLabels\":true},\"Customer Region\":{\"dataLabels\":true},\"Total Quantity\":{\"dataLabels\":true},\"Total Tax\":{\"dataLabels\":true},\"Total Discount\":{\"dataLabels\":true}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Market Segment\",\"columnProperty\": {}},{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3f967d3d-268f-4e72-a95b-1b73da85a533\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"5d0e6de8-5efa-420e-9b2f-d0de17c0d09d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"automobile\",\"color\": \"#2E75F0\"},{\"serieName\": \"building\",\"color\": \"#48D1E0\"},{\"serieName\": \"furniture\",\"color\": \"#FCC838\"},{\"serieName\": \"household\",\"color\": \"#06BF7F\"},{\"serieName\": \"machinery\",\"color\": \"#8C62F5\"}]}"
+  display_mode: CHART_MODE
