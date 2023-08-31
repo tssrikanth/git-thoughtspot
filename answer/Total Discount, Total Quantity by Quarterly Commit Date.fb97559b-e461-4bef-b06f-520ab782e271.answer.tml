@@ -5,29 +5,34 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Commit Date] [Commit Date].quarterly [Discount] [Quantity]"
+  search_query: "[Commit Date] [Commit Date].quarterly [Discount] [Quantity] [Container]"
   answer_columns:
   - name: Quarter(Commit Date)
   - name: Total Discount
   - name: Total Quantity
+  - name: Container
   table:
     table_columns:
     - column_id: Quarter(Commit Date)
       headline_aggregation: MIN-MAX
+    - column_id: Container
+      headline_aggregation: COUNT_DISTINCT
     - column_id: Total Discount
       headline_aggregation: SUM
     - column_id: Total Quantity
       headline_aggregation: SUM
     ordered_column_ids:
     - Quarter(Commit Date)
+    - Container
     - Total Discount
     - Total Quantity
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: STACKED_COLUMN
+    type: BAR
     chart_columns:
     - column_id: Quarter(Commit Date)
+    - column_id: Container
     - column_id: Total Discount
     - column_id: Total Quantity
     axis_configs:
@@ -37,5 +42,5 @@ answer:
       - Total Discount
       - Total Quantity
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5de89cf0-a9a8-4e27-8a55-4a7b1c5fd66b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\",\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"5536b494-0bf6-4397-aa32-9db296945bb5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Container\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"594e6650-c778-4fe9-91de-612bdf345a9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"01841b6e-ab57-41b1-bdc7-e2a5d72630a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"403cc41c-82d0-4ac2-b881-ab0184680fa4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
