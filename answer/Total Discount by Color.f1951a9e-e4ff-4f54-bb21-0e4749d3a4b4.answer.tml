@@ -1,0 +1,35 @@
+guid: f1951a9e-e4ff-4f54-bb21-0e4749d3a4b4
+answer:
+  name: Total Discount by Color
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Discount] [Color]"
+  answer_columns:
+  - name: Total Discount
+  - name: Color
+  table:
+    table_columns:
+    - column_id: Color
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Color
+    - Total Discount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Color
+    - column_id: Total Discount
+    axis_configs:
+    - x:
+      - Color
+      "y":
+      - Total Discount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f0a08ab1-708d-4beb-87fa-6de9358db7c0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"2bdff4f2-fd1e-4d91-9b25-359e5abbe62c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#747E8C\"}],\"tooltipConfig\": {}}"
+  display_mode: CHART_MODE
