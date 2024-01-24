@@ -1,6 +1,7 @@
 guid: bbb91d3d-4c0a-4f9c-98d5-ad61c4262eff
 answer:
   name: Total sales by city
+  description: "123"
   tables:
   - id: (Sample) Retail - Apparel
     name: (Sample) Retail - Apparel
