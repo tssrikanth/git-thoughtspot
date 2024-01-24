@@ -1,7 +1,6 @@
 guid: a832386d-43cb-4187-94a4-f8e4a863f63a
 liveboard:
   name: TEST
-  description: QWEDA
   visualizations:
   - id: Viz_1
     answer:
