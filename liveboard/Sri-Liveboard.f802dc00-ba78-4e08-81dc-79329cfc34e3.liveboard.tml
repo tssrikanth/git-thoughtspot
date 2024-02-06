@@ -56,6 +56,12 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Attribute Count\",\"columnProperty\": {}},{\"columnId\": \"Total Database Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}},{\"columnId\": \"Total Postgres Queries\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"efe3aed5-5428-4c27-b003-1158969ec6e1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"353af860-9bf2-4a4b-a532-add8cc769311\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Database Latency (us)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"rgba(252,200,56,0.5)\"}]}"
       display_mode: CHART_MODE
     viz_guid: 7b9a4098-e8fa-44e3-8bca-694ead5ea311
+  filters:
+  - column:
+    - Answer Book GUID
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_1
