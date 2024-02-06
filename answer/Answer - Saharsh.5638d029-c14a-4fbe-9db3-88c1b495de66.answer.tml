@@ -5,53 +5,37 @@ answer:
   - id: "TS: BI Server"
     name: "TS: BI Server"
     fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
-  search_query: "[Latency (us)] [Response Size] [User] [Postgres Queries] [Browser Version] [Client Type]"
+  search_query: "[Latency (us)] [Response Size] [User]"
   answer_columns:
-  - name: Total Latency (us)
   - name: Total Response Size
   - name: User
-  - name: Total Postgres Queries
-  - name: Browser Version
-  - name: Client Type
+  - name: Total Latency (us)
   table:
     table_columns:
     - column_id: User
-      show_headline: false
-    - column_id: Browser Version
-      show_headline: false
-    - column_id: Client Type
       show_headline: false
     - column_id: Total Latency (us)
       show_headline: false
     - column_id: Total Response Size
       show_headline: false
-    - column_id: Total Postgres Queries
-      show_headline: false
     ordered_column_ids:
     - User
-    - Browser Version
-    - Client Type
     - Total Latency (us)
     - Total Response Size
-    - Total Postgres Queries
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
     type: COLUMN
     chart_columns:
-    - column_id: User
-    - column_id: Browser Version
-    - column_id: Client Type
-    - column_id: Total Latency (us)
     - column_id: Total Response Size
-    - column_id: Total Postgres Queries
+    - column_id: User
+    - column_id: Total Latency (us)
     axis_configs:
     - x:
-      - Client Type
+      - User
       "y":
       - Total Latency (us)
       - Total Response Size
-      - Total Postgres Queries
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}},{\"columnId\": \"Browser Version\",\"columnProperty\": {}},{\"columnId\": \"Client Type\",\"columnProperty\": {}},{\"columnId\": \"Total Postgres Queries\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"13de0582-7453-4a60-9195-455f11d963fd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"a2667375-af51-44df-816d-c9394ff778d7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": true}},{\"id\": \"e174e60d-bc28-4f95-bbb0-92d938b9fe15\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Postgres Queries\"],\"isOpposite\": true}},{\"id\": \"f9c871bb-7b90-4de2-8b3a-0f7bfce348fc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Client Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Response Size\",\"color\": \"#2E75F0\"}]}"
-  display_mode: TABLE_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"89371b7e-adce-4618-a10c-3551a32e19ad\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"fcf12f11-0129-42e8-a941-bfb9fad3427a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": true}},{\"id\": \"61f35378-0978-44e3-ab25-a113570e2969\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Response Size\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
