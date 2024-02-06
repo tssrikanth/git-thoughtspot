@@ -1,6 +1,7 @@
 guid: 8d69ddfd-654e-473e-9e49-9395f362afac
 liveboard:
-  name: jishnu lb 1
+  name: jishnu lb 2
+  description: testing
   visualizations:
   - id: Viz_1
     answer:
