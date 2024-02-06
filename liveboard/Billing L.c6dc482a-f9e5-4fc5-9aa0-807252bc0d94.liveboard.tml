@@ -104,3 +104,44 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 1660e89f-6155-456f-ad14-d8fa0daf5eb2
+  - id: Viz_4
+    answer:
+      name: "Clustername, Sku, Clusterid 2"
+      tables:
+      - id: Billing W
+        name: Billing W
+        fqn: 83a85110-d63f-47c7-965c-6cbb31fe77a5
+      search_query: "[Clustername] [Sku] [Clusterid 2]"
+      answer_columns:
+      - name: Clustername
+      - name: Sku
+      - name: Clusterid 2
+      table:
+        table_columns:
+        - column_id: Clustername
+          show_headline: false
+        - column_id: Sku
+          show_headline: false
+        - column_id: Clusterid 2
+          show_headline: false
+        ordered_column_ids:
+        - Clustername
+        - Sku
+        - Clusterid 2
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Clustername
+        - column_id: Sku
+        - column_id: Clusterid 2
+        axis_configs:
+        - x:
+          - Sku
+          "y":
+          - Clusterid 2
+          category:
+          - Clustername
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: c8745cd8-8c9d-43bb-8eaa-ab28d38b7826
