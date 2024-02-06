@@ -1,0 +1,63 @@
+guid: e9f2f0fd-32fc-4917-8db7-0cef94c6d57b
+answer:
+  name: Sri-Answer
+  tables:
+  - id: "TS: BI Server"
+    name: "TS: BI Server"
+    fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+  search_query: "[Answer Book GUID] [Database Latency (us)] [Browser Version] [Browser Type] [Latency (us)] [Response Size] [Postgres Queries]"
+  answer_columns:
+  - name: Answer Book GUID
+  - name: Total Database Latency (us)
+  - name: Browser Version
+  - name: Browser Type
+  - name: Total Latency (us)
+  - name: Total Response Size
+  - name: Total Postgres Queries
+  table:
+    table_columns:
+    - column_id: Answer Book GUID
+      show_headline: false
+    - column_id: Browser Version
+      show_headline: false
+    - column_id: Browser Type
+      show_headline: false
+    - column_id: Total Database Latency (us)
+      show_headline: false
+    - column_id: Total Latency (us)
+      show_headline: false
+    - column_id: Total Response Size
+      show_headline: false
+    - column_id: Total Postgres Queries
+      show_headline: false
+    ordered_column_ids:
+    - Answer Book GUID
+    - Browser Version
+    - Browser Type
+    - Total Database Latency (us)
+    - Total Latency (us)
+    - Total Response Size
+    - Total Postgres Queries
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Answer Book GUID
+    - column_id: Browser Version
+    - column_id: Browser Type
+    - column_id: Total Database Latency (us)
+    - column_id: Total Latency (us)
+    - column_id: Total Response Size
+    - column_id: Total Postgres Queries
+    axis_configs:
+    - x:
+      - Browser Type
+      "y":
+      - Total Database Latency (us)
+      - Total Latency (us)
+      - Total Response Size
+      - Total Postgres Queries
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Browser Version\",\"columnProperty\": {}},{\"columnId\": \"Browser Type\",\"columnProperty\": {}},{\"columnId\": \"Total Database Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}},{\"columnId\": \"Total Postgres Queries\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0dcc31d5-8960-4f75-83c2-670ab97fa21e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Database Latency (us)\"],\"isOpposite\": false}},{\"id\": \"0854a9bc-a64a-4e1c-94fe-bd15af8c4338\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": true}},{\"id\": \"080e38f4-b18a-497b-93d8-95a3caf79206\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": true}},{\"id\": \"9d70ecd8-becb-45a1-9a7e-17cae6adb062\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Postgres Queries\"],\"isOpposite\": true}},{\"id\": \"85594421-441c-4a61-a870-e30bc2d69d54\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Browser Type\"]}}]}"
+  display_mode: TABLE_MODE
