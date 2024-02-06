@@ -48,3 +48,9 @@ liveboard:
         "y": 0
         height: 8
         width: 6
+    - name: Tab 2
+      description: ""
+    - name: Tab 3
+      description: ""
+    - name: Tab 4
+      description: ""
