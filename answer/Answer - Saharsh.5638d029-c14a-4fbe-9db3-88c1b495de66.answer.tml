@@ -1,0 +1,41 @@
+guid: 5638d029-c14a-4fbe-9db3-88c1b495de66
+answer:
+  name: Answer - Saharsh
+  tables:
+  - id: "TS: BI Server"
+    name: "TS: BI Server"
+    fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+  search_query: "[Latency (us)] [Response Size] [User]"
+  answer_columns:
+  - name: Total Latency (us)
+  - name: Total Response Size
+  - name: User
+  table:
+    table_columns:
+    - column_id: User
+      show_headline: false
+    - column_id: Total Latency (us)
+      show_headline: false
+    - column_id: Total Response Size
+      show_headline: false
+    ordered_column_ids:
+    - User
+    - Total Latency (us)
+    - Total Response Size
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: User
+    - column_id: Total Latency (us)
+    - column_id: Total Response Size
+    axis_configs:
+    - x:
+      - User
+      "y":
+      - Total Latency (us)
+      - Total Response Size
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"89371b7e-adce-4618-a10c-3551a32e19ad\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"fcf12f11-0129-42e8-a941-bfb9fad3427a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": true}},{\"id\": \"61f35378-0978-44e3-ab25-a113570e2969\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Response Size\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
