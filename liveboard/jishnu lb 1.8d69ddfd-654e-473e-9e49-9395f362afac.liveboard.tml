@@ -4,45 +4,6 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: Total click_count by object_type
-      tables:
-      - id: MetricsMonitoring
-        name: MetricsMonitoring
-        fqn: 182f1e7c-c461-4535-b9da-c5297147631a
-      search_query: "[click_count] [event_type] [object_type]"
-      answer_columns:
-      - name: Total click_count
-      - name: event_type
-      - name: object_type
-      table:
-        table_columns:
-        - column_id: event_type
-          show_headline: false
-        - column_id: object_type
-          show_headline: false
-        - column_id: Total click_count
-          show_headline: false
-        ordered_column_ids:
-        - event_type
-        - object_type
-        - Total click_count
-        client_state: ""
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: event_type
-        - column_id: object_type
-        - column_id: Total click_count
-        axis_configs:
-        - x:
-          - object_type
-          "y":
-          - Total click_count
-        client_state: ""
-      display_mode: CHART_MODE
-    viz_guid: 709f0f31-0f32-40b9-a059-1189215e8fb1
-  - id: Viz_2
-    answer:
       name: Total Impressions by Answer Book GUID
       tables:
       - id: "TS: BI Server"
@@ -77,3 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ca432651-fbc0-4ff0-b1ec-28f603d56c7d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"98c198fc-58db-412d-9e19-df8d197299fb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Answer Book GUID\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: 39dafbd6-313f-46d0-9713-1b39c413cb90
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
