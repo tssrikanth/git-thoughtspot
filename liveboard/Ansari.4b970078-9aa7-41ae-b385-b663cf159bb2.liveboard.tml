@@ -1,0 +1,40 @@
+guid: 4b970078-9aa7-41ae-b385-b663cf159bb2
+liveboard:
+  name: Ansari
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Impressions by Answer Book GUID
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Impressions] [Answer Book GUID]"
+      answer_columns:
+      - name: Total Impressions
+      - name: Answer Book GUID
+      table:
+        table_columns:
+        - column_id: Answer Book GUID
+          show_headline: false
+        - column_id: Total Impressions
+          show_headline: false
+        ordered_column_ids:
+        - Answer Book GUID
+        - Total Impressions
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Answer Book GUID
+        - column_id: Total Impressions
+        axis_configs:
+        - x:
+          - Answer Book GUID
+          "y":
+          - Total Impressions
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ca432651-fbc0-4ff0-b1ec-28f603d56c7d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"98c198fc-58db-412d-9e19-df8d197299fb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Answer Book GUID\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 316f4557-a027-45b6-acd1-5817df94f453
