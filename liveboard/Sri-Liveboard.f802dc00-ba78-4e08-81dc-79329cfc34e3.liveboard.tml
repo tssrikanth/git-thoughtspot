@@ -79,3 +79,13 @@ liveboard:
       values:
       - 5c7030d9-3faa-49f3-bbd4-825486cd4536
     is_public: false
+  - view_guid: 0af618e7-3ddb-4076-a32c-ab75630abb48
+    name: ghjk
+    view_filters:
+    - column:
+      - Answer Book GUID
+      oper: in
+      values:
+      - 5c7030d9-3faa-49f3-bbd4-825486cd4536
+      - 63afd66d-2d89-4755-bd4a-5b9ba92fb7f2
+    is_public: false
