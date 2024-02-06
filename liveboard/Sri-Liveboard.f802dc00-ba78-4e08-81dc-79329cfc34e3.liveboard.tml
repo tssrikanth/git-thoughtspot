@@ -65,4 +65,17 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+  views:
+  - view_guid: e8dcaeb6-5a68-4386-81b3-a8c4302fa88f
+    name: jjk
+    view_filters:
+    - column:
+      - Answer Book GUID
+      oper: in
+      values:
+      - 5c7030d9-3faa-49f3-bbd4-825486cd4536
+    is_public: false
