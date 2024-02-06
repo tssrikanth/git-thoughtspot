@@ -74,6 +74,42 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0576addc-35a6-4241-aa17-3c079c917aa8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"2752a177-91e7-4527-8855-e14fa41e0fc4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Answer Book Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: cb236ca3-5b52-4083-907e-963f0aead487
+  - id: Viz_3
+    answer:
+      name: Total Impressions by Answer Book Name
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Impressions] [Answer Book Name]"
+      answer_columns:
+      - name: Total Impressions
+      - name: Answer Book Name
+      table:
+        table_columns:
+        - column_id: Answer Book Name
+          show_headline: false
+        - column_id: Total Impressions
+          show_headline: false
+        ordered_column_ids:
+        - Answer Book Name
+        - Total Impressions
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Answer Book Name
+        - column_id: Total Impressions
+        axis_configs:
+        - x:
+          - Answer Book Name
+          "y":
+          - Total Impressions
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0576addc-35a6-4241-aa17-3c079c917aa8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"2752a177-91e7-4527-8855-e14fa41e0fc4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Answer Book Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 27a6b74e-9ff2-4cf0-9051-b13d0bb9d7ea
   layout:
     tabs:
     - name: Tab 1
@@ -89,5 +125,7 @@ liveboard:
       description: ""
     - name: Tab 3
       description: ""
+      tiles:
+      - visualization_id: Viz_3
     - name: Tab 4
       description: ""
