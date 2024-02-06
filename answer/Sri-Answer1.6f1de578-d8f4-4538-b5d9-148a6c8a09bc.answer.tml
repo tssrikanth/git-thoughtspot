@@ -1,0 +1,57 @@
+guid: 6f1de578-d8f4-4538-b5d9-148a6c8a09bc
+answer:
+  name: Sri-Answer1
+  tables:
+  - id: "TS: BI Server"
+    name: "TS: BI Server"
+    fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+  search_query: "[Answer Book GUID] [Response Size] [Latency (us)] [Visualization Count - Deprecated] [Client Id] [Attribute Count]"
+  answer_columns:
+  - name: Answer Book GUID
+  - name: Total Response Size
+  - name: Total Latency (us)
+  - name: Total Visualization Count - Deprecated
+  - name: Client Id
+  - name: Attribute Count
+  table:
+    table_columns:
+    - column_id: Answer Book GUID
+      show_headline: false
+    - column_id: Client Id
+      show_headline: false
+    - column_id: Attribute Count
+      show_headline: false
+    - column_id: Total Response Size
+      show_headline: false
+    - column_id: Total Latency (us)
+      show_headline: false
+    - column_id: Total Visualization Count - Deprecated
+      show_headline: false
+    ordered_column_ids:
+    - Answer Book GUID
+    - Client Id
+    - Attribute Count
+    - Total Response Size
+    - Total Latency (us)
+    - Total Visualization Count - Deprecated
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Answer Book GUID
+    - column_id: Client Id
+    - column_id: Attribute Count
+    - column_id: Total Response Size
+    - column_id: Total Latency (us)
+    - column_id: Total Visualization Count - Deprecated
+    axis_configs:
+    - x:
+      - Attribute Count
+      "y":
+      - Total Response Size
+      - Total Latency (us)
+      - Total Visualization Count - Deprecated
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Client Id\",\"columnProperty\": {}},{\"columnId\": \"Attribute Count\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Visualization Count - Deprecated\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0406e9e-5fde-48bf-8332-7eca8691b4b7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": false}},{\"id\": \"7272b537-d2f1-4781-ab76-038a0c7d455f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": true}},{\"id\": \"7cf58899-ba42-4e79-b60a-2f0e09220333\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Visualization Count - Deprecated\"],\"isOpposite\": true}},{\"id\": \"a7d10bc2-91be-4cb8-8446-17a197a68d46\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Attribute Count\"]}}]}"
+  display_mode: TABLE_MODE
