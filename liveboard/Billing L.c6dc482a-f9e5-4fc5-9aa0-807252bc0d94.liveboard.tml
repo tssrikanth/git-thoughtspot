@@ -1,0 +1,106 @@
+guid: c6dc482a-f9e5-4fc5-9aa0-807252bc0d94
+liveboard:
+  name: Billing L
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Workspaceid by Clusterid
+      tables:
+      - id: Billing W
+        name: Billing W
+        fqn: 83a85110-d63f-47c7-965c-6cbb31fe77a5
+      search_query: "[Workspaceid] [Clusterid 2]"
+      answer_columns:
+      - name: Total Workspaceid
+      - name: Clusterid 2
+      table:
+        table_columns:
+        - column_id: Clusterid 2
+          show_headline: false
+        - column_id: Total Workspaceid
+          show_headline: false
+        ordered_column_ids:
+        - Clusterid 2
+        - Total Workspaceid
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Clusterid 2
+        - column_id: Total Workspaceid
+        axis_configs:
+        - x:
+          - Clusterid 2
+          "y":
+          - Total Workspaceid
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 9333f003-3c87-4ac7-adf8-5fead912c52c
+  - id: Viz_2
+    answer:
+      name: "Clustername, Sku"
+      tables:
+      - id: Billing W
+        name: Billing W
+        fqn: 83a85110-d63f-47c7-965c-6cbb31fe77a5
+      search_query: "[Clustername] [Sku]"
+      answer_columns:
+      - name: Clustername
+      - name: Sku
+      table:
+        table_columns:
+        - column_id: Clustername
+          show_headline: false
+        - column_id: Sku
+          show_headline: false
+        ordered_column_ids:
+        - Clustername
+        - Sku
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Clustername
+        - column_id: Sku
+        axis_configs:
+        - x:
+          - Clustername
+          "y":
+          - Sku
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: b03a5d20-846a-48ea-9525-2197df9a44ed
+  - id: Viz_3
+    answer:
+      name: Total Workspaceid by Clustername
+      tables:
+      - id: Billing W
+        name: Billing W
+        fqn: 83a85110-d63f-47c7-965c-6cbb31fe77a5
+      search_query: "[Clustername] [Clustername] [Workspaceid]"
+      answer_columns:
+      - name: Clustername
+      - name: Total Workspaceid
+      table:
+        table_columns:
+        - column_id: Clustername
+          show_headline: false
+        - column_id: Total Workspaceid
+          show_headline: false
+        ordered_column_ids:
+        - Clustername
+        - Total Workspaceid
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Clustername
+        - column_id: Total Workspaceid
+        axis_configs:
+        - x:
+          - Clustername
+          "y":
+          - Total Workspaceid
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 1660e89f-6155-456f-ad14-d8fa0daf5eb2

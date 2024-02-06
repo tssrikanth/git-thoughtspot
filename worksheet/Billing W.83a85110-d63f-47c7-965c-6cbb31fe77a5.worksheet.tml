@@ -1,0 +1,37 @@
+guid: 83a85110-d63f-47c7-965c-6cbb31fe77a5
+worksheet:
+  name: Billing W
+  tables:
+  - name: BILLING
+    fqn: 02d123e1-efff-4c4b-8354-f095e7affbcd
+  table_paths:
+  - id: BILLING_1
+    table: BILLING
+    join_path:
+    - {}
+  worksheet_columns:
+  - name: Workspaceid
+    column_id: BILLING_1::workspaceId
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Clusterid 2
+    column_id: BILLING_1::clusterId
+    properties:
+      column_type: ATTRIBUTE
+  - name: Clustername
+    column_id: BILLING_1::clusterName
+    properties:
+      column_type: ATTRIBUTE
+  - name: Clusternodetype
+    column_id: BILLING_1::clusterNodeType
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sku
+    column_id: BILLING_1::sku
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
