@@ -11,11 +11,11 @@ liveboard:
         fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
       search_query: "[Database Latency (us)] [Impressions] [Postgres Queries] [Answer Book GUID] [Attribute Count]"
       answer_columns:
-      - name: Attribute Count
-      - name: Answer Book GUID
-      - name: Total Database Latency (us)
-      - name: Total Impressions
       - name: Total Postgres Queries
+      - name: Answer Book GUID
+      - name: Attribute Count
+      - name: Total Impressions
+      - name: Total Database Latency (us)
       table:
         table_columns:
         - column_id: Answer Book GUID
@@ -39,11 +39,11 @@ liveboard:
       chart:
         type: BUBBLE
         chart_columns:
-        - column_id: Total Database Latency (us)
-        - column_id: Total Postgres Queries
-        - column_id: Total Impressions
-        - column_id: Answer Book GUID
         - column_id: Attribute Count
+        - column_id: Total Database Latency (us)
+        - column_id: Total Impressions
+        - column_id: Total Postgres Queries
+        - column_id: Answer Book GUID
         axis_configs:
         - x:
           - Total Database Latency (us)
@@ -78,14 +78,4 @@ liveboard:
       oper: in
       values:
       - 5c7030d9-3faa-49f3-bbd4-825486cd4536
-    is_public: false
-  - view_guid: 0af618e7-3ddb-4076-a32c-ab75630abb48
-    name: ghjk
-    view_filters:
-    - column:
-      - Answer Book GUID
-      oper: in
-      values:
-      - 5c7030d9-3faa-49f3-bbd4-825486cd4536
-      - 63afd66d-2d89-4755-bd4a-5b9ba92fb7f2
     is_public: false
