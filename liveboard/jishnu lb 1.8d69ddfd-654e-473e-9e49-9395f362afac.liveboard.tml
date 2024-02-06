@@ -1,6 +1,7 @@
 guid: 8d69ddfd-654e-473e-9e49-9395f362afac
 liveboard:
   name: jishnu lb 1
+  description: test desc
   visualizations:
   - id: Viz_1
     answer:
@@ -121,11 +122,19 @@ liveboard:
         height: 8
         width: 6
       - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
     - name: Tab 2
       description: ""
     - name: Tab 3
       description: ""
       tiles:
       - visualization_id: Viz_3
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
     - name: Tab 4
       description: ""
