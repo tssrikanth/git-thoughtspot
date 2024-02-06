@@ -9,13 +9,14 @@ liveboard:
       - id: "TS: BI Server"
         name: "TS: BI Server"
         fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
-      search_query: "[Database Latency (us)] [Impressions] [Postgres Queries] [Answer Book GUID] [Attribute Count]"
+      search_query: "[Database Latency (us)] [Impressions] [Postgres Queries] [Answer Book GUID] [Attribute Count] [Response Size]"
       answer_columns:
       - name: Total Database Latency (us)
       - name: Total Impressions
       - name: Total Postgres Queries
       - name: Answer Book GUID
       - name: Attribute Count
+      - name: Total Response Size
       table:
         table_columns:
         - column_id: Answer Book GUID
@@ -28,31 +29,35 @@ liveboard:
           show_headline: false
         - column_id: Total Postgres Queries
           show_headline: false
+        - column_id: Total Response Size
+          show_headline: false
         ordered_column_ids:
         - Answer Book GUID
         - Attribute Count
         - Total Database Latency (us)
         - Total Impressions
         - Total Postgres Queries
+        - Total Response Size
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
-        type: BUBBLE
+        type: COLUMN
         chart_columns:
         - column_id: Answer Book GUID
         - column_id: Attribute Count
         - column_id: Total Database Latency (us)
         - column_id: Total Impressions
         - column_id: Total Postgres Queries
+        - column_id: Total Response Size
         axis_configs:
         - x:
-          - Total Database Latency (us)
+          - Attribute Count
           "y":
+          - Total Database Latency (us)
           - Total Impressions
-          size: Total Postgres Queries
-          category:
-          - Answer Book GUID
+          - Total Postgres Queries
+          - Total Response Size
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Attribute Count\",\"columnProperty\": {}},{\"columnId\": \"Total Database Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}},{\"columnId\": \"Total Postgres Queries\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"efe3aed5-5428-4c27-b003-1158969ec6e1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"353af860-9bf2-4a4b-a532-add8cc769311\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Database Latency (us)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"rgba(252,200,56,0.5)\"}]}"
-      display_mode: CHART_MODE
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {}},{\"columnId\": \"Attribute Count\",\"columnProperty\": {}},{\"columnId\": \"Total Database Latency (us)\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}},{\"columnId\": \"Total Postgres Queries\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fdde3fba-c443-4959-91eb-89a6d0ac33db\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Database Latency (us)\"],\"isOpposite\": false}},{\"id\": \"8afaae46-0f38-405c-a6fe-a47596bbbf8d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": true}},{\"id\": \"4d4715b8-8809-4a2b-9223-1ddef9d80391\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Postgres Queries\"],\"isOpposite\": true}},{\"id\": \"fc67c3a2-732e-4839-8225-7c4709fa219e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": true}},{\"id\": \"87fac93b-3abc-4767-a5e9-31c84a73c61a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Attribute Count\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"rgba(252,200,56,0.5)\"}]}"
+      display_mode: TABLE_MODE
     viz_guid: 7b9a4098-e8fa-44e3-8bca-694ead5ea311
