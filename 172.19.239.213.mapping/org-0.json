@@ -1,6 +1,11 @@
 [ {
   "originalGuid" : "6350d28b-5651-4221-8fe7-aed193039536",
   "mappedGuid" : "6350d28b-5651-4221-8fe7-aed193039536",
+  "counter" : 1,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "00c33018-0f8d-4561-a6e6-03b904c27905",
+  "mappedGuid" : "00c33018-0f8d-4561-a6e6-03b904c27905",
   "counter" : 0,
   "additionalMapping" : { }
 }, {
