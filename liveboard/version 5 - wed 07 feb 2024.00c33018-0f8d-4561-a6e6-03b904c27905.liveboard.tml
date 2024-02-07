@@ -1,6 +1,7 @@
 guid: 00c33018-0f8d-4561-a6e6-03b904c27905
 liveboard:
   name: version 5 - wed 07 feb 2024
+  description: wererfv
   visualizations:
   - id: Viz_1
     answer:
@@ -38,3 +39,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a554c838-4a6b-40d6-bab3-4910b584fa1b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"af89e3dd-0be9-497e-9a90-bacd5473ad4a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 46b0e36f-c7bc-44f0-aca4-1b3cdf615232
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
