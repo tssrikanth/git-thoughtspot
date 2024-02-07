@@ -1,6 +1,6 @@
 guid: 6350d28b-5651-4221-8fe7-aed193039536
 liveboard:
-  name: version 4 - web 07 feb 2024
+  name: version 4 - web 07 feb 2024 - 2
   visualizations:
   - id: Viz_1
     answer:
@@ -38,3 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"12aff36a-6b90-4a78-b607-93bd263e7da8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"fad0e39d-d2a8-4f75-9e9c-9bebe4eef5dc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 0d1f6f58-18f3-4542-96f7-a09bdc4a93a3
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
