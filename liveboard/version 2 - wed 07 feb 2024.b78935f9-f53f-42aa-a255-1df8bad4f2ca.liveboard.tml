@@ -1,0 +1,47 @@
+guid: b78935f9-f53f-42aa-a255-1df8bad4f2ca
+liveboard:
+  name: version 2 - wed 07 feb 2024
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Extended Price by Color and Container
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price] [Color] [Container]"
+      answer_columns:
+      - name: Total Extended Price
+      - name: Color
+      - name: Container
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Container
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Container
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Color
+        - column_id: Container
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Extended Price
+          color:
+          - Container
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"03432454-90af-4a29-9f59-8330fd466394\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"cc263704-5435-4df4-a864-81f9d48f39e5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"jumbo bag\",\"color\": \"#721F27\"},{\"serieName\": \"jumbo box\",\"color\": \"#F47E89\"},{\"serieName\": \"jumbo can\",\"color\": \"#B6313E\"},{\"serieName\": \"jumbo case\",\"color\": \"#F9B3B9\"},{\"serieName\": \"jumbo drum\",\"color\": \"#F04152\"},{\"serieName\": \"jumbo jar\",\"color\": \"#2F3947\"},{\"serieName\": \"jumbo pack\",\"color\": \"#A2ACBA\"},{\"serieName\": \"jumbo pkg\",\"color\": \"#47515F\"},{\"serieName\": \"lg bag\",\"color\": \"#BEC6D0\"},{\"serieName\": \"lg box\",\"color\": \"#747E8C\"},{\"serieName\": \"lg can\",\"color\": \"#7A3D1F\"},{\"serieName\": \"lg case\",\"color\": \"#FFA97E\"},{\"serieName\": \"lg drum\",\"color\": \"#C26232\"},{\"serieName\": \"lg jar\",\"color\": \"#FFCCB3\"},{\"serieName\": \"lg pack\",\"color\": \"#FF8142\"},{\"serieName\": \"lg pkg\",\"color\": \"#422E75\"},{\"serieName\": \"med bag\",\"color\": \"#B094F8\"},{\"serieName\": \"med box\",\"color\": \"#6A4ABA\"},{\"serieName\": \"med can\",\"color\": \"#D1C0FB\"},{\"serieName\": \"med case\",\"color\": \"#8C62F5\"},{\"serieName\": \"med drum\",\"color\": \"#025B3C\"},{\"serieName\": \"med jar\",\"color\": \"#56D3A8\"},{\"serieName\": \"med pack\",\"color\": \"#049160\"},{\"serieName\": \"med pkg\",\"color\": \"#9BE5CB\"},{\"serieName\": \"sm bag\",\"color\": \"#06BF7F\"},{\"serieName\": \"sm box\",\"color\": \"#785F1A\"},{\"serieName\": \"sm can\",\"color\": \"#FCD977\"},{\"serieName\": \"sm case\",\"color\": \"#BF982A\"},{\"serieName\": \"sm drum\",\"color\": \"#FDE9AF\"},{\"serieName\": \"sm jar\",\"color\": \"#FCC838\"},{\"serieName\": \"sm pack\",\"color\": \"#22636B\"},{\"serieName\": \"sm pkg\",\"color\": \"#82DFE9\"},{\"serieName\": \"wrap bag\",\"color\": \"#369FAA\"},{\"serieName\": \"wrap box\",\"color\": \"#B5ECF2\"},{\"serieName\": \"wrap can\",\"color\": \"#48D1E0\"},{\"serieName\": \"wrap case\",\"color\": \"#163772\"},{\"serieName\": \"wrap drum\",\"color\": \"#71A1F4\"},{\"serieName\": \"wrap jar\",\"color\": \"#2359B6\"},{\"serieName\": \"wrap pack\",\"color\": \"#ABC7F9\"},{\"serieName\": \"wrap pkg\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a2f092cc-1e8b-4ef5-864d-66f329bd99c4
