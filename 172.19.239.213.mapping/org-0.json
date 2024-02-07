@@ -9,9 +9,14 @@
   "counter" : 1,
   "additionalMapping" : { }
 }, {
+  "originalGuid" : "b78935f9-f53f-42aa-a255-1df8bad4f2ca",
+  "mappedGuid" : "b78935f9-f53f-42aa-a255-1df8bad4f2ca",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
   "originalGuid" : "e2559ad3-5194-4545-be6d-d6fe76e08b1c",
   "mappedGuid" : "e2559ad3-5194-4545-be6d-d6fe76e08b1c",
-  "counter" : 1,
+  "counter" : 2,
   "additionalMapping" : { }
 }, {
   "originalGuid" : "2445fe81-30d6-46fa-9f42-f6b1b4e01623",
