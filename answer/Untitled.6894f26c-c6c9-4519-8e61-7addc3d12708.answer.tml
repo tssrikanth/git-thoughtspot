@@ -1,0 +1,51 @@
+guid: 6894f26c-c6c9-4519-8e61-7addc3d12708
+answer:
+  name: Untitled
+  tables:
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] [PART_1::Brand1]"
+  answer_columns:
+  - name: Brand1
+  - name: Total Revenue
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Brand1
+    - Total Revenue
+    client_state: ""
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Brand1
+      "y":
+      - Total Revenue
+    client_state: ""
+  display_mode: CHART_MODE
