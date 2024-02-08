@@ -1,6 +1,7 @@
 guid: ff386e08-cc81-4bb4-9817-b7e7bfab3ac3
 liveboard:
   name: version 6 - thu 08 feb 2024
+  description: sdgfhg
   visualizations:
   - id: Viz_1
     answer:
@@ -38,3 +39,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cfd9af68-913a-47d8-99d7-23b1e6d90219\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"f6edd02d-1978-4b6a-bb43-046318b4667c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 407275f0-e441-41f6-8d64-9c739b1d4ba2
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
