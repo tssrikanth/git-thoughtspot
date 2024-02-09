@@ -1,0 +1,38 @@
+guid: 68b9dbcc-a7aa-4565-98c7-a2849975cfea
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Database Latency (us)
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Database Latency (us)] [Visualization Count - Deprecated]"
+      answer_columns:
+      - name: Total Database Latency (us)
+      - name: Total Visualization Count - Deprecated
+      table:
+        table_columns:
+        - column_id: Total Database Latency (us)
+          show_headline: false
+        - column_id: Total Visualization Count - Deprecated
+          show_headline: false
+        ordered_column_ids:
+        - Total Database Latency (us)
+        - Total Visualization Count - Deprecated
+        client_state: ""
+        client_state_v2: "{}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Database Latency (us)
+        - column_id: Total Visualization Count - Deprecated
+        axis_configs:
+        - "y":
+          - Total Database Latency (us)
+        client_state: ""
+        client_state_v2: "{}"
+      display_mode: CHART_MODE
+    viz_guid: f86b19a7-424f-4db9-9563-1c47bfd878f1
