@@ -1,6 +1,7 @@
 guid: 68b9dbcc-a7aa-4565-98c7-a2849975cfea
 liveboard:
-  name: tsadmin's first Liveboard
+  name: Pagination Test
+  description: Test 1
   visualizations:
   - id: Viz_1
     answer:
@@ -36,3 +37,7 @@ liveboard:
         client_state_v2: "{}"
       display_mode: CHART_MODE
     viz_guid: f86b19a7-424f-4db9-9563-1c47bfd878f1
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
