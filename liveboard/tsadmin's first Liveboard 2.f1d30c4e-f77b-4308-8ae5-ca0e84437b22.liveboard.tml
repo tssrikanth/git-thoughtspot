@@ -1,6 +1,6 @@
 guid: f1d30c4e-f77b-4308-8ae5-ca0e84437b22
 liveboard:
-  name: tsadmin's first Liveboard
+  name: tsadmin's first Liveboard 2
   visualizations:
   - id: Viz_1
     answer:
@@ -40,3 +40,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {\"conditionalFormatting\": {}}},{\"columnId\": \"Total Discount\",\"columnProperty\": {\"conditionalFormatting\": {}}}],\"axisProperties\": [{\"id\": \"0c997ec2-cc2b-4834-b412-2b428a630d77\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"c5048406-75e6-4f15-870e-114564776eef\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: 96bb032c-cba7-48e0-b88e-f2d5360c0b5a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
