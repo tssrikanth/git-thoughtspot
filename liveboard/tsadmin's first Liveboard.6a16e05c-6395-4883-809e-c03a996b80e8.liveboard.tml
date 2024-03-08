@@ -55,6 +55,17 @@ liveboard:
       height: 8
       width: 6
   views:
+  - view_guid: 0c98aeff-d7ee-468a-995d-0e1a613a70ff
+    name: bbb
+    view_filters:
+    - column:
+      - Brand1
+      oper: in
+      values:
+      - mfgr#111
+      - mfgr#1110
+      - mfgr#1111
+    is_public: false
   - view_guid: 0499ed94-cfb3-4be5-a6b0-bf9cee013bcf
     name: aaa
     view_filters:
