@@ -32,4 +32,4 @@ answer:
       - Total Impressions
     client_state: ""
     client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Browser Type\",\"columnProperty\": {}},{\"columnId\": \"Total Impressions\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a20e0cc-60cd-4c0d-a2fc-043e3e80be50\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Impressions\"],\"isOpposite\": false}},{\"id\": \"f471d6ef-c3e7-444c-8fb1-d3504d7aa469\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Browser Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Impressions\",\"color\": \"#2E75F0\"}]}"
-  display_mode: CHART_MODE
+  display_mode: TABLE_MODE
