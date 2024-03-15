@@ -104,7 +104,7 @@ worksheet:
     properties:
       column_type: MEASURE
       aggregation: SUM
-  - name: Tax
+  - name: Tax_2
     column_id: LINEORDER_1::Tax
     properties:
       column_type: MEASURE
