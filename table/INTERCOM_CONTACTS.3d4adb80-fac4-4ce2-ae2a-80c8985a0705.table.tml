@@ -1,0 +1,647 @@
+guid: 3d4adb80-fac4-4ce2-ae2a-80c8985a0705
+table:
+  name: INTERCOM_CONTACTS
+  db: GTM_DB
+  schema: INTERCOM
+  db_table: INTERCOM_CONTACTS
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Intercom Contact ID
+    db_column_name: Intercom Contact ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contacts Cluster Name
+    db_column_name: Intercom Contacts Cluster Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contacts Group
+    db_column_name: Intercom Contacts Group
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Name
+    db_column_name: Intercom Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Email
+    db_column_name: Intercom Contact Email
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Browser
+    db_column_name: Intercom Contact Browser
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Browser Language
+    db_column_name: Intercom Contact Browser Language
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Browser Version
+    db_column_name: Intercom Contact Browser Version
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Created At
+    db_column_name: Intercom Contact Created At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact External ID
+    db_column_name: Intercom Contact External ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Has Hard Bounced
+    db_column_name: Intercom Contact Has Hard Bounced
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Language Override
+    db_column_name: Intercom Contact Language Override
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Last Contacted At
+    db_column_name: Intercom Contact Last Contacted At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Last Email Clicked At
+    db_column_name: Intercom Contact Last Email Clicked At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Last Email Opened At
+    db_column_name: Intercom Contact Last Email Opened At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Last Replied At
+    db_column_name: Intercom Contact Last Replied At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Last Seen At
+    db_column_name: Intercom Contact Last Seen At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Marked Email As Spam
+    db_column_name: Intercom Contact Marked Email As Spam
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact OS
+    db_column_name: Intercom Contact OS
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Owner ID
+    db_column_name: Intercom Contact Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Phone
+    db_column_name: Intercom Contact Phone
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Role
+    db_column_name: Intercom Contact Role
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Signed Up At
+    db_column_name: Intercom Contact Signed Up At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Unsubscribed From Emails
+    db_column_name: Intercom Contact Unsubscribed From Emails
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Updated At
+    db_column_name: Intercom Contact Updated At
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Workspace ID
+    db_column_name: Intercom Contact Workspace ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Companies Total Count
+    db_column_name: Intercom Contact Companies Total Count
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Companies Url
+    db_column_name: Intercom Contact Companies Url
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Account SDR
+    db_column_name: Intercom Contact Account SDR
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Answers Viewed
+    db_column_name: Intercom Contact Answers Viewed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Answers Created
+    db_column_name: Intercom Contact Answers Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact CDW
+    db_column_name: Intercom Contact CDW
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Cluster UUID
+    db_column_name: Intercom Contact Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Connections Created
+    db_column_name: Intercom Contact Connections Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Drilldowns
+    db_column_name: Intercom Contact Drilldowns
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Eureka Searches
+    db_column_name: Intercom Contact Eureka Searches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Explore Searches
+    db_column_name: Intercom Contact Explore Searches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact First Session End Time
+    db_column_name: Intercom Contact First Session End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact First Session Start Time
+    db_column_name: Intercom Contact First Session Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Free Trial Type
+    db_column_name: Intercom Contact Free Trial Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Homehub Score
+    db_column_name: Intercom Contact Homehub Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Invitations Sent
+    db_column_name: Intercom Contact Invitations Sent
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Is Admin
+    db_column_name: Intercom Contact Is Admin
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Intercom Contact Is Developer
+    db_column_name: Intercom Contact Is Developer
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Intercom Contact Job Title
+    db_column_name: Intercom Contact Job Title
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Joins Created
+    db_column_name: Intercom Contact Joins Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Last Session Duration
+    db_column_name: Intercom Contact Last Session Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Last Session End Time
+    db_column_name: Intercom Contact Last Session End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Last Session Start Time
+    db_column_name: Intercom Contact Last Session Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Intercom Contact Lead Engagement Last
+    db_column_name: Intercom Contact Lead Engagement Last
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Mixpanel Last Updated
+    db_column_name: Intercom Contact Mixpanel Last Updated
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Intercom Contact Pinboards Created
+    db_column_name: Intercom Contact Pinboards Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Pinboards Viewed
+    db_column_name: Intercom Contact Pinboards Viewed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Product Specialist
+    db_column_name: Intercom Contact Product Specialist
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Region
+    db_column_name: Intercom Contact Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Salesforce ID
+    db_column_name: Intercom Contact Salesforce ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Salesforce Owner ID
+    db_column_name: Intercom Contact Salesforce Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Salesforce Owner Name
+    db_column_name: Intercom Contact Salesforce Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Salesforce Status
+    db_column_name: Intercom Contact Salesforce Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Search Assist Lessons Completed
+    db_column_name: Intercom Contact Search Assist Lessons Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Searched Demo Data
+    db_column_name: Intercom Contact Searched Demo Data
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Status
+    db_column_name: Intercom Contact Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Total Session Duration
+    db_column_name: Intercom Contact Total Session Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Uploaded CSVs
+    db_column_name: Intercom Contact Uploaded CSVs
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact User Activation Date
+    db_column_name: Intercom Contact User Activation Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Intercom Contact User Creation Date
+    db_column_name: Intercom Contact User Creation Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Intercom Contact User Expiration Date
+    db_column_name: Intercom Contact User Expiration Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Intercom Contact UserGUID
+    db_column_name: Intercom Contact UserGUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact User Source
+    db_column_name: Intercom Contact User Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact User Source Cluster
+    db_column_name: Intercom Contact User Source Cluster
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact User Status
+    db_column_name: Intercom Contact User Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Visualizations Pinned
+    db_column_name: Intercom Contact Visualizations Pinned
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Worksheets Created
+    db_column_name: Intercom Contact Worksheets Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Location City
+    db_column_name: Intercom Contact Location City
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Location Country
+    db_column_name: Intercom Contact Location Country
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Location Region
+    db_column_name: Intercom Contact Location Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Notes Total Count
+    db_column_name: Intercom Contact Notes Total Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Notes Url
+    db_column_name: Intercom Contact Notes Url
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contact Tags Total Count
+    db_column_name: Intercom Contact Tags Total Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Intercom Contact Tags Url
+    db_column_name: Intercom Contact Tags Url
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Intercom Contacts Sessions Count
+    db_column_name: Intercom Contacts Sessions Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: FK_INTERCOM_CONTACTS_SFDC_CLUSTER
+    destination:
+      name: SFDC_CLUSTER
+      fqn: 1a108b00-02ff-431e-9066-5a85f3b1fbd9
+    "on": "([INTERCOM_CONTACTS::Intercom Contact Cluster UUID] = [SFDC_CLUSTER::Cluster UUID])"
+    type: LEFT_OUTER
+  - name: FK_INTERCOM_CONTACTS_SFDC_PERSON
+    destination:
+      name: SFDC_PERSON
+      fqn: 657f3c7e-dfa9-4f04-879e-2b48b95fadbb
+    "on": "([INTERCOM_CONTACTS::Intercom Contact Email] = [SFDC_PERSON::Person Email])"
+    type: LEFT_OUTER

@@ -1,0 +1,2920 @@
+guid: cda5cb86-d4ae-40ed-b919-312d409ab019
+worksheet:
+  name: GTM Vivun
+  description: "The main worksheet for all Vivun related information. Also includes Opportunity, User, Account, Cluster details."
+  tables:
+  - name: CREDIT_BANK
+    fqn: 4a6c1493-7732-4faa-af58-da1a209b6504
+  - name: SFDC_ACCOUNT
+    fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+  - name: SFDC_CLUSTER
+    fqn: 1a108b00-02ff-431e-9066-5a85f3b1fbd9
+  - name: SFDC_OPPORTUNITY
+    fqn: 28ea7b2a-dcb1-4e47-8458-018d88a27e00
+  - name: SFDC_QUOTE
+    fqn: 7a9d59bb-3472-45c8-891f-eefed51bc691
+  - name: SFDC_USER
+    fqn: 30df64bd-9753-49e4-b261-0f66c8a8b7a8
+  - name: VIVUN_ACCOUNT_GAP
+    fqn: 49b62633-cd3e-4c1c-bb64-7661c3aa218c
+  - name: VIVUN_DELIVERABLES
+    fqn: 57249f5a-2f15-43b0-9fc9-4f8872b1f603
+  - name: VIVUN_HERO_ACTIVITY
+    fqn: cba96351-2b5e-41b6-9a67-5e9d51801f33
+  - name: VIVUN_OPPORTUNITY_GAP
+    fqn: d634bdd0-17e6-45b1-b03d-42d8f82bd9aa
+  - name: VIVUN_PRESALES_STAGE_MDT
+    fqn: 013cf4d5-9dea-4702-85c3-64205ceddaf2
+  - name: VIVUN_PRODGAP_DEVITEM_VIEW
+    fqn: a62d8be3-2240-4fd9-8317-45837971d986
+  - name: VIVUN_PRODUCT_GAP
+    fqn: f38eb576-3747-4d2a-a3ef-d92dab8f4930
+  - name: VIVUN_TEAM_MEMBER_REQUEST
+    fqn: 67bb0026-20f2-4854-8d32-44107aedecf0
+  joins:
+  - name: SFDC_QUOTE_to_CREDIT_BANK
+    source: CREDIT_BANK
+    destination: SFDC_QUOTE
+    type: INNER
+    is_one_to_one: false
+  - name: CREDIT_BANK_to_SFDC_CLUSTER
+    source: CREDIT_BANK
+    destination: SFDC_CLUSTER
+    type: INNER
+    is_one_to_one: false
+  - name: FK_CLUSTER_ACCOUNT
+    source: SFDC_CLUSTER
+    destination: SFDC_ACCOUNT
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_OPPORTUNITY_ACCOUNT
+    source: SFDC_OPPORTUNITY
+    destination: SFDC_ACCOUNT
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_OPP_VIVUN_PRESALES
+    source: SFDC_OPPORTUNITY
+    destination: VIVUN_PRESALES_STAGE_MDT
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: FK_QUOTE_TO_OPPORTUNITY
+    source: SFDC_QUOTE
+    destination: SFDC_OPPORTUNITY
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_VIVUN_ACCOUNT_GAP_VIVUN_PRODUCT_GAP
+    source: VIVUN_ACCOUNT_GAP
+    destination: VIVUN_PRODUCT_GAP
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_ACCOUNT_GAP_ACCOUNT
+    source: VIVUN_ACCOUNT_GAP
+    destination: SFDC_ACCOUNT
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: FK_VIVUN_DELIVERABLES_OPPORTUNITY
+    source: VIVUN_DELIVERABLES
+    destination: SFDC_OPPORTUNITY
+    type: INNER
+    is_one_to_one: false
+  - name: VIVUN_TEAM_MEMBER_REQUEST_to_VIVUN_DELIVERABLES
+    source: VIVUN_DELIVERABLES
+    destination: VIVUN_TEAM_MEMBER_REQUEST
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: FK_VIVUN_HERO_ACCOUNT
+    source: VIVUN_HERO_ACTIVITY
+    destination: SFDC_ACCOUNT
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_VIVUN_OPPORTUNITY_GAP_VIVUN PRODUCT_GAP
+    source: VIVUN_OPPORTUNITY_GAP
+    destination: VIVUN_PRODUCT_GAP
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_VIVUN_OPPORTUNITY_GAP_OPPORTUNITY
+    source: VIVUN_OPPORTUNITY_GAP
+    destination: SFDC_OPPORTUNITY
+    type: OUTER
+    is_one_to_one: false
+  - name: PRODGAP_DEVITEM_VIEW_TO_PRODGAP
+    source: VIVUN_PRODGAP_DEVITEM_VIEW
+    destination: VIVUN_PRODUCT_GAP
+    type: INNER
+    is_one_to_one: false
+  - name: VIVUN_TEAM_MEMBER_REQUEST_to_SFDC_USER
+    source: VIVUN_TEAM_MEMBER_REQUEST
+    destination: SFDC_USER
+    type: LEFT_OUTER
+    is_one_to_one: false
+  table_paths:
+  - id: SFDC_ACCOUNT_1
+    table: SFDC_ACCOUNT
+    join_path:
+    - join:
+      - FK_ACCOUNT_GAP_ACCOUNT
+    - join:
+      - FK_VIVUN_OPPORTUNITY_GAP_OPPORTUNITY
+      - FK_OPPORTUNITY_ACCOUNT
+    - join:
+      - FK_VIVUN_HERO_ACCOUNT
+    - join:
+      - CREDIT_BANK_to_SFDC_CLUSTER
+      - FK_CLUSTER_ACCOUNT
+    - join:
+      - FK_VIVUN_DELIVERABLES_OPPORTUNITY
+      - FK_OPPORTUNITY_ACCOUNT
+  - id: SFDC_CLUSTER_1
+    table: SFDC_CLUSTER
+    join_path:
+    - join:
+      - CREDIT_BANK_to_SFDC_CLUSTER
+  - id: SFDC_OPPORTUNITY_1
+    table: SFDC_OPPORTUNITY
+    join_path:
+    - join:
+      - FK_VIVUN_DELIVERABLES_OPPORTUNITY
+    - join:
+      - SFDC_QUOTE_to_CREDIT_BANK
+      - FK_QUOTE_TO_OPPORTUNITY
+    - join:
+      - FK_VIVUN_OPPORTUNITY_GAP_OPPORTUNITY
+  - id: SFDC_OPPORTUNITY_2
+    table: SFDC_OPPORTUNITY
+    join_path:
+    - join:
+      - FK_VIVUN_DELIVERABLES_OPPORTUNITY
+  - id: SFDC_USER_1
+    table: SFDC_USER
+    join_path:
+    - join:
+      - VIVUN_TEAM_MEMBER_REQUEST_to_VIVUN_DELIVERABLES
+      - VIVUN_TEAM_MEMBER_REQUEST_to_SFDC_USER
+  - id: VIVUN_ACCOUNT_GAP_1
+    table: VIVUN_ACCOUNT_GAP
+    join_path:
+    - {}
+  - id: VIVUN_DELIVERABLES_1
+    table: VIVUN_DELIVERABLES
+    join_path:
+    - {}
+  - id: VIVUN_HERO_ACTIVITY_1
+    table: VIVUN_HERO_ACTIVITY
+    join_path:
+    - {}
+  - id: VIVUN_OPPORTUNITY_GAP_1
+    table: VIVUN_OPPORTUNITY_GAP
+    join_path:
+    - {}
+  - id: VIVUN_PRESALES_STAGE_MDT_1
+    table: VIVUN_PRESALES_STAGE_MDT
+    join_path:
+    - join:
+      - FK_VIVUN_DELIVERABLES_OPPORTUNITY
+      - FK_OPP_VIVUN_PRESALES
+    - join:
+      - SFDC_QUOTE_to_CREDIT_BANK
+      - FK_QUOTE_TO_OPPORTUNITY
+      - FK_OPP_VIVUN_PRESALES
+    - join:
+      - FK_VIVUN_OPPORTUNITY_GAP_OPPORTUNITY
+      - FK_OPP_VIVUN_PRESALES
+  - id: VIVUN_PRODGAP_DEVITEM_VIEW_1
+    table: VIVUN_PRODGAP_DEVITEM_VIEW
+    join_path:
+    - {}
+  - id: VIVUN_PRODUCT_GAP_1
+    table: VIVUN_PRODUCT_GAP
+    join_path:
+    - join:
+      - FK_VIVUN_OPPORTUNITY_GAP_VIVUN PRODUCT_GAP
+    - join:
+      - PRODGAP_DEVITEM_VIEW_TO_PRODGAP
+    - join:
+      - FK_VIVUN_ACCOUNT_GAP_VIVUN_PRODUCT_GAP
+  - id: VIVUN_TEAM_MEMBER_REQUEST_1
+    table: VIVUN_TEAM_MEMBER_REQUEST
+    join_path:
+    - join:
+      - VIVUN_TEAM_MEMBER_REQUEST_to_VIVUN_DELIVERABLES
+  formulas:
+  - name: '# of Active Opportunities'
+    expr: "if ( [AE Motion] = 'active' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '# of CFT'
+    expr: "unique_count_if ( ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'concierge free trial' ) , [VIVUN_DELIVERABLES_1::Vivun Name] )"
+    was_auto_generated: false
+  - name: '# of Clusters Created'
+    expr: "if ( isnull ( [SFDC_CLUSTER_1::Cluster Cloud URL Provisioned] ) ) then 0 else 1"
+    was_auto_generated: false
+  - name: '# of Customer Facing Hours'
+    expr: "sum_if ( [Customer Facing] = 'customer facing' , [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Hours] )"
+    was_auto_generated: false
+  - name: '# of Days Close'
+    expr: "diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Close Date] , [SFDC_OPPORTUNITY_1::Opportunity Created Date] )"
+    was_auto_generated: false
+  - name: '# of Deliverables'
+    expr: "unique count ( [VIVUN_DELIVERABLES_1::Vivun Deliverable ID] )"
+    was_auto_generated: false
+  - name: '# of Merged Opportunities'
+    expr: "if ( [AE Motion] = 'merged' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '# of Opp & Acct Gaps'
+    expr: "[# of Opportunity Gaps] + [# of Account Gaps]"
+    was_auto_generated: false
+  - name: '# of Account Gaps'
+    expr: "unique count ( [VIVUN_ACCOUNT_GAP_1::Vivun Account Gap ID] )"
+    was_auto_generated: false
+  - name: '# of Opportunities'
+    expr: "unique count ( [SFDC_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: '# of Opportunity Gaps'
+    expr: "unique count ( [VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap ID] )"
+    was_auto_generated: false
+  - name: '# of PoVs'
+    expr: "unique_count_if ( ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'proof of value (pov)' ) , [VIVUN_DELIVERABLES_1::Vivun Name] )"
+    was_auto_generated: false
+  - name: '# of Product Gaps'
+    expr: "unique count ( [VIVUN_PRODUCT_GAP_1::Vivun Product Gap ID] )"
+    was_auto_generated: false
+  - name: '# of SE''s that Entered Activity'
+    expr: "unique count ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Created By ID] )"
+    was_auto_generated: false
+  - name: '% Loss Rate'
+    expr: "sum ( [# of Losses] ) / sum ( [# of Closed Opportunties] )"
+    was_auto_generated: false
+  - name: '# of Losses'
+    expr: "if ( [AE Motion] = 'closed lost' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Win M1 or Better'
+    expr: "sum ( [# of Wins] ) / sum_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage Maximum] != .5 , [# of Closed Opportunties] )"
+    was_auto_generated: false
+  - name: '% Win Rate'
+    expr: "sum ( [# of Wins] ) / sum ( [# of Closed Opportunties] )"
+    was_auto_generated: false
+  - name: '% Win S1 or  Better'
+    expr: "sum ( [# of Wins] ) / ( sum_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage Maximum] >= 1 , [# of Closed Opportunties] ) )"
+    was_auto_generated: false
+  - name: '% Win S2 or Better'
+    expr: "sum ( [# of Wins] ) / ( sum_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage Maximum] >= 2 , [# of Closed Opportunties] ) )"
+    was_auto_generated: false
+  - name: '% Win S3 or Better'
+    expr: "sum ( [# of Wins] ) / ( sum_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage Maximum] >= 3 , [# of Closed Opportunties] ) )"
+    was_auto_generated: false
+  - name: '% Win S4 or Better'
+    expr: "sum ( [# of Wins] ) / ( sum_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage Maximum] >= 4 , [# of Closed Opportunties] ) )"
+    was_auto_generated: false
+  - name: '% Win S5 or Better'
+    expr: "sum ( [# of Wins] ) / ( sum_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage Maximum] >= 5 , [# of Closed Opportunties] ) )"
+    was_auto_generated: false
+  - name: '# of Closed Opportunties'
+    expr: "if ( [AE Motion] = 'won' or [AE Motion] = 'closed lost' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Won Assigned'
+    expr: "sum ( [# of Wins] ) / ( sum ( [# of Assigned Opps] ) + sum ( [# of Wins] ) )"
+    was_auto_generated: false
+  - name: '# of Assigned Opps'
+    expr: "if ( ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '5 - completed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '6 - closed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '4 - qualified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '3 - prequalified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '2 - discovery' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '1 - assigned' ) and [AE Motion] != 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Won Completed'
+    expr: "sum ( [# of Wins] ) / ( sum ( [# of Completed Opps] ) + sum ( [# of Wins] ) )"
+    was_auto_generated: false
+  - name: '# of Completed Opps'
+    expr: "if ( ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '5 - completed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '6 - closed' ) and [AE Motion] != 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Won Discovery'
+    expr: "sum ( [# of Wins] ) / ( sum ( [# of Discovery Opps] ) + sum ( [# of Wins] ) )"
+    was_auto_generated: false
+  - name: '# of Discovery Opps'
+    expr: "if ( ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '5 - completed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '6 - closed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '4 - qualified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '3 - prequalified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '2 - discovery' ) and [AE Motion] != 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Won Prequalified'
+    expr: "sum ( [# of Wins] ) / ( sum ( [# of Prequalified Opps] ) + sum ( [# of Wins] ) )"
+    was_auto_generated: false
+  - name: '# of Prequalified Opps'
+    expr: "if ( ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '5 - completed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '6 - closed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '4 - qualified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '3 - prequalified hands on' ) and [AE Motion] != 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Won Qualified'
+    expr: "sum ( [# of Wins] ) / ( sum ( [# of Qualified Ops] ) + sum ( [# of Wins] ) )"
+    was_auto_generated: false
+  - name: '# of Qualified Ops'
+    expr: "if ( ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '5 - completed / production' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '6 - closed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '4 - qualified / rollout' ) and [AE Motion] != 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '% Won Unassigned'
+    expr: "sum ( [# of Wins] ) / ( sum ( [# of Unassigned Opps] ) + sum ( [# of Wins] ) )"
+    was_auto_generated: false
+  - name: '# of Unassigned Opps'
+    expr: "if ( ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '5 - completed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '6 - closed' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '4 - qualified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '3 - prequalified hands on' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '2 - discovery' or [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '1 - assigned' or isnull ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] ) ) and [AE Motion] != 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: '# of Wins'
+    expr: "if ( [AE Motion] = 'won' ) then 1 else 0"
+    was_auto_generated: false
+  - name: AE Motion
+    expr: "if ( [SFDC_OPPORTUNITY_1::Opportunity Stage] = 's7 closed won' ) then 'won' else if ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Reason] = 'merged/duplicate opportunity' ) then 'merged' else if ( [SFDC_OPPORTUNITY_1::Opportunity Stage] = 'closed dq/lost' ) then 'closed lost' else 'active'"
+    was_auto_generated: false
+  - name: Activity Presales Stage
+    expr: "if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '2 - evaluation' ) then '2 - discovery' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '3 - proof' ) then '4 - qualified hands on' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '4 - proof closed' ) then '6 - closed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '4 - proof completed' ) then '5 - completed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '5 - technical win' ) then '5 - completed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '5 - transition' ) then '5 - completed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '6 - technical loss' ) then '5 - completed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = 'assigned' ) then '1 - assigned' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = 'discovery' ) then '2 - discovery' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = 'proof of concept' ) then '3 - prequalified hands on' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = 'scoping' ) then '4 - qualified hands on' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = 'technical loss' ) then '6 - closed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = 'technical win' ) then '5 - completed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '1 - assigned' ) then '1 - assigned' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '2 - discovery' ) then '2 - discovery' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '3 - prequalified hands on' ) then '3 - prequalified hands on' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '4 - qualified hands on' ) then '4 - qualified hands on' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '5 - completed' ) then '5 - completed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = '6 - closed' ) then '6 - closed' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage] = null ) then '1 - assigned' else [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage]"
+    was_auto_generated: false
+  - name: Customer Facing
+    expr: "if ( contains ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Type] , 'external meeting' ) ) then 'customer facing' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Type] = 'environment setup' ) then 'customer facing' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Type] = 'presentation/demonstration' ) then 'customer facing' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Type] = 'external meeting' ) then 'customer facing' else if ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Type] = 'participation' ) then 'customer facing' else 'non customer facing'"
+    was_auto_generated: false
+  - name: Days Since Last Update
+    expr: "diff_days ( today ( ) , group_aggregate ( max ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Last Modified Date] ) , query_groups ( ) , query_filters ( ) ) )"
+    was_auto_generated: false
+  - name: Deliverable History
+    expr: "concat ( if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Description] ) ) then \"no history<br>\" else concat ( \"<div title='\" , sql_string_op ( \"regexp_replace(regexp_replace({0},{1},{2}),{3},{4})\" , [VIVUN_DELIVERABLES_1::Vivun Deliverable Description] , '\"|<|″' , '::' , \"'\" , ':' ) , \"'>history<br></div>\" ) , if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Link To Scoping Template] ) ) then \" \" else concat ( \"{caption}\" , \"📖 doc link{/caption}\" , [VIVUN_DELIVERABLES_1::Vivun Deliverable Link To Scoping Template] ) )"
+    was_auto_generated: false
+  - name: Deliverable Link
+    expr: "concat ( \"{caption}\" , \"<div title='\" , [VIVUN_DELIVERABLES_1::Vivun Deliverable Name] , \"'>\" , [VIVUN_DELIVERABLES_1::Vivun Deliverable Name] , \"</div>\" , \"{/caption}\" , \"https://app.vivun.com/dashboard/list/deliverables/deliverables/edit/\" , [VIVUN_DELIVERABLES_1::Vivun Deliverable ID] )"
+    was_auto_generated: false
+  - name: Deliverable Presales Stage
+    expr: "if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '2 - evaluation' ) then '2 - discovery' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '4 - proof closed' ) then '6 - closed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '4 - proof completed' ) then '5 - completed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '5 - technical win' ) then '5 - completed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '5 - transition' ) then '5 - completed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '6 - technical loss' ) then '5 - completed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = 'assigned' ) then '1 - assigned' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = 'discovery' ) then '2 - discovery' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = 'proof of concept' ) then '3 - prequalified hands on' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = 'scoping' ) then '4 - qualified hands on' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = 'technical loss' ) then '6 - closed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = 'technical win' ) then '5 - completed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '1 - assigned' ) then '1 - assigned' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '2 - discovery' ) then '2 - discovery' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '3 - prequalified hands on' ) then '3 - prequalified hands on' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '4 - qualified hands on' ) then '4 - qualified hands on' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '5 - completed' ) then '5 - completed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = '6 - closed' ) then '6 - closed' else if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage] = null ) then '' else [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Presales Stage]"
+    was_auto_generated: false
+  - name: Length of Opportunity
+    expr: "diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S7 Date] , [SFDC_OPPORTUNITY_1::Opportunity S1 Date] )"
+    was_auto_generated: false
+  - name: Opportunity Link
+    expr: "concat ( \"<div title='\" , [SFDC_OPPORTUNITY_1::Opportunity Forecast Category] , \" : \" , [SFDC_OPPORTUNITY_1::Opportunity Stage] , \" : \" , [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , \" : \" , [SFDC_OPPORTUNITY_1::Opportunity Name] , \" : \" , if ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Presales Notes] ) ) then \"no notes\" else sql_string_op ( \"regexp_replace(regexp_replace({0},{1},{2}),{3},{4})\" , [SFDC_OPPORTUNITY_1::Opportunity Presales Notes] , '\"|<|″' , '::' , \"'\" , ':' ) , \"' stage_gap='\" , [Stage Gap] , \"'>\" , left ( [SFDC_OPPORTUNITY_1::Opportunity Forecast Category] , 1 ) , \":\" , left ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 2 ) , \":p\" , left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) , \": \" , to_string ( round ( ifnull ( round ( [SFDC_OPPORTUNITY_1::Opportunity ACV] / 1000 , 1 ) , 0 ) ) ) , \"k\" , \"</br></div>\" , \"{caption}💰 opp link{/caption}\" , \"https://app.vivun.com/dashboard/list/opportunities/opportunities/edit/\" , [SFDC_OPPORTUNITY_1::Opportunity ID] , \"/view\" )"
+    was_auto_generated: false
+  - name: Opportunity M0 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity M1 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity M0 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity M1 Date] , [SFDC_OPPORTUNITY_1::Opportunity M0 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] ) ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity M1 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity M0 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] , [SFDC_OPPORTUNITY_1::Opportunity M0 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Opportunity M1 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity M1 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S1 Date] , [SFDC_OPPORTUNITY_1::Opportunity M1 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity M1 Date] ) ) ) then diff_days ( date ( now ( ) ) , [SFDC_OPPORTUNITY_1::Opportunity M1 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Opportunity Risks
+    expr: "concat ( if ( left ( [SFDC_OPPORTUNITY_2::Opportunity Stage] , 1 ) = \"c\" ) then 'closed, ' else '' , if ( isnull ( [SFDC_OPPORTUNITY_2::Opportunity SE ID] ) ) then 'no se, ' else '' , if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'proof of value (pov)' ) then ( if ( to_integer ( left ( [SFDC_OPPORTUNITY_2::Opportunity Presales Stage] , 1 ) ) < 4 ) then 'not qualified, ' else '' ) else '' , if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Link To Scoping Template] ) and [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'proof of value (pov)' ) then 'no scoping document, ' else '' , if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Description] ) ) then 'no history, ' else '' , if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Due Date] ) ) then 'no due date, ' else '' , if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Due Date] < today ( ) ) then 'past due, ' else '' , if ( diff_days ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Due Date] , [SFDC_OPPORTUNITY_2::Opportunity Close Date] ) > - 7 ) then 'near close date, ' else '' , if ( [SFDC_OPPORTUNITY_2::Opportunity Close Date] < today ( ) ) then 'past close date, ' else '' , if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] != 'request for proposal' ) then ifnull ( [Vivun Deliverable Risk] , 'no risk specified' ) else 'rfx' )"
+    was_auto_generated: false
+  - name: Opportunity S1 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] , [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 's1' ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) ) ) then diff_days ( date ( now ( ) ) , [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] , [SFDC_OPPORTUNITY_1::Opportunity S1 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Opportunity S2 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] , [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 's2' ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) ) ) then diff_days ( date ( now ( ) ) , [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] , [SFDC_OPPORTUNITY_1::Opportunity S2 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Opportunity S3 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] , [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 's3' ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) ) ) then diff_days ( date ( now ( ) ) , [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] , [SFDC_OPPORTUNITY_1::Opportunity S3 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Opportunity S4 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] , [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 's4' ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) ) ) then diff_days ( date ( now ( ) ) , [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] , [SFDC_OPPORTUNITY_1::Opportunity S4 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Opportunity S5 Duration
+    expr: "if ( not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S6 Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity S6 Date] , [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 's5' ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S6 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) ) ) then diff_days ( date ( now ( ) ) , [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) + 1 else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) ) and isnull ( [SFDC_OPPORTUNITY_1::Opportunity S6 Date] ) and not ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] ) ) ) then diff_days ( [SFDC_OPPORTUNITY_1::Opportunity Disqualified Date] , [SFDC_OPPORTUNITY_1::Opportunity S5 Date] ) + 1 else null"
+    was_auto_generated: false
+  - name: Participation Rate
+    expr: "[# of SE's that Closed] / [# of SE's]"
+    was_auto_generated: false
+  - name: '# of SE''s'
+    expr: "group_aggregate ( unique count ( [SFDC_OPPORTUNITY_1::Opportunity SE Name] ) , query_groups ( ) - { [SFDC_OPPORTUNITY_1::Opportunity Stage] } , query_filters ( ) )"
+    was_auto_generated: false
+  - name: '# of SE''s that Closed'
+    expr: "unique_count_if ( [SFDC_OPPORTUNITY_1::Opportunity Stage] = 's6 closed won' , [SFDC_OPPORTUNITY_1::Opportunity SE Name] )"
+    was_auto_generated: false
+  - name: Qualified/Prequalified Work
+    expr: "if ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '1 - assigned' ) then 'prequalified' else if ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '2 - discovery' ) then 'prequalified' else if ( [VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label] = '3 - prequalified hands on' ) then 'prequalified' else 'qualified'"
+    was_auto_generated: false
+  - name: SE Motion
+    expr: "if ( [Vivun Deliverable Status] = '0 - cancelled' ) then 'false start' else if ( [Vivun Deliverable Status] = '3 - finished' ) then 'se complete' else 'in progress'"
+    was_auto_generated: false
+  - name: SE Score Metric
+    expr: "( ( [Normalized RPHW (15)_1] * .15 ) + ( [Normalized Revenue (40)_1] * .35 ) + ( [Normalized Opportunity ACV (35)_1] * .4 ) + ( [Normalized SE Hours Worked (10)] * .1 ) ) * 100"
+    was_auto_generated: false
+  - name: Normalized Opportunity ACV (35)
+    expr: "( sum ( [SFDC_OPPORTUNITY_1::Opportunity ACV] - [SFDC_OPPORTUNITY_1::Opportunity Booked ACV] ) / group_aggregate ( sum ( [SFDC_OPPORTUNITY_1::Opportunity ACV] - [SFDC_OPPORTUNITY_1::Opportunity Booked ACV] ) , { } , query_filters ( ) ) )"
+    was_auto_generated: false
+  - id: Normalized Opportunity ACV (35)_1
+    name: Normalized Opportunity ACV (35)
+    expr: "( sum ( [SFDC_OPPORTUNITY_2::Opportunity ACV] - [SFDC_OPPORTUNITY_2::Opportunity Booked ACV] ) / group_aggregate ( sum ( [SFDC_OPPORTUNITY_2::Opportunity ACV] - [SFDC_OPPORTUNITY_2::Opportunity Booked ACV] ) , { } , query_filters ( ) ) )"
+    was_auto_generated: false
+  - name: Normalized RPHW (15)
+    expr: "( [Revenue per Hour Worked] / ( ( group_aggregate ( sum ( [SFDC_OPPORTUNITY_1::Opportunity Booked ACV] ) , { } , query_filters ( ) ) / group_aggregate ( sum ( [SFDC_OPPORTUNITY_1::Opportunity SE Hours] ) , { } , query_filters ( ) ) ) ) / 100 )"
+    was_auto_generated: false
+  - id: Normalized RPHW (15)_1
+    name: Normalized RPHW (15)
+    expr: "( [Revenue per Hour Worked_1] / ( ( group_aggregate ( sum ( [SFDC_OPPORTUNITY_2::Opportunity Booked ACV] ) , { } , query_filters ( ) ) / group_aggregate ( sum ( [SFDC_OPPORTUNITY_2::Opportunity SE Hours] ) , { } , query_filters ( ) ) ) ) / 100 )"
+    was_auto_generated: false
+  - name: Normalized Revenue (40)
+    expr: "( sum ( [SFDC_OPPORTUNITY_1::Opportunity Booked ACV] ) / group_aggregate ( sum ( [SFDC_OPPORTUNITY_1::Opportunity Booked ACV] ) , { } , query_filters ( ) ) )"
+    was_auto_generated: false
+  - id: Normalized Revenue (40)_1
+    name: Normalized Revenue (40)
+    expr: "( sum ( [SFDC_OPPORTUNITY_2::Opportunity Booked ACV] ) / group_aggregate ( sum ( [SFDC_OPPORTUNITY_2::Opportunity Booked ACV] ) , { } , query_filters ( ) ) )"
+    was_auto_generated: false
+  - name: Normalized SE Hours Worked (10)
+    expr: "( sum ( [SFDC_OPPORTUNITY_2::Opportunity SE Hours] ) / group_aggregate ( sum ( [VIVUN_DELIVERABLES_1::Vivun Deliverable SE Hours] ) , { } , query_filters ( ) ) )"
+    was_auto_generated: false
+  - name: Revenue per Hour Worked
+    expr: "sum ( [SFDC_OPPORTUNITY_1::Opportunity Booked ACV] ) / sum ( [SFDC_OPPORTUNITY_1::Opportunity SE Hours] )"
+    was_auto_generated: false
+  - id: Revenue per Hour Worked_1
+    name: Revenue per Hour Worked
+    expr: "sum ( [SFDC_OPPORTUNITY_2::Opportunity Booked ACV] ) / sum ( [SFDC_OPPORTUNITY_2::Opportunity SE Hours] )"
+    was_auto_generated: false
+  - name: Vivun Deliverables Count
+    expr: "sum ( if ( not ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable ID] ) ) ) then 1 else 0 )"
+    was_auto_generated: false
+  - name: Vivun Opportunity Link
+    expr: "concat ( \"<div title='\" , [SFDC_OPPORTUNITY_1::Opportunity Forecast Category] , \" : \" , [SFDC_OPPORTUNITY_1::Opportunity Stage] , \" : \" , [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , \" : \" , [SFDC_OPPORTUNITY_1::Opportunity Name] , \" : \" , if ( isnull ( [SFDC_OPPORTUNITY_1::Opportunity Presales Notes] ) ) then \"no notes\" else sql_string_op ( \"regexp_replace(regexp_replace({0},{1},{2}),{3},{4})\" , [SFDC_OPPORTUNITY_1::Opportunity Presales Notes] , '\"|<|″' , '::' , \"'\" , ':' ) , \"' stage_gap='\" , [Stage Gap] , \"'>\" , left ( [SFDC_OPPORTUNITY_1::Opportunity Forecast Category] , 1 ) , \":\" , left ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 2 ) , \":p\" , left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) , \": \" , to_string ( round ( ifnull ( round ( [SFDC_OPPORTUNITY_1::Opportunity ACV] / 1000 , 1 ) , 0 ) ) ) , \"k\" , \"</br></div>\" , \"{caption}💰 opp link{/caption}\" , \"https://app.vivun.com/dashboard/list/opportunities/opportunities/edit/\" , [SFDC_OPPORTUNITY_1::Opportunity ID] , \"/view\" )"
+    was_auto_generated: false
+  - name: Stage Gap
+    expr: "to_string ( to_integer ( 12.5 * ( 4 + to_integer ( if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , \"closed\" ) ) then 4 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 1 ) = \"m\" ) then 0 else if ( to_integer ( substr ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 1 , 1 ) ) > 2 ) then 3 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 2 ) = \"s2\" ) then 2 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Stage] , 2 ) = \"s1\" ) then 1 else 0 ) - to_integer ( if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) = \"1\" ) then 1 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) = \"2\" ) then 1 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) = \"3\" ) then 1 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) = \"4\" ) then 2 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) = \"5\" ) then 4 else if ( left ( [SFDC_OPPORTUNITY_1::Opportunity Presales Stage] , 1 ) = \"6\" ) then 4 else 0 ) ) ) )"
+    was_auto_generated: false
+  - name: f Account Region Segment
+    expr: "if ( [SFDC_ACCOUNT_1::Account Owner Team] in { 'commercial 1' , 'commercial 2' } ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'na' ) and contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'majors' ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'majors' ) \" ) ) else if ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'na' ) and not ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'majors' ) ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'emea' ) and contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'commercial' ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'emea' ) and not ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'commercial' ) ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'apac' ) or contains ( [SFDC_ACCOUNT_1::Account Owner Team] , 'japan' ) or [SFDC_ACCOUNT_1::Account Owner Team] = 'emerging markets' ) then sql_string_op ( \" upper ( 'apj' ) \" ) else sql_string_op ( \" initcap ( 'other' ) \" )"
+    was_auto_generated: false
+  - name: f Opportunity Region Segment
+    expr: "if ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] in { 'commercial 1' , 'commercial 2' } ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'na' ) and contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'majors' ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'majors' ) \" ) ) else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'na' ) and not ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'majors' ) ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'emea' ) and contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'emea' ) and not ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'apac' ) or contains ( [SFDC_OPPORTUNITY_1::Opportunity Owner Team] , 'japan' ) or [SFDC_OPPORTUNITY_1::Opportunity Owner Team] = 'emerging markets' ) then sql_string_op ( \" upper ( 'apj' ) \" ) else sql_string_op ( \" initcap ( 'other' ) \" )"
+    was_auto_generated: false
+  - name: '# of Expansions'
+    expr: "unique_count_if ( ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'expansion' ) , [VIVUN_DELIVERABLES_1::Vivun Name] )"
+    was_auto_generated: false
+  - name: '# of NBMs'
+    expr: "unique_count_if ( ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'new business meeting' ) , [VIVUN_DELIVERABLES_1::Vivun Name] )"
+    was_auto_generated: false
+  - name: '# of PoTs'
+    expr: "unique_count_if ( ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'pot' ) , [VIVUN_DELIVERABLES_1::Vivun Name] )"
+    was_auto_generated: false
+  - name: '# of Trials'
+    expr: "unique_count_if ( ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Type] = 'trial' ) , [VIVUN_DELIVERABLES_1::Vivun Name] )"
+    was_auto_generated: false
+  - name: Activity Opportunity
+    expr: "unique count ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Opportunity ID] )"
+    was_auto_generated: false
+  - name: Average Activities
+    expr: "[# of Activities] / [# of Activity Creators]"
+    was_auto_generated: false
+  - name: '# of Activities'
+    expr: "unique count ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity ID] )"
+    was_auto_generated: false
+  - name: Average Hours
+    expr: "sum ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Hours] ) / [# of Activity Creators]"
+    was_auto_generated: false
+  - name: '# of Activity Creators'
+    expr: "unique count ( [VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Owner ID] )"
+    was_auto_generated: false
+  - name: Deliverable Environment
+    expr: "ifnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Trial Environment] , [VIVUN_DELIVERABLES_1::Vivun Deliverable Validation Environment] )"
+    was_auto_generated: false
+  - name: Deliverable Result
+    expr: "ifnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Trial Result] , [VIVUN_DELIVERABLES_1::Vivun Deliverable Validation Result] )"
+    was_auto_generated: false
+  - name: Deliverable Started Date Flag
+    expr: "if ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Scheduled Date] < today ( ) ) then 1 else 0"
+    was_auto_generated: false
+  - name: Invalid Completed Flag
+    expr: "sum ( if ( isnull ( [Vivun Deliverable Database] ) ) then 1 else if ( isnull ( [Vivun Deliverable Risk] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Result] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Environment] ) ) then 1 else if ( isnull ( [Vivun Deliverable Source] ) ) then 1 else if ( isnull ( [Vivun Deliverable Status] ) ) then 1 else 0 )"
+    was_auto_generated: false
+  - name: Invalid Date Active Deliverable
+    expr: "sum ( if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Due Date] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Scheduled Date] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Started Date] ) ) then 1 else 0 )"
+    was_auto_generated: false
+  - name: Invalid Date Completed Deliverable
+    expr: "sum ( if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Due Date] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Date] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Scheduled Date] ) ) then 1 else if ( isnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Started Date] ) ) then 1 else 0 )"
+    was_auto_generated: false
+  - name: Vivun Deliverable Database
+    expr: "ifnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Trial Database] , [VIVUN_DELIVERABLES_1::Vivun Deliverable Validation Database] )"
+    was_auto_generated: false
+  - name: Vivun Deliverable Risk
+    expr: "ifnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Trial Risk] , [VIVUN_DELIVERABLES_1::Vivun Deliverable Validation Risk] )"
+    was_auto_generated: false
+  - name: Vivun Deliverable Source
+    expr: "ifnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Trial Source] , [VIVUN_DELIVERABLES_1::Vivun Deliverable Validation Source] )"
+    was_auto_generated: false
+  - name: Vivun Deliverable Status
+    expr: "if ( [Status Temp Formula] = 'cancelled' ) then '0 - cancelled' else if ( [Status Temp Formula] = 'scoping' ) then '1 - scoping' else if ( [Status Temp Formula] = 'in progress' ) then '2 - in progress' else if ( [Status Temp Formula] = 'finished' ) then '3 - finished' else [Status Temp Formula]"
+    was_auto_generated: false
+  - name: Status Temp Formula
+    expr: "ifnull ( [VIVUN_DELIVERABLES_1::Vivun Deliverable Trial Status] , [VIVUN_DELIVERABLES_1::Vivun Deliverable Validation Status] )"
+    was_auto_generated: false
+  worksheet_columns:
+  - name: Opportunity Owner Profile
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      index_priority: 2.0
+      value_casing: UNKNOWN
+  - name: Opportunity S3 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S3 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Stage Maximum
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Stage Maximum
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Original Renewal Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Original Renewal Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Se Role
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SE Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Availability Date
+    column_id: SFDC_CLUSTER_1::Cluster Availability Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Cs Team
+    column_id: SFDC_OPPORTUNITY_1::Opportunity CS Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Asset Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Se Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SE Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Completed Opps'
+    formula_id: '# of Completed Opps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Completed Opps
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Jira Status
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Jira Status
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Jira Status
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Name
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Created Date
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Modified By Name
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Created By Name
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Created By Name
+      - Product Gap Creator
+      value_casing: UNKNOWN
+  - name: Cluster Dynamic Sense Exception
+    column_id: SFDC_CLUSTER_1::Cluster Dynamic Sense Exception
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S6 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S6 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Deal Challenge Opportunity Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Challenge Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Last Modified By ID
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Disqualified Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Disqualified Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Subcategory
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Channel
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Channel
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Activation Timestamp
+    column_id: SFDC_CLUSTER_1::Cluster Activation Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Created Date
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Won Prequalified'
+    formula_id: '% Won Prequalified'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Presales Concern
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Presales Concern
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Use Case Document
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Use Case Document
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Default Hours
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Default Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Breaker Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Breaker Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Challenge Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Challenge Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of Active Opportunities'
+    formula_id: '# of Active Opportunities'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Probability
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Probability
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Merge Target
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Merge Target
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Normalized SE Hours Worked (10)
+    formula_id: Normalized SE Hours Worked (10)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Normalized SE Hours Worked
+      - Normalized SE Hours Employed
+      is_hidden: true
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Cs Profile
+    column_id: SFDC_OPPORTUNITY_1::Opportunity CS Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Opportunity Gap Yield Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Presales Stage Status
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Disqualified Comment
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Disqualified Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Type
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Owner Role
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Original Currency
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Original Currency
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Amount Source
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Amount Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Gap Amount Source
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Link
+    formula_id: Vivun Opportunity Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Forecast Category
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Cluster Age
+    column_id: SFDC_CLUSTER_1::Cluster Age
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Name
+    column_id: SFDC_ACCOUNT_1::Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of PoVs'
+    formula_id: '# of PoVs'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Win S3 or Better'
+    formula_id: '% Win S3 or Better'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Normalized Opportunity ACV (35)
+    formula_id: Normalized Opportunity ACV (35)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity ACV Standardized (35)
+      - Opportunity ACV Normalized (35)
+      is_hidden: true
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Function
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Cloud URL Provisioned
+    column_id: SFDC_CLUSTER_1::Cluster Cloud URL Provisioned
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Feature Subgroup
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Feature Subgroup
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Scheduled Duration
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Scheduled Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Won Completed'
+    formula_id: '% Won Completed'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Last Modified Date
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Jira Completed Issues
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Jira Completed Issues
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Jira Completed Issues
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Created By Name
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Deal Breaker Opportunity Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Breaker Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Creator ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Active
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Active
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Gap Active
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Hero Activity Flag
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Hero Activity Flag
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Next Step
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Next Step
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Install Date
+    column_id: SFDC_CLUSTER_1::Cluster Install Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Persona
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Persona
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Persona
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Status
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Status
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Opportunity Gap Status
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Leadership Priority
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Leadership Priority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Length of Opportunity
+    formula_id: Length of Opportunity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Normalized RPHW (15)
+    formula_id: Normalized RPHW (15)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Normalized RPHW Fifteen
+      - Normalized RPHW 15
+      is_hidden: true
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Type
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Account Gap Type
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Gap Type
+      value_casing: UNKNOWN
+  - name: Revenue per Hour Worked
+    formula_id: Revenue per Hour Worked
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Customer Environment Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Customer Environment Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Won Assigned'
+    formula_id: '% Won Assigned'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Last Viewed Date
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster ID
+    column_id: SFDC_CLUSTER_1::Cluster ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Name
+    column_id: VIVUN_DELIVERABLES_1::Vivun Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Free Trial Source
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Free Trial Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Currency ISO Code
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Account Gaps'
+    formula_id: '# of Account Gaps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Account Gaps
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Is Deleted
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Ae Motion
+    formula_id: AE Motion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Owner
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Owner
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Jira Link
+    column_id: VIVUN_PRODGAP_DEVITEM_VIEW_1::Vivun Development Item Jira Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Total Breaker Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Breaker Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Seniority
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Free Trial Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Free Trial Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Qualified/prequalified Work
+    formula_id: Qualified/Prequalified Work
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Subregion
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Subregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Risks
+    formula_id: Opportunity Risks
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Win S4 or Better'
+    formula_id: '% Win S4 or Better'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: '# of SE''s that Entered Activity'
+    formula_id: '# of SE''s that Entered Activity'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 Duration
+    formula_id: Opportunity M0 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Opportunity Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S3 Duration
+    formula_id: Opportunity S3 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Nice To Have Account Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Account Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      index_priority: 2.0
+      value_casing: UNKNOWN
+  - name: Cluster Activated
+    column_id: SFDC_CLUSTER_1::Cluster Activated
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Date Delivered
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Date Delivered
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Date Delivered
+      value_casing: UNKNOWN
+  - name: Opportunity Link
+    formula_id: Opportunity Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Presales Stage
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Wins'
+    formula_id: '# of Wins'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Wins
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Last Referenced Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch First Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch First ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Id
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Deal Breaker Opportunity Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Breaker Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Total Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Total Challenge Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Challenge Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Environment
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Id
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Classification
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Jira Total Issues
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Jira Total Issues
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Jira Total Issues
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Started Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Started Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Created By Name
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Opportunity Gap Created By Name
+      - Opportunity Gap Creator
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Created Stage
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Created Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Percent Complete
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Percent Complete
+    properties:
+      column_type: MEASURE
+      aggregation: AVERAGE
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Percent Complete
+      - Product Gap Pct Complete
+      - Product Gap % Complete
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Nice To Have Opportunity Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Challenge Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Challenge Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Sdr Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Active Flag
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Active Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Team
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Creator Team
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Total Related Development Items
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Related Development Items
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Deliverable Link
+    formula_id: Deliverable Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Owner Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Assigned Opps'
+    formula_id: '# of Assigned Opps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Assigned Opps
+      value_casing: UNKNOWN
+  - name: '# of Unassigned Opps'
+    formula_id: '# of Unassigned Opps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Unassigned Opps
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Description
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Description
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Product Gaps'
+    formula_id: '# of Product Gaps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Product Gaps
+      value_casing: UNKNOWN
+  - name: '# of Opportunity Gaps'
+    formula_id: '# of Opportunity Gaps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Opportunity Gaps
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Next Step History
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Next Step History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Flag
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Modified By Name
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Prequalified Opps'
+    formula_id: '# of Prequalified Opps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Prequalified Opps
+      value_casing: UNKNOWN
+  - name: Cluster EULA Acceptance Date
+    column_id: SFDC_CLUSTER_1::Cluster EULA Acceptance Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S2 Duration
+    formula_id: Opportunity S2 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S5 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S5 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Date
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Sdr Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SDR ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Profile
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Creator Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Region
+    column_id: SFDC_ACCOUNT_1::Account Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Days Since Last Update
+    formula_id: Days Since Last Update
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Validation Engineer
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Validation Engineer
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Tcv
+    column_id: SFDC_OPPORTUNITY_1::Opportunity TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Cloud Environment
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Cloud Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Last Referenced Date
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Type
+    column_id: SFDC_CLUSTER_1::Cluster Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Sdr Role
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SDR Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity System Modified Timestamp
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity System Modified TimeStamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Id
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Id
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Type
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S2 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S2 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Participation Rate
+    formula_id: Participation Rate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Description
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Description
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Description
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Created Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Created Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Creator Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Total Nice To Have Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Nice To Have Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Normalized Revenue (40)
+    formula_id: Normalized Revenue (40)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Normalized Earnings (40)
+      - Normalized Profits (40)
+      is_hidden: true
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: '% Win S5 or Better'
+    formula_id: '% Win S5 or Better'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Booked Acv
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Booked ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Meeting Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of Opp & Acct Gaps'
+    formula_id: '# of Opp & Acct Gaps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Opp & Acct Gaps
+      value_casing: UNKNOWN
+  - name: Opportunity Se Team
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SE Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Asset Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Account Id
+    column_id: VIVUN_ACCOUNT_GAP_1::Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Status
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Completed Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Completed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Cloud Data Warehouse
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Review Gap
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Review Gap
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Review Gap
+      value_casing: UNKNOWN
+  - name: Opportunity Booked Tcv
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Booked TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Opportunity Id
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S7 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S7 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Nice To Have Account Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Account Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of Discovery Opps'
+    formula_id: '# of Discovery Opps'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Discovery Opps
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Asset Link
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Asset Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Deployment
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Deployment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Won Unassigned'
+    formula_id: '% Won Unassigned'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Disqualified Reason
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Disqualified Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Status
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Owner ID
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Risk
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Risk
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Owner Id
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Se Hours
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SE Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Won Qualified'
+    formula_id: '% Won Qualified'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Region
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Last Modified Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Completed
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Completed
+      value_casing: UNKNOWN
+  - name: Se Motion
+    formula_id: SE Motion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Pricing Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Pricing Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Source
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Deleted Date
+    column_id: SFDC_CLUSTER_1::Cluster Deleted Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Is Deleted
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S5 Duration
+    formula_id: Opportunity S5 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Presales Stage
+    column_id: VIVUN_PRESALES_STAGE_MDT_1::Vivun Presales Stage MDT Label
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Last Modified By Id
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Se Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SE ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable System Modified Time
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable System Modified Time
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Role
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S4 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S4 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Create Date
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Create Date
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Create Date
+      value_casing: UNKNOWN
+  - name: Opportunity M1 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity M1 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of Customer Facing Hours'
+    formula_id: '# of Customer Facing Hours'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Ft Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact FT Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Pull Forward Flag
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Pull Forward Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Status
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Status
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Status
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Status
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Hours Float
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Hours Float
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Deal Challenge Opportunity Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Challenge Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Presales Notes
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Presales Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Se Profile
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SE Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Win M1 or Better'
+    formula_id: '% Win M1 or Better'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Is Deleted
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Stage Gap
+    formula_id: Stage Gap
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap System Modified Timestamp
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap System Modified Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Manager Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Created By
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Created By
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Interim Solution
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Interim Solution
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Interim Solution
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Name
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Opportunity Gap Name
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Is Deleted
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Hours
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Status
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Active
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Active
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Active
+      value_casing: UNKNOWN
+  - name: Opportunity Sdr Team
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Meeting Status
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Meeting Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Original Renewal Acv
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Original Renewal ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      value_casing: UNKNOWN
+  - name: Opportunity S4 Duration
+    formula_id: Opportunity S4 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Stage
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Id
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Product Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Last Modified By Id
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Mql Touch Last Campaign Category
+    column_id: SFDC_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Opportunities'
+    formula_id: '# of Opportunities'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Percent Complete
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Percent Complete
+    properties:
+      column_type: MEASURE
+      aggregation: AVERAGE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Gap Percent Complete
+      - Account Gap Pct Complete
+      - Account Gap % Complete
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Gap Yield Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Id
+    column_id: VIVUN_DELIVERABLES_1::Vivun Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverables Count
+    formula_id: Vivun Deliverables Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Country
+    column_id: SFDC_ACCOUNT_1::Account Country
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Losses'
+    formula_id: '# of Losses'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Feature Group
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Feature Group
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Feature Group
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Status
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Status
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Gap Status
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Type
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Type
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Opportunity Gap Type
+      value_casing: UNKNOWN
+  - name: '% Win Rate'
+    formula_id: '% Win Rate'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Message
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Message
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Gap Message
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Due Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Due Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Initial Meeting Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Initial Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Database
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Database
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Currency Iso Code
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Id
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Id
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Se Hours
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable SE Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Role
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Creator Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Date Delivered
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Date Delivered
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Gap Date Delivered
+      value_casing: UNKNOWN
+  - name: Opportunity S1 Duration
+    formula_id: Opportunity S1 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# Of Cft'
+    formula_id: '# of CFT'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Cft
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Created By Name
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Gap Created By Name
+      - Account Gap Creator
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Amount
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Amount
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Email
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Created By Id
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Name
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Product Gap
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Name
+      - Product Gap
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Result
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Result
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Qualified Opps'
+    formula_id: '# of Qualified Ops'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Qualified Opps
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Video Link
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Video Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Last Modified Date
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Breaker Gap Count
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Breaker Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of Days Close'
+    formula_id: '# of Days Close'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Description
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Owner Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Owner Id
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Link To Scoping Template
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Link To Scoping Template
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Deliverable Presales Stage
+    formula_id: Deliverable Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity M0 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Primary Competitor Solution
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Primary Competitor Solution
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Primary Competitor Solution
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Date Delivered
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Date Delivered
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Product Gap Date Delivered
+      value_casing: UNKNOWN
+  - name: Opportunity Pipeline Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Create Date
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Create Date
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Opportunity Gap Create Date
+      value_casing: UNKNOWN
+  - name: Opportunity Close Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Percent Complete
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Percent Complete
+    properties:
+      column_type: MEASURE
+      aggregation: AVERAGE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Percent Complete
+      - Opportunity Gap Pct Complete
+      - Opportunity Gap % Complete
+      value_casing: UNKNOWN
+  - name: '# of Clusters Created'
+    formula_id: '# of Clusters Created'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of SE''s'
+    formula_id: '# of SE''s'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Account
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Account
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Development Item Product Gap
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Development Item Product Gap
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Area
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Area
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Product Gap Area
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Name
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# Of Deliverables'
+    formula_id: '# of Deliverables'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Deliverables
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Created By ID
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Start Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Start Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Acv
+    column_id: SFDC_OPPORTUNITY_1::Opportunity ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Loss Rate'
+    formula_id: '% Loss Rate'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Title
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source Contact Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Type
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Activity Presales Stage
+    formula_id: Activity Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Scheduling
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Scheduling
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Name
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Team
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Duration
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '# of Closed Opportunties'
+    formula_id: '# of Closed Opportunties'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Last Referenced Date
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account ID
+    column_id: SFDC_ACCOUNT_1::Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Customer Facing
+    formula_id: Customer Facing
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Customer Environment
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Customer Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Deliverable History
+    formula_id: Deliverable History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Focus
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Focus
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Source
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: SE Score Metric
+    description: "Weight: RPHW: 15%, Rev: 35%, ACV: 40%, SE Hour: 10%"
+    formula_id: SE Score Metric
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Cs Id
+    column_id: SFDC_OPPORTUNITY_1::Opportunity CS ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Subregion
+    column_id: SFDC_ACCOUNT_1::Account Subregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Created Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Win S2 or Better'
+    formula_id: '% Win S2 or Better'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Free Trial Impact
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Free Trial Impact
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Opportunity Gap Weighted Yield Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Weighted Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Sdr Profile
+    column_id: SFDC_OPPORTUNITY_1::Opportunity SDR Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Booked Deal
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Booked Deal
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Owner Profile
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Partner Account Owner Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Nice To Have Opportunity Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: '% Win S1 or  Better'
+    formula_id: '% Win S1 or  Better'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: Opportunity Cs Role
+    column_id: SFDC_OPPORTUNITY_1::Opportunity CS Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Cluster Description
+    column_id: SFDC_CLUSTER_1::Cluster Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Leadership Notes
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Leadership Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Opportunity Gap Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Status
+    column_id: VIVUN_DELIVERABLES_1::Vivun Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap Amount Source
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap Amount Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap Amount Source
+      value_casing: UNKNOWN
+  - name: Opportunity Superregion
+    column_id: SFDC_OPPORTUNITY_1::Opportunity Superregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Last Viewed Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Scheduled Date
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Scheduled Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Created By Id
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Deliverable Last Modified By
+    column_id: VIVUN_DELIVERABLES_1::Vivun Deliverable Last Modified By
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Product Gap Account Gap Weighted Yield Sum
+    column_id: VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Weighted Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Amount
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Account Gap Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Gap Amount
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Deliverable
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Deliverable
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: '# of Merged Opportunities'
+    formula_id: '# of Merged Opportunities'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Hero Activity Last Viewed Date
+    column_id: VIVUN_HERO_ACTIVITY_1::Vivun Hero Activity Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Account Gap Created Date
+    column_id: VIVUN_ACCOUNT_GAP_1::Vivun Account Gap Account Gap Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S1 Date
+    column_id: SFDC_OPPORTUNITY_1::Opportunity S1 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun Opportunity Gap
+    column_id: VIVUN_OPPORTUNITY_GAP_1::Vivun Opportunity Gap
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Gap
+      value_casing: UNKNOWN
+  - name: '% Won Discovery'
+    formula_id: '% Won Discovery'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '##.##%'
+      value_casing: UNKNOWN
+  - name: '# of SE''s that Closed'
+    formula_id: '# of SE''s that Closed'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Jira Name
+    column_id: VIVUN_PRODGAP_DEVITEM_VIEW_1::Vivun Development Item Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M1 Duration
+    formula_id: Opportunity M1 Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Jira Number
+    column_id: VIVUN_PRODGAP_DEVITEM_VIEW_1::Vivun Development Item Key
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Status
+    column_id: SFDC_ACCOUNT_1::Account Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: f Opportunity Region Segment
+    formula_id: f Opportunity Region Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: f Account Region Segment
+    formula_id: f Account Region Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Owner Name
+    column_id: SFDC_ACCOUNT_1::Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Type
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Opportunity Name
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Opportunity ID
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Deliverable Type
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Deliverable Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Scheduled Date
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Scheduled Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun TMR End Date
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR End Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun TMR Created Date
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Vivun TMR Approver
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Approver
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Created By ID
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Status
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Assigned Team Member
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Assigned Team Member
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR ID
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Assigned Team Member Name
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Assigned Team Member Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Creator Name
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Creator Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Approver Name
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Approver Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Vivun TMR Name
+    column_id: VIVUN_TEAM_MEMBER_REQUEST_1::Vivun TMR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: User Active Flag
+    column_id: SFDC_USER_1::User Active Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: User Email
+    column_id: SFDC_USER_1::User Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: User ID
+    column_id: SFDC_USER_1::User ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: User Name
+    column_id: SFDC_USER_1::User Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: User Team Name
+    column_id: SFDC_USER_1::User Team Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: User Profile Name
+    column_id: SFDC_USER_1::User Profile Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: User Role Name
+    column_id: SFDC_USER_1::User Role Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: User Manager ID
+    column_id: SFDC_USER_1::User Manager ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: User Manager Name
+    column_id: SFDC_USER_1::User Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: User Start Date
+    column_id: SFDC_USER_1::User Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: User Title
+    column_id: SFDC_USER_1::User Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: User Department
+    column_id: SFDC_USER_1::User Department
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  properties:
+    is_bypass_rls: false
+    join_progressive: true

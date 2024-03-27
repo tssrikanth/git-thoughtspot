@@ -1,0 +1,104 @@
+guid: 013cf4d5-9dea-4702-85c3-64205ceddaf2
+table:
+  name: VIVUN_PRESALES_STAGE_MDT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: VIVUN_PRESALES_STAGE_MDT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Vivun Presales Stage MDT ID
+    db_column_name: Vivun Presales Stage MDT ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Developer Name
+    db_column_name: Vivun Presales Stage MDT Developer Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Master Label
+    db_column_name: Vivun Presales Stage MDT Master Label
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Language
+    db_column_name: Vivun Presales Stage MDT Language
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Namespace Prefix
+    db_column_name: Vivun Presales Stage MDT Namespace Prefix
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Label
+    db_column_name: Vivun Presales Stage MDT Label
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Qualified API Name
+    db_column_name: Vivun Presales Stage MDT Qualified API Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT API Name
+    db_column_name: Vivun Presales Stage MDT API Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Description
+    db_column_name: Vivun Presales Stage MDT Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Is Active
+    db_column_name: Vivun Presales Stage MDT Is Active
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Presales Stage MDT Last Modified Date
+    db_column_name: Vivun Presales Stage MDT Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Presales Stage MDT Order
+    db_column_name: Vivun Presales Stage MDT Order
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64

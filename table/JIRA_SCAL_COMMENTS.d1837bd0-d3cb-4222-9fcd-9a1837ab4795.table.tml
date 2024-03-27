@@ -1,0 +1,104 @@
+guid: d1837bd0-d3cb-4222-9fcd-9a1837ab4795
+table:
+  name: JIRA_SCAL_COMMENTS
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: JIRA_SCAL_COMMENTS
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: JIRA SCAL Comment Author Active
+    db_column_name: JIRA SCAL Comment Author Active
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Author Name
+    db_column_name: JIRA SCAL Comment Author Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Author Email
+    db_column_name: JIRA SCAL Comment Author Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Created Time
+    db_column_name: JIRA SCAL Comment Created Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA SCAL Comment ID
+    db_column_name: JIRA SCAL Comment ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Updated Author Name
+    db_column_name: JIRA SCAL Comment Updated Author Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Updated Author Email
+    db_column_name: JIRA SCAL Comment Updated Author Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Updated Time
+    db_column_name: JIRA SCAL Comment Updated Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA SCAL Comment Mentions
+    db_column_name: JIRA SCAL Comment Mentions
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Updated Comment Body
+    db_column_name: JIRA SCAL Updated Comment Body
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL ID
+    db_column_name: JIRA SCAL ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: FK_JIRA_COMMENTS_JIRA_SCAL
+    destination:
+      name: JIRA_SCAL_ISSUES
+      fqn: 743cbdd3-6690-45e4-a347-b356396d16bd
+    "on": "[JIRA_SCAL_COMMENTS::JIRA SCAL ID] = [JIRA_SCAL_ISSUES::JIRA SCAL ID]"
+    type: INNER

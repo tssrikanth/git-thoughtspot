@@ -1,0 +1,29 @@
+guid: 9d46c420-6cad-43fc-94f6-4b837edc2430
+sql_view:
+  name: MIXPANEL_USER_ACTIVITY_SQLVIEW
+  description: Placeholder SQL View for user level values based on Mixpanel Session
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "SELECT\r\n\t\"Mixpanel User GUID\",\r\n\t\"Cluster UUID\",\r\n\tMIN (\"Mixpanel Session Start Time\") as \"First Login Timestamp\",\r\n    MIN ( CASE WHEN ( \"Mixpanel Pinboards Viewed\" > 0 ) THEN \"Mixpanel Session Start Time\" ELSE NULL END ) AS \"First Liveboard View\"\r\nFROM\r\n\tGTM_DB.PUBLIC.MIXPANEL_SESSION\r\nWHERE\r\n\t\"Mixpanel User GUID\" IS NOT NULL\r\n\tAND \"Cluster UUID\" IS NOT NULL\r\nGROUP BY 1,2"
+  sql_view_columns:
+  - name: Mixpanel User GUID
+    sql_output_column: Mixpanel User GUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Cluster UUID
+    sql_output_column: Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: First Login Timestamp
+    sql_output_column: First Login Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: First Liveboard View
+    sql_output_column: First Liveboard View
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX

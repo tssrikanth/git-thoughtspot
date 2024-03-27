@@ -1,0 +1,43 @@
+guid: 8c75eb2d-c140-4232-a1f8-a556ccb38643
+sql_view:
+  name: VIEW_CS_GAINSIGHT_SCORECARD_NEW
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "with score as (\n  SELECT *  FROM \n( select \"Account ID\",\"Account Name\",\"Gainsight Current Score Name\",\"Gainsight Measure Name\",\"Gainsight Score Modified Date\" from gainsight_scorecard\n where \"Gainsight Is Current Score\"='true' and \"Gainsight Measure Name\" in ('CSM Sentiment', 'Renewal Risk')\n)\n               PIVOT ( MAX(\"Gainsight Current Score Name\") FOR \"Gainsight Measure Name\" IN ('CSM Sentiment', 'Renewal Risk')) AS P \n               (Account_ID,Account_Name,GS_Mod_Date,CSMSentiment,Renewal_Risk)\n              )\n,comments as (\n  SELECT * FROM\n( select \"Account ID\",\"Gainsight Comments\",\"Gainsight Measure Name\",\"Gainsight Score Modified Date\" from gainsight_scorecard \nwhere \"Gainsight Is Current Score\"='true' and \"Gainsight Measure Name\" in ('CSM Sentiment', 'Renewal Risk')\n)\n              PIVOT ( MAX(\"Gainsight Comments\") FOR \"Gainsight Measure Name\" IN ('CSM Sentiment', 'Renewal Risk') ) AS P \n              (Account_ID,GS_Mod_Date,CSM_Sentiment_Comments,Renewal_Risk_Comments)\n             )\nselect score.*,comments.CSM_Sentiment_Comments,comments.Renewal_Risk_Comments from score \nleft join comments on score.Account_ID=comments.Account_ID and score.GS_Mod_Date=comments.GS_Mod_Date\norder by 2 desc"
+  sql_view_columns:
+  - name: ACCOUNT_ID
+    sql_output_column: ACCOUNT_ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: ACCOUNT_NAME
+    sql_output_column: ACCOUNT_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: GS_MOD_DATE
+    sql_output_column: GS_MOD_DATE
+    properties:
+      column_type: ATTRIBUTE
+  - name: CSMSENTIMENT
+    sql_output_column: CSMSENTIMENT
+    properties:
+      column_type: ATTRIBUTE
+  - name: RENEWAL_RISK
+    sql_output_column: RENEWAL_RISK
+    properties:
+      column_type: ATTRIBUTE
+  - name: CSM_SENTIMENT_COMMENTS
+    sql_output_column: CSM_SENTIMENT_COMMENTS
+    properties:
+      column_type: ATTRIBUTE
+  - name: RENEWAL_RISK_COMMENTS
+    sql_output_column: RENEWAL_RISK_COMMENTS
+    properties:
+      column_type: ATTRIBUTE
+  joins_with:
+  - name: VIEW_GS_SFDC_ACCOUNT_NEW
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[VIEW_CS_GAINSIGHT_SCORECARD_NEW::ACCOUNT_ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER

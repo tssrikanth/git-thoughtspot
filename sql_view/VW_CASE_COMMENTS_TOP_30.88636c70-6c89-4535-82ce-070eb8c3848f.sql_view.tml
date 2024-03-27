@@ -1,0 +1,24 @@
+guid: 88636c70-6c89-4535-82ce-070eb8c3848f
+sql_view:
+  name: VW_CASE_COMMENTS_TOP_30
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "\nWITH COMMENTS_RANK AS (\nSELECT \n  \"ta_2\".\"Case ID\" as cid,\n    '\\n'||'_____________________________________________\\n\\n'\n    ||'\\n'||'Comment Created Date: '||NVL(\"ta_2\".\"Case Comment Created Date\",'')\n    ||'\\n'||'Comment Created By: '||NVL(\"ta_2\".\"Case Comment Created By Name\",'')\n    ||'\\n'||'_____________________________________________\\n\\n'\n    || NVL(\"ta_2\".\"Case Comment\",'') as comment,\n   ROW_NUMBER() OVER(PARTITION BY  \"ta_2\".\"Case ID\" ORDER BY   \"ta_2\".\"Case Comment Created Date\"  asc) as comments\nFROM \"GTM_DB\".\"PUBLIC\".\"SFDC_CASE_COMMENT\" \"ta_2\" ),\nCOMMENTS as (\n  SELECT \n  * FROM COMMENTS_RANK\n  PIVOT(MAX(comment) FOR comments IN(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30)) as p\n)\nSELECT cid as \"Case ID\",\nNVL(\"COMMENTS\".\"1\",'') ||\nNVL(\"COMMENTS\".\"2\",'') ||\nNVL(\"COMMENTS\".\"3\",'') ||\nNVL(\"COMMENTS\".\"4\",'') ||\nNVL(\"COMMENTS\".\"5\",'') ||\nNVL(\"COMMENTS\".\"6\",'') ||\nNVL(\"COMMENTS\".\"7\",'') ||\nNVL(\"COMMENTS\".\"8\",'') ||\nNVL(\"COMMENTS\".\"9\" ,'')||\nNVL(\"COMMENTS\".\"10\",'')||\nNVL(\"COMMENTS\".\"11\",'')||\nNVL(\"COMMENTS\".\"12\",'')||\nNVL(\"COMMENTS\".\"13\",'')||\nNVL(\"COMMENTS\".\"14\",'')||\nNVL(\"COMMENTS\".\"15\",'')||\nNVL(\"COMMENTS\".\"16\",'')||\nNVL(\"COMMENTS\".\"17\",'')||\nNVL(\"COMMENTS\".\"18\",'')||\nNVL(\"COMMENTS\".\"19\",'')||\nNVL(\"COMMENTS\".\"20\",'')||\nNVL(\"COMMENTS\".\"21\",'')||\nNVL(\"COMMENTS\".\"22\",'')||\nNVL(\"COMMENTS\".\"23\",'')||\nNVL(\"COMMENTS\".\"24\",'')||\nNVL(\"COMMENTS\".\"25\",'')||\nNVL(\"COMMENTS\".\"26\",'')||\nNVL(\"COMMENTS\".\"27\",'')||\nNVL(\"COMMENTS\".\"28\",'')||\nNVL(\"COMMENTS\".\"29\",'')||\nNVL(\"COMMENTS\".\"30\",'') AS \"Case Comments\"\nFROM COMMENTS\n"
+  sql_view_columns:
+  - name: Case ID
+    sql_output_column: Case ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Case Comments
+    sql_output_column: Case Comments
+    properties:
+      column_type: ATTRIBUTE
+  joins_with:
+  - name: FK_TOP30_CASE_COMMENT_SFDC_CASE
+    destination:
+      name: SFDC_CASE
+      fqn: 470a6c78-7d32-4266-bde6-f8ee715d51d5
+    "on": "[VW_CASE_COMMENTS_TOP_30::Case ID] = [SFDC_CASE::Case ID]"
+    type: INNER

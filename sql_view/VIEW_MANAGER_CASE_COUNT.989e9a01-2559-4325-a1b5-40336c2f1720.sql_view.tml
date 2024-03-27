@@ -1,0 +1,44 @@
+guid: 989e9a01-2559-4325-a1b5-40336c2f1720
+sql_view:
+  name: VIEW_MANAGER_CASE_COUNT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: |-
+    with total as(
+    select count(*) total_count from sfdc_case
+    where "Case Status" in ('Open', 'Pending') and ("Case Customer Category" IS NULL or "Case Customer Category" = 'Issue')
+    and "Case Record Type" = 'Customer Support'
+    )
+    select "Case Owner Manager Email", total_count "Total Case Count", count("Case Number") "Case Count Per Manager",  100*(count("Case Number")/total_count) as "% Cases" from sfdc_case
+    left join total on 1=1
+    where "Case Status" in ('Open', 'Pending') and ("Case Customer Category" IS NULL or "Case Customer Category" = 'Issue')
+    and "Case Record Type" = 'Customer Support'
+    group by 1,2 order by 2 desc
+  sql_view_columns:
+  - name: Case Owner Manager Email
+    sql_output_column: Case Owner Manager Email
+    properties:
+      column_type: ATTRIBUTE
+  - name: Total Case Count
+    sql_output_column: Total Case Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Case Count Per Manager
+    sql_output_column: Case Count Per Manager
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: '% Cases'
+    sql_output_column: '% Cases'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  joins_with:
+  - name: VIEW_MANAGER_CASE_COUNT_SFDC_CASE
+    destination:
+      name: SFDC_CASE
+      fqn: 470a6c78-7d32-4266-bde6-f8ee715d51d5
+    "on": "[VIEW_MANAGER_CASE_COUNT::Case Owner Manager Email] = [SFDC_CASE::Case Owner Manager Email]"
+    type: INNER

@@ -1,0 +1,217 @@
+guid: 358487c3-9c97-4971-b8e6-4fcfe19e63a1
+table:
+  name: SFDC_CHASSIS
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_CHASSIS
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Address 1
+    db_column_name: Chassis Address 1
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Address 2
+    db_column_name: Chassis Address 2
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Active
+    db_column_name: Chassis Active
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Chassis End Date
+    db_column_name: Chassis End Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Chassis Renewable
+    db_column_name: Chassis Renewable
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Chassis Serial
+    db_column_name: Chassis Serial
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Start Date
+    db_column_name: Chassis Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Chassis City
+    db_column_name: Chassis City
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Country
+    db_column_name: Chassis Country
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Created By ID
+    db_column_name: Chassis Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Currency ISO Code
+    db_column_name: Chassis Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Description
+    db_column_name: Chassis Description
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Install Date
+    db_column_name: Chassis Install Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Chassis Last Modified By ID
+    db_column_name: Chassis Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Operating System
+    db_column_name: Chassis Operating System
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Opportunity
+    db_column_name: Chassis Opportunity
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Owner ID
+    db_column_name: Chassis Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Postal Code
+    db_column_name: Chassis Postal Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Product Code
+    db_column_name: Chassis Product Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Product ID
+    db_column_name: Chassis Product ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Ship Date
+    db_column_name: Chassis Ship Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Chassis Spares Depot
+    db_column_name: Chassis Spares Depot
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Status
+    db_column_name: Chassis Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis ID
+    db_column_name: Chassis ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Cluster Account
+    db_column_name: Cluster Account
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Cluster Account ID
+    db_column_name: Cluster Account ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Chassis Account
+    db_column_name: Chassis Account
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_CHASSIS_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[SFDC_CHASSIS::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER

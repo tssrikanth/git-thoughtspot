@@ -1,0 +1,395 @@
+guid: f54aba87-9214-4901-9751-64e8dd8c4d58
+table:
+  name: MIXPANEL_SESSION
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: MIXPANEL_SESSION
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Cluster UUID
+    db_column_name: Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Mixpanel AI Search, Show Query"
+    db_column_name: "Mixpanel AI Search, Show Query"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Searches on Retail Demo Data Excluding Search Assist
+    db_column_name: Mixpanel Searches on Retail Demo Data Excluding Search Assist
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Pin Answer, Demo Data"
+    db_column_name: "Mixpanel AI Search, Pin Answer, Demo Data"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel Search Sessions, Data"
+    db_column_name: "Mixpanel Search Sessions, Data"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Formula Saved
+    db_column_name: Mixpanel Formula Saved
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel Search Sessions, Demo Data"
+    db_column_name: "Mixpanel Search Sessions, Demo Data"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Explore Click"
+    db_column_name: "Mixpanel AI Search, Explore Click"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Downvote Result"
+    db_column_name: "Mixpanel AI Search, Downvote Result"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Title Click"
+    db_column_name: "Mixpanel AI Search, Title Click"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Searches on Retail Demo Data Using Search Assist
+    db_column_name: Mixpanel Searches on Retail Demo Data Using Search Assist
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Submit Feedback"
+    db_column_name: "Mixpanel AI Search, Submit Feedback"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel Search Sessions, AI"
+    db_column_name: "Mixpanel Search Sessions, AI"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Pin Answer"
+    db_column_name: "Mixpanel AI Search, Pin Answer"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Upvote Result"
+    db_column_name: "Mixpanel AI Search, Upvote Result"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel AI Searches
+    db_column_name: Mixpanel AI Searches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: "Mixpanel AI Search, Intent to Fix"
+    db_column_name: "Mixpanel AI Search, Intent to Fix"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel User GUID
+    db_column_name: Mixpanel User GUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Mixpanel Session ID
+    db_column_name: Mixpanel Session ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Mixpanel Session Start Time
+    db_column_name: Mixpanel Session Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Mixpanel Session End Time
+    db_column_name: Mixpanel Session End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Mixpanel Session Duration
+    db_column_name: Mixpanel Session Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Session Event Count
+    db_column_name: Mixpanel Session Event Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Answers Created
+    db_column_name: Mixpanel Answers Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Connections Created
+    db_column_name: Mixpanel Connections Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Invitations Sent
+    db_column_name: Mixpanel Invitations Sent
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Pinboards Created
+    db_column_name: Mixpanel Pinboards Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Worksheets Created
+    db_column_name: Mixpanel Worksheets Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Search Assist Lessons Completed
+    db_column_name: Mixpanel Search Assist Lessons Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Searched Demo Data
+    db_column_name: Mixpanel Searched Demo Data
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Visualizations Pinned
+    db_column_name: Mixpanel Visualizations Pinned
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Pinboards Viewed
+    db_column_name: Mixpanel Pinboards Viewed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Drilldowns
+    db_column_name: Mixpanel Drilldowns
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Eureka Searches
+    db_column_name: Mixpanel Eureka Searches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Explore Searches
+    db_column_name: Mixpanel Explore Searches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Answers Viewed
+    db_column_name: Mixpanel Answers Viewed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Joins Created
+    db_column_name: Mixpanel Joins Created
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Searches On Data
+    db_column_name: Mixpanel Searches On Data
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Homehub Score
+    db_column_name: Mixpanel Homehub Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Searched on Data Excluding Search Assist
+    db_column_name: Mixpanel Searched on Data Excluding Search Assist
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Searches on Data Using Search Assist
+    db_column_name: Mixpanel Searches on Data Using Search Assist
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Shares Sent
+    db_column_name: Mixpanel Shares Sent
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Mixpanel Uploaded CSV
+    db_column_name: Mixpanel Uploaded CSV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: FK_MIXPANEL_SESSION_CLUSTER
+    destination:
+      name: SFDC_CLUSTER
+      fqn: 1a108b00-02ff-431e-9066-5a85f3b1fbd9
+    "on": "[MIXPANEL_SESSION::Cluster UUID] = [SFDC_CLUSTER::Cluster UUID]"
+    type: INNER
+  - name: FK_MIXPANEL_SESSION_INTERCOM_CONTACTS
+    destination:
+      name: INTERCOM_CONTACTS
+      fqn: 3d4adb80-fac4-4ce2-ae2a-80c8985a0705
+    "on": "[MIXPANEL_SESSION::Mixpanel User GUID] = [INTERCOM_CONTACTS::Intercom Contact External ID]"
+    type: INNER
+  - name: FK_MIXPANEL_SESSION_to_MIXPANEL_USER_ACTIVITY_SQLVIEW
+    destination:
+      name: MIXPANEL_USER_ACTIVITY_SQLVIEW
+      fqn: 9d46c420-6cad-43fc-94f6-4b837edc2430
+    "on": "[MIXPANEL_SESSION::Mixpanel User GUID] = [MIXPANEL_USER_ACTIVITY_SQLVIEW::Mixpanel User GUID] AND [MIXPANEL_SESSION::Cluster UUID] = [MIXPANEL_USER_ACTIVITY_SQLVIEW::Cluster UUID]"
+    type: LEFT_OUTER

@@ -1,0 +1,332 @@
+guid: 743cbdd3-6690-45e4-a347-b356396d16bd
+table:
+  name: JIRA_SCAL_ISSUES
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: JIRA_SCAL_ISSUES
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: JIRA SCAL Reporter Name
+    db_column_name: JIRA SCAL Reporter Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL ID
+    db_column_name: JIRA SCAL ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA SCAL Reporter Email
+    db_column_name: JIRA SCAL Reporter Email
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Assignee Email
+    db_column_name: JIRA SCAL Assignee Email
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Votes
+    db_column_name: JIRA SCAL Votes
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA SCAL Watchers Count
+    db_column_name: JIRA SCAL Watchers Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA SCAL Field Escalated
+    db_column_name: JIRA SCAL Field Escalated
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL SFDC Case Account Health Status
+    db_column_name: JIRA SCAL SFDC Case Account Health Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL SFDC Case Owner Name
+    db_column_name: JIRA SCAL SFDC Case Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL SFDC Case Status
+    db_column_name: JIRA SCAL SFDC Case Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL SFDC Case Association
+    db_column_name: JIRA SCAL SFDC Case Association
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Linked Issue
+    db_column_name: JIRA SCAL Linked Issue
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Origin
+    db_column_name: JIRA SCAL Origin
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Last Updated By
+    db_column_name: JIRA SCAL Comment Last Updated By
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Fix Builds
+    db_column_name: JIRA SCAL Fix Builds
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Regression
+    db_column_name: JIRA SCAL Regression
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Created Date
+    db_column_name: JIRA SCAL Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA SCAL Issue Type
+    db_column_name: JIRA SCAL Issue Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Updated Date
+    db_column_name: JIRA SCAL Updated Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA SCAL Assignee
+    db_column_name: JIRA SCAL Assignee
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Components Name
+    db_column_name: JIRA SCAL Components Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Fix Versions Name
+    db_column_name: JIRA SCAL Fix Versions Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Labels
+    db_column_name: JIRA SCAL Labels
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Status
+    db_column_name: JIRA SCAL Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Issue Summary
+    db_column_name: JIRA SCAL Issue Summary
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Priority
+    db_column_name: JIRA SCAL Priority
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Customer Commit
+    db_column_name: JIRA SCAL Customer Commit
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: JIRA SCAL Target Version
+    db_column_name: JIRA SCAL Target Version
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Release Commit
+    db_column_name: JIRA SCAL Release Commit
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Resolution Date
+    db_column_name: JIRA SCAL Resolution Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA SCAL Resolution
+    db_column_name: JIRA SCAL Resolution
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Found-In Version
+    db_column_name: JIRA SCAL Found-In Version
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Customer Name
+    db_column_name: JIRA SCAL Customer Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL URL
+    db_column_name: JIRA SCAL URL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Deployment Type
+    db_column_name: JIRA SCAL Deployment Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Epic Name
+    db_column_name: JIRA SCAL Epic Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Primary Persona
+    db_column_name: JIRA SCAL Primary Persona
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL V-team
+    db_column_name: JIRA SCAL V-team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Product Manager
+    db_column_name: JIRA SCAL Product Manager
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Target Date
+    db_column_name: JIRA SCAL Target Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: JIRA SCAL Key
+    db_column_name: JIRA SCAL Key
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Comment Count
+    db_column_name: JIRA SCAL Comment Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA SCAL Visibility
+    db_column_name: JIRA SCAL Visibility
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL Eng Target Version/s
+    db_column_name: JIRA SCAL Eng Target Version/s
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR

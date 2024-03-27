@@ -1,0 +1,23 @@
+guid: fea9ed47-7897-4f85-b588-f6a139dd4009
+sql_view:
+  name: INVITER_NAME_VIEW
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "SELECT DISTINCT tu.\"User Inviter ID\",tu1. \"User Name\" AS \"User Inviter Name\" FROM TS_USER tu left join TS_USER tu1 on tu.\"User Inviter ID\"=tu1.\"User GUID\""
+  sql_view_columns:
+  - name: User Inviter ID
+    sql_output_column: User Inviter ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: User Inviter Name
+    sql_output_column: User Inviter Name
+    properties:
+      column_type: ATTRIBUTE
+  joins_with:
+  - name: FK_INVITER_NAME_VIEW_TS_USER
+    destination:
+      name: TS_USER
+      fqn: 962febc2-8be6-479e-80d0-dca3c7dc8e6e
+    "on": "[INVITER_NAME_VIEW::User Inviter ID] = [TS_USER::User Inviter ID]"
+    type: INNER

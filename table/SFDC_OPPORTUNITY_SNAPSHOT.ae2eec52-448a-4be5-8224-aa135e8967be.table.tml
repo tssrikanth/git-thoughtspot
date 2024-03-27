@@ -1,0 +1,863 @@
+guid: ae2eec52-448a-4be5-8224-aa135e8967be
+table:
+  name: SFDC_OPPORTUNITY_SNAPSHOT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_OPPORTUNITY_SNAPSHOT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Opportunity Snapshot Product Line(s) Sold
+    db_column_name: Opportunity Snapshot Product Line(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Score
+    db_column_name: Opportunity Snapshot Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Expansion Software ACV
+    db_column_name: Opportunity Snapshot Expansion Software ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot TVP Close Date
+    db_column_name: Opportunity Snapshot TVP Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot RVP Close Date
+    db_column_name: Opportunity Snapshot RVP Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot TCV
+    db_column_name: Opportunity Snapshot TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Renewal Type
+    db_column_name: Opportunity Snapshot Renewal Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Owner Role
+    db_column_name: Opportunity Snapshot Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot RVP Forecast Category
+    db_column_name: Opportunity Snapshot RVP Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot CRO Forecast Category
+    db_column_name: Opportunity Snapshot CRO Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot New/Expand ACV
+    db_column_name: Opportunity Snapshot New/Expand ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot CRO Close Date
+    db_column_name: Opportunity Snapshot CRO Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot New Customer Software ACV
+    db_column_name: Opportunity Snapshot New Customer Software ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot TVP Forecast Category
+    db_column_name: Opportunity Snapshot TVP Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Source Detailed
+    db_column_name: Opportunity Snapshot Source Detailed
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot CRO Gross ACV
+    db_column_name: Opportunity Snapshot CRO Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Creator Profile
+    db_column_name: Opportunity Snapshot Creator Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot RD Forecast Category
+    db_column_name: Opportunity Snapshot RD Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot RD Close Date
+    db_column_name: Opportunity Snapshot RD Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot RVP Gross ACV
+    db_column_name: Opportunity Snapshot RVP Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Creator Role
+    db_column_name: Opportunity Snapshot Creator Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Owner Team
+    db_column_name: Opportunity Snapshot Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot RD Gross ACV
+    db_column_name: Opportunity Snapshot RD Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Theater VP Gross ACV
+    db_column_name: Opportunity Snapshot Theater VP Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Created Date
+    db_column_name: Opportunity Snapshot Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Opportunity Snapshot Renewal Software ACV
+    db_column_name: Opportunity Snapshot Renewal Software ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Creator Team
+    db_column_name: Opportunity Snapshot Creator Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S7 Date
+    db_column_name: Opportunity Snapshot S7 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snpashot (For CCoE) Type
+    db_column_name: Opportunity Snpashot (For CCoE) Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Close Date
+    db_column_name: Opportunity Snapshot Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Date
+    db_column_name: Opportunity Snapshot Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot ACV
+    db_column_name: Opportunity Snapshot ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Stage
+    db_column_name: Opportunity Snapshot Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Forecast Category
+    db_column_name: Opportunity Snapshot Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PeopleAi Engagement Level
+    db_column_name: PeopleAi Engagement Level
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot HighFive URL
+    db_column_name: Opportunity Snapshot HighFive URL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Disqualified Date
+    db_column_name: Opportunity Snapshot Disqualified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Source
+    db_column_name: Opportunity Snapshot Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot M0 Date
+    db_column_name: Opportunity Snapshot M0 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot CS ID
+    db_column_name: Opportunity Snapshot CS ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Probability
+    db_column_name: Opportunity Snapshot Probability
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Contract Term Years
+    db_column_name: Opportunity Snapshot Contract Term Years
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Snapshot Engagement Date Last
+    db_column_name: Opportunity Snapshot Engagement Date Last
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Creator
+    db_column_name: Opportunity Snapshot Creator
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Original Renewal Date
+    db_column_name: Opportunity Snapshot Original Renewal Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Disqualified Reason
+    db_column_name: Opportunity Snapshot Disqualified Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Pipeline Date
+    db_column_name: Opportunity Snapshot Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Services Amount
+    db_column_name: Opportunity Snapshot Services Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Conversion
+    db_column_name: Opportunity Snapshot Conversion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Owner Next Step History
+    db_column_name: Opportunity Snapshot Owner Next Step History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S6 Date
+    db_column_name: Opportunity Snapshot S6 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Pull Forward Flag
+    db_column_name: Opportunity Snapshot Pull Forward Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Initial Meeting Occurred
+    db_column_name: Opportunity Snapshot Initial Meeting Occurred
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot SDR Name
+    db_column_name: Opportunity Snapshot SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Free Trial Impact
+    db_column_name: Opportunity Snapshot Free Trial Impact
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Customer Environment Type
+    db_column_name: Opportunity Snapshot Customer Environment Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot CS Name
+    db_column_name: Opportunity Snapshot CS Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Creator ID
+    db_column_name: Opportunity Snapshot Creator ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S1 Date
+    db_column_name: Opportunity Snapshot S1 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Contract Term Months
+    db_column_name: Opportunity Snapshot Contract Term Months
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Snapshot Owner Next Step
+    db_column_name: Opportunity Snapshot Owner Next Step
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot HighFive Meeting Scheduled
+    db_column_name: Opportunity Snapshot HighFive Meeting Scheduled
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Initial Meeting Date
+    db_column_name: Opportunity Snapshot Initial Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Deployment
+    db_column_name: Opportunity Snapshot Deployment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Product Type
+    db_column_name: Opportunity Snapshot Product Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Customer Environment
+    db_column_name: Opportunity Snapshot Customer Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S4 Date
+    db_column_name: Opportunity Snapshot S4 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Type
+    db_column_name: Opportunity Snapshot Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Partner Account Name
+    db_column_name: Opportunity Snapshot Partner Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Status
+    db_column_name: Opportunity Snapshot Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot MQL Touch Last ID
+    db_column_name: Opportunity Snapshot MQL Touch Last ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Owner ID
+    db_column_name: Opportunity Snapshot Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot SE ID
+    db_column_name: Opportunity Snapshot SE ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Source Contact Function
+    db_column_name: Opportunity Snapshot Source Contact Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Channel
+    db_column_name: Opportunity Snapshot Channel
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Free Trial Source
+    db_column_name: Opportunity Snapshot Free Trial Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Name
+    db_column_name: Opportunity Snapshot Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Free Trial Type
+    db_column_name: Opportunity Snapshot Free Trial Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Superregion
+    db_column_name: Opportunity Snapshot Superregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Disqualified Comment
+    db_column_name: Opportunity Snapshot Disqualified Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S2 Date
+    db_column_name: Opportunity Snapshot S2 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Partner Account ID
+    db_column_name: Opportunity Snapshot Partner Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Cloud Environment
+    db_column_name: Opportunity Snapshot Cloud Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot M1 Date
+    db_column_name: Opportunity Snapshot M1 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Presales Notes
+    db_column_name: Opportunity Snapshot Presales Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Source Contact Seniority
+    db_column_name: Opportunity Snapshot Source Contact Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S3 Date
+    db_column_name: Opportunity Snapshot S3 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Currency
+    db_column_name: Opportunity Snapshot Currency
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Meeting Date
+    db_column_name: Opportunity Snapshot Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Source Contact ID
+    db_column_name: Opportunity Snapshot Source Contact ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot MQL Touch First ID
+    db_column_name: Opportunity Snapshot MQL Touch First ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Original Renewal ACV
+    db_column_name: Opportunity Snapshot Original Renewal ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Snapshot SDR ID
+    db_column_name: Opportunity Snapshot SDR ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot SE Name
+    db_column_name: Opportunity Snapshot SE Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Subregion
+    db_column_name: Opportunity Snapshot Subregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Owner Name
+    db_column_name: Opportunity Snapshot Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Region
+    db_column_name: Opportunity Snapshot Region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot S5 Date
+    db_column_name: Opportunity Snapshot S5 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Snapshot Meeting Status
+    db_column_name: Opportunity Snapshot Meeting Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Cloud Data Warehouse
+    db_column_name: Opportunity Snapshot Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Presales Stage
+    db_column_name: Opportunity Snapshot Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Snapshot Stage Maximum
+    db_column_name: Opportunity Snapshot Stage Maximum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Snapshot Source Contact Name
+    db_column_name: Opportunity Snapshot Source Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_OPPORTUNITY_SNAPSHOT_OPPORTUNITY
+    destination:
+      name: SFDC_OPPORTUNITY
+      fqn: 28ea7b2a-dcb1-4e47-8458-018d88a27e00
+    "on": "[SFDC_OPPORTUNITY_SNAPSHOT::Opportunity ID] = [SFDC_OPPORTUNITY::Opportunity ID]"
+    type: INNER

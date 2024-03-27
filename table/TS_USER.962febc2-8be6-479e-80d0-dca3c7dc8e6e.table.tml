@@ -1,0 +1,185 @@
+guid: 962febc2-8be6-479e-80d0-dca3c7dc8e6e
+table:
+  name: TS_USER
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: TS_USER
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: User GUID
+    db_column_name: User GUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User TsRef
+    db_column_name: User TsRef
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Social SignUp
+    db_column_name: User Social SignUp
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TS User TE Active Member Flag
+    db_column_name: TS User TE Active Member Flag
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Source
+    db_column_name: User Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Source Cluster
+    db_column_name: User Source Cluster
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Expiration Date
+    db_column_name: User Expiration Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: User Registration Date
+    db_column_name: User Registration Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: User Activation Date
+    db_column_name: User Activation Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: User Status
+    db_column_name: User Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Person ID
+    db_column_name: Person ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Email
+    db_column_name: User Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Company
+    db_column_name: User Company
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Team ID
+    db_column_name: User Team ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Team Owner Flag
+    db_column_name: User Team Owner Flag
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: User Inviter ID
+    db_column_name: User Inviter ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Purchase Option
+    db_column_name: User Purchase Option
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Subscription Type
+    db_column_name: User Subscription Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Billing Customer ID
+    db_column_name: User Billing Customer ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Name
+    db_column_name: User Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Subscription Status
+    db_column_name: User Subscription Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Subscription Tier
+    db_column_name: User Subscription Tier
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_FT_ENGAGEMENT_PERSON
+    destination:
+      name: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+      fqn: 9539a35b-6e9c-49b6-8fb0-b4b03fecb9fe
+    "on": "[TS_USER::Person ID] = [SFDC_CAMPAIGN_ENGAGEMENT_PERSON::Person ID]"
+    type: INNER
+  - name: FK_TS_USER_PERSON
+    destination:
+      name: SFDC_PERSON
+      fqn: 657f3c7e-dfa9-4f04-879e-2b48b95fadbb
+    "on": "[TS_USER::Person ID] = [SFDC_PERSON::Person ID]"
+    type: INNER

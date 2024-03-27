@@ -1,0 +1,138 @@
+guid: 67bb0026-20f2-4854-8d32-44107aedecf0
+table:
+  name: VIVUN_TEAM_MEMBER_REQUEST
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: VIVUN_TEAM_MEMBER_REQUEST
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Vivun TMR Type
+    db_column_name: Vivun TMR Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR ID
+    db_column_name: Vivun TMR ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Assigned Team Member Name
+    db_column_name: Vivun TMR Assigned Team Member Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Creator Name
+    db_column_name: Vivun TMR Creator Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Approver Name
+    db_column_name: Vivun TMR Approver Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Name
+    db_column_name: Vivun TMR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Opportunity Name
+    db_column_name: Vivun TMR Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Opportunity ID
+    db_column_name: Vivun TMR Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Deliverable Type
+    db_column_name: Vivun TMR Deliverable Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Scheduled Date
+    db_column_name: Vivun TMR Scheduled Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun TMR End Date
+    db_column_name: Vivun TMR End Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun TMR Created Date
+    db_column_name: Vivun TMR Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun TMR Approver
+    db_column_name: Vivun TMR Approver
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Created By ID
+    db_column_name: Vivun TMR Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Status
+    db_column_name: Vivun TMR Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun TMR Assigned Team Member
+    db_column_name: Vivun TMR Assigned Team Member
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: VIVUN_TEAM_MEMBER_REQUEST_to_SFDC_OPPORTUNITY
+    destination:
+      name: SFDC_OPPORTUNITY
+      fqn: 28ea7b2a-dcb1-4e47-8458-018d88a27e00
+    "on": "[VIVUN_TEAM_MEMBER_REQUEST::Vivun TMR Opportunity ID] = [SFDC_OPPORTUNITY::Opportunity ID]"
+    type: LEFT_OUTER
+  - name: VIVUN_TEAM_MEMBER_REQUEST_to_SFDC_USER
+    destination:
+      name: SFDC_USER
+      fqn: 30df64bd-9753-49e4-b261-0f66c8a8b7a8
+    "on": "[VIVUN_TEAM_MEMBER_REQUEST::Vivun TMR Created By ID] = [SFDC_USER::User ID]"
+    type: LEFT_OUTER

@@ -1,0 +1,46 @@
+guid: 2e8f6925-0725-464b-96a2-781810a6f3b6
+sql_view:
+  name: CLUSTER_AGE_MAU_ACCOUNT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "with clus_acc as (\n  select distinct \"Account ID\", \"Cluster Contract Start Date\" from (\nselect distinct c.\"Account ID\", c.\"Cluster ID\", c.\"Cluster UUID\", c.\"Cluster ID\", c.\"Cluster UUID\", co.\"Cluster Contract Start Date\" from sfdc_cluster c\nleft join sfdc_cluster_opportunity co on c.\"Cluster UUID\"=co.\"Cluster UUID\" and c.\"Cluster ID\"=co.\"Cluster ID\"\n  order by 1) qualify rank() over( partition by \"Account ID\" order by \"Cluster Contract Start Date\" asc)=1\n  order by 1)\n,cont_date as (\nselect distinct c.\"Account ID\", c.\"Cluster Contract Start Date\", \"Opportunity Close Date\", nvl(\"Cluster Contract Start Date\", \"Opportunity Close Date\") \"Contract Date\" from clus_acc c\nleft join (select distinct \"Account ID\", min(\"Opportunity Close Date\") \"Opportunity Close Date\" from sfdc_opportunity where 1=1 --and \"Account ID\"='0017000001L27vlAAB'\n           and \"Opportunity Status\" = 'Booked' group by 1 order by 1\n          ) o on c.\"Account ID\"=o.\"Account ID\"\n)\n,mau as (\nselect c.\"Account ID\", count(distinct \"User GUID\") AS \"Number Of Customers\" from sfdc_cluster c\ninner join mixpanel_metrics s on c.\"Cluster UUID\"=s.\"Cluster UUID\"\nwhere to_date(\"Time\") between current_date()-30 and current_date() --and \"Account ID\"='0017000001L27vlAAB'\ngroup by 1\n)\nselect a.\"Account ID\", a.\"Account Name\", cd.\"Contract Date\", \ncase  when (datediff(day,cd.\"Contract Date\",CURRENT_DATE())<=90) then '(1) <=3 months'\n        when (datediff(day,cd.\"Contract Date\",CURRENT_DATE()) BETWEEN 91 AND 180) then '(2) 4-6 months'\n        when (datediff(day,cd.\"Contract Date\",CURRENT_DATE()) BETWEEN 181 AND 270) then '(3) 7-9 months' \n        when (datediff(day,cd.\"Contract Date\",CURRENT_DATE()) > 270 ) then '(4) 9+ months' \n        else NULL end  AS \"Cluster Age\",\n\ncase when m.\"Number Of Customers\" IS NULL or '0' THEN '0'\n       when m.\"Number Of Customers\" BETWEEN 1 AND 10 THEN '1-10'\n       when m.\"Number Of Customers\" BETWEEN 11 AND 50 THEN '11-50'\n       when m.\"Number Of Customers\" BETWEEN 51 AND 200 THEN '51-200'\n       when m.\"Number Of Customers\" BETWEEN 201 AND 500 THEN '201-500'\n       when m.\"Number Of Customers\" BETWEEN 501 AND 2000 THEN '501-2000'\n       when m.\"Number Of Customers\">2000 THEN '2000+'\n       else NULL end as \"MAU Tier\",\n       \n       count(distinct c.\"Cluster UUID\") AS \"Cluster Count\"\nfrom sfdc_account a\ninner join sfdc_cluster c on a.\"Account ID\"=c.\"Account ID\"\nleft join mau m on c.\"Account ID\"=m.\"Account ID\"\nleft join cont_date cd on a.\"Account ID\"=cd.\"Account ID\"\nwhere 1=1 and \"Account Status\"='Customer' --and a.\"Account ID\"='0017000001L27vlAAB'\ngroup by 1,2,3,4,5\norder by 1\n"
+  sql_view_columns:
+  - name: Account ID
+    sql_output_column: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Account Name
+    sql_output_column: Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Contract Date
+    sql_output_column: Contract Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Cluster Age
+    sql_output_column: Cluster Age
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: MAU Tier
+    sql_output_column: MAU Tier
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Cluster Count
+    sql_output_column: Cluster Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  joins_with:
+  - name: FK_CLUSTER_AGE_MAU_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[CLUSTER_AGE_MAU_ACCOUNT::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER

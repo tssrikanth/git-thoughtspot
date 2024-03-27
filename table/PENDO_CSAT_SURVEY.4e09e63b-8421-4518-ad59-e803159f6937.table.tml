@@ -1,0 +1,98 @@
+guid: 4e09e63b-8421-4518-ad59-e803159f6937
+table:
+  name: PENDO_CSAT_SURVEY
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: PENDO_CSAT_SURVEY
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Pendo Cluster UUID
+    db_column_name: Pendo Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo Guide ID
+    db_column_name: Pendo Guide ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo Poll Score
+    db_column_name: Pendo Poll Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Pendo URL
+    db_column_name: Pendo URL
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo User GUID
+    db_column_name: Pendo User GUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo Poll Created Time
+    db_column_name: Pendo Poll Created Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Pendo Poll ID
+    db_column_name: Pendo Poll ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo TS Release Version
+    db_column_name: Pendo TS Release Version
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo User Persona
+    db_column_name: Pendo User Persona
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo Poll Commment
+    db_column_name: Pendo Poll Commment
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pendo User First Login Date
+    db_column_name: Pendo User First Login Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  joins_with:
+  - name: PENDO_CSAT_TS_USER
+    destination:
+      name: TS_USER
+      fqn: 962febc2-8be6-479e-80d0-dca3c7dc8e6e
+    "on": "[PENDO_CSAT_SURVEY::Pendo User GUID] = [TS_USER::User GUID]"
+    type: INNER

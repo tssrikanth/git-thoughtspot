@@ -1,0 +1,873 @@
+guid: 4f7cf842-2bcb-42f1-a814-5db8f024fc4e
+table:
+  name: SFDC_PROJECT_ASSIGNMENT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_PROJECT_ASSIGNMENT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Assignment ID
+    db_column_name: Assignment ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Owner ID
+    db_column_name: Assignment Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Is Deleted
+    db_column_name: Assignment Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Name
+    db_column_name: Assignment Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Currency ISO Code
+    db_column_name: Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Created Date
+    db_column_name: Assignment Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Assignment Created By ID
+    db_column_name: Assignment Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Last Modified Date
+    db_column_name: Assignment Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Assignment Last Modified By ID
+    db_column_name: Assignment Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: System Modified Timestamp
+    db_column_name: System Modified Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Assignment Last Activity Date
+    db_column_name: Assignment Last Activity Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Assignment Last Viewed Date
+    db_column_name: Assignment Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Assignment Last Referenced Date
+    db_column_name: Assignment Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Assignment Correlation ID
+    db_column_name: Assignment Correlation ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Action Refresh EVA Hours From Timecards
+    db_column_name: Assignment Action Refresh EVA Hours From Timecards
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Action Refresh Hours From Schedule
+    db_column_name: Assignment Action Refresh Hours From Schedule
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Daily Notes Last Updated
+    db_column_name: Assignment Daily Notes Last Updated
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Assignment Daily Notes
+    db_column_name: Assignment Daily Notes
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Number
+    db_column_name: Assignment Number
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Average Cost Rate Currency Code
+    db_column_name: Assignment Average Cost Rate Currency Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Average Cost Rate Number
+    db_column_name: Assignment Average Cost Rate Number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Average Cost Rate
+    db_column_name: Assignment Average Cost Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Batch Sequence Number
+    db_column_name: Assignment Batch Sequence Number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Batch Sequence
+    db_column_name: Assignment Batch Sequence
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Bill Rate
+    db_column_name: Assignment Bill Rate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Amount In Financials
+    db_column_name: Assignment Billable Amount In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Amount Submitted
+    db_column_name: Assignment Billable Amount Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Days In Financials
+    db_column_name: Assignment Billable Days In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Days Submitted
+    db_column_name: Assignment Billable Days Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Expenses In Financials
+    db_column_name: Assignment Billable Expenses In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Expenses Submitted
+    db_column_name: Assignment Billable Expenses Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Hours In Financials
+    db_column_name: Assignment Billable Hours In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Billable Hours Submitted
+    db_column_name: Assignment Billable Hours Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Closed for Expense Entry
+    db_column_name: Assignment Closed for Expense Entry
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Closed for Time Entry
+    db_column_name: Assignment Closed for Time Entry
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Cost Rate Amount
+    db_column_name: Assignment Cost Rate Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Cost Rate Currency Code
+    db_column_name: Assignment Cost Rate Currency Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Cost Rate
+    db_column_name: Assignment Cost Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Daily Bill Rate
+    db_column_name: Assignment Daily Bill Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Daily Cost Rate
+    db_column_name: Assignment Daily Cost Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Daily Timecard Notes Required
+    db_column_name: Assignment Daily Timecard Notes Required
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Description
+    db_column_name: Assignment Description
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment ERP Absence Correlation ID
+    db_column_name: Assignment ERP Absence Correlation ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Eligible for Schedule Recalculation
+    db_column_name: Assignment Eligible for Schedule Recalculation
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment End Date
+    db_column_name: Assignment End Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Assignment Estimated Time To Completion
+    db_column_name: Assignment Estimated Time To Completion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Exclude from Billing
+    db_column_name: Assignment Exclude from Billing
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Exclude from Planners
+    db_column_name: Assignment Exclude from Planners
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Hours to Days Rule
+    db_column_name: Assignment Hours to Days Rule
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Is Billable
+    db_column_name: Assignment Is Billable
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Location
+    db_column_name: Assignment Location
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Milestone
+    db_column_name: Assignment Milestone
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Nick Name
+    db_column_name: Assignment Nick Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Non Billable Days In Financials
+    db_column_name: Assignment Non Billable Days In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Non Billable Days Submitted
+    db_column_name: Assignment Non Billable Days Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Non Billable Expenses In Financials
+    db_column_name: Assignment Non Billable Expenses In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Non Billable Expenses Submitted
+    db_column_name: Assignment Non Billable Expenses Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Non Billable Hours In Financials
+    db_column_name: Assignment Non Billable Hours In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Non Billable Hours Submitted
+    db_column_name: Assignment Non Billable Hours Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Override Expense Group
+    db_column_name: Assignment Override Expense Group
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Expense Practice
+    db_column_name: Assignment Override Expense Practice
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Expense Region
+    db_column_name: Assignment Override Expense Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override RPG Audit Notes
+    db_column_name: Assignment Override RPG Audit Notes
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override RPG Enabled
+    db_column_name: Assignment Override RPG Enabled
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Timecard Cost Group
+    db_column_name: Assignment Override Timecard Cost Group
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Timecard Cost Practice
+    db_column_name: Assignment Override Timecard Cost Practice
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Timecard Cost Region
+    db_column_name: Assignment Override Timecard Cost Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Timecard Revenue Group
+    db_column_name: Assignment Override Timecard Revenue Group
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Timecard Revenue Practice
+    db_column_name: Assignment Override Timecard Revenue Practice
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Override Timecard Revenue Region
+    db_column_name: Assignment Override Timecard Revenue Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Percent Allocated
+    db_column_name: Assignment Percent Allocated
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Planned Bill Rate
+    db_column_name: Assignment Planned Bill Rate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Planned Hours
+    db_column_name: Assignment Planned Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Planned Revenue
+    db_column_name: Assignment Planned Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Project Task Hours
+    db_column_name: Assignment Project Task Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Project ID
+    db_column_name: Project ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Projected Revenue
+    db_column_name: Assignment Projected Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Rate Card
+    db_column_name: Assignment Rate Card
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Resource Cost Rate Date
+    db_column_name: Assignment Resource Cost Rate Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Assignment Resource Request
+    db_column_name: Assignment Resource Request
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Resource ID
+    db_column_name: Assignment Resource ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Role
+    db_column_name: Assignment Role
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Schedule Updated
+    db_column_name: Assignment Schedule Updated
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Schedule
+    db_column_name: Assignment Schedule
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Scheduled Days
+    db_column_name: Assignment Scheduled Days
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Scheduled Hours
+    db_column_name: Assignment Scheduled Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Show Assignment Methodologies Only
+    db_column_name: Show Assignment Methodologies Only
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Show Assignment Milestones Only
+    db_column_name: Show Assignment Milestones Only
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Show Assignment Phases Only
+    db_column_name: Show Assignment Phases Only
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Start Date
+    db_column_name: Assignment Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Assignment Status
+    db_column_name: Assignment Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Suggested Bill Rate Currency Code
+    db_column_name: Assignment Suggested Bill Rate Currency Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Suggested Bill Rate Number
+    db_column_name: Assignment Suggested Bill Rate Number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Suggested Bill Rate
+    db_column_name: Assignment Suggested Bill Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Team Member Swap Date
+    db_column_name: Assignment Team Member Swap Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Assignment Team Member Swapped Out
+    db_column_name: Assignment Team Member Swapped Out
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Team Schedule Slot Key
+    db_column_name: Assignment Team Schedule Slot Key
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Team Schedule Slot
+    db_column_name: Assignment Team Schedule Slot
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Time Credited
+    db_column_name: Assignment Time Credited
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Time Excluded
+    db_column_name: Assignment Time Excluded
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Timecard External Costs In Financials
+    db_column_name: Assignment Timecard External Costs In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Timecard External Costs Submitted
+    db_column_name: Assignment Timecard External Costs Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Timecard Internal Costs In Financials
+    db_column_name: Assignment Timecard Internal Costs In Financials
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Timecard Internal Costs Submitted
+    db_column_name: Assignment Timecard Internal Costs Submitted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Assignment Use Project Currency For Resource Cost
+    db_column_name: Assignment Use Project Currency For Resource Cost
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Assignment Use Resource Currency For Resource Cost
+    db_column_name: Assignment Assignment Use Resource Currency For Resource Cost
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Use Resource Default Cost Rate
+    db_column_name: Assignment Use Resource Default Cost Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Use Resource Default Cost Rate as Daily
+    db_column_name: Assignment Use Resource Default Cost Rate as Daily
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Assignment Is Resource Current User
+    db_column_name: Assignment Is Resource Current User
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: SFDC_PROJECT_ASSIGNMENT_to_PS_ORGANIZATION
+    destination:
+      name: PS_ORGANIZATION
+      fqn: 1bbcbdf2-5299-4b0b-a279-a49aa5fafbfa
+    "on": "([SFDC_PROJECT_ASSIGNMENT::Assignment Resource ID] = [PS_ORGANIZATION::SFDC_PERSON_ID])"
+    type: INNER
+  - name: SFDC_PROJECT_ASSIGNMENT_to_RESOURCE_EMPLOYEE_TS
+    destination:
+      name: PS_ASSIGNED_RESOURCES
+      fqn: afef41e7-e300-4a13-9dba-368d1a4b455c
+    "on": "[SFDC_PROJECT_ASSIGNMENT::Project ID] = [PS_ASSIGNED_RESOURCES::Project ID] AND [SFDC_PROJECT_ASSIGNMENT::Assignment Resource ID] = [PS_ASSIGNED_RESOURCES::Resource ID]"
+    type: INNER
+  - name: SFDC_PROJECT_ASSIGNMENT_to_SFDC_PERSON
+    destination:
+      name: SFDC_PERSON
+      fqn: 657f3c7e-dfa9-4f04-879e-2b48b95fadbb
+    "on": "[SFDC_PROJECT_ASSIGNMENT::Assignment Resource ID] = [SFDC_PERSON::Person ID]"
+    type: LEFT_OUTER
+  - name: SFDC_PROJECT_ASSIGNMENT_to_SFDC_PROJECT
+    destination:
+      name: SFDC_PROJECT
+      fqn: 27102553-8120-489a-81ed-56d63212a411
+    "on": "([SFDC_PROJECT_ASSIGNMENT::Project ID] = [SFDC_PROJECT::Project ID])"
+    type: INNER

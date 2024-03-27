@@ -1,0 +1,1811 @@
+guid: eed6ee53-49bc-43c0-89bf-d72232aad8d1
+liveboard:
+  name: Technical Architect Team Overview
+  description: "Liveboard to show overall workload volume for the Technical Architect team, along with the teams calendarised activity metrics."
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Deliverables In-Progress
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      search_query: "[Vivun Deliverable Status].'in progress' [Vivun Deliverable Owner] [Account Name] [Vivun Deliverable Name] [Opportunity Owner Name] [Opportunity SE Name] [Account CS Name] sort by [Vivun Deliverable Owner] sort by [Account Name] [Vivun Deliverable Type] [Vivun TMR Name] [Vivun TMR Creator Name] [Vivun Deliverable Description]"
+      answer_columns:
+      - name: Vivun Deliverable Owner
+      - name: Account Name
+      - name: Vivun Deliverable Name
+      - name: Opportunity Owner Name
+      - name: Opportunity SE Name
+      - name: Account CS Name
+      - name: Vivun Deliverable Type
+      - name: Vivun TMR Name
+      - name: Vivun TMR Creator Name
+      - name: Vivun Deliverable Description
+      table:
+        table_columns:
+        - column_id: Vivun Deliverable Owner
+          show_headline: false
+        - column_id: Account Name
+          show_headline: false
+        - column_id: Vivun Deliverable Name
+          show_headline: false
+        - column_id: Opportunity Owner Name
+          show_headline: false
+        - column_id: Opportunity SE Name
+          show_headline: false
+        - column_id: Account CS Name
+          show_headline: false
+        - column_id: Vivun Deliverable Type
+          show_headline: false
+        - column_id: Vivun TMR Name
+          show_headline: false
+        - column_id: Vivun TMR Creator Name
+          show_headline: false
+        - column_id: Vivun Deliverable Description
+          show_headline: false
+        ordered_column_ids:
+        - Vivun Deliverable Owner
+        - Account Name
+        - Vivun Deliverable Name
+        - Opportunity Owner Name
+        - Opportunity SE Name
+        - Account CS Name
+        - Vivun Deliverable Type
+        - Vivun TMR Name
+        - Vivun TMR Creator Name
+        - Vivun Deliverable Description
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Account Name\",\"width\": 209.0},{\"columnId\": \"Vivun Deliverable Name\",\"width\": 293.0},{\"columnId\": \"Opportunity Owner Name\",\"width\": 178.0}],\"wrapTableHeader\": false,\"showTableFooter\": false,\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Vivun Deliverable Owner\",\"Vivun TMR Name\",\"Vivun TMR Creator Name\",\"Account Name\",\"Vivun Deliverable Type\",\"Vivun Deliverable Name\",\"Opportunity Owner Name\",\"Opportunity SE Name\",\"Account CS Name\"]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Vivun Deliverable Owner
+        - column_id: Account Name
+        - column_id: Vivun Deliverable Name
+        - column_id: Opportunity Owner Name
+        - column_id: Opportunity SE Name
+        - column_id: Account CS Name
+        - column_id: Vivun Deliverable Type
+        - column_id: Vivun TMR Name
+        - column_id: Vivun TMR Creator Name
+        - column_id: Vivun Deliverable Description
+        axis_configs:
+        - x:
+          - Vivun Deliverable Type
+          "y":
+          - Vivun Deliverable Description
+          color:
+          - Vivun TMR Creator Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Name\",\"columnProperty\": {}},{\"columnId\": \"Opportunity Owner Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Owner\",\"columnProperty\": {}},{\"columnId\": \"Opportunity SE Name\",\"columnProperty\": {}},{\"columnId\": \"Account CS Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Type\",\"columnProperty\": {}},{\"columnId\": \"Vivun TMR Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun TMR Creator Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Description\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4ea0a8f4-4096-4279-a9f3-7cf749b4a042\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Vivun Deliverable Description\"],\"isOpposite\": false}},{\"id\": \"e05b394c-807f-40ad-9127-89ccb4f676b3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Vivun Deliverable Type\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 20ca0c02-593b-49f0-bbda-d5320055cd32
+  - id: Viz_2
+    answer:
+      name: Deliverables Pending
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      search_query: "[Vivun Deliverable Owner] [Account Name] [Vivun Deliverable Name] [Opportunity Owner Name] [Opportunity SE Name] [Account CS Name] sort by [Vivun Deliverable Owner] sort by [Account Name] [Vivun Deliverable Type] [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun Deliverable Status].Scoping [Vivun Deliverable Status].{Null} [Vivun TMR Creator Name] [Vivun TMR Name] [Vivun Deliverable Description]"
+      answer_columns:
+      - name: Vivun Deliverable Owner
+      - name: Account Name
+      - name: Vivun Deliverable Name
+      - name: Opportunity Owner Name
+      - name: Opportunity SE Name
+      - name: Account CS Name
+      - name: Vivun Deliverable Type
+      - name: Vivun TMR Creator Name
+      - name: Vivun TMR Name
+      - name: Vivun Deliverable Description
+      table:
+        table_columns:
+        - column_id: Vivun Deliverable Owner
+          show_headline: false
+        - column_id: Account Name
+          show_headline: false
+        - column_id: Vivun Deliverable Name
+          show_headline: false
+        - column_id: Opportunity Owner Name
+          show_headline: false
+        - column_id: Opportunity SE Name
+          show_headline: false
+        - column_id: Account CS Name
+          show_headline: false
+        - column_id: Vivun Deliverable Type
+          show_headline: false
+        - column_id: Vivun TMR Creator Name
+          show_headline: false
+        - column_id: Vivun TMR Name
+          show_headline: false
+        - column_id: Vivun Deliverable Description
+          show_headline: false
+        ordered_column_ids:
+        - Vivun Deliverable Owner
+        - Account Name
+        - Vivun Deliverable Name
+        - Opportunity Owner Name
+        - Opportunity SE Name
+        - Account CS Name
+        - Vivun Deliverable Type
+        - Vivun TMR Creator Name
+        - Vivun TMR Name
+        - Vivun Deliverable Description
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Account Name\",\"width\": 209.0},{\"columnId\": \"Vivun Deliverable Name\",\"width\": 293.0},{\"columnId\": \"Opportunity Owner Name\",\"width\": 178.0}],\"wrapTableHeader\": false,\"showTableFooter\": false,\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Vivun Deliverable Owner\",\"Vivun TMR Name\",\"Vivun TMR Creator Name\",\"Account Name\",\"Vivun Deliverable Type\",\"Vivun Deliverable Name\",\"Opportunity Owner Name\",\"Opportunity SE Name\",\"Account CS Name\"]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Vivun Deliverable Owner
+        - column_id: Account Name
+        - column_id: Vivun Deliverable Name
+        - column_id: Opportunity Owner Name
+        - column_id: Opportunity SE Name
+        - column_id: Account CS Name
+        - column_id: Vivun Deliverable Type
+        - column_id: Vivun TMR Creator Name
+        - column_id: Vivun TMR Name
+        - column_id: Vivun Deliverable Description
+        axis_configs:
+        - x:
+          - Vivun Deliverable Type
+          "y":
+          - Vivun Deliverable Description
+          color:
+          - Vivun TMR Creator Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Name\",\"columnProperty\": {}},{\"columnId\": \"Opportunity Owner Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Owner\",\"columnProperty\": {}},{\"columnId\": \"Opportunity SE Name\",\"columnProperty\": {}},{\"columnId\": \"Account CS Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Type\",\"columnProperty\": {}},{\"columnId\": \"Vivun TMR Creator Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun TMR Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Description\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1821a685-e768-4d67-aaf0-638adfcc72fb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Vivun Deliverable Description\"],\"isOpposite\": false}},{\"id\": \"1d7b7853-1e27-4cab-ab20-068cb7d58916\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Vivun Deliverable Type\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 0cc59278-99b7-48e9-9ee1-58b8c99d401f
+  - id: Viz_3
+    answer:
+      name: Deliverables Assigned by Technical Architect
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "[Vivun Deliverable Owner] [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' count [Vivun Deliverable ID] [Status] [Vivun Deliverable Status] != 'cancelled'"
+      answer_columns:
+      - name: Vivun Deliverable Owner
+      - name: Number of Vivun Deliverable ID
+      - name: Status
+      table:
+        table_columns:
+        - column_id: Vivun Deliverable Owner
+          show_headline: false
+        - column_id: Status
+          show_headline: false
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Vivun Deliverable Owner
+        - Status
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Vivun Deliverable Owner\"]}"
+      chart:
+        type: HEATMAP
+        chart_columns:
+        - column_id: Vivun Deliverable Owner
+        - column_id: Status
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - x:
+          - Vivun Deliverable Owner
+          "y":
+          - Status
+          size: Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Vivun Deliverable Owner\",\"columnProperty\": {}},{\"columnId\": \"Status\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"74c2842e-0166-4e87-aa04-a72ffd180c0d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Status\"],\"isOpposite\": false}},{\"id\": \"a0398b11-1bc3-4cb1-a9bc-65169d12823b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Vivun Deliverable Owner\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"Status\",\"color\": \"#48d1e0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7f41da0d-b84c-452a-8c39-04fe8b5d9c0a
+  - id: Viz_4
+    answer:
+      name: Weekly Deliverables Created
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Deliverable ID] [Vivun Deliverable Status] != 'cancelled' [Vivun Deliverable Created Date] >= '03/20/2023' [Vivun Deliverable Created Date].weekly"
+      answer_columns:
+      - name: Number of Vivun Deliverable ID
+      - name: Week(Vivun Deliverable Created Date)
+      table:
+        table_columns:
+        - column_id: Week(Vivun Deliverable Created Date)
+          show_headline: false
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Week(Vivun Deliverable Created Date)
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Week(Vivun Deliverable Created Date)
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - x:
+          - Week(Vivun Deliverable Created Date)
+          "y":
+          - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Week(Vivun Deliverable Created Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b6f9c00f-54ec-4f2b-9260-3b39e1ecd417\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Deliverable ID\"],\"isOpposite\": false}},{\"id\": \"c0956672-7c70-45dd-bed3-7b8ba37685c0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Deliverable Created Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7347b5e2-00b3-450c-9b79-9ffd758ba356
+  - id: Viz_5
+    answer:
+      name: Weekly TMR's Created
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun TMR Name] [Vivun Deliverable Created Date].weekly [Vivun TMR Created Date] >= '03/20/2023' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt'"
+      answer_columns:
+      - name: Number of Vivun TMR Name
+      - name: Week(Vivun Deliverable Created Date)
+      table:
+        table_columns:
+        - column_id: Week(Vivun Deliverable Created Date)
+          show_headline: false
+        - column_id: Number of Vivun TMR Name
+          show_headline: false
+        ordered_column_ids:
+        - Week(Vivun Deliverable Created Date)
+        - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Week(Vivun Deliverable Created Date)
+        - column_id: Number of Vivun TMR Name
+        axis_configs:
+        - x:
+          - Week(Vivun Deliverable Created Date)
+          "y":
+          - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Week(Vivun Deliverable Created Date)\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun TMR Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34949078-18f8-4287-9aa8-6e848633e8a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun TMR Name\"],\"isOpposite\": false}},{\"id\": \"eb91be4e-e182-4f55-9c9d-ba01764e112a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Deliverable Created Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun TMR Name\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 81137f35-deaa-4e7b-9f4c-2d78600ebfad
+  - id: Viz_6
+    answer:
+      name: TMR's by Creator
+      description: Filtered by when Created and Excludes TMR's created by the Technical Architect Team.
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "[Vivun TMR Creator Name] count [Vivun Name] sort by count [Vivun Name] descending [Vivun TMR Creator Name] != [Vivun TMR Creator Name].'Bill Back' [Vivun TMR Creator Name].'paul froggatt' [Vivun TMR Creator Name].{Null}"
+      answer_columns:
+      - name: Vivun TMR Creator Name
+      - name: Number of Vivun Name
+      table:
+        table_columns:
+        - column_id: Vivun TMR Creator Name
+          show_headline: false
+        - column_id: Number of Vivun Name
+          show_headline: false
+        ordered_column_ids:
+        - Vivun TMR Creator Name
+        - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Vivun TMR Creator Name
+        - column_id: Number of Vivun Name
+        axis_configs:
+        - x:
+          - Vivun TMR Creator Name
+          "y":
+          - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Vivun TMR Creator Name\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun Name\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"a907d9bb-b2bb-4952-8b44-6c7d2ff7a9a4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Name\"],\"isOpposite\": false}},{\"id\": \"34342c8f-8693-4382-889a-2b4c42e05363\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Vivun TMR Creator Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"428a3e13-518f-4033-a7c2-1b923bec40df\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Name\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8434ebed-7842-4bbd-8ed9-6613dd93b14a
+  - id: Viz_7
+    answer:
+      name: Deliverables Created by Type
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "[Vivun Deliverable Type] count [Vivun Deliverable ID] [Status] [Vivun Deliverable Status] != 'cancelled'"
+      answer_columns:
+      - name: Vivun Deliverable Type
+      - name: Number of Vivun Deliverable ID
+      - name: Status
+      table:
+        table_columns:
+        - column_id: Vivun Deliverable Type
+          show_headline: false
+        - column_id: Status
+          show_headline: false
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Vivun Deliverable Type
+        - Status
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: HEATMAP
+        chart_columns:
+        - column_id: Vivun Deliverable Type
+        - column_id: Status
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - x:
+          - Vivun Deliverable Type
+          "y":
+          - Status
+          size: Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Status\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Type\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"7f764657-06d7-405b-a3a2-a886352fbeaa\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Status\"],\"isOpposite\": false}},{\"id\": \"9cc8cd21-e903-4b76-a812-38967b66890c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Vivun Deliverable Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"Status\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a5d2f187-f843-4e00-bcac-984a300cff8d
+  - id: Viz_8
+    answer:
+      name: TMR's by Account Segment
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "[Account Region Segment] count [Vivun Name] [Vivun TMR Created Date] >= '03/20/2023' [Vivun TMR Type].'tech ops' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun Deliverable Created Date] >= '03/20/2023' sort by count [Vivun Name] descending"
+      answer_columns:
+      - name: Account Region Segment
+      - name: Number of Vivun Name
+      table:
+        table_columns:
+        - column_id: Account Region Segment
+          show_headline: false
+        - column_id: Number of Vivun Name
+          show_headline: false
+        ordered_column_ids:
+        - Account Region Segment
+        - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Account Region Segment
+        - column_id: Number of Vivun Name
+        axis_configs:
+        - x:
+          - Account Region Segment
+          "y":
+          - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Account Region Segment\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun Name\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"00d52b22-b46d-4045-94e8-319f9a22a8f6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Name\"],\"isOpposite\": false}},{\"id\": \"bffead35-880b-4b0f-bcd4-c5643fa26c50\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account Region Segment\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"428a3e13-518f-4033-a7c2-1b923bec40df\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Name\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5fe4035e-b397-4408-a5fc-e9a3cbea4d90
+  - id: Viz_9
+    answer:
+      name: Weekly Deliverables Completed / Cancelled
+      description: Filtered by when Completed / Cancelled
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Deliverable ID] [Vivun Deliverable Completed Date].weekly [Vivun Deliverable Status].Cancelled [Vivun Deliverable Status].finished"
+      answer_columns:
+      - name: Number of Vivun Deliverable ID
+      - name: Week(Vivun Deliverable Completed Date)
+      table:
+        table_columns:
+        - column_id: Week(Vivun Deliverable Completed Date)
+          show_headline: false
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Week(Vivun Deliverable Completed Date)
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Week(Vivun Deliverable Completed Date)
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - x:
+          - Week(Vivun Deliverable Completed Date)
+          "y":
+          - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Week(Vivun Deliverable Completed Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"74e014f3-1ad8-430e-a589-8d88e9cb48ab\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Deliverable ID\"],\"isOpposite\": false}},{\"id\": \"0a809140-f281-42ae-9b11-61ff64a97ec9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Deliverable Completed Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8ce5d51d-2fee-45b8-bf51-d5e1db60dc4e
+  - id: Viz_10
+    answer:
+      name: Deliverables Outstanding
+      description: Over all time
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Deliverable ID] [Vivun Deliverable Created Date] >= '03/20/2023' [Vivun Deliverable Status] != [Vivun Deliverable Status].cancelled [Vivun Deliverable Status].Finished"
+      answer_columns:
+      - name: Number of Vivun Deliverable ID
+      table:
+        table_columns:
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - "y":
+          - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"e6d1d284-4bca-49f9-a88f-25e305c490cb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Deliverable ID\"],\"isOpposite\": false}},{\"id\": \"e22b270a-da1a-470f-b1b9-5f69d223cb46\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ddbe28f1-09b7-4def-86eb-6f06e3593bc5
+  - id: Viz_11
+    answer:
+      name: Finished/Cancelled Deliverables with a NULL Completion Date
+      description: This table should be empty if the data quality is good.  ALL completed or cancelled deliverables should have a Completion Date set
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      search_query: "[Vivun Deliverable Owner] [Account Name] [Vivun Deliverable Name] [Opportunity Owner Name] [Opportunity SE Name] [Account CS Name] sort by [Vivun Deliverable Owner] sort by [Account Name] [Vivun Deliverable Type] [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun TMR Creator Name] [Vivun TMR Name] [Vivun Deliverable Description] [Vivun Deliverable Status] = [Vivun Deliverable Status].cancelled [Vivun Deliverable Status].finished [Vivun Deliverable Completed Date] = '{null}' [Vivun Deliverable Status]"
+      answer_columns:
+      - name: Vivun Deliverable Owner
+      - name: Account Name
+      - name: Vivun Deliverable Name
+      - name: Opportunity Owner Name
+      - name: Opportunity SE Name
+      - name: Account CS Name
+      - name: Vivun Deliverable Type
+      - name: Vivun TMR Creator Name
+      - name: Vivun TMR Name
+      - name: Vivun Deliverable Description
+      - name: Vivun Deliverable Status
+      table:
+        table_columns:
+        - column_id: Vivun Deliverable Owner
+          show_headline: false
+        - column_id: Account Name
+          show_headline: false
+        - column_id: Vivun Deliverable Name
+          show_headline: false
+        - column_id: Opportunity Owner Name
+          show_headline: false
+        - column_id: Opportunity SE Name
+          show_headline: false
+        - column_id: Account CS Name
+          show_headline: false
+        - column_id: Vivun Deliverable Type
+          show_headline: false
+        - column_id: Vivun TMR Creator Name
+          show_headline: false
+        - column_id: Vivun TMR Name
+          show_headline: false
+        - column_id: Vivun Deliverable Description
+          show_headline: false
+        - column_id: Vivun Deliverable Status
+          show_headline: false
+        ordered_column_ids:
+        - Vivun Deliverable Owner
+        - Account Name
+        - Vivun Deliverable Name
+        - Opportunity Owner Name
+        - Opportunity SE Name
+        - Account CS Name
+        - Vivun Deliverable Type
+        - Vivun TMR Creator Name
+        - Vivun TMR Name
+        - Vivun Deliverable Description
+        - Vivun Deliverable Status
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Account Name\",\"width\": 209.0},{\"columnId\": \"Vivun Deliverable Name\",\"width\": 293.0},{\"columnId\": \"Opportunity Owner Name\",\"width\": 178.0}],\"wrapTableHeader\": false,\"showTableFooter\": false,\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Vivun TMR Name\",\"Vivun TMR Creator Name\",\"Vivun Deliverable Type\",\"Vivun Deliverable Status\",\"Vivun Deliverable Owner\",\"Account Name\",\"Vivun Deliverable Name\",\"Opportunity Owner Name\",\"Opportunity SE Name\",\"Account CS Name\",\"Vivun Deliverable Description\"]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Vivun Deliverable Owner
+        - column_id: Account Name
+        - column_id: Vivun Deliverable Name
+        - column_id: Opportunity Owner Name
+        - column_id: Opportunity SE Name
+        - column_id: Account CS Name
+        - column_id: Vivun Deliverable Type
+        - column_id: Vivun TMR Creator Name
+        - column_id: Vivun TMR Name
+        - column_id: Vivun Deliverable Description
+        - column_id: Vivun Deliverable Status
+        axis_configs:
+        - x:
+          - Vivun Deliverable Type
+          "y":
+          - Vivun Deliverable Description
+          color:
+          - Vivun Deliverable Status
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Name\",\"columnProperty\": {}},{\"columnId\": \"Opportunity Owner Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Owner\",\"columnProperty\": {}},{\"columnId\": \"Opportunity SE Name\",\"columnProperty\": {}},{\"columnId\": \"Account CS Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Type\",\"columnProperty\": {}},{\"columnId\": \"Vivun TMR Creator Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun TMR Name\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Description\",\"columnProperty\": {}},{\"columnId\": \"Vivun Deliverable Status\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1821a685-e768-4d67-aaf0-638adfcc72fb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Vivun Deliverable Description\"],\"isOpposite\": false}},{\"id\": \"1d7b7853-1e27-4cab-ab20-068cb7d58916\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Vivun Deliverable Type\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: f5678c0c-f036-49d0-a086-dfd48c68cf5a
+  - id: Viz_12
+    viz_guid: e0a7f3cb-455f-4727-8693-9b6b2296759e
+    note_tile:
+      html_parsed_string: <h1><span>Team Workload Request Volume</span></h1>
+  - id: Viz_13
+    viz_guid: 67287bdb-4c59-409c-ad9b-0110be476fc5
+    note_tile:
+      html_parsed_string: <h1><span>Team Workload Breakdown</span></h1>
+  - id: Viz_14
+    viz_guid: eef08557-30a0-4773-8e3f-da3e741b6ccc
+    note_tile:
+      html_parsed_string: <h1><span>Team Workload Source</span></h1>
+  - id: Viz_15
+    answer:
+      name: Deliverables Completed
+      description: Filtered by when Completed
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Deliverable ID] [Vivun Deliverable Created Date] >= '03/20/2023' [Vivun Deliverable Status] = 'finished'"
+      answer_columns:
+      - name: Number of Vivun Deliverable ID
+      table:
+        table_columns:
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - "y":
+          - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"e6d1d284-4bca-49f9-a88f-25e305c490cb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Deliverable ID\"],\"isOpposite\": false}},{\"id\": \"e22b270a-da1a-470f-b1b9-5f69d223cb46\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: af83e40a-6f25-4189-9e06-a384f5c61d58
+  - id: Viz_16
+    answer:
+      name: Deliverables Created
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Deliverable ID] [Vivun Deliverable Created Date] >= '03/20/2023'"
+      answer_columns:
+      - name: Number of Vivun Deliverable ID
+      table:
+        table_columns:
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - "y":
+          - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"e6d1d284-4bca-49f9-a88f-25e305c490cb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Deliverable ID\"],\"isOpposite\": false}},{\"id\": \"e22b270a-da1a-470f-b1b9-5f69d223cb46\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7a5e2732-8f47-4b63-a9ad-15ea286b7385
+  - id: Viz_17
+    answer:
+      name: Deliverables Cancelled
+      description: Filtered by when Completed
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Deliverable ID] [Vivun Deliverable Created Date] >= '03/20/2023' [Vivun Deliverable Status] = 'cancelled' [Vivun Deliverable Description] [Vivun Deliverable Description] != [Vivun Deliverable Description].'Tesing ignore' [Vivun Deliverable Description].{Null}"
+      answer_columns:
+      - name: Number of Vivun Deliverable ID
+      - name: Vivun Deliverable Description
+      table:
+        table_columns:
+        - column_id: Vivun Deliverable Description
+          show_headline: false
+        - column_id: Number of Vivun Deliverable ID
+          show_headline: false
+        ordered_column_ids:
+        - Vivun Deliverable Description
+        - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Vivun Deliverable Description
+        - column_id: Number of Vivun Deliverable ID
+        axis_configs:
+        - "y":
+          - Number of Vivun Deliverable ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Deliverable ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Vivun Deliverable Description\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ed25fa5-743c-47ce-aef2-6708e113533c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Deliverable ID\"],\"isOpposite\": false}},{\"id\": \"85c86bca-ead6-4261-9229-d0499ea319d5\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun Deliverable ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2184bd67-e702-4af2-b018-f2462fa6c087
+  - id: Viz_18
+    answer:
+      name: TMR's Created
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun TMR Name] [Vivun TMR Created Date] >= '03/20/2023'"
+      answer_columns:
+      - name: Number of Vivun TMR Name
+      table:
+        table_columns:
+        - column_id: Number of Vivun TMR Name
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun TMR Name
+        axis_configs:
+        - "y":
+          - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"5851147a-527e-4d42-8555-37ca7166551b\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun TMR Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34949078-18f8-4287-9aa8-6e848633e8a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun TMR Name\"],\"isOpposite\": false}},{\"id\": \"eb91be4e-e182-4f55-9c9d-ba01764e112a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"5851147a-527e-4d42-8555-37ca7166551b\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun TMR Name\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a647befc-6c7e-4bf0-8592-06d0e6345efa
+  - id: Viz_19
+    answer:
+      name: Weekly Team Members With Activity Logged
+      tables:
+      - id: GTM Vivun
+        name: GTM Vivun
+        fqn: cda5cb86-d4ae-40ed-b919-312d409ab019
+      formulas:
+      - id: Exclude Future Activities
+        name: Exclude Future Activities
+        expr: "if ( [Vivun Hero Activity Date] > today ( ) ) then 'only future activities' else 'exclude future activities'"
+        was_auto_generated: false
+      - id: '# of Opps Worked'
+        name: '# of Opps Worked'
+        expr: "unique count ( [Vivun Hero Activity Opportunity Id] )"
+        was_auto_generated: false
+      - id: Customer Facing Hours
+        name: Customer Facing Hours
+        expr: "sum ( [Vivun Hero Activity Hours] ) / unique count ( [Vivun Hero Activity Created By Name] )"
+        was_auto_generated: false
+      - id: Total Hours Entered
+        name: Total Hours Entered
+        expr: "group_aggregate ( sum ( [Vivun Hero Activity Hours] ) , query_groups ( ) - { [Vivun Hero Activity Type] } , { } )"
+        was_auto_generated: false
+      search_query: "unique count [Vivun Hero Activity Created By Name] [Vivun Hero Activity Date].weekly [Exclude Future Activities] = 'exclude future activities'"
+      answer_columns:
+      - name: Week(Vivun Hero Activity Date)
+      - name: Unique Number of Vivun Hero Activity Created By Name
+      table:
+        table_columns:
+        - column_id: Week(Vivun Hero Activity Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of Vivun Hero Activity Created By Name
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Week(Vivun Hero Activity Date)
+        - Unique Number of Vivun Hero Activity Created By Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Week(Vivun Hero Activity Date)
+        - column_id: Unique Number of Vivun Hero Activity Created By Name
+        axis_configs:
+        - x:
+          - Week(Vivun Hero Activity Date)
+          "y":
+          - Unique Number of Vivun Hero Activity Created By Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"d8804eaa-d5de-47f2-b67e-9bfed7f5acdb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Vivun Hero Activity Created By Name\"],\"isOpposite\": false}},{\"id\": \"034819d8-db0c-4cc3-bde7-4486a289f218\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Hero Activity Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of Vivun Hero Activity Created By Name\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 31806fef-715c-4cdc-8b82-4144eeec4389
+  - id: Viz_20
+    viz_guid: 5c7a2d86-cd19-4b46-9f2d-28276100a86f
+    note_tile:
+      html_parsed_string: <h1><span>Team Activity Tracking</span></h1>
+  - id: Viz_21
+    answer:
+      name: Weekly Deliverables with Activity Logged
+      tables:
+      - id: GTM Vivun
+        name: GTM Vivun
+        fqn: cda5cb86-d4ae-40ed-b919-312d409ab019
+      formulas:
+      - id: Exclude Future Activities
+        name: Exclude Future Activities
+        expr: "if ( [Vivun Hero Activity Date] > today ( ) ) then 'only future activities' else 'exclude future activities'"
+        was_auto_generated: false
+      - id: '# of Opps Worked'
+        name: '# of Opps Worked'
+        expr: "unique count ( [Vivun Hero Activity Opportunity Id] )"
+        was_auto_generated: false
+      - id: Customer Facing Hours
+        name: Customer Facing Hours
+        expr: "sum ( [Vivun Hero Activity Hours] ) / unique count ( [Vivun Hero Activity Created By Name] )"
+        was_auto_generated: false
+      - id: Total Hours Entered
+        name: Total Hours Entered
+        expr: "group_aggregate ( sum ( [Vivun Hero Activity Hours] ) , query_groups ( ) - { [Vivun Hero Activity Type] } , { } )"
+        was_auto_generated: false
+      search_query: "unique count [Vivun Hero Activity Deliverable] [Vivun Hero Activity Date].weekly [Exclude Future Activities] = 'exclude future activities'"
+      answer_columns:
+      - name: Unique Number of Vivun Hero Activity Deliverable
+      - name: Week(Vivun Hero Activity Date)
+      table:
+        table_columns:
+        - column_id: Week(Vivun Hero Activity Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of Vivun Hero Activity Deliverable
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Week(Vivun Hero Activity Date)
+        - Unique Number of Vivun Hero Activity Deliverable
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Week(Vivun Hero Activity Date)
+        - column_id: Unique Number of Vivun Hero Activity Deliverable
+        axis_configs:
+        - x:
+          - Week(Vivun Hero Activity Date)
+          "y":
+          - Unique Number of Vivun Hero Activity Deliverable
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"bdea831c-1aad-4db0-b416-c135f09df184\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Vivun Hero Activity Deliverable\"],\"isOpposite\": false}},{\"id\": \"3e102a92-8fb4-4389-bae4-019cfe00dda5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Hero Activity Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of Vivun Hero Activity Deliverable\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a337f1f4-9595-4c97-ba56-7e3010d3190d
+  - id: Viz_22
+    answer:
+      name: Deliverables & Hours by Week and Team Member
+      tables:
+      - id: GTM Vivun
+        name: GTM Vivun
+        fqn: cda5cb86-d4ae-40ed-b919-312d409ab019
+      formulas:
+      - id: '# Deliverable Hours'
+        name: '# Deliverable Hours'
+        expr: "sum_if ( not ( isnull ( [Vivun Hero Activity Deliverable] ) ) , [Vivun Hero Activity Hours] )"
+        was_auto_generated: false
+      - id: '# Deliverables Worked'
+        name: '# Deliverables Worked'
+        expr: "unique count ( [Vivun Hero Activity Deliverable] )"
+        was_auto_generated: false
+      - id: '# Non-Deliverable Hours'
+        name: '# Non-Deliverable Hours'
+        expr: "sum_if ( ( isnull ( [Vivun Hero Activity Deliverable] ) ) , [Vivun Hero Activity Hours] )"
+        was_auto_generated: false
+      - id: Exclude Future Activities
+        name: Exclude Future Activities
+        expr: "if ( [Vivun Hero Activity Date] > today ( ) ) then 'only future activities' else 'exclude future activities'"
+        was_auto_generated: false
+      - id: Customer Facing Hours
+        name: Customer Facing Hours
+        expr: "sum ( [Vivun Hero Activity Hours] ) / unique count ( [Vivun Hero Activity Created By Name] )"
+        was_auto_generated: false
+      - id: Total Hours Entered
+        name: Total Hours Entered
+        expr: "sum ( [Vivun Hero Activity Hours] )"
+        was_auto_generated: false
+      search_query: "[Vivun Hero Activity Created By Name] [Vivun Hero Activity Date] [Vivun Hero Activity Date].weekly [# Deliverables Worked] [# Deliverable Hours] [# Non-Deliverable Hours] sort by [Vivun Hero Activity Created By Name] [Exclude Future Activities] = 'exclude future activities'"
+      answer_columns:
+      - name: Vivun Hero Activity Created By Name
+      - name: Week(Vivun Hero Activity Date)
+      - name: '# Deliverables Worked'
+      - name: '# Deliverable Hours'
+      - name: '# Non-Deliverable Hours'
+      table:
+        table_columns:
+        - column_id: Vivun Hero Activity Created By Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Week(Vivun Hero Activity Date)
+          headline_aggregation: MIN-MAX
+        - column_id: '# Deliverables Worked'
+          headline_aggregation: AVERAGE
+        - column_id: '# Deliverable Hours'
+          headline_aggregation: SUM
+        - column_id: '# Non-Deliverable Hours'
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Vivun Hero Activity Created By Name
+        - Week(Vivun Hero Activity Date)
+        - '# Deliverables Worked'
+        - '# Deliverable Hours'
+        - '# Non-Deliverable Hours'
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Vivun Hero Activity Created By Name
+        - column_id: Week(Vivun Hero Activity Date)
+        - column_id: '# Deliverables Worked'
+        - column_id: '# Deliverable Hours'
+        - column_id: '# Non-Deliverable Hours'
+        axis_configs:
+        - x:
+          - Week(Vivun Hero Activity Date)
+          - Vivun Hero Activity Created By Name
+          "y":
+          - '# Deliverables Worked'
+          - '# Deliverable Hours'
+          - '# Non-Deliverable Hours'
+        - "y":
+          - '# Deliverables Worked'
+          - '# Deliverable Hours'
+          - '# Non-Deliverable Hours'
+        - x:
+          - Week(Vivun Hero Activity Date)
+          "y":
+          - '# Deliverables Worked'
+          - '# Deliverable Hours'
+          - '# Non-Deliverable Hours'
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Week(Vivun Hero Activity Date)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Week(Vivun Hero Activity Date)\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"useFlatLayout\": false,\"isHeatmapOverlayed\": true,\"dataFieldArea\": \"column\"}},\"axisProperties\": [{\"id\": \"221556a7-dc2b-42e5-beb9-672f2688af08\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"# Deliverables Worked\"],\"isOpposite\": false}},{\"id\": \"2c90d762-87de-4adb-bb1a-57d4290f5ee0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"# Deliverable Hours\"],\"isOpposite\": true}},{\"id\": \"e6ab1b41-4716-4f64-bfa0-1739aeb8ffdb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"# Non-Deliverable Hours\"],\"isOpposite\": true}},{\"id\": \"fc96ca47-0b5c-40ab-9741-6e8df818e918\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Hero Activity Date)\",\"Vivun Hero Activity Created By Name\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1f3c9dd5-94b5-49f9-ac86-a2a99439abca
+  - id: Viz_23
+    answer:
+      name: TMR's Created by Opportunity Type
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Opp Type
+        name: Opp Type
+        expr: "ifnull ( [Opportunity Renewal Type] , [Opportunity Type] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "[Opp Type] count [Vivun Name] [Vivun TMR Created Date] >= '03/20/2023' [Vivun TMR Type].'tech ops' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun Deliverable Created Date] >= '03/20/2023' sort by count [Vivun Name] descending"
+      answer_columns:
+      - name: Opp Type
+      - name: Number of Vivun Name
+      table:
+        table_columns:
+        - column_id: Opp Type
+          show_headline: false
+        - column_id: Number of Vivun Name
+          show_headline: false
+        ordered_column_ids:
+        - Opp Type
+        - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Opp Type
+        - column_id: Number of Vivun Name
+        axis_configs:
+        - x:
+          - Opp Type
+          "y":
+          - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Name\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Opp Type\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7f6a9f3c-e155-4a86-907e-9c47ad74dace\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Name\"],\"isOpposite\": false}},{\"id\": \"52e372d5-d658-4c56-ad89-d92cc560ccf0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Opp Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"428a3e13-518f-4033-a7c2-1b923bec40df\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Name\",\"color\": \"#06BF7F\"},{\"serieName\": \"renewal\",\"color\": \"#FCC838\"},{\"serieName\": \"new customer\",\"color\": \"#48D1E0\"},{\"serieName\": \"existing customer expansion\",\"color\": \"#2E75F0\"},{\"serieName\": \"n/a\",\"color\": \"#FCC838\"},{\"serieName\": \"renewal + expansion\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 35bb08d1-991a-4426-bdf6-676fccf58bf5
+  - id: Viz_24
+    answer:
+      name: TMR's Created by Opportunity ACV
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: ACV
+        name: ACV
+        expr: "if ( isnull ( [Opportunity Renewal Type] ) ) then [Opportunity ACV] else [Opportunity Renewal ACV] "
+        was_auto_generated: false
+      - id: Opp Type
+        name: Opp Type
+        expr: "ifnull ( [Opportunity Renewal Type] , [Opportunity Type] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "[Opp Type] sort by count [Vivun Name] descending [Vivun TMR Created Date] on or after '03/01/2023' [Vivun TMR Type].'tech ops' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun Deliverable Created Date] between [Vivun Deliverable Created Date].03/01/2023 and [Vivun Deliverable Created Date].08/31/2023 [ACV]"
+      answer_columns:
+      - name: Total ACV
+      - name: Opp Type
+      - name: Number of Vivun Name
+      table:
+        table_columns:
+        - column_id: Opp Type
+          show_headline: false
+        - column_id: Number of Vivun Name
+          show_headline: false
+        - column_id: Total ACV
+          show_headline: false
+        ordered_column_ids:
+        - Opp Type
+        - Number of Vivun Name
+        - Total ACV
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Opp Type
+        - column_id: Number of Vivun Name
+        - column_id: Total ACV
+        axis_configs:
+        - x:
+          - Opp Type
+          "y":
+          - Total ACV
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Name\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Opp Type\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total ACV\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"2f82477e-0f67-4b47-a467-8324dd5db7e8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total ACV\"],\"isOpposite\": false}},{\"id\": \"88c52a0c-1b1f-4a70-8fd0-a5de5674585b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Opp Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"428a3e13-518f-4033-a7c2-1b923bec40df\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Name\",\"color\": \"#06BF7F\"},{\"serieName\": \"renewal\",\"color\": \"#FCC838\"},{\"serieName\": \"new customer\",\"color\": \"#48D1E0\"},{\"serieName\": \"existing customer expansion\",\"color\": \"#2E75F0\"},{\"serieName\": \"renewal + expansion\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 05af515f-055a-4955-b236-6e95170d8514
+  - id: Viz_25
+    answer:
+      name: TMR's Completed by Opportunity Type
+      description: Filtered by when Completed
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Opp Type
+        name: Opp Type
+        expr: "ifnull ( [Opportunity Renewal Type] , [Opportunity Type] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun Name] [Vivun TMR Type].'tech ops' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' sort by count [Vivun Name] descending [Opp Type]"
+      answer_columns:
+      - name: Opp Type
+      - name: Number of Vivun Name
+      table:
+        table_columns:
+        - column_id: Opp Type
+          show_headline: false
+        - column_id: Number of Vivun Name
+          show_headline: false
+        ordered_column_ids:
+        - Opp Type
+        - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Opp Type
+        - column_id: Number of Vivun Name
+        axis_configs:
+        - x:
+          - Opp Type
+          "y":
+          - Number of Vivun Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Name\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Opp Type\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8ba1bbc9-2659-4493-b0b2-bca804d06572\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun Name\"],\"isOpposite\": false}},{\"id\": \"61ab2bcb-ed00-4972-98e2-fa1eb010a9d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Opp Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"428a3e13-518f-4033-a7c2-1b923bec40df\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Name\",\"color\": \"#06BF7F\"},{\"serieName\": \"renewal\",\"color\": \"#FCC838\"},{\"serieName\": \"new customer\",\"color\": \"#48D1E0\"},{\"serieName\": \"existing customer expansion\",\"color\": \"#2E75F0\"},{\"serieName\": \"renewal + expansion\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: b0ff047d-b61e-45d7-b103-5b719c401994
+  - id: Viz_26
+    answer:
+      name: TMR's Completed by Opportunity ACV
+      description: Filtered by when Completed
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: ACV
+        name: ACV
+        expr: "if ( isnull ( [Opportunity Renewal Type] ) ) then [Opportunity ACV] else [Opportunity Renewal ACV] "
+        was_auto_generated: false
+      - id: Opp Type
+        name: Opp Type
+        expr: "ifnull ( [Opportunity Renewal Type] , [Opportunity Type] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "sort by count [Vivun Name] descending [Vivun TMR Type].'tech ops' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [ACV] [Opp Type]"
+      answer_columns:
+      - name: Total ACV
+      - name: Opp Type
+      - name: Number of Vivun Name
+      table:
+        table_columns:
+        - column_id: Opp Type
+          show_headline: false
+        - column_id: Number of Vivun Name
+          show_headline: false
+        - column_id: Total ACV
+          show_headline: false
+        ordered_column_ids:
+        - Opp Type
+        - Number of Vivun Name
+        - Total ACV
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Opp Type
+        - column_id: Number of Vivun Name
+        - column_id: Total ACV
+        axis_configs:
+        - x:
+          - Opp Type
+          "y":
+          - Total ACV
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Vivun Name\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total ACV\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Opp Type\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"5b56bcb6-7d4d-4fa1-83ed-4d26c6ffd72e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total ACV\"],\"isOpposite\": false}},{\"id\": \"06be25f2-cb37-4f55-b4ba-432245fe6f52\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Opp Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bill back\",\"color\": \"#06BF7F\"},{\"serieName\": \"bryant howell\",\"color\": \"#FCC838\"},{\"serieName\": \"dan howell\",\"color\": \"#48D1E0\"},{\"serieName\": \"gautam parab\",\"color\": \"#71A1F4\"},{\"serieName\": \"paul froggatt\",\"color\": \"#2E75F0\"},{\"serieName\": \"428a3e13-518f-4033-a7c2-1b923bec40df\",\"color\": \"#48d1e0\"},{\"serieName\": \"Number of Vivun Name\",\"color\": \"#06BF7F\"},{\"serieName\": \"renewal\",\"color\": \"#FCC838\"},{\"serieName\": \"new customer\",\"color\": \"#48D1E0\"},{\"serieName\": \"existing customer expansion\",\"color\": \"#2E75F0\"},{\"serieName\": \"n/a\",\"color\": \"#FCC838\"},{\"serieName\": \"renewal + expansion\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 996cc3ed-fa3c-4f5a-a872-19c9b122d4ad
+  - id: Viz_27
+    answer:
+      name: TMR's Rejected
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun TMR Name] [Vivun TMR Created Date] >= '03/20/2023' [Vivun TMR Status].Rejected"
+      answer_columns:
+      - name: Number of Vivun TMR Name
+      table:
+        table_columns:
+        - column_id: Number of Vivun TMR Name
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun TMR Name
+        axis_configs:
+        - "y":
+          - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"5851147a-527e-4d42-8555-37ca7166551b\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun TMR Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34949078-18f8-4287-9aa8-6e848633e8a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun TMR Name\"],\"isOpposite\": false}},{\"id\": \"eb91be4e-e182-4f55-9c9d-ba01764e112a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"5851147a-527e-4d42-8555-37ca7166551b\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun TMR Name\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2af69000-4211-45ac-99f1-410ea3ae9259
+  - id: Viz_28
+    answer:
+      name: TMR's Need Clarification
+      description: Filtered by when Created
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun TMR Name] [Vivun TMR Created Date] >= '03/20/2023' [Vivun TMR Status].'Clarification Needed'"
+      answer_columns:
+      - name: Number of Vivun TMR Name
+      table:
+        table_columns:
+        - column_id: Number of Vivun TMR Name
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun TMR Name
+        axis_configs:
+        - "y":
+          - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"5851147a-527e-4d42-8555-37ca7166551b\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun TMR Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34949078-18f8-4287-9aa8-6e848633e8a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun TMR Name\"],\"isOpposite\": false}},{\"id\": \"eb91be4e-e182-4f55-9c9d-ba01764e112a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"5851147a-527e-4d42-8555-37ca7166551b\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun TMR Name\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 76e817b1-1f3f-4bd4-9d12-faef95e63d79
+  - id: Viz_29
+    answer:
+      name: TMR's Pending Approval
+      description: Over all time
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "count [Vivun TMR Name] [Vivun TMR Created Date] >= '03/20/2023' [Vivun TMR Status].'Pending Approval'"
+      answer_columns:
+      - name: Number of Vivun TMR Name
+      table:
+        table_columns:
+        - column_id: Number of Vivun TMR Name
+          show_headline: false
+        ordered_column_ids:
+        - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Vivun TMR Name
+        axis_configs:
+        - "y":
+          - Number of Vivun TMR Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"5851147a-527e-4d42-8555-37ca7166551b\",\"columnProperty\": {}},{\"columnId\": \"Number of Vivun TMR Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34949078-18f8-4287-9aa8-6e848633e8a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Vivun TMR Name\"],\"isOpposite\": false}},{\"id\": \"eb91be4e-e182-4f55-9c9d-ba01764e112a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"5851147a-527e-4d42-8555-37ca7166551b\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Vivun TMR Name\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 66bf8ce6-6d0a-429f-8bd2-666bb32d1a25
+  - id: Viz_30
+    viz_guid: e1ac7ca7-9820-4fd9-af11-6c62db3f641c
+    note_tile:
+      html_parsed_string: <h1><span>Team Workload Deliverable Volume</span></h1>
+  - id: Viz_31
+    answer:
+      name: TMR Avg Approval Time (Hours)
+      description: "Filtered by when Created, in Hours (incl. weekends)"
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Approval Time (Hours)
+        name: Approval Time (Hours)
+        expr: "diff_hours ( [Vivun Deliverable Created Date] , [Vivun TMR Created Date] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "average [Approval Time (Hours)] [Vivun TMR Created Date] >= '03/20/2023' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun TMR Status].Approved"
+      answer_columns:
+      - name: Average Approval Time (Hours)
+      table:
+        table_columns:
+        - column_id: Average Approval Time (Hours)
+          show_headline: false
+        ordered_column_ids:
+        - Average Approval Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Approval Time (Hours)
+        axis_configs:
+        - "y":
+          - Average Approval Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Approval Time (Hours)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f7520b92-2478-4548-b78f-7aebc7dcbf96\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Approval Time (Hours)\"],\"isOpposite\": false}},{\"id\": \"b1ea5eb5-5830-418d-a287-639bbacc13a9\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"4dd8c3f3-2a35-4746-bca4-391d9edecf60\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 03bcd3ba-0d97-44d6-84a8-1e403d145083
+  - id: Viz_32
+    answer:
+      name: TMR Avg Completion Time (Days)
+      description: "Filtered by when Completed, in Days (incl. weekends)"
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Resolution Time (Hours)
+        name: Resolution Time (Hours)
+        expr: "diff_days ( [Vivun Deliverable Completed Date] , [Vivun TMR Created Date] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "average [Resolution Time (Hours)] [Vivun TMR Status].Approved [Vivun Deliverable Owner].'Bill Back' [Vivun Deliverable Owner].'Bryant Howell' [Vivun Deliverable Owner].'Dan Howell' [Vivun Deliverable Owner].'Gautam Parab' [Vivun Deliverable Owner].'Paul Froggatt' [Vivun Deliverable Status].Cancelled [Vivun Deliverable Status].finished"
+      answer_columns:
+      - name: Average Resolution Time (Hours)
+      table:
+        table_columns:
+        - column_id: Average Resolution Time (Hours)
+          show_headline: false
+        ordered_column_ids:
+        - Average Resolution Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Resolution Time (Hours)
+        axis_configs:
+        - "y":
+          - Average Resolution Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Resolution Time (Hours)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f7520b92-2478-4548-b78f-7aebc7dcbf96\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Resolution Time (Hours)\"],\"isOpposite\": false}},{\"id\": \"b1ea5eb5-5830-418d-a287-639bbacc13a9\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"4dd8c3f3-2a35-4746-bca4-391d9edecf60\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 186fe91b-3bb1-402e-bc22-5180db8d52c3
+  - id: Viz_33
+    answer:
+      name: Weekly Team Activity Hours Logged
+      tables:
+      - id: GTM Vivun
+        name: GTM Vivun
+        fqn: cda5cb86-d4ae-40ed-b919-312d409ab019
+      formulas:
+      - id: Exclude Future Activities
+        name: Exclude Future Activities
+        expr: "if ( [Vivun Hero Activity Date] > today ( ) ) then 'only future activities' else 'exclude future activities'"
+        was_auto_generated: false
+      - id: '# of Opps Worked'
+        name: '# of Opps Worked'
+        expr: "unique count ( [Vivun Hero Activity Opportunity Id] )"
+        was_auto_generated: false
+      - id: Customer Facing Hours
+        name: Customer Facing Hours
+        expr: "sum ( [Vivun Hero Activity Hours] ) / unique count ( [Vivun Hero Activity Created By Name] )"
+        was_auto_generated: false
+      - id: Total Hours Entered
+        name: Total Hours Entered
+        expr: "group_aggregate ( sum ( [Vivun Hero Activity Hours] ) , query_groups ( ) - { [Vivun Hero Activity Type] } , { } )"
+        was_auto_generated: false
+      search_query: "[Vivun Hero Activity Date].weekly [Exclude Future Activities] = 'exclude future activities' [Vivun Hero Activity Hours]"
+      answer_columns:
+      - name: Total Vivun Hero Activity Hours
+      - name: Week(Vivun Hero Activity Date)
+      table:
+        table_columns:
+        - column_id: Week(Vivun Hero Activity Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Vivun Hero Activity Hours
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Week(Vivun Hero Activity Date)
+        - Total Vivun Hero Activity Hours
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Week(Vivun Hero Activity Date)
+        - column_id: Total Vivun Hero Activity Hours
+        axis_configs:
+        - x:
+          - Week(Vivun Hero Activity Date)
+          "y":
+          - Total Vivun Hero Activity Hours
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"67b8ab96-c6ad-45cb-8f98-a695cae572a7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Vivun Hero Activity Hours\"],\"isOpposite\": false}},{\"id\": \"2a05a7f2-4edc-431a-89a2-67c19a61e0d4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Vivun Hero Activity Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"9ed3b60c-fd31-420a-a2e6-6d4cb1347be5\",\"color\": \"#2770ef\"},{\"serieName\": \"Total Vivun Hero Activity Hours\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7f77ec7a-54c6-429e-a97f-cb76d924fa72
+  - id: Viz_34
+    answer:
+      name: Monthly TMR Average Approval Time (Hours)
+      description: "Filtered by when Created, in Hours (incl. weekends)"
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Approval Time (Hours)
+        name: Approval Time (Hours)
+        expr: "diff_hours ( [Vivun Deliverable Created Date] , [Vivun TMR Created Date] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "average [Approval Time (Hours)] [Vivun TMR Created Date] >= '03/20/2023' [Vivun Deliverable Owner].'bill back' [Vivun Deliverable Owner].'bryant howell' [Vivun Deliverable Owner].'dan howell' [Vivun Deliverable Owner].'gautam parab' [Vivun Deliverable Owner].'paul froggatt' [Vivun TMR Status].Approved [Vivun TMR Created Date].monthly"
+      answer_columns:
+      - name: Average Approval Time (Hours)
+      - name: Month(Vivun TMR Created Date)
+      table:
+        table_columns:
+        - column_id: Month(Vivun TMR Created Date)
+          show_headline: false
+        - column_id: Average Approval Time (Hours)
+          show_headline: false
+        ordered_column_ids:
+        - Month(Vivun TMR Created Date)
+        - Average Approval Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Vivun TMR Created Date)
+        - column_id: Average Approval Time (Hours)
+        axis_configs:
+        - x:
+          - Month(Vivun TMR Created Date)
+          "y":
+          - Average Approval Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Approval Time (Hours)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month(Vivun TMR Created Date)\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"75660262-ba46-42d0-8be1-b671cb716393\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Approval Time (Hours)\"],\"isOpposite\": false}},{\"id\": \"e4e9ec69-cae1-42c8-9da2-bacc0649e7ff\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Vivun TMR Created Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"4dd8c3f3-2a35-4746-bca4-391d9edecf60\",\"color\": \"#2770ef\"},{\"serieName\": \"Average Approval Time (Hours)\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#F04152\",\"#06BF7F\",\"#F04152\",\"#747E8C\"]}"
+      display_mode: CHART_MODE
+    viz_guid: 9f0554a7-3b70-4781-b991-76c225617b33
+  - id: Viz_35
+    answer:
+      name: Monthly TMR Average Completion Time (Days)
+      description: "Filtered by when Completed, in Days (incl. weekends)"
+      tables:
+      - id: GTM
+        name: GTM
+        fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+      formulas:
+      - id: Resolution Time (Hours)
+        name: Resolution Time (Hours)
+        expr: "diff_days ( [Vivun Deliverable Completed Date] , [Vivun TMR Created Date] )"
+        was_auto_generated: false
+      - id: Status
+        name: Status
+        expr: "if ( isnull ( [Vivun Deliverable Status] ) or [Vivun Deliverable Status] = 'scoping' ) then 'pending' else [Vivun Deliverable Status]"
+        was_auto_generated: false
+      search_query: "average [Resolution Time (Hours)] [Vivun TMR Status].Approved [Vivun Deliverable Owner].'Bill Back' [Vivun Deliverable Owner].'Bryant Howell' [Vivun Deliverable Owner].'Dan Howell' [Vivun Deliverable Owner].'Gautam Parab' [Vivun Deliverable Owner].'Paul Froggatt' [Vivun Deliverable Status].Cancelled [Vivun Deliverable Status].finished [Vivun Deliverable Completed Date].monthly"
+      answer_columns:
+      - name: Average Resolution Time (Hours)
+      - name: Month(Vivun Deliverable Completed Date)
+      table:
+        table_columns:
+        - column_id: Month(Vivun Deliverable Completed Date)
+          show_headline: false
+        - column_id: Average Resolution Time (Hours)
+          show_headline: false
+        ordered_column_ids:
+        - Month(Vivun Deliverable Completed Date)
+        - Average Resolution Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"showTableFooter\": false,\"theme\": \"ZEBRA\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Vivun Deliverable Completed Date)
+        - column_id: Average Resolution Time (Hours)
+        axis_configs:
+        - x:
+          - Month(Vivun Deliverable Completed Date)
+          "y":
+          - Average Resolution Time (Hours)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Resolution Time (Hours)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month(Vivun Deliverable Completed Date)\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"8347d49e-d51a-4651-8974-32c9217ae048\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Resolution Time (Hours)\"],\"isOpposite\": false}},{\"id\": \"0a58fe99-9ea0-4653-a68d-b5e274d8e08d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Vivun Deliverable Completed Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"4dd8c3f3-2a35-4746-bca4-391d9edecf60\",\"color\": \"#2770ef\"},{\"serieName\": \"Average Resolution Time (Hours)\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#F04152\",\"#06BF7F\",\"#F04152\",\"#747E8C\"]}"
+      display_mode: CHART_MODE
+    viz_guid: b5ab4c08-5f4d-429d-b13f-770883e4f6ed
+  filters:
+  - column:
+    - GTM::Vivun TMR Type
+    oper: in
+    values:
+    - tech ops
+    is_mandatory: false
+    is_single_value: false
+    display_name: TMR Type
+  - column:
+    - GTM::Vivun TMR Created Date
+    excluded_visualizations:
+    - Viz_1
+    - Viz_10
+    - Viz_32
+    - Viz_2
+    - Viz_25
+    - Viz_35
+    - Viz_9
+    - Viz_15
+    - Viz_26
+    - Viz_29
+    - Viz_17
+    is_mandatory: false
+    date_filter:
+      type: THIS_PERIOD
+      oper: =
+      date_period: YEAR
+    display_name: TMR Created Date
+  - column:
+    - GTM::Vivun Deliverable Created Date
+    excluded_visualizations:
+    - Viz_9
+    - Viz_1
+    - Viz_10
+    - Viz_32
+    - Viz_2
+    - Viz_11
+    - Viz_25
+    - Viz_35
+    - Viz_27
+    - Viz_15
+    - Viz_26
+    - Viz_18
+    - Viz_29
+    - Viz_17
+    - Viz_28
+    is_mandatory: false
+    date_filter:
+      type: THIS_PERIOD
+      oper: =
+      date_period: YEAR
+    display_name: Deliverable Created Date
+  - column:
+    - GTM::Vivun Deliverable Completed Date
+    excluded_visualizations:
+    - Viz_8
+    - Viz_5
+    - Viz_4
+    - Viz_7
+    - Viz_6
+    - Viz_1
+    - Viz_10
+    - Viz_3
+    - Viz_2
+    - Viz_31
+    - Viz_23
+    - Viz_34
+    - Viz_11
+    - Viz_24
+    - Viz_16
+    - Viz_27
+    - Viz_18
+    - Viz_29
+    - Viz_28
+    is_mandatory: false
+    date_filter:
+      type: THIS_PERIOD
+      oper: =
+      date_period: YEAR
+    display_name: Deliverable Completed Date
+  - column:
+    - GTM Vivun::Vivun Hero Activity Date
+    is_mandatory: false
+    date_filter:
+      type: THIS_PERIOD
+      oper: =
+      date_period: YEAR
+    display_name: Activity Date
+  - column:
+    - GTM::Vivun Deliverable Owner
+    - GTM Vivun::Vivun Hero Activity Created By Name
+    oper: in
+    values:
+    - bill back
+    - bryant howell
+    - gautam parab
+    - paul froggatt
+    excluded_visualizations:
+    - Viz_5
+    - Viz_27
+    - Viz_18
+    - Viz_29
+    - Viz_28
+    is_mandatory: false
+    is_single_value: false
+    display_name: Deliverable Owner
+  - column:
+    - GTM::Vivun Deliverable Parent TMR
+    oper: not in
+    values:
+    - "{null}"
+    excluded_visualizations:
+    - Viz_8
+    - Viz_5
+    - Viz_6
+    - Viz_32
+    - Viz_31
+    - Viz_23
+    - Viz_25
+    - Viz_24
+    - Viz_27
+    - Viz_26
+    - Viz_18
+    - Viz_29
+    - Viz_28
+    is_mandatory: false
+    is_single_value: false
+    display_name: Deliverable Parent TMR
+  - column:
+    - GTM::Account Name
+    - GTM Vivun::Account Name
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - GTM::Vivun Deliverable Description
+    excluded_visualizations:
+    - Viz_5
+    - Viz_27
+    - Viz_18
+    - Viz_29
+    - Viz_28
+    is_mandatory: false
+    is_single_value: false
+    display_name: Deliverable Description
+  layout:
+    tabs:
+    - name: Workload Metrics
+      description: ""
+      tiles:
+      - visualization_id: Viz_3
+        x: 6
+        "y": 15
+        height: 5
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 10
+        height: 4
+        width: 6
+      - visualization_id: Viz_5
+        x: 0
+        "y": 3
+        height: 4
+        width: 6
+      - visualization_id: Viz_6
+        x: 4
+        "y": 21
+        height: 5
+        width: 8
+      - visualization_id: Viz_7
+        x: 0
+        "y": 15
+        height: 5
+        width: 6
+      - visualization_id: Viz_8
+        x: 0
+        "y": 21
+        height: 5
+        width: 4
+      - visualization_id: Viz_9
+        x: 6
+        "y": 10
+        height: 4
+        width: 6
+      - visualization_id: Viz_10
+        x: 2
+        "y": 8
+        height: 2
+        width: 2
+      - visualization_id: Viz_12
+        x: 0
+        "y": 0
+        height: 1
+        width: 12
+      - visualization_id: Viz_13
+        x: 0
+        "y": 14
+        height: 1
+        width: 12
+      - visualization_id: Viz_14
+        x: 0
+        "y": 20
+        height: 1
+        width: 12
+      - visualization_id: Viz_15
+        x: 6
+        "y": 8
+        height: 2
+        width: 2
+      - visualization_id: Viz_16
+        x: 0
+        "y": 8
+        height: 2
+        width: 2
+      - visualization_id: Viz_17
+        x: 8
+        "y": 8
+        height: 2
+        width: 2
+      - visualization_id: Viz_18
+        x: 0
+        "y": 1
+        height: 2
+        width: 2
+      - visualization_id: Viz_23
+        x: 0
+        "y": 26
+        height: 4
+        width: 3
+      - visualization_id: Viz_24
+        x: 3
+        "y": 26
+        height: 4
+        width: 3
+      - visualization_id: Viz_25
+        x: 6
+        "y": 26
+        height: 4
+        width: 3
+      - visualization_id: Viz_26
+        x: 9
+        "y": 26
+        height: 4
+        width: 3
+      - visualization_id: Viz_27
+        x: 6
+        "y": 1
+        height: 2
+        width: 2
+      - visualization_id: Viz_28
+        x: 4
+        "y": 1
+        height: 2
+        width: 2
+      - visualization_id: Viz_29
+        x: 2
+        "y": 1
+        height: 2
+        width: 2
+      - visualization_id: Viz_30
+        x: 0
+        "y": 7
+        height: 1
+        width: 12
+      - visualization_id: Viz_31
+        x: 8
+        "y": 1
+        height: 2
+        width: 2
+      - visualization_id: Viz_32
+        x: 10
+        "y": 1
+        height: 2
+        width: 2
+      - visualization_id: Viz_34
+        x: 6
+        "y": 3
+        height: 4
+        width: 3
+      - visualization_id: Viz_35
+        x: 9
+        "y": 3
+        height: 4
+        width: 3
+    - name: Activity Metrics
+      description: ""
+      tiles:
+      - visualization_id: Viz_20
+        x: 0
+        "y": 0
+        height: 1
+        width: 12
+      - visualization_id: Viz_19
+        x: 0
+        "y": 1
+        height: 4
+        width: 4
+      - visualization_id: Viz_21
+        x: 4
+        "y": 1
+        height: 4
+        width: 4
+      - visualization_id: Viz_22
+        x: 0
+        "y": 5
+        height: 8
+        width: 12
+      - visualization_id: Viz_33
+        x: 8
+        "y": 1
+        height: 4
+        width: 4
+    - name: Workload Tables
+      description: ""
+      tiles:
+      - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 4
+        width: 12
+      - visualization_id: Viz_1
+        x: 0
+        "y": 4
+        height: 4
+        width: 12
+    - name: Workload Quality Check
+      description: ""
+      tiles:
+      - visualization_id: Viz_11
+        x: 0
+        "y": 0
+        height: 4
+        width: 12

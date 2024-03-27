@@ -1,0 +1,54 @@
+guid: e6b3efb0-9b02-47b2-9179-3517b1ff096c
+table:
+  name: ACCOUNT_COHORT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: ACCOUNT_COHORT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Cohort API Name
+    db_column_name: Account Cohort API Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account CS Tier
+    db_column_name: Account CS Tier
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Cohort
+    db_column_name: Account Cohort
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Cohort Comment
+    db_column_name: Account Cohort Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_ACCOUNT_COHORT_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "([ACCOUNT_COHORT::Account ID] = [SFDC_ACCOUNT::Account ID])"
+    type: INNER

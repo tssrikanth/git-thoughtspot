@@ -1,0 +1,213 @@
+guid: bc6c2ba7-0ef1-473b-be9f-503e5c2101b5
+table:
+  name: FREETRIAL_QUERY_CONSUMPTION
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: FREETRIAL_QUERY_CONSUMPTION
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Query ID
+    db_column_name: Query ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query CDW Start Time
+    db_column_name: Query CDW Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query Cluster User
+    db_column_name: Query Cluster User
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Task
+    db_column_name: Query Task
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Is System
+    db_column_name: Query Is System
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: Query End Time
+    db_column_name: Query End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query Client
+    db_column_name: Query Client
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query User Name
+    db_column_name: Query User Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Data Manager End Time
+    db_column_name: Query Data Manager End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query Error Message
+    db_column_name: Query Error Message
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Data Source Query ID
+    db_column_name: Query Data Source Query ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Data Manager Start Time
+    db_column_name: Query Data Manager Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query Request ID
+    db_column_name: Query Request ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Status
+    db_column_name: Query Status
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Is Billable
+    db_column_name: Query Is Billable
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: Query Viz ID
+    db_column_name: Query Viz ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query CDW Type
+    db_column_name: Query CDW Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query CDW End Time
+    db_column_name: Query CDW End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query Row Upload Time
+    db_column_name: Query Row Upload Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query Object ID
+    db_column_name: Query Object ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Trace ID
+    db_column_name: Query Trace ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Object Name
+    db_column_name: Query Object Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Rows Fetched
+    db_column_name: Query Rows Fetched
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Query Context
+    db_column_name: Query Context
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Start Time
+    db_column_name: Query Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Query CONNECTION NAME
+    db_column_name: Query CONNECTION NAME
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query CONNECTION ID
+    db_column_name: Query CONNECTION ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query User ID
+    db_column_name: Query User ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Cluster UUID
+    db_column_name: Query Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Query Cluster Name
+    db_column_name: Query Cluster Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_FT_QUERY_CONSUMPTION_TS_USER
+    destination:
+      name: TS_USER
+      fqn: 962febc2-8be6-479e-80d0-dca3c7dc8e6e
+    "on": "[FREETRIAL_QUERY_CONSUMPTION::Query User ID] = [TS_USER::User GUID]"
+    type: INNER

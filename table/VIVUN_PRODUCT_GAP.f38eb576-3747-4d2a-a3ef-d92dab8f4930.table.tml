@@ -1,0 +1,478 @@
+guid: f38eb576-3747-4d2a-a3ef-d92dab8f4930
+table:
+  name: VIVUN_PRODUCT_GAP
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: VIVUN_PRODUCT_GAP
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Vivun Product Gap ID
+    db_column_name: Vivun Product Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Feature Subgroup
+    db_column_name: Vivun Product Gap Feature Subgroup
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Owner ID
+    db_column_name: Vivun Product Gap Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Is Deleted
+    db_column_name: Vivun Product Gap Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Product Gap
+    db_column_name: Vivun Product Gap Product Gap
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Currency ISO Code
+    db_column_name: Vivun Product Gap Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Create Date
+    db_column_name: Vivun Product Gap Create Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Product Gap Created By ID
+    db_column_name: Vivun Product Gap Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Last Modified Date
+    db_column_name: Vivun Product Gap Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Product Gap Last Modified By ID
+    db_column_name: Vivun Product Gap Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap System Modified Timestamp
+    db_column_name: Vivun Product Gap System Modified Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Product Gap Last Viewed Date
+    db_column_name: Vivun Product Gap Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Product Gap Last Referenced Date
+    db_column_name: Vivun Product Gap Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Product Gap Date Delivered
+    db_column_name: Vivun Product Gap Date Delivered
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Product Gap Description
+    db_column_name: Vivun Product Gap Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Feature Group
+    db_column_name: Vivun Product Gap Feature Group
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Interim Solution
+    db_column_name: Vivun Product Gap Interim Solution
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Jira Completed Issues
+    db_column_name: Vivun Product Gap Jira Completed Issues
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Jira Status
+    db_column_name: Vivun Product Gap Jira Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Jira Total Issues
+    db_column_name: Vivun Product Gap Jira Total Issues
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Merge Target
+    db_column_name: Vivun Product Gap Merge Target
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Percent Complete
+    db_column_name: Vivun Product Gap Percent Complete
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Area
+    db_column_name: Vivun Product Gap Area
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Persona
+    db_column_name: Vivun Product Gap Persona
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Review Gap
+    db_column_name: Vivun Product Gap Review Gap
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Status
+    db_column_name: Vivun Product Gap Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Total Breaker Gap Count
+    db_column_name: Vivun Product Gap Total Breaker Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Total Challenge Gap Count
+    db_column_name: Vivun Product Gap Total Challenge Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Total Gap Count
+    db_column_name: Vivun Product Gap Total Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Total Nice To Have Gap Count
+    db_column_name: Vivun Product Gap Total Nice To Have Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Breaker Gap Count
+    db_column_name: Vivun Product Gap Account Breaker Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Breaker Gap Sum
+    db_column_name: Vivun Product Gap Account Breaker Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Challenge Gap Count
+    db_column_name: Vivun Product Gap Account Challenge Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Challenge Gap Sum
+    db_column_name: Vivun Product Gap Account Challenge Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Gap Count
+    db_column_name: Vivun Product Gap Account Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Gap Sum
+    db_column_name: Vivun Product Gap Account Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Completed
+    db_column_name: Vivun Product Gap Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Deal Breaker Opportunity Gap Count
+    db_column_name: Vivun Product Gap Deal Breaker Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Deal Breaker Opportunity Gap Sum
+    db_column_name: Vivun Product Gap Deal Breaker Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Deal Challenge Opportunity Gap Count
+    db_column_name: Vivun Product Gap Deal Challenge Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Deal Challenge Opportunity Gap Sum
+    db_column_name: Vivun Product Gap Deal Challenge Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Nice To Have Account Gap Count
+    db_column_name: Vivun Product Gap Nice To Have Account Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Nice To Have Account Gap Sum
+    db_column_name: Vivun Product Gap Nice To Have Account Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Nice To Have Opportunity Gap Count
+    db_column_name: Vivun Product Gap Nice To Have Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Nice To Have Opportunity Gap Sum
+    db_column_name: Vivun Product Gap Nice To Have Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Opportunity Gap Count
+    db_column_name: Vivun Product Gap Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Opportunity Gap Sum
+    db_column_name: Vivun Product Gap Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Total Related Development Items
+    db_column_name: Vivun Product Gap Total Related Development Items
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Gap Weighted Yield Sum
+    db_column_name: Vivun Product Gap Account Gap Weighted Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Account Gap Yield Sum
+    db_column_name: Vivun Product Gap Account Gap Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Opportunity Gap Weighted Yield Sum
+    db_column_name: Vivun Product Gap Opportunity Gap Weighted Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Opportunity Gap Yield Sum
+    db_column_name: Vivun Product Gap Opportunity Gap Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Product Gap Created By Name
+    db_column_name: Vivun Product Gap Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Modified By Name
+    db_column_name: Vivun Product Gap Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Leadership Notes
+    db_column_name: Vivun Product Gap Leadership Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Product Gap Leadership Priority
+    db_column_name: Vivun Product Gap Leadership Priority
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR

@@ -1,0 +1,61 @@
+guid: dad3eb23-1360-4fad-8eed-e97bb825bbef
+sql_view:
+  name: CS_PROJECT_STATS_VIEW
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "select prjct.\"Project Name\",\"Project Stage\" AS \"Project State\",\"Project Status\",\"Project Type\",\"Project Start Date\",\"Project End Date\",\"Account ID\",\ninitcap(replace(ap.\"Current Status\",'_',' ')) AS \"Current Project Status\",\ncase when prjct.\"Project Stage\" IN ('In Progress','On Hold','Planned' ) then ((\"Project End Date\"- \"Opportunity Close Date\" ) - 1)\n     else (( \"Project Use Case Complete\"-\"Opportunity Close Date\" ) - 1 ) end AS \"Velocity\",\ncase when \"Project Type\" LIKE '%Activate%' then '45'\n     when \"Project Type\" LIKE '%Accelerate%' or \"Project Type\" LIKE '%Quickstart%' then '90'\n     else NULL end AS \"Velocity Target\",\n     \"Velocity\"-\"Velocity Target\" AS \"Velocity Variance\"  \n\n from gtm_db.public.sfdc_project prjct \nleft outer join gtm_db.public.sfdc_opportunity opp on prjct.\"Project Opportunity ID\"=opp.\"Opportunity ID\"\nleft outer join GTM_DB.PUBLIC.ASANA_PROJECT ap on prjct.\"Project ID\"=ap.\"Project ID\""
+  sql_view_columns:
+  - name: Project Name
+    sql_output_column: Project Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Project State
+    sql_output_column: Project State
+    properties:
+      column_type: ATTRIBUTE
+  - name: Project Status
+    sql_output_column: Project Status
+    properties:
+      column_type: ATTRIBUTE
+  - name: Project Type
+    sql_output_column: Project Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: Project Start Date
+    sql_output_column: Project Start Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Project End Date
+    sql_output_column: Project End Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account ID
+    sql_output_column: Account ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Current Project Status
+    sql_output_column: Current Project Status
+    properties:
+      column_type: ATTRIBUTE
+  - name: Velocity
+    sql_output_column: Velocity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Velocity Target
+    sql_output_column: Velocity Target
+    properties:
+      column_type: ATTRIBUTE
+  - name: Velocity Variance
+    sql_output_column: Velocity Variance
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  joins_with:
+  - name: CS_PROJECT_STATS_VIEW_SFDC_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[CS_PROJECT_STATS_VIEW::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER

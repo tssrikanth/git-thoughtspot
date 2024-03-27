@@ -1,0 +1,250 @@
+guid: cba96351-2b5e-41b6-9a67-5e9d51801f33
+table:
+  name: VIVUN_HERO_ACTIVITY
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: VIVUN_HERO_ACTIVITY
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Vivun Hero Activity Hours Float
+    db_column_name: Vivun Hero Activity Hours Float
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Vivun Hero Activity ID
+    db_column_name: Vivun Hero Activity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Owner ID
+    db_column_name: Vivun Hero Activity Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Is Deleted
+    db_column_name: Vivun Hero Activity Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Development Item Product Gap
+    db_column_name: Vivun Hero Activity Development Item Product Gap
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Currency ISO Code
+    db_column_name: Vivun Hero Activity Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Created Date
+    db_column_name: Vivun Hero Activity Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Hero Activity Created By ID
+    db_column_name: Vivun Hero Activity Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Last Modified Date
+    db_column_name: Vivun Hero Activity Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Hero Activity Last Modified By ID
+    db_column_name: Vivun Hero Activity Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity System Modified TimeStamp
+    db_column_name: Vivun Hero Activity System Modified TimeStamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Hero Activity Last Viewed Date
+    db_column_name: Vivun Hero Activity Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Hero Activity Last Referenced Date
+    db_column_name: Vivun Hero Activity Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Created Stage
+    db_column_name: Vivun Hero Activity Created Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Date
+    db_column_name: Vivun Hero Activity Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Hero Activity Default Hours
+    db_column_name: Vivun Hero Activity Default Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Hero Activity Deliverable
+    db_column_name: Vivun Hero Activity Deliverable
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Description
+    db_column_name: Vivun Hero Activity Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Focus
+    db_column_name: Vivun Hero Activity Focus
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Hero Activity Flag
+    db_column_name: Vivun Hero Activity Hero Activity Flag
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Hero Activity Hours
+    db_column_name: Vivun Hero Activity Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Hero Activity Opportunity ID
+    db_column_name: Vivun Hero Activity Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Presales Stage
+    db_column_name: Vivun Hero Activity Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Source
+    db_column_name: Vivun Hero Activity Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Status
+    db_column_name: Vivun Hero Activity Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Type
+    db_column_name: Vivun Hero Activity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Created By Name
+    db_column_name: Vivun Hero Activity Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Modified By Name
+    db_column_name: Vivun Hero Activity Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Hero Activity Presales Stage Status
+    db_column_name: Vivun Hero Activity Presales Stage Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_VIVUN_HERO_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[VIVUN_HERO_ACTIVITY::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: RIGHT_OUTER

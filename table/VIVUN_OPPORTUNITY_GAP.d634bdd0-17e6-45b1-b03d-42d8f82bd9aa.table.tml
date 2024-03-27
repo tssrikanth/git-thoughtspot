@@ -1,0 +1,250 @@
+guid: d634bdd0-17e6-45b1-b03d-42d8f82bd9aa
+table:
+  name: VIVUN_OPPORTUNITY_GAP
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: VIVUN_OPPORTUNITY_GAP
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Vivun Opportunity Gap ID
+    db_column_name: Vivun Opportunity Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Is Deleted
+    db_column_name: Vivun Opportunity Gap Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Name
+    db_column_name: Vivun Opportunity Gap Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Currency ISO Code
+    db_column_name: Vivun Opportunity Gap Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Create Date
+    db_column_name: Vivun Opportunity Gap Create Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Opportunity Gap Created By ID
+    db_column_name: Vivun Opportunity Gap Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Last Modified Date
+    db_column_name: Vivun Opportunity Gap Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Opportunity Gap Last Modified By ID
+    db_column_name: Vivun Opportunity Gap Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap System Modified Timestamp
+    db_column_name: Vivun Opportunity Gap System Modified Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Opportunity Gap Last Viewed Date
+    db_column_name: Vivun Opportunity Gap Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Opportunity Gap Last Referenced Date
+    db_column_name: Vivun Opportunity Gap Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Opportunity Gap Product Gap ID
+    db_column_name: Vivun Opportunity Gap Product Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Active Lookup ID
+    db_column_name: Vivun Opportunity Gap Active Lookup ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Active
+    db_column_name: Vivun Opportunity Gap Active
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Amount Source
+    db_column_name: Vivun Opportunity Gap Amount Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Date Delivered
+    db_column_name: Vivun Opportunity Gap Date Delivered
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Opportunity Gap
+    db_column_name: Vivun Opportunity Gap
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Amount
+    db_column_name: Vivun Opportunity Gap Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Opportunity Gap Percent Complete
+    db_column_name: Vivun Opportunity Gap Percent Complete
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Opportunity Gap Primary Competitor Solution
+    db_column_name: Vivun Opportunity Gap Primary Competitor Solution
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Status
+    db_column_name: Vivun Opportunity Gap Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Type
+    db_column_name: Vivun Opportunity Gap Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Weighted Yield
+    db_column_name: Vivun Opportunity Gap Weighted Yield
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Opportunity Gap Yield
+    db_column_name: Vivun Opportunity Gap Yield
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Opportunity Gap Created By Name
+    db_column_name: Vivun Opportunity Gap Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Modified By Name
+    db_column_name: Vivun Opportunity Gap Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Opportunity Gap Created Date
+    db_column_name: Vivun Opportunity Gap Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  joins_with:
+  - name: DATE_DIMENSION_to_VIVUN_OPPORTUNITY_GAP
+    destination:
+      name: DATE_DIMENSION
+      fqn: 95eb2007-8da6-4c01-ae3b-f9ea52e951ef
+    "on": "([VIVUN_OPPORTUNITY_GAP::Vivun Opportunity Gap Created Date] = [DATE_DIMENSION::Date])"
+    type: LEFT_OUTER
+  - name: FK_VIVUN_OPPORTUNITY_GAP_OPPORTUNITY
+    destination:
+      name: SFDC_OPPORTUNITY
+      fqn: 28ea7b2a-dcb1-4e47-8458-018d88a27e00
+    "on": "[VIVUN_OPPORTUNITY_GAP::Opportunity ID] = [SFDC_OPPORTUNITY::Opportunity ID]"
+    type: LEFT_OUTER
+  - name: FK_VIVUN_OPPORTUNITY_GAP_VIVUN PRODUCT_GAP
+    destination:
+      name: VIVUN_PRODUCT_GAP
+      fqn: f38eb576-3747-4d2a-a3ef-d92dab8f4930
+    "on": "[VIVUN_OPPORTUNITY_GAP::Vivun Opportunity Gap Product Gap ID] = [VIVUN_PRODUCT_GAP::Vivun Product Gap ID]"
+    type: INNER

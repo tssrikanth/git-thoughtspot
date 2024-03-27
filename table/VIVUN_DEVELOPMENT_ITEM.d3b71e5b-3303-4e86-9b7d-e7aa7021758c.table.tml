@@ -1,0 +1,187 @@
+guid: d3b71e5b-3303-4e86-9b7d-e7aa7021758c
+table:
+  name: VIVUN_DEVELOPMENT_ITEM
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: VIVUN_DEVELOPMENT_ITEM
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Vivun Development Item ID
+    db_column_name: Vivun Development Item ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Is Deleted
+    db_column_name: Vivun Development Item Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Product Gap
+    db_column_name: Vivun Development Item Product Gap
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Currency ISO Code
+    db_column_name: Vivun Development Item Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Created Date
+    db_column_name: Vivun Development Item Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Development Item Created By ID
+    db_column_name: Vivun Development Item Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Last Modified Date
+    db_column_name: Vivun Development Item Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Development Item Last Modified By ID
+    db_column_name: Vivun Development Item Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item System Modified Timestamp
+    db_column_name: Vivun Development Item System Modified Timestamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Development Item Last Viewed Date
+    db_column_name: Vivun Development Item Last Viewed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Development Item Last Referenced Date
+    db_column_name: Vivun Development Item Last Referenced Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Vivun Development Item Product Gap ID
+    db_column_name: Vivun Development Item Product Gap ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Completed
+    db_column_name: Vivun Development Item Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Development Item Key
+    db_column_name: Vivun Development Item Key
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Jira Link
+    db_column_name: Vivun Development Item Jira Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Name
+    db_column_name: Vivun Development Item Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Size
+    db_column_name: Vivun Development Item Size
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Vivun Development Item Source
+    db_column_name: Vivun Development Item Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Sync Status
+    db_column_name: Vivun Development Item Sync Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Type
+    db_column_name: Vivun Development Item Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Created By Name
+    db_column_name: Vivun Development Item Created By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Vivun Development Item Modified By Name
+    db_column_name: Vivun Development Item Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_VIVUN_DEVELOPMENT_ITEM_VIVUN PRODUCT_GAP
+    destination:
+      name: VIVUN_PRODUCT_GAP
+      fqn: f38eb576-3747-4d2a-a3ef-d92dab8f4930
+    "on": "[VIVUN_DEVELOPMENT_ITEM::Vivun Development Item Product Gap ID] = [VIVUN_PRODUCT_GAP::Vivun Product Gap ID]"
+    type: INNER

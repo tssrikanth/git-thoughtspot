@@ -1,0 +1,101 @@
+guid: 87fd5ecc-8efc-49be-b262-05fb14ed24ad
+table:
+  name: SFDC_ACTIVITY
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_ACTIVITY
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Activity Classification
+    db_column_name: Activity Classification
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Owner Team
+    db_column_name: Activity Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Owner Role
+    db_column_name: Activity Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Mode Activity
+    db_column_name: Activity Mode Activity
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: Activity ID
+    db_column_name: Activity ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Owner ID
+    db_column_name: Activity Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Subject
+    db_column_name: Activity Subject
+    properties:
+      column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Person ID
+    db_column_name: Person ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Type
+    db_column_name: Activity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Time
+    db_column_name: Activity Time
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Activity Owner Name
+    db_column_name: Activity Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_SFDC_ACTIVITY_PERSON
+    destination:
+      name: SFDC_PERSON
+      fqn: 657f3c7e-dfa9-4f04-879e-2b48b95fadbb
+    "on": "[SFDC_ACTIVITY::Person ID] = [SFDC_PERSON::Person ID]"
+    type: RIGHT_OUTER

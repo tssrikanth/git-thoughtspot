@@ -1,0 +1,114 @@
+guid: 16b4ee54-0cec-4b69-b8f0-ada67fc5f9ec
+table:
+  name: PAI_PARTICIPANTS
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: PAI_PARTICIPANTS
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: PAI Participant ID
+    db_column_name: PAI Participant ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Phone
+    db_column_name: PAI Participant Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant CRM ID
+    db_column_name: PAI Participant CRM ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Name
+    db_column_name: PAI Participant Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Participant Type
+    db_column_name: PAI Participant Participant Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Status
+    db_column_name: PAI Participant Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Email
+    db_column_name: PAI Participant Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Role
+    db_column_name: PAI Participant Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Matched As
+    db_column_name: PAI Participant Matched As
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Activity UID
+    db_column_name: PAI Activity UID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Title
+    db_column_name: PAI Participant Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PAI Participant Time Spent
+    db_column_name: PAI Participant Time Spent
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: FK_PAI_PARTICIAPNTS_ACTIVITY
+    destination:
+      name: PAI_ACTIVITY
+      fqn: f533ddeb-b26a-4125-8168-5af733e3fe06
+    "on": "([PAI_PARTICIPANTS::PAI Activity UID] = [PAI_ACTIVITY::PAI Activity UID])"
+    type: INNER

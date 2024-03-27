@@ -1,0 +1,139 @@
+guid: 2fa9b41c-3e69-46b7-b2a7-0a1f1cca2289
+table:
+  name: NPS_SUPPORT_RESPONSES
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: NPS_SUPPORT_RESPONSES
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: NPS Support Created Time
+    db_column_name: NPS Support Created Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: NPS Support Scores
+    db_column_name: NPS Support Scores
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: NPS Support End User Email
+    db_column_name: NPS Support End User Email
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support End User External ID
+    db_column_name: NPS Support End User External ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support End User ID
+    db_column_name: NPS Support End User ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support End User SFDCID
+    db_column_name: NPS Support End User SFDCID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Excluded From Calculations
+    db_column_name: NPS Support Excluded From Calculations
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support ID
+    db_column_name: NPS Support ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support IP Address
+    db_column_name: NPS Support IP Address
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Original URL
+    db_column_name: NPS Support Original URL
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Score
+    db_column_name: NPS Support Score
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Survey ID
+    db_column_name: NPS Support Survey ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Text
+    db_column_name: NPS Support Text
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Updated At
+    db_column_name: NPS Support Updated At
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Wootric Tags
+    db_column_name: NPS Wootric Tags
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Person ID
+    db_column_name: NPS Support Person ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NPS Support Completed
+    db_column_name: NPS Support Completed
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_NPS_SUPPORT_PERSON
+    destination:
+      name: SFDC_PERSON
+      fqn: 657f3c7e-dfa9-4f04-879e-2b48b95fadbb
+    "on": "[NPS_SUPPORT_RESPONSES::NPS Support Person ID] = [SFDC_PERSON::Person ID]"
+    type: INNER

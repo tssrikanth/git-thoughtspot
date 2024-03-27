@@ -1,0 +1,87 @@
+guid: 2622a3bd-62cf-4e21-b775-ef4235ad5aef
+table:
+  name: SFDC_CLEARBIT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_CLEARBIT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Clearbit ID
+    db_column_name: Clearbit ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit Owner ID
+    db_column_name: Clearbit Owner ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit Name
+    db_column_name: Clearbit Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit Currency ISO Code
+    db_column_name: Clearbit Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit Created Date
+    db_column_name: Clearbit Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Clearbit Created By ID
+    db_column_name: Clearbit Created By ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit Last Modified Date
+    db_column_name: Clearbit Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Clearbit Last Modified By ID
+    db_column_name: Clearbit Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit System Mod Stamp
+    db_column_name: Clearbit System Mod Stamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Clearbit Company Tech
+    db_column_name: Clearbit Company Tech
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clearbit Company Tech Full
+    db_column_name: Clearbit Company Tech Full
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: SFDC_CLEARBIT_to_SFDC_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[SFDC_CLEARBIT::Clearbit ID] = [SFDC_ACCOUNT::Account Clearbit ID]"
+    type: RIGHT_OUTER
+    is_one_to_one: true

@@ -1,0 +1,270 @@
+guid: 71ab8bea-18a7-48b1-bcf6-abed21c1e5ec
+table:
+  name: JIRA_CLOUD_ISSUES
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: JIRA_CLOUD_ISSUES
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: JIRA CLOUD Assignee
+    db_column_name: JIRA CLOUD Assignee
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Assignee Email
+    db_column_name: JIRA CLOUD Assignee Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Created Date
+    db_column_name: JIRA CLOUD Created Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA CLOUD Description
+    db_column_name: JIRA CLOUD Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Due Date
+    db_column_name: JIRA CLOUD Due Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: JIRA CLOUD ID
+    db_column_name: JIRA CLOUD ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA CLOUD Issue Type Description
+    db_column_name: JIRA CLOUD Issue Type Description
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Issue Type Name
+    db_column_name: JIRA CLOUD Issue Type Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Key
+    db_column_name: JIRA CLOUD Key
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Labels
+    db_column_name: JIRA CLOUD Labels
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Original Estimate
+    db_column_name: JIRA CLOUD Original Estimate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Priority
+    db_column_name: JIRA CLOUD Priority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Project ID
+    db_column_name: JIRA CLOUD Project ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA CLOUD Project Key
+    db_column_name: JIRA CLOUD Project Key
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Project Name
+    db_column_name: JIRA CLOUD Project Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Remaining Estimate
+    db_column_name: JIRA CLOUD Remaining Estimate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Reporter Display Name
+    db_column_name: JIRA CLOUD Reporter Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Reporter Email
+    db_column_name: JIRA CLOUD Reporter Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Resolution
+    db_column_name: JIRA CLOUD Resolution
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Resolution Description
+    db_column_name: JIRA CLOUD Resolution Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Resolution ID
+    db_column_name: JIRA CLOUD Resolution ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA CLOUD Resolution Name
+    db_column_name: JIRA CLOUD Resolution Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Status
+    db_column_name: JIRA CLOUD Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Status Category
+    db_column_name: JIRA CLOUD Status Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Issue Summary
+    db_column_name: JIRA CLOUD Issue Summary
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Time Spent
+    db_column_name: JIRA CLOUD Time Spent
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Updated Date
+    db_column_name: JIRA CLOUD Updated Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA CLOUD Watchers Count
+    db_column_name: JIRA CLOUD Watchers Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA CLOUD Resolution Date
+    db_column_name: JIRA CLOUD Resolution Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: JIRA CLOUD URL
+    db_column_name: JIRA CLOUD URL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Reporter Name
+    db_column_name: JIRA CLOUD Reporter
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA CLOUD Votes
+    db_column_name: JIRA CLOUD Votes
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: JIRA CLOUD Comment Count
+    db_column_name: JIRA CLOUD Comment Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64

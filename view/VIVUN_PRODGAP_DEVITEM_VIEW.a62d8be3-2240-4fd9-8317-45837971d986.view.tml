@@ -1,0 +1,420 @@
+guid: a62d8be3-2240-4fd9-8317-45837971d986
+view:
+  name: VIVUN_PRODGAP_DEVITEM_VIEW
+  description: This view combines development items and product gaps into a single view.  There can be multiple development items per product gap so be careful in not over-counting product gaps.
+  tables:
+  - id: VIVUN_DEVELOPMENT_ITEM
+    name: VIVUN_DEVELOPMENT_ITEM
+    fqn: d3b71e5b-3303-4e86-9b7d-e7aa7021758c
+  - id: VIVUN_PRODUCT_GAP
+    name: VIVUN_PRODUCT_GAP
+    fqn: f38eb576-3747-4d2a-a3ef-d92dab8f4930
+  joins:
+  - id: FK_VIVUN_DEVELOPMENT_ITEM_VIVUN PRODUCT_GAP
+    name: FK_VIVUN_DEVELOPMENT_ITEM_VIVUN PRODUCT_GAP
+    source: VIVUN_DEVELOPMENT_ITEM
+    destination: VIVUN_PRODUCT_GAP
+  table_paths:
+  - id: VIVUN_DEVELOPMENT_ITEM_1
+    table: VIVUN_DEVELOPMENT_ITEM
+    join_path:
+    - {}
+  - id: VIVUN_PRODUCT_GAP_1
+    table: VIVUN_PRODUCT_GAP
+    join_path:
+    - join:
+      - FK_VIVUN_DEVELOPMENT_ITEM_VIVUN PRODUCT_GAP
+  search_query: "[VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Completed] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Created By ID] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Created By Name] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Created Date] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Created Date].monthly [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Currency ISO Code] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item ID] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Is Deleted] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Jira Link] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Key] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Modified By ID] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Modified Date] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Modified Date].monthly [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Referenced Date] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Referenced Date].monthly [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Viewed Date] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Last Viewed Date].monthly [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Modified By Name] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Name] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Product Gap] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Product Gap ID] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Size] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Source] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Sync Status] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item System Modified Timestamp] [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item System Modified Timestamp].monthly [VIVUN_DEVELOPMENT_ITEM_1::Vivun Development Item Type] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Breaker Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Breaker Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Challenge Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Challenge Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Weighted Yield Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Account Gap Yield Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Area] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Completed] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Create Date] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Create Date].monthly [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Created By ID] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Created By Name] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Currency ISO Code] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Date Delivered] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Date Delivered].monthly [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Breaker Opportunity Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Breaker Opportunity Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Challenge Opportunity Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Deal Challenge Opportunity Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Description] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Feature Group] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap ID] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Interim Solution] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Is Deleted] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Jira Completed Issues] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Jira Status] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Jira Total Issues] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Modified By ID] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Modified Date] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Modified Date].monthly [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Referenced Date] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Referenced Date].monthly [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Viewed Date] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Last Viewed Date].monthly [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Leadership Notes] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Leadership Priority] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Merge Target] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Modified By Name] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Account Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Account Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Opportunity Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Nice To Have Opportunity Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Weighted Yield Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Opportunity Gap Yield Sum] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Owner ID] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Percent Complete] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Persona] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Product Gap] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Review Gap] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Status] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap System Modified Timestamp] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap System Modified Timestamp].monthly [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Breaker Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Challenge Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Nice To Have Gap Count] [VIVUN_PRODUCT_GAP_1::Vivun Product Gap Total Related Development Items]"
+  view_columns:
+  - name: Vivun Development Item Created By ID
+    search_output_column: Vivun Development Item Created By ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Created By Name
+    search_output_column: Vivun Development Item Created By Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week(Vivun Development Item Created Date)
+    search_output_column: Month(Vivun Development Item Created Date)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy 'Week'
+  - name: Vivun Development Item Currency ISO Code
+    search_output_column: Vivun Development Item Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item ID
+    search_output_column: Vivun Development Item ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Is Deleted
+    search_output_column: Vivun Development Item Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Jira Link
+    search_output_column: Vivun Development Item Jira Link
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Key
+    search_output_column: Vivun Development Item Key
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Last Modified By ID
+    search_output_column: Vivun Development Item Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hour(Vivun Development Item Last Modified Date)
+    search_output_column: Month(Vivun Development Item Last Modified Date)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy hh a
+  - name: Vivun Development Item Last Referenced Date
+    search_output_column: Month(Vivun Development Item Last Referenced Date)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MMM yyyy
+  - name: Vivun Development Item Last Viewed Date
+    search_output_column: Month(Vivun Development Item Last Viewed Date)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MMM yyyy
+  - name: Vivun Development Item Modified By Name
+    search_output_column: Vivun Development Item Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Name
+    search_output_column: Vivun Development Item Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Product Gap
+    search_output_column: Vivun Development Item Product Gap
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Product Gap ID
+    search_output_column: Vivun Development Item Product Gap ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Source
+    search_output_column: Vivun Development Item Source
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Development Item Sync Status
+    search_output_column: Vivun Development Item Sync Status
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hour(Vivun Development Item System Modified Timestamp)
+    search_output_column: Month(Vivun Development Item System Modified Timestamp)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy hh a
+  - name: Vivun Development Item Type
+    search_output_column: Vivun Development Item Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Area
+    search_output_column: Vivun Product Gap Area
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week(Vivun Product Gap Create Date)
+    search_output_column: Month(Vivun Product Gap Create Date)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy 'Week'
+  - name: Vivun Product Gap Created By ID
+    search_output_column: Vivun Product Gap Created By ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Created By Name
+    search_output_column: Vivun Product Gap Created By Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Currency ISO Code
+    search_output_column: Vivun Product Gap Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week(Vivun Product Gap Date Delivered)
+    search_output_column: Month(Vivun Product Gap Date Delivered)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy 'Week'
+  - name: Vivun Product Gap Description
+    search_output_column: Vivun Product Gap Description
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Feature Group
+    search_output_column: Vivun Product Gap Feature Group
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap ID
+    search_output_column: Vivun Product Gap ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Interim Solution
+    search_output_column: Vivun Product Gap Interim Solution
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Is Deleted
+    search_output_column: Vivun Product Gap Is Deleted
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Jira Status
+    search_output_column: Vivun Product Gap Jira Status
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Last Modified By ID
+    search_output_column: Vivun Product Gap Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week(Vivun Product Gap Last Modified Date)
+    search_output_column: Month(Vivun Product Gap Last Modified Date)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy 'Week'
+  - name: Vivun Product Gap Last Referenced Date
+    search_output_column: Month(Vivun Product Gap Last Referenced Date)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MMM yyyy
+  - name: Vivun Product Gap Last Viewed Date
+    search_output_column: Month(Vivun Product Gap Last Viewed Date)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MMM yyyy
+  - name: Vivun Product Gap Leadership Notes
+    search_output_column: Vivun Product Gap Leadership Notes
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Leadership Priority
+    search_output_column: Vivun Product Gap Leadership Priority
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Merge Target
+    search_output_column: Vivun Product Gap Merge Target
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Modified By Name
+    search_output_column: Vivun Product Gap Modified By Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Owner ID
+    search_output_column: Vivun Product Gap Owner ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Persona
+    search_output_column: Vivun Product Gap Persona
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Product Gap
+    search_output_column: Vivun Product Gap Product Gap
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Review Gap
+    search_output_column: Vivun Product Gap Review Gap
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Product Gap Status
+    search_output_column: Vivun Product Gap Status
+    properties:
+      column_type: ATTRIBUTE
+  - name: Week(Vivun Product Gap System Modified Timestamp)
+    search_output_column: Month(Vivun Product Gap System Modified Timestamp)
+    properties:
+      column_type: ATTRIBUTE
+      format_pattern: MM/dd/yyyy 'Week'
+  - name: Total Vivun Development Item Completed
+    search_output_column: Total Vivun Development Item Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Development Item Size
+    search_output_column: Total Vivun Development Item Size
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Breaker Gap Count
+    search_output_column: Total Vivun Product Gap Account Breaker Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Breaker Gap Sum
+    search_output_column: Total Vivun Product Gap Account Breaker Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Challenge Gap Count
+    search_output_column: Total Vivun Product Gap Account Challenge Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Challenge Gap Sum
+    search_output_column: Total Vivun Product Gap Account Challenge Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Gap Count
+    search_output_column: Total Vivun Product Gap Account Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Gap Sum
+    search_output_column: Total Vivun Product Gap Account Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Gap Weighted Yield Sum
+    search_output_column: Total Vivun Product Gap Account Gap Weighted Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Account Gap Yield Sum
+    search_output_column: Total Vivun Product Gap Account Gap Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Completed
+    search_output_column: Total Vivun Product Gap Completed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Deal Breaker Opportunity Gap Count
+    search_output_column: Total Vivun Product Gap Deal Breaker Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Deal Breaker Opportunity Gap Sum
+    search_output_column: Total Vivun Product Gap Deal Breaker Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Deal Challenge Opportunity Gap Count
+    search_output_column: Total Vivun Product Gap Deal Challenge Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Deal Challenge Opportunity Gap Sum
+    search_output_column: Total Vivun Product Gap Deal Challenge Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Jira Completed Issues
+    search_output_column: Total Vivun Product Gap Jira Completed Issues
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Jira Total Issues
+    search_output_column: Total Vivun Product Gap Jira Total Issues
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Nice To Have Account Gap Count
+    search_output_column: Total Vivun Product Gap Nice To Have Account Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Nice To Have Account Gap Sum
+    search_output_column: Total Vivun Product Gap Nice To Have Account Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Nice To Have Opportunity Gap Count
+    search_output_column: Total Vivun Product Gap Nice To Have Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Nice To Have Opportunity Gap Sum
+    search_output_column: Total Vivun Product Gap Nice To Have Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Opportunity Gap Count
+    search_output_column: Total Vivun Product Gap Opportunity Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Opportunity Gap Sum
+    search_output_column: Total Vivun Product Gap Opportunity Gap Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Opportunity Gap Weighted Yield Sum
+    search_output_column: Total Vivun Product Gap Opportunity Gap Weighted Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Opportunity Gap Yield Sum
+    search_output_column: Total Vivun Product Gap Opportunity Gap Yield Sum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Percent Complete
+    search_output_column: Total Vivun Product Gap Percent Complete
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Total Breaker Gap Count
+    search_output_column: Total Vivun Product Gap Total Breaker Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Total Challenge Gap Count
+    search_output_column: Total Vivun Product Gap Total Challenge Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Total Gap Count
+    search_output_column: Total Vivun Product Gap Total Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Total Nice To Have Gap Count
+    search_output_column: Total Vivun Product Gap Total Nice To Have Gap Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Vivun Product Gap Total Related Development Items
+    search_output_column: Total Vivun Product Gap Total Related Development Items
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  joins_with:
+  - name: PRODGAP_DEVITEM_VIEW_TO_PRODGAP
+    destination:
+      name: VIVUN_PRODUCT_GAP
+      fqn: f38eb576-3747-4d2a-a3ef-d92dab8f4930
+    "on": "[VIVUN_PRODGAP_DEVITEM_VIEW::Vivun Product Gap ID] = [VIVUN_PRODUCT_GAP::Vivun Product Gap ID]"
+    type: INNER

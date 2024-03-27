@@ -1,0 +1,44 @@
+guid: 3bdf854b-92cc-4340-9df4-eac7d842e58c
+sql_view:
+  name: JIRA_SCAL_HERO_BY_VIVUN_VIVUN_OPPORTUNITY_GAP_ID
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: "select distinct\n        i.\"JIRA SCAL ID\",i.\"JIRA SCAL Key\",\n         vp.\"Vivun Product Gap Product Gap\" as \"Hero By Vivun\", vo.\"Opportunity ID\" AS \"Vivun Opportunity Gap Opportunity ID\",so.\"Opportunity Name\" AS \"Vivun Opportunity Gap Name\",\n         va.\"Account ID\" AS \"Vivun Account Gap Account ID\",sa.\"Account Name\" AS \"Vivun Account Gap Name\"\n         from \"GTM_DB\".\"PUBLIC\".\"JIRA_SCAL_ISSUES\" i left join \"VIVUN_DEVELOPMENT_ITEM\" d\n  on i.\"JIRA SCAL Key\"=d.\"Vivun Development Item Key\"\n  left join \"GTM_DB\".\"PUBLIC\".\"VIVUN_PRODUCT_GAP\" vp\n  on d.\"Vivun Development Item Product Gap ID\"=vp.\"Vivun Product Gap ID\" \n  left join \"VIVUN_OPPORTUNITY_GAP\" vo\n  on vp.\"Vivun Product Gap ID\"=vo.\"Vivun Opportunity Gap Product Gap ID\"\n  left join \"SFDC_OPPORTUNITY\" so \n on vo.\"Opportunity ID\"=so.\"Opportunity ID\"\n left join \"VIVUN_ACCOUNT_GAP\" va on\n  vp.\"Vivun Product Gap ID\"=va.\"Vivun Account Gap Product Gap ID\"\n  left join \"SFDC_ACCOUNT\" sa \n  on va.\"Account ID\"=sa.\"Account ID\" \n"
+  sql_view_columns:
+  - name: JIRA SCAL ID
+    sql_output_column: JIRA SCAL ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: JIRA SCAL Key
+    sql_output_column: JIRA SCAL Key
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hero By Vivun
+    sql_output_column: Hero By Vivun
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Opportunity Gap Opportunity ID
+    sql_output_column: Vivun Opportunity Gap Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Opportunity Gap Name
+    sql_output_column: Vivun Opportunity Gap Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Account Gap Account ID
+    sql_output_column: Vivun Account Gap Account ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Vivun Account Gap Name
+    sql_output_column: Vivun Account Gap Name
+    properties:
+      column_type: ATTRIBUTE
+  joins_with:
+  - name: VIVUN_PRODUCT_GAP_JIRA_SCAL_ISSUES
+    destination:
+      name: JIRA_SCAL_ISSUES
+      fqn: 743cbdd3-6690-45e4-a347-b356396d16bd
+    "on": "[JIRA_SCAL_HERO_BY_VIVUN_VIVUN_OPPORTUNITY_GAP_ID::JIRA SCAL ID] = [JIRA_SCAL_ISSUES::JIRA SCAL ID]"
+    type: RIGHT_OUTER

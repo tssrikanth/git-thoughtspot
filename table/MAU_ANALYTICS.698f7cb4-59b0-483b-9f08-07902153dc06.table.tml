@@ -1,0 +1,47 @@
+guid: 698f7cb4-59b0-483b-9f08-07902153dc06
+table:
+  name: MAU_ANALYTICS
+  db: GTM_DB
+  schema: ACTIVE_USERS_METRICS
+  db_table: MAU_ANALYTICS
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Cluster UUID
+    db_column_name: Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User GUID
+    db_column_name: User GUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DATE
+    db_column_name: DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: SOURCE
+    db_column_name: SOURCE
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: MAU_ANALYTICS_to_SFDC_CLUSTER
+    destination:
+      name: SFDC_CLUSTER
+      fqn: 1a108b00-02ff-431e-9066-5a85f3b1fbd9
+    "on": "[MAU_ANALYTICS::Cluster UUID] = [SFDC_CLUSTER::Cluster UUID]"
+    type: RIGHT_OUTER

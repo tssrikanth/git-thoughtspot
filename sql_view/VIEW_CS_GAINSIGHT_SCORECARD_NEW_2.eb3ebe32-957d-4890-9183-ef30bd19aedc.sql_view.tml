@@ -1,0 +1,87 @@
+guid: eb3ebe32-957d-4890-9183-ef30bd19aedc
+sql_view:
+  name: VIEW_CS_GAINSIGHT_SCORECARD_NEW_2
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  sql_query: |2
+     with sentiment as
+    ( select "Account ID","Account Name","Gainsight Current Score Name" AS "CSM Sentiment","Gainsight Measure Name","Gainsight Score Modified Date" AS "GSM Sentiment Modified Date"
+     from gainsight_scorecard
+     where "Gainsight Is Current Score"='true' and "Gainsight Measure Name" in ('CSM Sentiment') --and "Account Name"='Zoomin Software'
+     qualify rank()over(partition by "Account ID" order by "Gainsight Score Modified Date" desc)=1 ),
+       risk as
+    ( select "Account ID","Account Name","Gainsight Current Score Name" AS "Renewal Risk","Gainsight Measure Name","Gainsight Score Modified Date" AS "Renewal Risk Modified Date"
+     from gainsight_scorecard
+     where "Gainsight Is Current Score"='true' and "Gainsight Measure Name" in ('Renewal Risk') --and "Account Name"='Zoomin Software'
+     qualify rank()over(partition by "Account ID" order by "Gainsight Score Modified Date" desc)=1
+                  ),
+    sentiment_comment as
+    ( select "Account ID","Account Name","Gainsight Comments" AS "CSM Sentiment Comments","Gainsight Measure Name","Gainsight Score Modified Date" AS "Sentiment Comment Modified Date"
+     from gainsight_scorecard
+     where "Gainsight Is Current Score"='true' and "Gainsight Measure Name" in ('CSM Sentiment') --and "Account Name"='Zoomin Software'
+     qualify rank()over(partition by "Account ID" order by "Gainsight Score Modified Date" desc)=1
+     ),
+       risk_comment as
+    ( select "Account ID","Account Name","Gainsight Comments" AS "Renewal Risk Comments","Gainsight Measure Name","Gainsight Score Modified Date" AS "Risk Comment Modified Date"
+     from gainsight_scorecard
+     where "Gainsight Is Current Score"='true' and "Gainsight Measure Name" in ('Renewal Risk') --and "Account Name"='Zoomin Software'
+     qualify rank()over(partition by "Account ID" order by "Gainsight Score Modified Date" desc)=1
+                  )
+    select s."Account ID",s."Account Name",s."CSM Sentiment",s."GSM Sentiment Modified Date","Renewal Risk","Renewal Risk Modified Date",
+    "CSM Sentiment Comments","Sentiment Comment Modified Date","Renewal Risk Comments","Risk Comment Modified Date" from
+    sentiment s left join sentiment_comment sc
+    on s."Account ID"=sc."Account ID" and s."Gainsight Measure Name"=sc."Gainsight Measure Name"
+    left join risk r
+    on s."Account ID"=r."Account ID"
+    left join risk_comment rc on
+    r."Account ID"=rc."Account ID" and r."Gainsight Measure Name"=rc."Gainsight Measure Name"
+    order by 2 desc
+  sql_view_columns:
+  - name: Account ID
+    sql_output_column: Account ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Name
+    sql_output_column: Account Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: CSM Sentiment
+    sql_output_column: CSM Sentiment
+    properties:
+      column_type: ATTRIBUTE
+  - name: GSM Sentiment Modified Date
+    sql_output_column: GSM Sentiment Modified Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Renewal Risk
+    sql_output_column: Renewal Risk
+    properties:
+      column_type: ATTRIBUTE
+  - name: Renewal Risk Modified Date
+    sql_output_column: Renewal Risk Modified Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: CSM Sentiment Comments
+    sql_output_column: CSM Sentiment Comments
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sentiment Comment Modified Date
+    sql_output_column: Sentiment Comment Modified Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Renewal Risk Comments
+    sql_output_column: Renewal Risk Comments
+    properties:
+      column_type: ATTRIBUTE
+  - name: Risk Comment Modified Date
+    sql_output_column: Risk Comment Modified Date
+    properties:
+      column_type: ATTRIBUTE
+  joins_with:
+  - name: VIEW_FK_SFDC_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[VIEW_CS_GAINSIGHT_SCORECARD_NEW_2::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER

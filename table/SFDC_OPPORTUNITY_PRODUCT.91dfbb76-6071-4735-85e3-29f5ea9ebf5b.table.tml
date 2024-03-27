@@ -1,0 +1,296 @@
+guid: 91dfbb76-6071-4735-85e3-29f5ea9ebf5b
+table:
+  name: SFDC_OPPORTUNITY_PRODUCT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_OPPORTUNITY_PRODUCT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Opportunity Product Additional Discount
+    db_column_name: Opportunity Product Additional Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Volume Discount
+    db_column_name: Opportunity Product Volume Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Discount
+    db_column_name: Opportunity Product Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Term Discount
+    db_column_name: Opportunity Product Term Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Offering
+    db_column_name: Opportunity Product Offering
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Quote Line
+    db_column_name: Opportunity Product Quote Line
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Upsell (RR)
+    db_column_name: Opportunity Product Upsell (RR)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Churn
+    db_column_name: Opportunity Product Churn
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Expansion/CS
+    db_column_name: Opportunity Product Expansion/CS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Renewal
+    db_column_name: Opportunity Product Renewal
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Renewal (RR)
+    db_column_name: Opportunity Product Renewal (RR)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Churn (RR)
+    db_column_name: Opportunity Product Churn (RR)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Expansion/CS (RR)
+    db_column_name: Opportunity Product Expansion/CS (RR)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product New (RR)
+    db_column_name: Opportunity Product New (RR)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Downsell
+    db_column_name: Opportunity Product Downsell
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product New
+    db_column_name: Opportunity Product New
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Upsell
+    db_column_name: Opportunity Product Upsell
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Downsell (RR)
+    db_column_name: Opportunity Product Downsell (RR)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Code
+    db_column_name: Opportunity Product Code
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product ID
+    db_column_name: Opportunity Product ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product ID
+    db_column_name: Product ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Line
+    db_column_name: Opportunity Product Line
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Pricing Type
+    db_column_name: Opportunity Product Pricing Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Volume
+    db_column_name: Opportunity Product Volume
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Sales Price
+    db_column_name: Opportunity Product Sales Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Product Category
+    db_column_name: Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Name
+    db_column_name: Opportunity Product Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Total Price
+    db_column_name: Opportunity Product Total Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Product List Price
+    db_column_name: Opportunity Product List Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Product Quantity
+    db_column_name: Opportunity Product Quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Product Rows Purchased
+    db_column_name: Opportunity Product Rows Purchased
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Product Edition
+    db_column_name: Opportunity Product Edition
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Unit Price
+    db_column_name: Opportunity Product Unit Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  joins_with:
+  - name: FK_OPPORTUNITY_PRODUCT_OPPORTUNITY
+    destination:
+      name: SFDC_OPPORTUNITY
+      fqn: 28ea7b2a-dcb1-4e47-8458-018d88a27e00
+    "on": "[SFDC_OPPORTUNITY_PRODUCT::Opportunity ID] = [SFDC_OPPORTUNITY::Opportunity ID]"
+    type: INNER

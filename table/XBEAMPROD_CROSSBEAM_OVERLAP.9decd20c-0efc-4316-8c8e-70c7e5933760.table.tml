@@ -1,0 +1,169 @@
+guid: 9decd20c-0efc-4316-8c8e-70c7e5933760
+table:
+  name: XBEAMPROD_CROSSBEAM_OVERLAP
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: XBEAMPROD_CROSSBEAM_OVERLAP
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: XbeamProd ID
+    db_column_name: XbeamProd ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Owner ID
+    db_column_name: XbeamProd Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd IsDeleted
+    db_column_name: XbeamProd IsDeleted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: XbeamProd Name
+    db_column_name: XbeamProd Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Currency ISO Code
+    db_column_name: XbeamProd Currency ISO Code
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Created Date
+    db_column_name: XbeamProd Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: XbeamProd Created By ID
+    db_column_name: XbeamProd Created By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Last Modified Date
+    db_column_name: XbeamProd Last Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: XbeamProd Last Modified By ID
+    db_column_name: XbeamProd Last Modified By ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd System Mod Stamp
+    db_column_name: XbeamProd System Mod Stamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: XbeamProd Account
+    db_column_name: XbeamProd Account
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Crossbeam EID
+    db_column_name: XbeamProd Crossbeam EID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Partner AE Email
+    db_column_name: XbeamProd Partner AE Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Partner AE Name
+    db_column_name: XbeamProd Partner AE Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Partner Name
+    db_column_name: XbeamProd Partner Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Partner Population
+    db_column_name: XbeamProd Partner Population
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Population
+    db_column_name: XbeamProd Population
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Opportunity
+    db_column_name: XbeamProd Opportunity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: XbeamProd Partner AE Phone
+    db_column_name: XbeamProd Partner AE Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: XBEAM_SFDC_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[XBEAMPROD_CROSSBEAM_OVERLAP::XbeamProd Account] = [SFDC_ACCOUNT::Account ID]"
+    type: RIGHT_OUTER

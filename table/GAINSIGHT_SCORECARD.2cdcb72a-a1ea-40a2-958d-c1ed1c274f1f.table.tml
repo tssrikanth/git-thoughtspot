@@ -1,0 +1,225 @@
+guid: 2cdcb72a-a1ea-40a2-958d-c1ed1c274f1f
+table:
+  name: GAINSIGHT_SCORECARD
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: GAINSIGHT_SCORECARD
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Gainsight Author Email
+    db_column_name: Gainsight Author Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Comments
+    db_column_name: Gainsight Comments
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Company ID CSM Email
+    db_column_name: Gainsight Company ID CSM Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Current Score Name
+    db_column_name: Gainsight Current Score Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Current Score
+    db_column_name: Gainsight Current Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Gainsight Measure Name
+    db_column_name: Gainsight Measure Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Name
+    db_column_name: Gainsight Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Subject
+    db_column_name: Gainsight Subject
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Type Name
+    db_column_name: Gainsight Type Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Rule Date
+    db_column_name: Gainsight Rule Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Gainsight Score Modified Date
+    db_column_name: Gainsight Score Modified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Gainsight Last Timeline Date
+    db_column_name: Gainsight Last Timeline Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Gainsight Customer Status
+    db_column_name: Gainsight Customer Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Company Name
+    db_column_name: Gainsight Company Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Is Current Score
+    db_column_name: Gainsight Is Current Score
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Gainsight Is Comment Blank
+    db_column_name: Gainsight Is Comment Blank
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Owner Name
+    db_column_name: Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account CS Name
+    db_column_name: Account CS Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account SDR Name
+    db_column_name: Account SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account SRE Name
+    db_column_name: Account SRE Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Segment
+    db_column_name: Account Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Region
+    db_column_name: Account Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account SubRegion
+    db_column_name: Account SubRegion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Status
+    db_column_name: Account Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_GAINSIGHT_SCORECARD_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[GAINSIGHT_SCORECARD::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER
+  - name: GAINSIGHT_SCORECARD_to_GAINSIGHT_COMPANY_ATTRIBUTES
+    destination:
+      name: GAINSIGHT_COMPANY_ATTRIBUTES
+      fqn: 882750b6-0099-4c64-a684-0cb57e9448cf
+    "on": "[GAINSIGHT_SCORECARD::Account ID] = [GAINSIGHT_COMPANY_ATTRIBUTES::Account ID]"
+    type: LEFT_OUTER
+  - name: GAINSIGHT_SCORECARD_to_GAINSIGHT_QBR
+    destination:
+      name: GAINSIGHT_QBR
+      fqn: 62e64be9-3473-4742-aec5-60470b94ec34
+    "on": "([GAINSIGHT_SCORECARD::Account ID] = [GAINSIGHT_QBR::SFDC ID])"
+    type: LEFT_OUTER

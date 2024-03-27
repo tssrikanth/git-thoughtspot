@@ -1,0 +1,100 @@
+guid: 2ebf2b2d-22d6-460e-8ebc-47a27811187b
+table:
+  name: TS_CREDIT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: TS_CREDIT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Credit Start Time
+    db_column_name: Credit Start Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Credit End Time
+    db_column_name: Credit End Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Credit Rank
+    db_column_name: Credit Rank
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Cluster UUID
+    db_column_name: Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Credit Opportunity ID
+    db_column_name: Credit Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Credit Number
+    db_column_name: Credit Number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Credit User GUID
+    db_column_name: Credit User GUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Credit GUID
+    db_column_name: Credit GUID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Credit Source Application
+    db_column_name: Credit Source Application
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Credit Category
+    db_column_name: Credit Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Credit Type
+    db_column_name: Credit Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_CREDIT_CLUSTER_OPPORTUNITY
+    destination:
+      name: SFDC_CLUSTER_OPPORTUNITY
+      fqn: 72eda526-f776-4bae-a392-341b81b8ffe0
+    "on": "[TS_CREDIT::Credit Opportunity ID] = [SFDC_CLUSTER_OPPORTUNITY::Cluster Opportunity ID] AND [TS_CREDIT::Cluster UUID] = [SFDC_CLUSTER_OPPORTUNITY::Cluster UUID]"
+    type: INNER

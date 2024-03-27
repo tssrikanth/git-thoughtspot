@@ -1,0 +1,98 @@
+guid: 1bd0b170-a2da-427c-84b2-e4fa49ecb9a6
+table:
+  name: SFDC_CASE_SNAPSHOT
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_CASE_SNAPSHOT
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Case ID
+    db_column_name: Case ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case Snapshot Status
+    db_column_name: Case Snapshot Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case Snapshot Internal Status
+    db_column_name: Case Snapshot Internal Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case Snapshot Escalated to Engineering
+    db_column_name: Case Snapshot Escalated to Engineering
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Case Snapshot Jira Escalated
+    db_column_name: Case Snapshot Jira Escalated
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Case Snapshot Escalated Flag
+    db_column_name: Case Snapshot Escalated Flag
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Case Snapshot Last Communication Time by Customer
+    db_column_name: Case Snapshot Last Communication Time by Customer
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Case Snapshot Last Communication Time by ThoughtSpot
+    db_column_name: Case Snapshot Last Communication Time by ThoughtSpot
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Case Snapshot Time
+    db_column_name: Case Snapshot Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Case Last Modified Time
+    db_column_name: Case Last Modified Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  joins_with:
+  - name: FK_CASE_SNAPSHOT_CASE
+    destination:
+      name: SFDC_CASE
+      fqn: 470a6c78-7d32-4266-bde6-f8ee715d51d5
+    "on": "[SFDC_CASE_SNAPSHOT::Case ID] = [SFDC_CASE::Case ID]"
+    type: INNER

@@ -1,0 +1,87 @@
+guid: 3312eea3-e1fb-4051-b8a4-f114a68d56ee
+table:
+  name: JIRA_SCAL_CHANGELOG
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: JIRA_SCAL_CHANGELOG
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: JIRA Change Author Name
+    db_column_name: JIRA Change Author Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA Change Author Email Address
+    db_column_name: JIRA Change Author Email Address
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA Change Author TimeZone
+    db_column_name: JIRA Change Author TimeZone
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA Change Created Time
+    db_column_name: JIRA Change Created Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: JIRA Change ID
+    db_column_name: JIRA Change ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA Change Item Field Name
+    db_column_name: JIRA Change Item Field Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA Change Item From Value
+    db_column_name: JIRA Change Item From Value
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA Change Item To Value
+    db_column_name: JIRA Change Item To Value
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JIRA SCAL ID
+    db_column_name: JIRA SCAL ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: FK_JIRA_CHANGELOG_JIRA
+    destination:
+      name: JIRA_SCAL_ISSUES
+      fqn: 743cbdd3-6690-45e4-a347-b356396d16bd
+    "on": "[JIRA_SCAL_CHANGELOG::JIRA SCAL ID] = [JIRA_SCAL_ISSUES::JIRA SCAL ID]"
+    type: INNER

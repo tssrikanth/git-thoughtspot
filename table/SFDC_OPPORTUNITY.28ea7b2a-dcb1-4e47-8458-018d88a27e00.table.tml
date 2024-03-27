@@ -1,0 +1,2013 @@
+guid: 28ea7b2a-dcb1-4e47-8458-018d88a27e00
+table:
+  name: SFDC_OPPORTUNITY
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_OPPORTUNITY
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Opportunity Nature of BVA Involvement
+    db_column_name: Opportunity Nature of BVA Involvement
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity(For CCoE) Type
+    db_column_name: Opportunity(For CCoE) Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Product Add Ons
+    db_column_name: Opportunity Mode Product Add Ons
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity TVP Close Date
+    description: Anticipated close date by TVP
+    db_column_name: Opportunity TVP Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Expansion Software TCV Converted
+    db_column_name: Opportunity Expansion Software TCV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Source MQL Partners Involved
+    db_column_name: Opportunity Source MQL Partners Involved
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Data Compute Flex Rate
+    db_column_name: Opportunity Mode Data Compute Flex Rate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Expansion Software ACV Converted
+    db_column_name: Opportunity Expansion Software ACV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Renewal Software ACV
+    db_column_name: Opportunity Renewal Software ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity New Customer Software TCV Converted
+    db_column_name: Opportunity New Customer Software TCV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Seat Overage Billing Period
+    db_column_name: Opportunity Mode Seat Overage Billing Period
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source MQL Mode Campaign
+    db_column_name: Opportunity Source MQL Mode Campaign
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Booked Renewal ACV
+    db_column_name: Opportunity Booked Renewal ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity New Customer Software ACV Converted
+    db_column_name: Opportunity New Customer Software ACV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity New Customer Software ACV
+    db_column_name: Opportunity New Customer Software ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity BVA Next Steps
+    db_column_name: Opportunity BVA Next Steps
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity New/Expand ACV
+    db_column_name: Opportunity New/Expand ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Renewal Software TCV Converted
+    db_column_name: Opportunity Renewal Software TCV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Software TCV Delta
+    db_column_name: Opportunity Software TCV Delta
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Data Compute Overage Payment Terms
+    db_column_name: Opportunity Mode Data Compute Overage Payment Terms
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity New/Expand TCV
+    db_column_name: Opportunity New/Expand TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Seat Overage Payment Method
+    db_column_name: Opportunity Mode Seat Overage Payment Method
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source MQL Partner Event Organizer
+    db_column_name: Opportunity Source MQL Partner Event Organizer
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Payment Terms
+    db_column_name: Opportunity Mode Payment Terms
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Monthly Seat Flex Rate
+    db_column_name: Opportunity Mode Monthly Seat Flex Rate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Renewal Type
+    db_column_name: Opportunity Renewal Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Payment Method
+    db_column_name: Opportunity Mode Payment Method
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Data Compute Total Purchased GB
+    db_column_name: Opportunity Mode Data Compute Total Purchased GB
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Renewal Software TCV
+    db_column_name: Opportunity Renewal Software TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Software ACV Delta
+    db_column_name: Opportunity Software ACV Delta
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Region Segment
+    db_column_name: Opportunity Region Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity New Customer Software TCV
+    db_column_name: Opportunity New Customer Software TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity External Mode Opportunity ID
+    db_column_name: Opportunity External Mode Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Data Compute Flex Amount GB
+    db_column_name: Opportunity Mode Data Compute Flex Amount GB
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Data Compute Overage Payment Method
+    db_column_name: Opportunity Mode Data Compute Overage Payment Method
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Billing Period
+    db_column_name: Opportunity Mode Billing Period
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Expansion Software TCV
+    db_column_name: Opportunity Expansion Software TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Opportunity
+    db_column_name: Opportunity Mode Opportunity
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Mode Number Of Seats
+    db_column_name: Opportunity Mode Number Of Seats
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Expansion Software ACV
+    db_column_name: Opportunity Expansion Software ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Short Term Software TCV Converted
+    db_column_name: Opportunity Short Term Software TCV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Renewal Comments
+    db_column_name: Opportunity Renewal Comments
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Seat Overage Payment Terms
+    db_column_name: Opportunity Mode Seat Overage Payment Terms
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Closed Won Region Segment
+    db_column_name: Opportunity Closed Won Region Segment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Product Edition(s)
+    db_column_name: Opportunity Mode Product Edition(s)
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Short Term Software TCV
+    db_column_name: Opportunity Short Term Software TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Helix Limit GB
+    db_column_name: Opportunity Mode Helix Limit GB
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Data Compute Overage Billing Period
+    db_column_name: Opportunity Mode Data Compute Overage Billing Period
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Non Software TCV
+    db_column_name: Opportunity Non Software TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Renewal Software ACV Converted
+    db_column_name: Opportunity Renewal Software ACV Converted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Mode Specialist Notes
+    db_column_name: Opportunity Mode Specialist Notes
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Specialist
+    db_column_name: Opportunity Mode Specialist
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Mode Specialist Forecast Category
+    db_column_name: Opportunity Mode Specialist Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CRO Close Date
+    description: Anticipated close date by CRO
+    db_column_name: Opportunity CRO Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity RD Close Date
+    description: Anticipated close date by RD
+    db_column_name: Opportunity RD Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Source Contact Title
+    db_column_name: Opportunity Source Contact Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity RVP Close Date
+    description: Anticipated close date by RVP
+    db_column_name: Opportunity RVP Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Free Trial Impact
+    db_column_name: Opportunity Free Trial Impact
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Pricing Type
+    db_column_name: Opportunity Pricing Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Pull Forward Flag
+    db_column_name: Opportunity Pull Forward Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Creator Team
+    db_column_name: Opportunity Creator Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Customer Environment Type
+    db_column_name: Opportunity Customer Environment Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Team Edition Product ID
+    db_column_name: Opportunity Team Edition Product ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity RVP Forecast Category
+    db_column_name: Opportunity RVP Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Prior Close Date
+    db_column_name: Opportunity Prior Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity RD Forecast Category
+    db_column_name: Opportunity RD Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SE Name
+    db_column_name: Opportunity SE Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Pipeline Date
+    db_column_name: Opportunity Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Source Engagement Asset Type
+    db_column_name: Opportunity Source Engagement Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Free Trial Source
+    db_column_name: Opportunity Free Trial Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity S2 Date
+    db_column_name: Opportunity S2 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity RD Gross ACV
+    db_column_name: Opportunity RD Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Owner ID
+    db_column_name: Opportunity Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact Segment Persona
+    db_column_name: Opportunity Source Contact Segment Persona
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity M1 Date
+    db_column_name: Opportunity M1 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Product Line(s) Sold
+    db_column_name: Opportunity Product Line(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity MQL Touch Last Campaign Category
+    db_column_name: Opportunity MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Original Renewal Date
+    db_column_name: Opportunity Original Renewal Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity MQL Touch Last Campaign Asset Type
+    db_column_name: Opportunity MQL Touch Last Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity RVP Gross ACV
+    db_column_name: Opportunity RVP Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity CS Team
+    db_column_name: Opportunity CS Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Score
+    db_column_name: Opportunity Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity SDR Team
+    db_column_name: Opportunity SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Engagement Category
+    db_column_name: Opportunity Source Engagement Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SDR Manager Name
+    db_column_name: Opportunity SDR Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity S4 Date
+    db_column_name: Opportunity S4 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity SDR Name
+    db_column_name: Opportunity SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SE Hours
+    db_column_name: Opportunity SE Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity RD PullFwd
+    db_column_name: Opportunity RD PullFwd
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Superregion
+    db_column_name: Opportunity Superregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SE Role
+    db_column_name: Opportunity SE Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact Email
+    db_column_name: Opportunity Source Contact Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SDR Role
+    db_column_name: Opportunity SDR Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Creator ID
+    db_column_name: Opportunity Creator ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CS Name
+    db_column_name: Opportunity CS Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Created Date
+    db_column_name: Opportunity Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Opportunity Subregion
+    db_column_name: Opportunity Subregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity S5 Date
+    db_column_name: Opportunity S5 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Ready For CS Approval
+    db_column_name: Opportunity Ready For CS Approval
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Consequence
+    db_column_name: Opportunity Consequence
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Active Flag
+    db_column_name: Opportunity Owner Active Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Services Partner
+    db_column_name: Opportunity Services Partner
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Disqualified Date
+    db_column_name: Opportunity Disqualified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Next Quarter S2 Target
+    db_column_name: Opportunity Next Quarter S2 Target
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Owner Role Start Date
+    db_column_name: Opportunity Owner Role Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Contract Term Years
+    db_column_name: Opportunity Contract Term Years
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity MQL Touch Last Campaign Subcategory
+    db_column_name: Opportunity MQL Touch Last Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SE Profile
+    db_column_name: Opportunity SE Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Engagement Date Last
+    db_column_name: Opportunity Engagement Date Last
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity S7 Date
+    db_column_name: Opportunity S7 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Technology Partner Role
+    db_column_name: Opportunity Technology Partner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Engagement Asset Name
+    db_column_name: Opportunity Source Engagement Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Tech Partners
+    db_column_name: Opportunity Tech Partners
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity MQL Touch Last Campaign Name
+    db_column_name: Opportunity MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Account Tier Snapshot
+    db_column_name: Opportunity Account Tier Snapshot
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Booked ACV
+    db_column_name: Opportunity Booked ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity MQL Touch Last ID
+    db_column_name: Opportunity MQL Touch Last ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SE ID
+    db_column_name: Opportunity SE ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Conversion
+    db_column_name: Opportunity Conversion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Tenure
+    db_column_name: Opportunity Owner Tenure
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity SE Team
+    db_column_name: Opportunity SE Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity RVP PullFwd
+    db_column_name: Opportunity RVP PullFwd
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Notes On Commissions
+    db_column_name: Opportunity Notes On Commissions
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presales Notes
+    db_column_name: Opportunity Presales Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Partner Account Owner Role
+    db_column_name: Opportunity Partner Account Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Close Date
+    db_column_name: Opportunity Close Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Deployment
+    db_column_name: Opportunity Deployment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Start Date
+    db_column_name: Opportunity Owner Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Source Engagement Name
+    db_column_name: Opportunity Source Engagement Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Original Renewal ACV
+    db_column_name: Opportunity Original Renewal ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity S6 Date
+    db_column_name: Opportunity S6 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Source Contact ID
+    db_column_name: Opportunity Source Contact ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Contract Term Months
+    db_column_name: Opportunity Contract Term Months
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Stage
+    db_column_name: Opportunity Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Finance Comments
+    db_column_name: Opportunity Finance Comments
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Partner Account ID
+    db_column_name: Opportunity Partner Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presales Concern
+    db_column_name: Opportunity Presales Concern
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Team
+    db_column_name: Opportunity Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Send To Commissions Date
+    db_column_name: Opportunity Send To Commissions Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Creator
+    db_column_name: Opportunity Creator
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Probability
+    db_column_name: Opportunity Probability
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Cloud Data Warehouse
+    db_column_name: Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Quote Hide Logo Language
+    db_column_name: Opportunity Quote Hide Logo Language
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Technology Partner Alliance
+    db_column_name: Opportunity Technology Partner Alliance
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Target Profile
+    db_column_name: Opportunity Target Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CRO Gross ACV
+    db_column_name: Opportunity CRO Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity RD Gate Meeting Held
+    db_column_name: Opportunity RD Gate Meeting Held
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Partner Account Owner Profile
+    db_column_name: Opportunity Partner Account Owner Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Competitors
+    db_column_name: Opportunity Competitors
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Booked Deal
+    db_column_name: Opportunity Booked Deal
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Closed Won Owner Team
+    db_column_name: Opportunity Closed Won Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Quote Status
+    db_column_name: Opportunity Quote Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Channel
+    db_column_name: Opportunity Channel
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Creator Profile
+    db_column_name: Opportunity Creator Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Authority
+    db_column_name: Opportunity Authority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CRO PullFwd
+    db_column_name: Opportunity CRO PullFwd
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Region
+    db_column_name: Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Next Step History
+    db_column_name: Opportunity Owner Next Step History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Booked TCV
+    db_column_name: Opportunity Booked TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Theater VP PullFwd
+    db_column_name: Opportunity Theater VP PullFwd
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Product Type
+    db_column_name: Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Partner Account Owner ID
+    db_column_name: Opportunity Partner Account Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Meeting Status
+    db_column_name: Opportunity Meeting Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Creator Name
+    db_column_name: Opportunity Creator Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity TCV
+    db_column_name: Opportunity TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Source Detailed
+    db_column_name: Opportunity Source Detailed
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CS Next Step History
+    db_column_name: Opportunity CS Next Step History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity TVP Forecast Category
+    db_column_name: Opportunity TVP Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source
+    db_column_name: Opportunity Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Partner Role
+    db_column_name: Opportunity Partner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Status
+    db_column_name: Opportunity Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Partner Account Status
+    db_column_name: Opportunity Partner Account Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presales Stage
+    db_column_name: Opportunity Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Pricing Type(s) Sold
+    db_column_name: Opportunity Pricing Type(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Engagement Subcategory
+    db_column_name: Opportunity Source Engagement Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Original Currency
+    db_column_name: Opportunity Original Currency
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact Name
+    db_column_name: Opportunity Source Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact Seniority
+    db_column_name: Opportunity Source Contact Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Services Amount
+    db_column_name: Opportunity Services Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity HighFive Meeting Scheduled
+    db_column_name: Opportunity HighFive Meeting Scheduled
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Validation Engineer
+    db_column_name: Opportunity Validation Engineer
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Theater VP Gross ACV
+    db_column_name: Opportunity Theater VP Gross ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Partner Account Type
+    db_column_name: Opportunity Partner Account Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Engagement Type
+    db_column_name: Opportunity Source Engagement Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Stage Maximum
+    db_column_name: Opportunity Stage Maximum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Type
+    db_column_name: Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Pain
+    db_column_name: Opportunity Pain
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Name
+    db_column_name: Opportunity Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Initial Meeting Occurred
+    db_column_name: Opportunity Initial Meeting Occurred
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Technology Partner Alliance Role
+    db_column_name: Opportunity Technology Partner Alliance Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity M0 Date
+    db_column_name: Opportunity M0 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Primary Quote
+    db_column_name: Opportunity Primary Quote
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Customer Environment
+    db_column_name: Opportunity Customer Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Forecast Category
+    db_column_name: Opportunity Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact Function
+    db_column_name: Opportunity Source Contact Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Edition(s) Sold
+    db_column_name: Opportunity Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Partner Account Owner Name
+    db_column_name: Opportunity Partner Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Initial Meeting Date
+    db_column_name: Opportunity Initial Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Partner Serviced
+    db_column_name: Opportunity Partner Serviced
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Cloud Region
+    db_column_name: Opportunity Cloud Region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CS Role
+    db_column_name: Opportunity CS Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Creator Role
+    db_column_name: Opportunity Creator Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Engagement Classification
+    db_column_name: Opportunity Source Engagement Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity S1 Date
+    db_column_name: Opportunity S1 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Owner Profile
+    db_column_name: Opportunity Owner Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SDR Profile
+    db_column_name: Opportunity SDR Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Disqualified Comment
+    db_column_name: Opportunity Disqualified Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity MQL Touch Last Campaign Type
+    db_column_name: Opportunity MQL Touch Last Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Name
+    db_column_name: Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Closed Won Owner
+    db_column_name: Opportunity Closed Won Owner
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Owner Last Login Date
+    db_column_name: Opportunity Owner Last Login Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Cloud Environment
+    db_column_name: Opportunity Cloud Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Win Notes
+    db_column_name: Opportunity Win Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Created By Profile ID
+    db_column_name: Created By Profile ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PeopleAi Engagement Level
+    db_column_name: PeopleAi Engagement Level
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Timing
+    db_column_name: Opportunity Timing
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity MQL Touch Last Campaign Classification
+    db_column_name: Opportunity MQL Touch Last Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Offering(s) Sold
+    db_column_name: Opportunity Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CS ID
+    db_column_name: Opportunity CS ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CRO Forecast Category
+    db_column_name: Opportunity CRO Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact FT Date
+    db_column_name: Opportunity Source Contact FT Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Partner Account Name
+    db_column_name: Opportunity Partner Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Source Contact Pardot Grade
+    db_column_name: Opportunity Source Contact Pardot Grade
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity SDR ID
+    db_column_name: Opportunity SDR ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportuniy Send To Commissions
+    db_column_name: Opportuniy Send To Commissions
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Opportunity Source Engagement ID
+    db_column_name: Opportunity Source Engagement ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity MQL Touch Last Campaign Asset Name
+    db_column_name: Opportunity MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Meeting Date
+    db_column_name: Opportunity Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Disqualified Reason
+    db_column_name: Opportunity Disqualified Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CS Profile
+    db_column_name: Opportunity CS Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Free Trial Type
+    db_column_name: Opportunity Free Trial Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity MQL Touch First ID
+    db_column_name: Opportunity MQL Touch First ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity HighFive URL
+    db_column_name: Opportunity HighFive URL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ACV
+    db_column_name: Opportunity ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Owner Role Tenure
+    db_column_name: Opportunity Owner Role Tenure
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Opportunity Owner Manager Name
+    db_column_name: Opportunity Owner Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Quote Start Date
+    db_column_name: Opportunity Quote Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Owner Next Step
+    db_column_name: Opportunity Owner Next Step
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity S3 Date
+    db_column_name: Opportunity S3 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Owner Role
+    db_column_name: Opportunity Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity CS Next Step Last Modified
+    db_column_name: Opportunity CS Next Step Last Modified
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity MQL Date Last
+    db_column_name: Opportunity MQL Date Last
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity CCoE Sentiment
+    db_column_name: Opportunity CCoE Sentiment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Last OCR Engagement
+    db_column_name: Opportunity Last OCR Engagement
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity First OCR Engagement
+    db_column_name: Opportunity First OCR Engagement
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Competitor Displaced
+    db_column_name: Opportunity Competitor Displaced
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Marketplace Order
+    db_column_name: Opportunity Marketplace Order
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Marketplace Preference
+    db_column_name: Opportunity Marketplace Preference
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Go Live Date
+    db_column_name: Opportunity Go Live Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Opportunity Index Opportunity Booked
+    db_column_name: Opportunity Index Opportunity Booked
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Index Opportunity
+    db_column_name: Opportunity Index Opportunity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  joins_with:
+  - name: ARR_ACCOUNT_DEMO_to_SFDC_OPPORTUNITY
+    destination:
+      name: ARR_ACCOUNT_DEMO
+      fqn: 297af746-b292-46b9-a22e-8ab124ab7ebd
+    "on": "[SFDC_OPPORTUNITY::Account ID] = [ARR_ACCOUNT_DEMO::Case Safe Account ID]"
+    type: RIGHT_OUTER
+  - name: FK_OPPORTUNITY_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[SFDC_OPPORTUNITY::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER
+  - name: FK_OPPORTUNITY_BRIDGE
+    destination:
+      name: CLARI_USER_BRIDGE_TABLE
+      fqn: af92a57f-c52f-495b-9b4a-fabe11284f0e
+    "on": "[SFDC_OPPORTUNITY::Opportunity Owner ID] = [CLARI_USER_BRIDGE_TABLE::User ID]"
+    type: INNER
+  - name: FK_OPP_VIVUN_PRESALES
+    destination:
+      name: VIVUN_PRESALES_STAGE_MDT
+      fqn: 013cf4d5-9dea-4702-85c3-64205ceddaf2
+    "on": "[SFDC_OPPORTUNITY::Opportunity Presales Stage] = [VIVUN_PRESALES_STAGE_MDT::Vivun Presales Stage MDT API Name]"
+    type: INNER
+  - name: SFDC_OPPORTUNITY_to_ACCOUNTS_OPPORTUNITIES
+    destination:
+      name: ACCOUNTS_OPPORTUNITIES
+      fqn: fc696485-5a62-417e-a714-437f86abdec7
+    "on": "([SFDC_OPPORTUNITY::Opportunity ID] = [ACCOUNTS_OPPORTUNITIES::R Opportunity ID])"
+    type: OUTER
+    is_one_to_one: true
+  - name: SFDC_OPPORTUNITY_to_SE_TEAM_DATA
+    destination:
+      name: SE_TEAM_DATA
+      fqn: 966a7675-3768-40a3-ad12-d1cc8b3d089a
+    "on": "([SFDC_OPPORTUNITY::Opportunity SE ID] = [SE_TEAM_DATA::SE User ID])"
+    type: LEFT_OUTER
+  - name: SFDC_OPPORTUNITY_to_SFDC_PARTNER_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "([SFDC_OPPORTUNITY::Opportunity Partner Account ID] = [SFDC_ACCOUNT::Account ID])"
+    type: LEFT_OUTER

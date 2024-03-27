@@ -1,0 +1,203 @@
+guid: 963ceb65-e584-42e5-b350-feee9562baeb
+table:
+  name: SFDC_ACCOUNT_EXTENDED
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_ACCOUNT_EXTENDED
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Account Rev Score - TSA
+    db_column_name: Account Rev Score - TSA
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Account ID
+    db_column_name: Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Score - TSE
+    db_column_name: Account Rev Score - TSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Matillion Signal
+    db_column_name: Account Rev Matillion Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Alation Signal
+    db_column_name: Account Rev Alation Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev BigQuery Signal
+    db_column_name: Account Rev BigQuery Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Compliance Focused
+    db_column_name: Account Rev Compliance Focused
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev SaaS Signal
+    db_column_name: Account Rev SaaS Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Growth Rate
+    db_column_name: Account Rev Growth Rate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Tech Centricity
+    db_column_name: Account Rev Tech Centricity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Early Adopter
+    db_column_name: Account Rev Early Adopter
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Fivetran Signal
+    db_column_name: Account Rev Fivetran Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev DBT Signal
+    db_column_name: Account Rev DBT Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Collibra Signal
+    db_column_name: Account Rev Collibra Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Synapse Signal
+    db_column_name: Account Rev Synapse Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Starburst Signal
+    db_column_name: Account Rev Starburst Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Snowflake Signal
+    db_column_name: Account Rev Snowflake Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Redshift Signal
+    db_column_name: Account Rev Redshift Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Databricks Signal
+    db_column_name: Account Rev Databricks Signal
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev AICP Name
+    db_column_name: Account Rev AICP Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Rev Data Ramp
+    db_column_name: Account Rev Data Ramp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_TO_SFDC_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "[SFDC_ACCOUNT_EXTENDED::Account ID] = [SFDC_ACCOUNT::Account ID]"
+    type: INNER
+    is_one_to_one: true
+  - name: SFDC_ACCOUNT_EXTENDED_to_SFDC_CAMPAIGN_PERSON_ACCOUNT
+    destination:
+      name: SFDC_CAMPAIGN_PERSON_ACCOUNT
+      fqn: f6d4fd72-6a03-4b6d-bd3c-0091babde6e8
+    "on": "[SFDC_ACCOUNT_EXTENDED::Account ID] = [SFDC_CAMPAIGN_PERSON_ACCOUNT::Account ID]"
+    type: INNER
+    is_one_to_one: true

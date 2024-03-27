@@ -1,0 +1,158 @@
+guid: 62e64be9-3473-4742-aec5-60470b94ec34
+table:
+  name: GAINSIGHT_QBR
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: GAINSIGHT_QBR
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Digital QBR
+    db_column_name: Digital QBR
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Created By
+    db_column_name: Created By
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SFDC ID
+    db_column_name: SFDC ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GSID
+    db_column_name: GSID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Type Name
+    db_column_name: Type Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: QBR Status
+    db_column_name: QBR Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Activity Date
+    db_column_name: Activity Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: External Attendees
+    db_column_name: External Attendees
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Internal Attendees
+    db_column_name: Internal Attendees
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ' Created By'
+    db_column_name: ' Created By'
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Link To JSP
+    db_column_name: Link To JSP
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Link To QBR Deck
+    db_column_name: Link To QBR Deck
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: User Name
+    db_column_name: User Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Last Completed QBR
+    db_column_name: Last Completed QBR
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CSM Name
+    db_column_name: CSM Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Next Scheduled QBR
+    db_column_name: Next Scheduled QBR
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: scheduling In Progress
+    db_column_name: scheduling In Progress
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: QBR Notes
+    db_column_name: QBR Notes
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: GAINSIGHT_QBR_to_GAINSIGHT_COMPANY_ATTRIBUTES
+    destination:
+      name: GAINSIGHT_COMPANY_ATTRIBUTES
+      fqn: 882750b6-0099-4c64-a684-0cb57e9448cf
+    "on": "([GAINSIGHT_QBR::SFDC ID] = [GAINSIGHT_COMPANY_ATTRIBUTES::Account ID])"
+    type: LEFT_OUTER
+  - name: GAINSIGHT_QBR_to_SFDC_ACCOUNT
+    destination:
+      name: SFDC_ACCOUNT
+      fqn: c328225c-ba1c-4775-acde-7d3ea6194f1f
+    "on": "([GAINSIGHT_QBR::SFDC ID] = [SFDC_ACCOUNT::Account ID])"
+    type: LEFT_OUTER

@@ -1,0 +1,74 @@
+guid: 5b7c1f0d-ce26-494e-84ad-934a37b1517b
+table:
+  name: SFDC_CASE_HISTORY
+  db: GTM_DB
+  schema: PUBLIC
+  db_table: SFDC_CASE_HISTORY
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Case History ID
+    db_column_name: Case History ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case History Rank
+    db_column_name: Case History Rank
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Case ID
+    db_column_name: Case ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case History Created By
+    db_column_name: Case History Created By
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case History Created Time
+    db_column_name: Case History Created Time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Case History Field Name
+    db_column_name: Case History Field Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case History Old Value
+    db_column_name: Case History Old Value
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Case History New Value
+    db_column_name: Case History New Value
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_CASE_HISTORY_CASE
+    destination:
+      name: SFDC_CASE
+      fqn: 470a6c78-7d32-4266-bde6-f8ee715d51d5
+    "on": "[SFDC_CASE_HISTORY::Case ID] = [SFDC_CASE::Case ID]"
+    type: INNER

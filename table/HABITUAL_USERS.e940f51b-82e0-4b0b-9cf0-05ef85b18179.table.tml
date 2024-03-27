@@ -1,0 +1,42 @@
+guid: e940f51b-82e0-4b0b-9cf0-05ef85b18179
+table:
+  name: HABITUAL_USERS
+  db: GTM_DB
+  schema: ACTIVE_USERS_METRICS
+  db_table: HABITUAL_USERS
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Habitual Users
+    db_column_name: Habitual Users
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Date
+    db_column_name: Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Cluster UUID
+    db_column_name: Cluster UUID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: HABITUAL_USERS_TO_SFDC_CLUSTER
+    destination:
+      name: SFDC_CLUSTER
+      fqn: 1a108b00-02ff-431e-9066-5a85f3b1fbd9
+    "on": "[HABITUAL_USERS::Cluster UUID] = [SFDC_CLUSTER::Cluster UUID]"
+    type: RIGHT_OUTER
