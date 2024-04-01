@@ -73,44 +73,6 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d2d18eba-01f9-4982-a57c-9fd809808f67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"c6a143a0-b4ce-4432-aaab-2c44871483d8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\",\"Total Revenue\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#F04152\"}]}"
       display_mode: CHART_MODE
     viz_guid: c7e06178-1a24-4a3f-b8cf-a28757ffc6ab
-  - id: Viz_3
-    answer:
-      name: "Total Discount by Color, Total Revenue"
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Discount] [Revenue] [Color]"
-      answer_columns:
-      - name: Color
-      - name: Total Discount
-      - name: Total Revenue
-      table:
-        table_columns:
-        - column_id: Color
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Discount
-          headline_aggregation: SUM
-        - column_id: Total Revenue
-          headline_aggregation: SUM
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: GEO_BUBBLE
-        chart_columns:
-        - column_id: Color
-        - column_id: Total Discount
-        - column_id: Total Revenue
-        axis_configs:
-        - x:
-          - Color
-          - Total Revenue
-          "y":
-          - Total Discount
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d2d18eba-01f9-4982-a57c-9fd809808f67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"c6a143a0-b4ce-4432-aaab-2c44871483d8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\",\"Total Revenue\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#F04152\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: c99aef84-87a8-4048-a7d6-30276a14ebee
   layout:
     tabs:
     - name: Tax
@@ -121,12 +83,11 @@ liveboard:
         "y": 4
         height: 8
         width: 6
+    - name: Geo
+      description: ""
+      tiles:
       - visualization_id: Viz_2
         x: 6
         "y": 0
         height: 8
         width: 6
-    - name: Geo
-      description: ""
-      tiles:
-      - visualization_id: Viz_3
