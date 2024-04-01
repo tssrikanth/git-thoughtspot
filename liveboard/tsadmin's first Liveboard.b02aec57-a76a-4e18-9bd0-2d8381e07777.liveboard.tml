@@ -1,0 +1,92 @@
+guid: b02aec57-a76a-4e18-9bd0-2d8381e07777
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Discount by Color, Total Revenue"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Brand1]"
+      answer_columns:
+      - name: Brand1
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Brand1
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3333fa4a-286d-4017-a92a-40b97a599042\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"d40d1ebe-e8a2-4f39-b387-06c09a190b2b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bd46b7b2-dff6-43d8-a6aa-970b4aa42085\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: dc590cbb-aa3b-4031-a9e6-6f2537d19091
+  - id: Viz_2
+    answer:
+      name: "Total Discount by Color, Total Revenue"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Revenue] [Color]"
+      answer_columns:
+      - name: Color
+      - name: Total Discount
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_BUBBLE
+        chart_columns:
+        - column_id: Color
+        - column_id: Total Discount
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Color
+          - Total Revenue
+          "y":
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d2d18eba-01f9-4982-a57c-9fd809808f67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"c6a143a0-b4ce-4432-aaab-2c44871483d8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\",\"Total Revenue\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#F04152\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c7e06178-1a24-4a3f-b8cf-a28757ffc6ab
+  layout:
+    tabs:
+    - name: Tax
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 4
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+    - name: Geo
+      description: ""
