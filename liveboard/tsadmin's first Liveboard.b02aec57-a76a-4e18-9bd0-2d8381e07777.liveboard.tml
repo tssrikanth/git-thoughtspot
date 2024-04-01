@@ -87,7 +87,7 @@ liveboard:
       description: ""
       tiles:
       - visualization_id: Viz_2
-        x: 6
+        x: 0
         "y": 0
-        height: 8
-        width: 6
+        height: 4
+        width: 3
