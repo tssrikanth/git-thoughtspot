@@ -80,9 +80,9 @@ liveboard:
       tiles:
       - visualization_id: Viz_1
         x: 0
-        "y": 4
-        height: 8
-        width: 6
+        "y": 0
+        height: 4
+        width: 3
     - name: Geo
       description: ""
       tiles:
