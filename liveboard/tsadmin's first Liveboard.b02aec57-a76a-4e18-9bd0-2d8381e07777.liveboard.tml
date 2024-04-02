@@ -83,7 +83,7 @@ liveboard:
         "y": 4
         height: 8
         width: 6
-    - name: Geo 2
+    - name: Geo
       description: ""
       tiles:
       - visualization_id: Viz_2
