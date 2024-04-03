@@ -141,3 +141,14 @@ liveboard:
         "y": 0
         height: 8
         width: 6
+  views:
+  - view_guid: fe3662b2-5d08-4a00-84b6-72cc45492faa
+    name: aa
+    view_filters:
+    - column:
+      - Brand1
+      oper: in
+      values:
+      - mfgr#111
+      - mfgr#1110
+    is_public: false
