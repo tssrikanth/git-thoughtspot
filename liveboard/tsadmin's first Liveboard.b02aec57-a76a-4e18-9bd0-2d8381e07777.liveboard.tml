@@ -106,6 +106,15 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"35ee2168-2411-4be4-a4a3-02cb7c8e14c9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"614edfd6-4a6b-4398-863b-a3d43de991c3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: 45e3f74f-7777-420d-89b3-7cac96f93b0f
+  filters:
+  - column:
+    - Brand1
+    oper: in
+    values:
+    - mfgr#111
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tabs:
     - name: Tax
