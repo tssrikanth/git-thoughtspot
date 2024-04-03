@@ -152,3 +152,14 @@ liveboard:
       - mfgr#111
       - mfgr#1110
     is_public: false
+  - view_guid: a8d2336f-a700-45d9-94d4-d35026fa539f
+    name: bb
+    view_filters:
+    - column:
+      - Brand1
+      oper: in
+      values:
+      - mfgr#111
+      - mfgr#1110
+      - mfgr#1111
+    is_public: false
