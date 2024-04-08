@@ -18,7 +18,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: PIE
     chart_columns:
     - column_id: Brand1
     - column_id: Total Discount
