@@ -41,4 +41,4 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
+      size: LARGE_SMALL
