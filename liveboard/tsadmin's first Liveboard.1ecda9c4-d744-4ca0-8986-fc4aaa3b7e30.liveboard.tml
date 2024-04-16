@@ -38,3 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ASSIGNEE\",\"columnProperty\": {}},{\"columnId\": \"Total ID\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"952e288f-1fd2-4e59-9e29-21f2cf12f0ad\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total ID\"],\"isOpposite\": false}},{\"id\": \"3be50937-2ac6-4bd0-94b8-3a6dd994369d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ASSIGNEE\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total ID\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 0da290df-c360-4c69-81b8-10dd2d0df002
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
