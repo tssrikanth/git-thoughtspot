@@ -1,6 +1,6 @@
 guid: bdd30471-2994-4e25-b666-52c4210c343f
 liveboard:
-  name: tsadmin's first Liveboard
+  name: tsadmin's first Liveboard dsdSA
   visualizations:
   - id: Viz_1
     answer:
@@ -49,3 +49,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"latitude\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4fdce7a4-409c-4d91-bea3-a9f036896888\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"ddab4f3f-7e65-4f18-a09d-c7a97c3ce0a8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"latitude\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bags\",\"color\": \"#6A4ABA\"},{\"serieName\": \"dresses\",\"color\": \"#B094F8\"},{\"serieName\": \"headwear\",\"color\": \"#8C62F5\"},{\"serieName\": \"jackets\",\"color\": \"#049160\"},{\"serieName\": \"jeans\",\"color\": \"#56D3A8\"},{\"serieName\": \"pants\",\"color\": \"#06BF7F\"},{\"serieName\": \"shirts\",\"color\": \"#BF982A\"},{\"serieName\": \"shorts\",\"color\": \"#FCD977\"},{\"serieName\": \"skirts\",\"color\": \"#FCC838\"},{\"serieName\": \"socks\",\"color\": \"#369FAA\"},{\"serieName\": \"sweaters\",\"color\": \"#82DFE9\"},{\"serieName\": \"sweatshirts\",\"color\": \"#48D1E0\"},{\"serieName\": \"swimwear\",\"color\": \"#2359B6\"},{\"serieName\": \"underwear\",\"color\": \"#71A1F4\"},{\"serieName\": \"vests\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: ff6a6210-c6a9-4453-bc2b-b6eb2f03663a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
