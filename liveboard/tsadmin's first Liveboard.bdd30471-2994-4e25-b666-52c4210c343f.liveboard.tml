@@ -1,0 +1,51 @@
+guid: bdd30471-2994-4e25-b666-52c4210c343f
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: test answer
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[city] [county] [item type] [quantity purchased] [latitude]"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: city
+      - name: county
+      - name: item type
+      - name: latitude
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: city
+          show_headline: false
+        - column_id: county
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        - column_id: latitude
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: city
+        - column_id: county
+        - column_id: item type
+        - column_id: latitude
+        axis_configs:
+        - x:
+          - latitude
+          "y":
+          - Total quantity purchased
+          color:
+          - item type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"latitude\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4fdce7a4-409c-4d91-bea3-a9f036896888\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"ddab4f3f-7e65-4f18-a09d-c7a97c3ce0a8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"latitude\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bags\",\"color\": \"#6A4ABA\"},{\"serieName\": \"dresses\",\"color\": \"#B094F8\"},{\"serieName\": \"headwear\",\"color\": \"#8C62F5\"},{\"serieName\": \"jackets\",\"color\": \"#049160\"},{\"serieName\": \"jeans\",\"color\": \"#56D3A8\"},{\"serieName\": \"pants\",\"color\": \"#06BF7F\"},{\"serieName\": \"shirts\",\"color\": \"#BF982A\"},{\"serieName\": \"shorts\",\"color\": \"#FCD977\"},{\"serieName\": \"skirts\",\"color\": \"#FCC838\"},{\"serieName\": \"socks\",\"color\": \"#369FAA\"},{\"serieName\": \"sweaters\",\"color\": \"#82DFE9\"},{\"serieName\": \"sweatshirts\",\"color\": \"#48D1E0\"},{\"serieName\": \"swimwear\",\"color\": \"#2359B6\"},{\"serieName\": \"underwear\",\"color\": \"#71A1F4\"},{\"serieName\": \"vests\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ff6a6210-c6a9-4453-bc2b-b6eb2f03663a
